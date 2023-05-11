@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(90deg, #1f316d, #0c1c4a, #290536, #400448);
+	background: url("stars.avif"), linear-gradient(90deg, #1f316d, #0c1c4a, #290536, #400448);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
     color: white;
@@ -38,10 +38,15 @@ a:active{
   background-color: transparent;
   text-decoration: underline;
 }
-star{
+div{
     width: 100px;
     height: 100px;
     background: red;
     position: relative;
     animation: mymove 10s infinite;
 }
+@keyframes mymove {
+    0% {left: 0%;}
+    50% {left: 44%;}
+    100% {left: 89%;}
+  }
