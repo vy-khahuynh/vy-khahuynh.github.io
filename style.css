@@ -16,20 +16,14 @@ body {
     }
 }
 div{
-    width: 100px;
-    height: 100px;
-    background: red;
+    width: 5px;
+    height: 5;
+    background: white;
     position: relative;
-    animation: mymove 10s infinite;
+    animation: mymove 20s infinite;
 }
 @keyframes mymove {
     0% {left: 0%;}
     50% {left: 44%;}
     100% {left: 89%;}
-}
-.center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
 }
