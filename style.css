@@ -15,7 +15,7 @@ body {
         background-position: 0% 50%;
     }
 }
-div {
+.dot {
     width: 5px;
     height: 5px;
     background: white;
