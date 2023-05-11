@@ -15,11 +15,11 @@ body {
         background-position: 0% 50%;
     }
 }
-.dot {
+div {
     width: 25px;
     height: 25px;
     border-radius: 30%;
-    background-color: white;
+    background: white;
     position: relative;
     animation: mymove 10s infinite;
 }
