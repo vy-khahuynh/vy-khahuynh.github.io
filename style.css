@@ -27,3 +27,9 @@ div{
     50% {left: 44%;}
     100% {left: 89%;}
 }
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
