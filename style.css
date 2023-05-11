@@ -15,7 +15,7 @@ body {
         background-position: 0% 50%;
     }
 }
-span {
+.stars {
     width: 10px;
     height: 10px;
     border-radius: 50%;
