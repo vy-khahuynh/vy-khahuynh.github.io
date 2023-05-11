@@ -15,7 +15,7 @@ body {
         background-position: 0% 50%;
     }
 }
-/* .stars {
+.stars {
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -26,7 +26,7 @@ body {
 @keyframes mymove {
     0% {left: 0%;}
     100% {left: 100%;}
-} */
+}
 
 * {box-sizing:border-box}
 
