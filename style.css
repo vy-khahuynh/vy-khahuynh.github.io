@@ -1,5 +1,5 @@
 body {
-	background: url("stars.avif"), linear-gradient(90deg, #1f316d, #0c1c4a, #290536, #400448);
+	background-image: url("stars.avif"), linear-gradient(90deg, #1f316d, #0c1c4a, #290536, #400448);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
     color: white;
@@ -49,4 +49,4 @@ div{
     0% {left: 0%;}
     50% {left: 44%;}
     100% {left: 89%;}
-  }
+}
