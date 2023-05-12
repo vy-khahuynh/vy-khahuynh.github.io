@@ -37,8 +37,9 @@ img {vertical-align: middle;}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
+  position: relative;
   margin: auto;
-  top:30%;
+  top:50%;
 }
 
 /* Hide the images by default */
