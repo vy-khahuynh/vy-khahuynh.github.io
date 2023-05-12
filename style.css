@@ -40,8 +40,7 @@ body {
 
 /* Hide the images by default */
 .mySlides {
-  /* display: none; */
-  display: inline-block;
+  display: none;
 }
 
 /* Next & previous buttons */
