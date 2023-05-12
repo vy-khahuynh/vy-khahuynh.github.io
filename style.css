@@ -21,11 +21,12 @@ body {
     border-radius: 50%;
     background: white;
     position: relative;
-    animation: mymove 10s infinite;
+    animation: mymove 20s infinite;
 }
 @keyframes mymove {
     0% {left: 0%;}
-    100% {left: 100%;}
+    50% {left: 100%;}
+    100% {left: 0%;}
 }
 
 * {box-sizing:border-box}
