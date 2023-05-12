@@ -38,6 +38,7 @@ img {vertical-align: middle;}
 .slideshow-container {
   max-width: 1000px;
   margin: auto;
+  top:30%;
 }
 
 /* Hide the images by default */
@@ -64,6 +65,11 @@ img {vertical-align: middle;}
 /* Position the "next button" to the right */
 .next {
   right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
   border-radius: 3px 0 0 3px;
 }
 
