@@ -39,7 +39,7 @@ img {vertical-align: middle;}
   max-width: 1000px;
   position: relative;
   margin: auto;
-  top:300;
+  top:300px;
 }
 
 /* Hide the images by default */
