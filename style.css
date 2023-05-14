@@ -24,9 +24,15 @@ body {
     animation: mymove 20s infinite;
 }
 @keyframes mymove {
-    0% {left: 0%; top: 0%}
+    /* 0% {left: 0%;} */
     /* 50% {left: 100%;} */
-    100% {left: 100%; top: 100%}
+    /* 100% {left: 100%;} */
+    from{
+      top:0%
+    }
+    to{
+      top: 100%;
+    }
 }
 
 * {box-sizing: border-box}
