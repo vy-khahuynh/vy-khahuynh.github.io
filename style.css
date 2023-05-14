@@ -24,13 +24,13 @@ body {
     animation: mymove 20s infinite;
 }
 @keyframes mymove {
-    0% {left: 0%;}
-    50% {left: 100%;}
-    100% {left: 0%;}
+    0% {left: 0%; top: 0%}
+    /* 50% {left: 100%;} */
+    100% {left: 100%; top: 100%}
 }
 
 * {box-sizing: border-box}
-/* body {font-family: Verdana, sans-serif; margin:0} */
+body {font-family: Verdana, sans-serif; margin:0}
 .mySlides {display: none}
 img {vertical-align: middle;}
 
@@ -39,7 +39,6 @@ img {vertical-align: middle;}
   max-width: 1000px;
   position: relative;
   margin: auto;
-  top:100%;
 }
 
 /* Hide the images by default */
