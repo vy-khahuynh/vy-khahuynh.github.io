@@ -15,6 +15,27 @@ body {
         background-position: 0% 50%;
     }
 }
+.circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  animation: x-axis 2s infinite linear;
+}
+.wrapper{
+  animation: y-axis 5s infinite ease-in-out;
+}
+@keyframes x-axis {
+  50%{
+    transform: translateX(50px);
+  }
+}
+@keyframes y-axis {
+  50%{
+    transform: translateY(200px);
+  }
+}
 .stars {
     width: 10px;
     height: 10px;
