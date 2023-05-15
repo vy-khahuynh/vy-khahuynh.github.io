@@ -21,13 +21,13 @@ body {
   border-radius: 50%;
   background: white;
   position: relative;
-  top: 50%;
-  right: 50%;
-  animation: x-axis 2.5s infinite linear;
+  /* top: 50%;
+  right: 50%; */
+  animation: x-axis 3s infinite linear;
 }
 .wrapper{
-  animation: y-axis 5s infinite ease-in-out;
-  height: 210px;
+  animation: y-axis 6s infinite ease-in-out;
+  /* height: 210px; */
 }
 @keyframes x-axis {
   50%{
@@ -136,7 +136,7 @@ img {vertical-align: middle;}
 /* Fading animation */
 .fade {
   animation-name: fade;
-  animation-duration: 2s;
+  animation-duration: 1.5s;
 }
 
 @keyframes fade {
