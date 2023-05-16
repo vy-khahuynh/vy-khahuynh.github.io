@@ -36,7 +36,7 @@ body {
   animation: x-axis 6s infinite ease-in-out;
 }
 .wrapper{
-  animation: y-axis 3s infinite ease-in-out;
+  animation: y-axis 6s infinite ease-in-out;
 }
 @keyframes x-axis {
   50%{
@@ -58,24 +58,24 @@ body {
   }
 }
 .bigstar {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
     background: white;
     position: relative;
     /* animation: mymove 20s infinite; */
 }
 .mediumstar {
-  width: 5px;
-  height: 5px;
+  width: 2.5px;
+  height: 2.5px;
   border-radius: 50%;
   background: white;
   position: relative;
   /* animation: mymove 20s infinite; */
 }
 .smallstar {
-  width: 2.5px;
-  height: 2.5px;
+  width: 1px;
+  height: 1px;
   border-radius: 50%;
   background: white;
   position: relative;
