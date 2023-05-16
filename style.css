@@ -1,3 +1,7 @@
+html{
+  height: 100%;
+  width: 100%;
+}
 body {
 	background: linear-gradient(90deg, #0a122f, #010510, #120217, #000000);
 	background-size: 400% 400%;
