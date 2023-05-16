@@ -23,7 +23,7 @@ body {
 }
 #sky{
   background-color: transparent;
-  position:absolute;
+  position: relative;
   height: 100%;
   width: 100%;
 }
@@ -56,7 +56,7 @@ body {
     height: 10px;
     border-radius: 50%;
     background: white;
-    position: absolute;
+    position: relative;
     /* animation: mymove 20s infinite; */
 }
 .mediumstar {
@@ -64,7 +64,7 @@ body {
   height: 5px;
   border-radius: 50%;
   background: white;
-  position: absolute;
+  position: relative;
   /* animation: mymove 20s infinite; */
 }
 .smallstar {
@@ -72,7 +72,7 @@ body {
   height: 2.5px;
   border-radius: 50%;
   background: white;
-  position: absolute;
+  position: relative;
   /* animation: mymove 20s infinite; */
 }
 @keyframes mymove {
