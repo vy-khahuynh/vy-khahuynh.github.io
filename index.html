@@ -74,16 +74,15 @@ function showSlides(n) {
 function addStars(){
   var cur = document.getElementById("sky");
   var classes = ["smallstar", "mediumstar", "bigstar"];
-  var num = Math.floor(Math.random() * 10);
+  var num = Math.floor(Math.random() * 15) + 25;
   for(let i = 0 ; i < num ; i++){
     var star = document.createElement('div');
     star.classList.add(classes[Math.floor(Math.random() * classes.length)]);
-    star.style.top = Math.floor(Math.random() * cur.clientHeight);
-    star.style.left = Math.floor(Math.random() * cur.clientWidth);
-    alert("star 1 is located at " + star.left + " and " + star.top);
+    star.style.top = Math.floor(Math.random() * cur.clientHeight)+"px";
+    star.style.left = Math.floor(Math.random() * cur.clientWidth)+"px";
     cur.appendChild(star);
   }
-  alert(cur.clientHeight + " by " + cur.clientWidth);
+  // alert(cur.clientHeight + " by " + cur.clientWidth);
 }
 </script>
 </body>
