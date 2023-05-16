@@ -2,7 +2,7 @@ body {
 	background: linear-gradient(90deg, #0a122f, #010510, #120217, #000000);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
-    color: white;
+  color: white;
 }
 @keyframes gradient {
     0% {
@@ -14,6 +14,11 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+#sky{
+  background-color: transparent;
+  position:absolute;
+  height: 100%;
 }
 .circle{
   width: 10px;
@@ -39,13 +44,29 @@ body {
     transform: translateY(-25px);
   }
 }
-.stars {
-    width: 10px;
-    height: 10px;
+.bigstar {
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background: white;
     position: relative;
-    animation: mymove 20s infinite;
+    /* animation: mymove 20s infinite; */
+}
+.mediumstar {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  /* animation: mymove 20s infinite; */
+}
+.smallstar {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  /* animation: mymove 20s infinite; */
 }
 @keyframes mymove {
     0% {left: 0%;}
