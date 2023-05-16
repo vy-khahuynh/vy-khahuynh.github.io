@@ -21,10 +21,10 @@ body {
   border-radius: 50%;
   background: white;
   position: relative;
-  animation: x-axis 6s infinite linear;
+  animation: x-axis 6s infinite ease-in-out;
 }
 .wrapper{
-  animation: y-axis 3s infinite ease-in-out;
+  animation: y-axis 3s infinite linear;
 }
 @keyframes x-axis {
   50%{
@@ -32,8 +32,11 @@ body {
   }
 }
 @keyframes y-axis {
-  50%{
+  25%{
     transform: translateY(25px);
+  }
+  75%{
+    transform: translateY(-25px);
   }
 }
 .stars {
