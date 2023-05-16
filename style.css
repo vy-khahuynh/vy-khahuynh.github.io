@@ -21,10 +21,10 @@ body {
   border-radius: 50%;
   background: white;
   position: relative;
-  animation: x-axis 6s infinite ease-in-out;
+  animation: x-axis 6s infinite linear;
 }
 .wrapper{
-  animation: y-axis 3s infinite ease-in-out;
+  animation: y-axis 3s infinite linear;
 }
 @keyframes x-axis {
   50%{
