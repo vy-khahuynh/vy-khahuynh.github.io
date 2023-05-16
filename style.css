@@ -36,7 +36,7 @@ body {
   animation: x-axis 6s infinite ease-in-out;
 }
 .wrapper{
-  animation: y-axis 3s infinite linear;
+  animation: y-axis 3s infinite ease-in-out;
 }
 @keyframes x-axis {
   50%{
@@ -44,10 +44,16 @@ body {
   }
 }
 @keyframes y-axis {
-  25%{
+  12.5%{
     transform: translateY(25px);
   }
-  75%{
+  37.5%{
+    transform: translateY(-25px);
+  }
+  62.5%{
+    transform: translateY(25px);
+  }
+  87.5%{
     transform: translateY(-25px);
   }
 }
