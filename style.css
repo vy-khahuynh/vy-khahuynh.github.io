@@ -181,7 +181,9 @@ img {vertical-align: middle;}
 
 .glow {
   animation-name: glow;
-  animation: glow 1.5 infinite ease
+  animation: 1.5;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
 }
 
 @keyframes glow{
