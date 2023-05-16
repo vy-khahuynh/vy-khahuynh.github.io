@@ -79,7 +79,7 @@ function addStars(){
     var star = document.createElement('div');
     star.classList.add(classes[Math.floor(Math.random() * classes.length)]);
     star.style.top = Math.floor(Math.random() * cur.clientHeight);
-    star.style.right = Math.floor(Math.random() * cur.clientWidth);
+    star.style.left = Math.floor(Math.random() * cur.clientWidth);
     cur.appendChild(star);
   }
   alert(cur.clientHeight + " by " + clientWidth);

@@ -62,7 +62,7 @@ body {
     height: 5px;
     border-radius: 50%;
     background: white;
-    position: relative;
+    position: absolute;
     /* animation: mymove 20s infinite; */
 }
 .mediumstar {
@@ -70,7 +70,7 @@ body {
   height: 2.5px;
   border-radius: 50%;
   background: white;
-  position: relative;
+  position: absolute;
   /* animation: mymove 20s infinite; */
 }
 .smallstar {
@@ -78,7 +78,7 @@ body {
   height: 1px;
   border-radius: 50%;
   background: white;
-  position: relative;
+  position: absolute;
   /* animation: mymove 20s infinite; */
 }
 @keyframes mymove {
