@@ -3,6 +3,8 @@ html{
   width: 100%;
 }
 body {
+  min-height: 100%;
+  min-width: 100%;
 	background: linear-gradient(90deg, #0a122f, #010510, #120217, #000000);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
@@ -54,7 +56,7 @@ body {
     height: 10px;
     border-radius: 50%;
     background: white;
-    position: relative;
+    position: absolute;
     /* animation: mymove 20s infinite; */
 }
 .mediumstar {
@@ -62,7 +64,7 @@ body {
   height: 5px;
   border-radius: 50%;
   background: white;
-  position: relative;
+  position: absolute;
   /* animation: mymove 20s infinite; */
 }
 .smallstar {
@@ -70,7 +72,7 @@ body {
   height: 2.5px;
   border-radius: 50%;
   background: white;
-  position: relative;
+  position: absolute;
   /* animation: mymove 20s infinite; */
 }
 @keyframes mymove {
