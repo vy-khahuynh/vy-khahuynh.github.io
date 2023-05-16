@@ -24,7 +24,7 @@ body {
   animation: x-axis 6s infinite ease-in-out;
 }
 .wrapper{
-  animation: y-axis 3s infinite linear;
+  animation: y-axis 3s infinite ease-in-out;
 }
 @keyframes x-axis {
   50%{
