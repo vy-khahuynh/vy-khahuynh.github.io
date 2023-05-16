@@ -84,8 +84,7 @@ function addStars(){
   }
   var bigstars = curr.getElementsByClassName("bigstar");
   for(let i = 0 ; i < bigstars.length ; i++){
-    alert("This is star ${i}, added to class glow")
-    bigstars[i].classList.add("glow");
+    bigstars[i].style.animation = 'glow 5s ease infinite';
   }
 }
 </script>
