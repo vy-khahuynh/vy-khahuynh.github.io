@@ -188,6 +188,6 @@ img {vertical-align: middle;}
 
 @keyframes glow{
   50%{
-    transform: scale(150%)
+    transform: scale(300%)
   }
 }
