@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(90deg, #0a122f, #010510, #1b0124, #000000);
+	background: linear-gradient(90deg, #0a122f, #010510, #120217, #000000);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
     color: white;
@@ -21,10 +21,10 @@ body {
   border-radius: 50%;
   background: white;
   position: relative;
-  animation: x-axis 6s infinite linear;
+  animation: x-axis 6s infinite ease-in-out;
 }
 .wrapper{
-  animation: y-axis 3s infinite linear;
+  animation: y-axis 3s infinite ease-in-out;
 }
 @keyframes x-axis {
   50%{
