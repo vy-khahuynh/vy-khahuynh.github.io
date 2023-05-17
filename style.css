@@ -95,6 +95,7 @@ img {vertical-align: middle;}
   max-width: 1000px;
   position: relative;
   margin: auto;
+  top: 40%;
   z-index: 10;
 }
 
