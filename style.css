@@ -19,6 +19,20 @@ body {
         background-position: 0% 50%;
     }
 }
+ul{
+  list-style-type: none;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+li{
+  display: inline-block;
+  padding: 1.5%;
+}
+.nav-links{
+  color: white;
+}
 #sky{
   background-color: transparent;
   position: relative;
