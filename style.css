@@ -95,7 +95,7 @@ img {vertical-align: middle;}
   max-width: 1000px;
   position: relative;
   margin: auto;
-  top: 500%;
+  z-index: 10;
 }
 
 /* Hide the images by default */
