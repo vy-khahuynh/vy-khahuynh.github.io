@@ -6,7 +6,7 @@
 body {
   min-height: 100vh;
   height: 1px;
-	background: linear-gradient(90deg, #0a122f, #010510, #120217, #000000);
+	background: linear-gradient(90deg, #0a122f, #010510, #120217, #2b0716);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
   color: white;
@@ -24,7 +24,24 @@ body {
         background-position: 0% 50%;
     }
 }
+#singularity{
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  width: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  background-color: black;
+  opacity: 1;
+  z-index: 1;
+}
+/* #event-horizon{
 
+}
+#accretion-disc{
+  
+} */
 #sky{
   background-color: transparent;
   position: relative;
