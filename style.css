@@ -27,19 +27,41 @@ body {
 #singularity{
   position: absolute;
   aspect-ratio: 1 / 1;
-  width: 40%;
+  width:100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   border-radius: 50%;
-  background-color: black;
-  opacity: 1;
+  background: radial-gradient(circle, black 0%, 60%, white 70%);
+  box-shadow: 0 0 10px 20px white;
+}
+#event-horizon{
+  position: absolute;
+  width: 30%;
+  aspect-ratio: 1 / 1;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  box-shadow: 0 0 15px 30px rgb(249, 232, 170);
   z-index: 1;
 }
-/* #event-horizon{
-
+#aura{
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  width:30%;
+  top: 50%;
+  left: 50%;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  opacity: 0.5;
+  box-shadow: 0 0 100px 100px white;
 }
-#accretion-disc{
+/* #accretion-disc{
   
 } */
 #sky{
