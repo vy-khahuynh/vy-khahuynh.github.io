@@ -9,16 +9,11 @@
 
 <body onload="addStars()">
 <div id="sky">
-  <!-- <div style="height: 10%; width: 100%;">
+  <!-- <div id="nav-bar">
     <ul>
       <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">About</li>
-      <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">Linkedin</li>
-      <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">Linkedin</li>
-      <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">Linkedin</li>
-      <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">Linkedin</li>
-      <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">Linkedin</li>
-      <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">Linkedin</li>
-      <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">Linkedin</li>
+      <!-- <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">Linkedin</li> -->
+      <!-- <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">Linkedin</li> -->
     </ul>
   </div> -->
 <!-- <div class="slideshow-container" style="text-align: center;">
@@ -83,6 +78,9 @@ function showSlides(n) {
 }
 
 function addStars(){
+  // var hb = document.body.scrollHeight;
+  // var hs = document.getElementById('sky').clientHeight;
+  // document.body.innerHTML = `Height of body is ${hb} and height of sky is ${hs}`;
   var cur = document.getElementById("sky");
   var classes = ["smallstar", "mediumstar", "bigstar"];
   var num = Math.floor(Math.random() * 50) + 100;
