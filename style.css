@@ -17,59 +17,66 @@ body {
         background-position: 0% 50%;
     }
 }
+
 #sky{
   background-color: transparent;
   position: relative;
   height: 100%;
   width: 100%;
+  padding-top: 5%;
 }
+.bigstar {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+}
+.mediumstar {
+width: 2.5px;
+height: 2.5px;
+border-radius: 50%;
+background: white;
+position: absolute;
+}
+.smallstar {
+width: 1px;
+height: 1px;
+border-radius: 50%;
+background: white;
+position: absolute;
+}
+@keyframes glow{
+  10%{
+    transform: scale(200%);
+  }
+  20%{
+    transform: scale(100%);
+  }
+}
+
 #nav-bar{
-  border-style: dashed;
+  position: fixed;
   height: auto;
+  width: 100%;
+  position: sticky;
 }
 ul{
-  border-style: solid;
+  top: 0;
   list-style-type: none;
-  width: auto;
+  width: 100%;
   height: auto;
-  /* padding: 0;
-  margin: auto; */
+  text-align: center;
+  margin: auto;
+  padding: 0;
 }
 li{
-  /* float: left;
-  display: block; */
+  display: inline;
+  padding-inline: 10%;
 }
 .nav-links{
   color: white;
-}
-.bigstar {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: white;
-    position: absolute;
-    /* animation: mymove 20s infinite; */
-}
-.mediumstar {
-  width: 2.5px;
-  height: 2.5px;
-  border-radius: 50%;
-  background: white;
-  position: absolute;
-  /* animation: mymove 20s infinite; */
-}
-.smallstar {
-  width: 1px;
-  height: 1px;
-  border-radius: 50%;
-  background: white;
-  position: absolute;
-  /* animation: mymove 20s infinite; */
-}
-@keyframes mymove {
-    0% {left: 0%;}
-    50% {left: 100%;}
-    100% {left: 0%;}
+  text-decoration: none;
 }
 
 * {box-sizing: border-box}
@@ -166,14 +173,5 @@ img {vertical-align: middle;}
   to {
     opacity: 1;
     transform: translate(0,0);
-  }
-}
-
-@keyframes glow{
-  10%{
-    transform: scale(200%);
-  }
-  20%{
-    transform: scale(100%);
   }
 }
