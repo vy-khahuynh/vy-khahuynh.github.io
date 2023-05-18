@@ -152,7 +152,6 @@ img{
 /* The dots/bullets/indicators */
 .dot {
   position: relative;
-  top: 60%;
   cursor: pointer;
   height: 5px;
   width: 5px;
