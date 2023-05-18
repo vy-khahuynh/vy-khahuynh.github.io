@@ -92,7 +92,7 @@ li{
   max-width: 100%;
   position: relative;
   margin: auto;
-  top: 30%;
+  top: 20%;
   z-index: 10;
 }
 
@@ -103,7 +103,7 @@ li{
 
 img{
   vertical-align: middle;
-  width:400px;
+  width:50vh;
 }
 
 /* Next & previous buttons */
