@@ -1,7 +1,4 @@
 * {box-sizing: border-box}
-/* body {font-family: Verdana, sans-serif; margin:0} */
-/* .mySlides {display: none} */
-/* img {vertical-align: middle;} */
 
 body {
   min-height: 100vh;
@@ -24,46 +21,46 @@ body {
         background-position: 0% 50%;
     }
 }
-#singularity{
+.blackhole{
   position: absolute;
   aspect-ratio: 1 / 1;
-  width:100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   border-radius: 50%;
+}
+#singularity{
+  width:100%;
   background: radial-gradient(circle, black 0%, 60%, white 70%);
   box-shadow: 0 0 10px 20px white;
 }
 #event-horizon{
-  position: absolute;
   width: 30%;
-  aspect-ratio: 1 / 1;
-  top: 50%;
-  left: 50%;
   background-color: white;
-  transform: translate(-50%,-50%);
-  border-radius: 50%;
   box-shadow: 0 0 15px 30px rgb(249, 232, 170);
   z-index: 1;
 }
 #aura{
-  position: absolute;
-  aspect-ratio: 1 / 1;
-  width:30%;
-  top: 50%;
-  left: 50%;
-  background-color: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  border-radius: 50%;
+  filter: blur(3rem);
   opacity: 0.5;
-  box-shadow: 0 0 100px 100px white;
+  width:60%;
+  background-color: white;
+  border-radius: 50%;
 }
 /* #accretion-disc{
-  
-} */
+  filter: blur(100px);
+  position: absolute;
+  width: 60%;
+  aspect-ratio: 1 / 1;
+  top: 50%;
+  left: 50%;
+  /* background: repeating-radial-gradient(black 10%, white 25%); */
+  /* background-color: aqua;
+  transform: translate(-50%,-50%);
+  opacity: 1;
+  border-radius: 50%;
+  z-index: 2; */
+/* } */
 #sky{
   background-color: transparent;
   position: relative;
