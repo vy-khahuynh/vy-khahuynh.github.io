@@ -65,18 +65,15 @@ body {
 }
 #front-disc{
   width: 23rem;
-  height: 2rem;
-  /* border: solid 0.4rem white; */
-  box-shadow: none;
-  /* background: repeating-radial-gradient(white, rgb(255, 247, 222), white, black) ; */
+  height: 1rem;
+  border: none;
+  padding: none;
   box-shadow: 0 0 1rem 0.5rem rgb(255, 255, 255);
-  background-size: 50% 50%;
-  /* animation: moving 1s infinite linear; */
 }
-/* @keyframes moving {
-  0%{background-position: 0% 0%;}
-  100%{background-position: 00% 0%;}
-} */
+@keyframes moving {
+  from{background-position: 0 -300%;}
+  to{background-position: 100% 300%;}
+}
 #sky{
   background-color: transparent;
   position: relative;
