@@ -2,7 +2,7 @@
 body {
   min-height: 100vh;
   height: 1px;
-	background: linear-gradient(90deg, #0a122f, #010510, #120217, #000000);
+	background: linear-gradient(90deg, #030611, #010510, #120217, #000000);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
   color: white;
@@ -32,6 +32,7 @@ body {
   width:14rem;
   background: radial-gradient(circle, black 0%, 60%, white 70%);
   box-shadow: 0 0 10px 20px white;
+  animation: moving 5s linear infinite;
 }
 #photon-ring{
   width:85%;
@@ -49,7 +50,8 @@ body {
   filter: blur(2rem);
   opacity: 0.5;
   width: 25rem;
-  background: radial-gradient(circle, transparent 0% 30%, white 30%);
+  background-color: white;
+  animation: moving 10s ease infinite;
 }
 .accretion-disc{
   position: absolute;
@@ -70,10 +72,27 @@ body {
   padding: none;
   box-shadow: 0 0 1rem 0.5rem rgb(255, 255, 255);
 }
-@keyframes moving {
-  from{background-position: 0 -300%;}
-  to{background-position: 100% 300%;}
+@keyframes moving{
+  0%{
+    transform: translate(-50%,-50%) scale(100%);
+  }
+  20%{
+    transform: translate(-50%,-50%) scale(102%);
+  }
+  55%{
+    transform: translate(-50%,-50%) scale(101%);
+  }
+  70%{
+    transform: translate(-50%,-50%) scale(98%);
+  }
+  90%{
+    transform: translate(-50%,-50%) scale(103%);
+  }
+  100%{
+    transform: translate(-50%,-50%) scale(100%);
+  }
 }
+
 #sky{
   background-color: transparent;
   position: relative;
