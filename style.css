@@ -30,37 +30,43 @@ body {
   border-radius: 50%;
 }
 #singularity{
-  width:100%;
+  width:14rem;
   background: radial-gradient(circle, black 0%, 60%, white 70%);
   box-shadow: 0 0 10px 20px white;
 }
+#photon-ring{
+  width:85%;
+  background: transparent;
+  border: solid 0.1rem white;
+  box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem white;
+}
 #event-horizon{
-  width: 30%;
+  width: 14rem;
   background-color: white;
-  box-shadow: 0 0 15px 30px rgb(249, 232, 170);
+  box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
   z-index: 1;
 }
 #aura{
-  filter: blur(3rem);
+  filter: blur(2rem);
   opacity: 0.5;
-  width:60%;
-  background-color: white;
-  border-radius: 50%;
+  width: 25rem;
+  background: radial-gradient(circle, transparent 0% 30%, white 30%);
 }
-/* #accretion-disc{
-  filter: blur(100px);
+.accretion-disc{
   position: absolute;
-  width: 60%;
-  aspect-ratio: 1 / 1;
   top: 50%;
   left: 50%;
-  /* background: repeating-radial-gradient(black 10%, white 25%); */
-  /* background-color: aqua;
+  border: solid 0.5rem white;
   transform: translate(-50%,-50%);
-  opacity: 1;
   border-radius: 50%;
-  z-index: 2; */
-/* } */
+  width: 35rem;
+  height: auto;
+  background-color: white;
+  box-shadow: 0 0 1rem 1rem rgb(249, 232, 170);
+}
+#front-disc{
+  box-shadow: none;
+}
 #sky{
   background-color: transparent;
   position: relative;
