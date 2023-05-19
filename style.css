@@ -1,9 +1,8 @@
 * {box-sizing: border-box}
-
 body {
   min-height: 100vh;
   height: 1px;
-	background: linear-gradient(90deg, #0a122f, #010510, #120217, #2b0716);
+	background: linear-gradient(90deg, #0a122f, #010510, #120217, #000000);
 	background-size: 400% 400%;
 	animation: gradient 20s ease infinite;
   color: white;
@@ -41,10 +40,10 @@ body {
   box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem white;
 }
 #event-horizon{
-  width: 14rem;
-  background-color: white;
-  box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
-  z-index: 1;
+  width: 0;
+  height: 0;
+  border: 7.5rem solid white;
+  box-shadow: 0 0 1rem 1.5rem rgb(249, 232, 170);
 }
 #aura{
   filter: blur(2rem);
@@ -62,11 +61,22 @@ body {
   width: 35rem;
   height: auto;
   background-color: white;
-  box-shadow: 0 0 1rem 1rem rgb(249, 232, 170);
+  box-shadow: 0 0 1rem 1rem rgb(255, 247, 222);
 }
 #front-disc{
+  width: 23rem;
+  height: 2rem;
+  /* border: solid 0.4rem white; */
   box-shadow: none;
+  /* background: repeating-radial-gradient(white, rgb(255, 247, 222), white, black) ; */
+  box-shadow: 0 0 1rem 0.5rem rgb(255, 255, 255);
+  background-size: 50% 50%;
+  /* animation: moving 1s infinite linear; */
 }
+/* @keyframes moving {
+  0%{background-position: 0% 0%;}
+  100%{background-position: 00% 0%;}
+} */
 #sky{
   background-color: transparent;
   position: relative;
@@ -75,26 +85,23 @@ body {
   padding-top: 5%;
   overflow: hidden;
 }
-.bigstar {
-  width: 5px;
-  height: 5px;
+.star{
   border-radius: 50%;
   background: white;
   position: absolute;
+  z-index: -1;
 }
-.mediumstar {
+.big {
+  width: 5px;
+  height: 5px;
+}
+.medium {
 width: 2.5px;
 height: 2.5px;
-border-radius: 50%;
-background: white;
-position: absolute;
 }
-.smallstar {
+.small {
 width: 1px;
 height: 1px;
-border-radius: 50%;
-background: white;
-position: absolute;
 }
 @keyframes glow{
   10%{

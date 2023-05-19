@@ -16,14 +16,16 @@
       <li><a class = "nav-links" href="https://github.com/vy-khahuynh">GitHub</a></li>
     </ul>
   </div>
-<div class="blackhole" id="event-horizon">
-  <div class="blackhole" id="aura"></div>
-  <div class="accretion-disc"></div>
-  <div class="blackhole" id="singularity">
-    <div class="blackhole" id="photon-ring"></div>
+  <div id="blackhole">
+    <div class="blackhole" id="aura"></div>
+    <div class="blackhole" id="event-horizon">
+      <div class="accretion-disc"></div>
+      <div class="blackhole" id="singularity">
+        <div class="blackhole" id="photon-ring"></div>
+      </div>
+    </div>
+    <div class="accretion-disc" id="front-disc"></div>
   </div>
-  <div class="accretion-disc" id="front-disc"></div>
-</div>
 <!-- <svg viewBox='0 0 130 130'>
   <path d='M0,78 a65,25 0 1 1 102.5,45' stroke='black' stroke-width='2' fill='transparent' transform='rotate(45,100,100)' />
   <path d='M0,78 a65,25 0 1 0 102.5,45' stroke='black' stroke-width='2' fill='transparent' transform='rotate(45,100,100)' />
@@ -91,10 +93,11 @@ function showSlides(n) {
 
 function addStars(){
   var cur = document.getElementById("sky");
-  var classes = ["smallstar", "mediumstar", "bigstar"];
-  var num = Math.floor(Math.random() * 50) + 100;
+  var classes = ["small", "medium", "big"];
+  var num = Math.floor(Math.random() * 75) + 100;
   for(let i = 0 ; i < num ; i++){
     var star = document.createElement('div');
+    star.classList.add("star");
     star.classList.add(classes[Math.floor(Math.random() * classes.length)]);
     star.style.top = Math.floor(Math.random() * screen.height)+"px";
     star.style.left = Math.floor(Math.random() * screen.width)+"px";
