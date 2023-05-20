@@ -32,27 +32,82 @@ body {
   width:14rem;
   background: radial-gradient(circle, black 0%, 60%, white 70%);
   box-shadow: 0 0 10px 20px white;
-  animation: pulsing 5s linear infinite;
+  animation: pulsing-low 1s linear infinite;
+}
+@keyframes pulsing-low{
+  0%{
+    transform: translate(-50%,-50%) scale(100%);
+  }
+  20%{
+    transform: translate(-50%,-50%) scale(102%);
+    box-shadow: 0 0 15px 15px white;
+  }
+  55%{
+    transform: translate(-50%,-50%) scale(103%);
+  }
+  70%{
+    transform: translate(-50%,-50%) scale(99%);
+    box-shadow: 0 0 20px 10px white;
+  }
+  90%{
+    transform: translate(-50%,-50%) scale(101%);
+    box-shadow: 0 0 20px 15px white;
+  }
+  100%{
+    transform: translate(-50%,-50%) scale(100%);
+  }
 }
 #photon-ring{
   width:85%;
   background: transparent;
   border: solid 0.1rem white;
   box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem white;
-  animation: rotate 5s ease infinite;
+  animation: rotate 0.5s linear infinite;
 }
 #event-horizon{
   width: 0;
   height: 0;
-  border: 7.5rem solid white;
-  box-shadow: 0 0 1rem 1.5rem rgb(249, 232, 170);
+  border: 7rem solid white;
+  box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
+  animation: pulsing-bright 3s linear infinite alternate;
+}
+@keyframes pulsing-bright {
+  0%{
+    transform: translate(-50%,-50%) scale(100%);
+    box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
+  }  
+  17%{
+    box-shadow: 0 0 1.5rem 2.5rem rgb(255, 242, 195);
+  }
+  20%{
+    transform: translate(-50%,-50%) scale(98%);
+  }
+  55%{
+    transform: translate(-50%,-50%) scale(101%);
+  }  
+  67%{
+    box-shadow: 0 0 2rem 2rem rgb(249, 232, 170);
+  }
+  70%{
+    transform: translate(-50%,-50%) scale(101%);
+  } 
+  83%{
+    box-shadow: 0 0 1.5rem 2rem rgb(255, 246, 185);
+  }
+  90%{
+    transform: translate(-50%,-50%) scale(99%);
+  }
+  100%{
+    transform: translate(-50%,-50%) scale(100%);
+    box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
+  }
 }
 #aura{
   filter: blur(2rem);
   opacity: 0.5;
   width: 25rem;
   background-color: white;
-  animation: pulsing 10s ease infinite;
+  animation: pulsing 7s ease infinite;
 }
 .accretion-disc{
   position: absolute;
@@ -65,6 +120,7 @@ body {
   height: auto;
   background-color: white;
   box-shadow: 0 0 1rem 1rem rgb(255, 247, 222);
+  animation: vibrate 0.1s linear infinite;
 }
 #front-disc{
   width: 23rem;
@@ -72,19 +128,61 @@ body {
   border: none;
   padding: none;
   box-shadow: 0 0 1rem 0.5rem rgb(255, 255, 255);
+  background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
+  animation: stripe 0.3s ease infinite;
+}
+@keyframes stripe {
+  0%{
+    background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
+  }
+  12.5%{
+    background: repeating-linear-gradient(white 5%, transparent 30%, white 55%);
+  }
+  25%{
+    background: repeating-linear-gradient(white 0%, transparent 30%, white 60%);
+  }
+  37.5%{
+    background: repeating-linear-gradient(white 5%, transparent 30%, white 55%);
+  }
+  50%{
+    background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
+  }
+  62.5%{
+    background: repeating-linear-gradient(white 15%, transparent 30%, white 45%);
+  }
+  75%{
+    background: repeating-linear-gradient(white 20%, transparent 30%, white 40%);
+  }
+  87.5%{
+    background: repeating-linear-gradient(white 15%, transparent 30%, white 45%);
+  }
+  100%{
+    background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
+  }
+}
+@keyframes vibrate{
+  25%{
+    transform: translate(-50.25%, -49.75%);
+  }
+  50%{
+    transform: translate(-50%, -50%);
+  }
+  75%{
+    transform: translate(-49.75%, -50.25%);
+  }
 }
 @keyframes pulsing{
   0%{
     transform: translate(-50%,-50%) scale(100%);
   }
   20%{
-    transform: translate(-50%,-50%) scale(102%);
+    transform: translate(-50%,-50%) scale(103%);
   }
   55%{
-    transform: translate(-50%,-50%) scale(101%);
+    transform: translate(-50%,-50%) scale(105%);
   }
   70%{
-    transform: translate(-50%,-50%) scale(98%);
+    transform: translate(-50%,-50%) scale(101%);
   }
   90%{
     transform: translate(-50%,-50%) scale(103%);
