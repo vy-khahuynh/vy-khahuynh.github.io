@@ -24,8 +24,8 @@ body {
   height: 5rem;
   width: 5rem;
   position: relative;
-  left: -20%;
   top: 40%;
+  translate: -200% -30%;
   perspective: 1000px;
   animation: swoosh-tieY 10s ease-in-out infinite;
 }
@@ -116,9 +116,10 @@ body {
 
 .millenium_falcon#container{
   width: 5rem;
+  height: 5rem;
   position: relative;
-  left: -20%;
-  top: 30%;
+  translate: -100% -10%;
+  top: 25%;
   animation: swoosh 10s ease-in infinite;
 }
 @keyframes swoosh {
@@ -126,13 +127,12 @@ body {
     transform: translate(0, 0) scale(100%);
   }
   95%, 100%{
-    transform: translate(80vw, -30vh) scale(0%);
+    transform: translate(80vh, -30vw) scale(0%);
   }
 }
 .millenium_falcon img{
   position: absolute;
   width: 100%;
-  left: 5rem;
 }
 .millenium_falcon#blue_trail{
   position: absolute;
@@ -140,7 +140,7 @@ body {
   width: 2rem;
   height: 8rem;
   top: -0.8rem;
-  left: 3rem;
+  left: -2rem;
   transform: rotate(55deg) skew(-10deg);
   border-radius: 50% 50% 0% 0%;
   animation: hyperspace 10s ease infinite;
