@@ -24,7 +24,7 @@ body {
   height: 5rem;
   width: 5rem;
   position: relative;
-  top: 40%;
+  top: 60%;
   translate: -200% -30%;
   perspective: 1000px;
   animation: swoosh-tieY 10s ease-in-out infinite;
@@ -60,57 +60,85 @@ body {
 }
 .tie-fighter#laser span:nth-child(1){
   animation: laser1 10s linear infinite;
+  -webkit-animation: laser1 10s lienar infinite;
 }
 .tie-fighter#laser span:nth-child(2){
   animation: laser2 10s linear infinite;
+  -webkit-animation: laser2 10s lienar infinite;
 }
 .tie-fighter#laser span:nth-child(3){
   animation: laser3 10s linear infinite;
+  -webkit-animation: laser3 10s lienar infinite;
 }
 @keyframes swoosh-tieY {
   75%{
     transform: translateY(0);
+    -webkit-transform: translateY(0);
   }
   100%{
     transform: translateY(-20vh);
+    -webkit-transform: translateY(-20vh);
   }
 }
 @keyframes swoosh-tieX {
   75%{
     transform: translateX(0);
+    -webkit-transform: translateX(0);
+    
   }
   90%{
-    transform: translateX(40vh) scale(50%);
+    transform: translateX(30vw) scale(50%);
+    -webkit-transform: translateX(30vw) scale(50%);
   }
   91%{
-    transform: translateX(39vh) scale(50%) rotate3d(0,1,0,180deg);
+    transform: translateX(29vw) scale(50%) rotate3d(0,1,0,180deg);
+    -webkit-transform: translateX(29vw) scale(50%) rotate3d(0,1,0,180deg);
   }
   100%{
     transform: translateX(0) scale(50%) rotate3d(0,1,0,180deg);
+    -webkit-transform: translateX(0) scale(50%) rotate3d(0,1,0,180deg);
   }
 }
 @keyframes laser1 {
   82%{
     transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
+    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
   }
-  86%, 100% {
+  86% {
     transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+    -webkit-transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+  }
+  87%, 100% {
+    transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
+    -webkit-transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
   }
 }
 @keyframes laser2 {
   85%{
     transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
+    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
   }
-  89%, 100% {
+  89% {
     transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+    -webkit-transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+  }
+  90%, 100% {
+    transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
+    -webkit-transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
   }
 }
 @keyframes laser3 {
   86%{
     transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
+    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
   }
-  90%, 100% {
+  90%{
     transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+    -webkit-transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+  }
+  91%, 100% {
+    transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
+    -webkit-transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
   }
 }
 
@@ -118,16 +146,23 @@ body {
   width: 5rem;
   height: 5rem;
   position: relative;
-  /* translate: -100% -10%; */
-  /* top: 25%; */
+  translate: -100% -30%;
+  top: 55%;
   animation: swoosh 10s ease-in infinite;
+  -webkit-animation: swoosh 10s ease-in infinite;
 }
 @keyframes swoosh {
-  72.5%{
-    transform: translate(0%, 0%) scale(100%);
+  70%{
+    -webkit-transform: translate(0, 0) scale(100%);
+    transform: translate(0, 0) scale(100%);
   }
-  95%, 100%{
-    transform: translate(80vh, -30vw) scale(0%);
+  85%{
+    -webkit-transform: translate(35vw, -30vh) scale(50%);
+    transform: translate(35vw, -30vh) scale(50%);
+  }
+  90%, 100%{
+    -webkit-transform: translate(65vw, -50vh) scale(0%);
+    transform: translate(65vw, -50vh) scale(0%);
   }
 }
 .millenium_falcon img{
@@ -136,7 +171,7 @@ body {
 }
 .millenium_falcon#blue_trail{
   position: absolute;
-  background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 50%);
+  background: linear-gradient(-190deg,white 20%, rgb(115, 236, 255) 30%, transparent 40%);
   width: 2rem;
   height: 8rem;
   top: -0.8rem;
@@ -146,19 +181,19 @@ body {
   animation: hyperspace 10s ease infinite;
 }
 @keyframes hyperspace {
-  85.5%{
+  85%{
     background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 50%);
   }
-  86%{
+  85.5%{
     background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 60%);
   }
-  87.5%{
+  86%{
     background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 70%);
   }
-  88%{
+  86.5%{
     background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 80%);
   }
-  88.5%, 100%{
+  87%, 100%{
     background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 90%);
   }
 }
