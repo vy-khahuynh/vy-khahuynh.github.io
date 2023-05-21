@@ -20,6 +20,154 @@ body {
         background-position: 0% 50%;
     }
 }
+.tie-fighter#containerY{
+  height: 5rem;
+  width: 5rem;
+  position: relative;
+  left: -20vw;
+  top: 40vh;
+  perspective: 1000px;
+  animation: swoosh-tieY 10s ease-in-out infinite;
+}
+.tie-fighter#containerX{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: -5rem;
+  perspective: 1000px;
+  animation: swoosh-tieX 10s ease-in-out infinite;
+}
+.tie-fighter img{
+  position: absolute;
+  width: 100%;
+}
+.tie-fighter#laser{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  perspective: 1000px;
+}
+.tie-fighter#laser * {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 0 2px 1px rgb(17, 255, 0);
+  top: 1.4rem;
+  left: 1.5rem;
+  width: 20px;
+  height: 1px;
+  opacity: 1;
+  transform: rotateY(50deg) rotate(-15deg);
+}
+.tie-fighter#laser span:nth-child(1){
+  animation: laser1 10s linear infinite;
+}
+.tie-fighter#laser span:nth-child(2){
+  animation: laser2 10s linear infinite;
+}
+.tie-fighter#laser span:nth-child(3){
+  animation: laser3 10s linear infinite;
+}
+@keyframes swoosh-tieY {
+  75%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-20vh);
+  }
+}
+@keyframes swoosh-tieX {
+  75%{
+    transform: translateX(0);
+  }
+  90%{
+    transform: translateX(40vh) scale(50%);
+  }
+  91%{
+    transform: translateX(39vh) scale(50%) rotate3d(0,1,0,180deg);
+  }
+  100%{
+    transform: translateX(0) scale(50%) rotate3d(0,1,0,180deg);
+  }
+}
+@keyframes laser1 {
+  84%{
+    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
+  }
+  88%, 100% {
+    transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+  }
+}
+@keyframes laser2 {
+  87%{
+    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
+  }
+  91%, 100% {
+    transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+  }
+}
+@keyframes laser3 {
+  88%{
+    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
+  }
+  92%, 100% {
+    transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+  }
+}
+
+.millenium_falcon#container{
+  width: 5rem;
+  position: relative;
+  left: -20vw;
+  top: 30vh;
+  animation: swoosh 10s ease-in infinite;
+}
+@keyframes swoosh {
+  72.5%{
+    transform: translate(0, 0) scale(100%);
+  }
+  95%, 100%{
+    transform: translate(80vw, -30vh) scale(0%);
+  }
+}
+.millenium_falcon img{
+  position: absolute;
+  width: 100%;
+  left: 5rem;
+}
+.millenium_falcon#blue_trail{
+  position: absolute;
+  background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 50%);
+  width: 2rem;
+  height: 8rem;
+  top: -0.8rem;
+  left: 3rem;
+  transform: rotate(55deg) skew(-10deg);
+  border-radius: 50% 50% 0% 0%;
+  animation: hyperspace 10s ease infinite;
+}
+@keyframes hyperspace {
+  85.5%{
+    background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 50%);
+  }
+  86%{
+    background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 60%);
+  }
+  87.5%{
+    background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 70%);
+  }
+  88%{
+    background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 80%);
+  }
+  88.5%, 100%{
+    background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 90%);
+  }
+}
+
+#space{
+  width: 100%; 
+  height: 100%; 
+  position: relative;
+}
 .blackhole{
   position: absolute;
   aspect-ratio: 1 / 1;
@@ -108,7 +256,7 @@ body {
   width: 25rem;
   background: repeating-conic-gradient(white, transparent 11% 15%, white 18%);
   background-size: 50% 50%;
-  animation: aura-pulsing 3s ease infinite, pulsing 3s ease infinite;
+  animation: aura-pulsing 20s ease infinite;
 }
 .accretion-disc{
   position: absolute;
@@ -197,16 +345,16 @@ body {
     background-position: 0px 0px;
   }
   20%{
-    background-position: -2.5px 3.6px;
+    background-position: -20.5% 3.6%;
   }
   55%{
-    background-position: 4.7px -5.9px;
+    background-position: -40.7% -50.9%;
   }
   70%{
-    background-position: -5.7px 7.5px;
+    background-position: -50.7% -70.5%;
   }
   90%{
-    background-position: 2.3px -4.5px;
+    background-position: 20.3% -40.5%;
   }
   100%{
     background-position: 0px 0px;
