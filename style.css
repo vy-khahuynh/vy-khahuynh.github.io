@@ -152,17 +152,17 @@ body {
   -webkit-animation: swoosh 10s ease-in infinite;
 }
 @keyframes swoosh {
-  75%{
+  70%{
     -webkit-transform: translate(0, 0) scale(100%);
     transform: translate(0, 0) scale(100%);
   }
   85%{
-    -webkit-transform: translate(35vw, -30vh) scale(50%);
-    transform: translate(35vw, -30vh) scale(50%);
+    -webkit-transform: translate(25vw, -20vh) scale(50%);
+    transform: translate(25vw, -20vh) scale(50%);
   }
   90%, 100%{
-    -webkit-transform: translate(65vw, -50vh) scale(0%);
-    transform: translate(65vw, -50vh) scale(0%);
+    -webkit-transform: translate(65vw, -45vh) scale(0%);
+    transform: translate(65vw, -45vh) scale(0%);
   }
 }
 .millenium_falcon img{
