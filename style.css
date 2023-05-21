@@ -118,13 +118,13 @@ body {
   width: 5rem;
   height: 5rem;
   position: relative;
-  translate: -100% -10%;
-  top: 25%;
+  /* translate: -100% -10%; */
+  /* top: 25%; */
   animation: swoosh 10s ease-in infinite;
 }
 @keyframes swoosh {
   72.5%{
-    transform: translate(0, 0) scale(100%);
+    transform: translate(0%, 0%) scale(100%);
   }
   95%, 100%{
     transform: translate(80vh, -30vw) scale(0%);
