@@ -24,8 +24,8 @@ body {
   height: 5rem;
   width: 5rem;
   position: relative;
-  left: -20vw;
-  top: 40vh;
+  left: -20%;
+  top: 40%;
   perspective: 1000px;
   animation: swoosh-tieY 10s ease-in-out infinite;
 }
@@ -90,26 +90,26 @@ body {
   }
 }
 @keyframes laser1 {
-  84%{
+  82%{
     transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
   }
-  88%, 100% {
+  86%, 100% {
     transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
   }
 }
 @keyframes laser2 {
-  87%{
+  85%{
     transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
   }
-  91%, 100% {
+  89%, 100% {
     transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
   }
 }
 @keyframes laser3 {
-  88%{
+  86%{
     transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
   }
-  92%, 100% {
+  90%, 100% {
     transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
   }
 }
@@ -117,8 +117,8 @@ body {
 .millenium_falcon#container{
   width: 5rem;
   position: relative;
-  left: -20vw;
-  top: 30vh;
+  left: -20%;
+  top: 30%;
   animation: swoosh 10s ease-in infinite;
 }
 @keyframes swoosh {
