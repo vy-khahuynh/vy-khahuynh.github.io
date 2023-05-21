@@ -87,12 +87,12 @@ body {
     
   }
   90%{
-    transform: translateX(30vw) scale(50%);
-    -webkit-transform: translateX(30vw) scale(50%);
+    transform: translateX(35vw) scale(50%);
+    -webkit-transform: translateX(35vw) scale(50%);
   }
   91%{
-    transform: translateX(29vw) scale(50%) rotate3d(0,1,0,180deg);
-    -webkit-transform: translateX(29vw) scale(50%) rotate3d(0,1,0,180deg);
+    transform: translateX(34vw) scale(50%) rotate3d(0,1,0,180deg);
+    -webkit-transform: translateX(34vw) scale(50%) rotate3d(0,1,0,180deg);
   }
   100%{
     transform: translateX(0) scale(50%) rotate3d(0,1,0,180deg);
@@ -152,7 +152,7 @@ body {
   -webkit-animation: swoosh 10s ease-in infinite;
 }
 @keyframes swoosh {
-  70%{
+  75%{
     -webkit-transform: translate(0, 0) scale(100%);
     transform: translate(0, 0) scale(100%);
   }
