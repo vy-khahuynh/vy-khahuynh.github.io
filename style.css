@@ -1,14 +1,25 @@
-* {box-sizing: border-box}
+* {box-sizing: border-box;}
+html{
+  height: 100%;
+}
 body {
   min-height: 100vh;
-  height: 1px;
-	background: linear-gradient(90deg, #030611, #010510, #120217, #000000);
-	background-size: 400% 400%;
-	animation: gradient 20s ease infinite;
+  height: 100vh;
+  overflow: hidden;
+  
+  margin: 0;
+  padding: 0;
+	
   color: white;
   font-size: 1.5em;
   font-family: 'Courier New', monospace;
+
+  background: linear-gradient(90deg, #030611, #010510, #120217, #000000);
+	background-size: 500% 500%;
+	
+  animation: gradient 20s ease infinite;
 }
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -20,55 +31,120 @@ body {
         background-position: 0% 50%;
     }
 }
-.tie-fighter#containerY{
-  height: 5rem;
-  width: 5rem;
+
+#background{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-style: double;
+}
+
+nav{
+  height: auto;
+  width: 100%;
+  position: sticky;
+  padding: 5%;
+  top: 0;
+}
+
+ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  list-style-type: none;
+
+  width: 100%;
+  height: auto;
+
+  padding-inline: 0;
+  margin-block: 0;
+}
+
+li{
+  margin: auto;
+}
+
+.nav-links{
+  color: white;
+  text-decoration: none;
+}
+
+#blackhole-container{
   position: relative;
-  top: 60%;
-  translate: -200% -30%;
-  perspective: 1000px;
+  height: 50%;
+  width: 50%;
+  min-height: 284px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.star-wars{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+}
+
+.tie-fighter#containerY{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8%;
+  min-height: 5rem;
+  max-height: 5rem;
+  position: relative;
+  aspect-ratio: 1;
+  top: 50%;
   animation: swoosh-tieY 10s ease-in-out infinite;
 }
 .tie-fighter#containerX{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
-  position: absolute;
-  left: -5rem;
-  perspective: 1000px;
+  translate: -8rem 0;
   animation: swoosh-tieX 10s ease-in-out infinite;
 }
 .tie-fighter img{
-  position: absolute;
-  width: 100%;
+  margin: auto;
+  height: 100%;
 }
 .tie-fighter#laser{
   position: absolute;
   height: 100%;
   width: 100%;
-  perspective: 1000px;
+  z-index: -1;
 }
 .tie-fighter#laser * {
   position: absolute;
   background-color: white;
   box-shadow: 0 0 2px 1px rgb(17, 255, 0);
-  top: 1.4rem;
-  left: 1.5rem;
-  width: 20px;
-  height: 1px;
-  opacity: 1;
+  top: 50%;
+  left: 50%;
+  width: 25%;
+  height: 1%;
   transform: rotateY(50deg) rotate(-15deg);
 }
 .tie-fighter#laser span:nth-child(1){
   animation: laser1 10s linear infinite;
-  -webkit-animation: laser1 10s lienar infinite;
+  -webkit-animation: laser1 10s linear infinite;
 }
 .tie-fighter#laser span:nth-child(2){
   animation: laser2 10s linear infinite;
-  -webkit-animation: laser2 10s lienar infinite;
+  -webkit-animation: laser2 10s linear infinite;
 }
 .tie-fighter#laser span:nth-child(3){
   animation: laser3 10s linear infinite;
-  -webkit-animation: laser3 10s lienar infinite;
+  -webkit-animation: laser3 10s linear infinite;
 }
 @keyframes swoosh-tieY {
   75%{
@@ -87,12 +163,12 @@ body {
     
   }
   90%{
-    transform: translateX(35vw) scale(50%);
-    -webkit-transform: translateX(35vw) scale(50%);
+    transform: translateX(25vw) scale(50%);
+    -webkit-transform: translateX(25vw) scale(50%);
   }
   91%{
-    transform: translateX(34vw) scale(50%) rotate3d(0,1,0,180deg);
-    -webkit-transform: translateX(34vw) scale(50%) rotate3d(0,1,0,180deg);
+    transform: translateX(24vw) scale(50%) rotate3d(0,1,0,180deg);
+    -webkit-transform: translateX(24vw) scale(50%) rotate3d(0,1,0,180deg);
   }
   100%{
     transform: translateX(0) scale(50%) rotate3d(0,1,0,180deg);
@@ -101,216 +177,288 @@ body {
 }
 @keyframes laser1 {
   82%{
-    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
-    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
+    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
   }
-  86% {
-    transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
-    -webkit-transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+  84% {
+    transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
   }
   87%, 100% {
-    transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
-    -webkit-transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
+    transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
   }
 }
 @keyframes laser2 {
   85%{
-    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
-    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
+    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
   }
   89% {
-    transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
-    -webkit-transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+    transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
   }
   90%, 100% {
-    transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
-    -webkit-transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
+    transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
   }
 }
 @keyframes laser3 {
   86%{
-    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
-    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-15deg);
+    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
   }
   90%{
-    transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
-    -webkit-transform: translate(150px, -130px) scale(10%) rotateY(50deg) rotate(-15deg);
+    transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
   }
   91%, 100% {
-    transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
-    -webkit-transform: translate(150px, -130px) scale(0%) rotateY(50deg) rotate(-15deg);
+    transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
   }
 }
-
-.millenium_falcon#container{
-  width: 5rem;
-  height: 5rem;
+.millenium_falcon#containerY{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8%;
+  min-height: 5rem;
+  max-height: 5rem;
+  aspect-ratio: 1;
   position: relative;
-  translate: -100% -30%;
-  top: 55%;
-  animation: swoosh 10s ease-in infinite;
-  -webkit-animation: swoosh 10s ease-in infinite;
+  top: 50%;
+  animation: swooshY 10s ease-in-out infinite;
+  -webkit-animation: swooshY 10s ease-in-out infinite;
 }
-@keyframes swoosh {
+.millenium_falcon#containerX{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  translate: -8rem 0;
+  animation: swooshX 10s ease-in-out infinite;
+  -webkit-animation: swooshX 10s ease-in-out infinite;
+}
+@keyframes swooshX {
   70%{
-    -webkit-transform: translate(0, 0) scale(100%);
-    transform: translate(0, 0) scale(100%);
+    -webkit-transform: translateX(0%) scale(100%);
+    transform: translateX(0%) scale(100%);
   }
   85%{
-    -webkit-transform: translate(25vw, -20vh) scale(50%);
-    transform: translate(25vw, -20vh) scale(50%);
+    -webkit-transform: translateX(30vw) scale(60%);
+    transform: translateX(30vw) scale(60%);
   }
   90%, 100%{
-    -webkit-transform: translate(65vw, -45vh) scale(0%);
-    transform: translate(65vw, -45vh) scale(0%);
+    -webkit-transform: translateX(40vw) scale(0%);
+    transform: translateX(40vw) scale(0%);
+  }
+}
+@keyframes swooshY {
+  70%{
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+  }
+  85%{
+    transform: translateY(-7vh);
+    -webkit-transform: translateY(-7vh);
+  }
+  90%, 100%{
+    transform: translateY(-12.5vh) rotate(-10deg);
+    -webkit-transform: translateY(-12.5vh) rotate(-10deg);
   }
 }
 .millenium_falcon img{
-  position: absolute;
-  width: 100%;
+  height: 100%;
+  margin: auto;
 }
+
+#plasma{
+  position: absolute;
+  background: radial-gradient(circle,white 30%, rgb(115, 236, 255));
+  border-radius: 50%;
+  height: 80%;
+  width: 90%;
+  transform: skew(20deg);
+  rotate: -15deg;
+  z-index: -1;
+  top: 25%;
+  left: -25%;
+}
+
 .millenium_falcon#blue_trail{
   position: absolute;
-  background: linear-gradient(-190deg,white 20%, rgb(115, 236, 255) 30%, transparent 40%);
-  width: 2rem;
-  height: 8rem;
-  top: -0.8rem;
-  left: -2rem;
-  transform: rotate(55deg) skew(-10deg);
-  border-radius: 50% 50% 0% 0%;
+  background: white;
+  transform: skew(-40deg);
+  rotate: 25deg;
+  opacity: 0;
+  background: linear-gradient(-165deg,white 30%, rgb(115, 236, 255) 35%, transparent 40%);
+  height: 300%;
+  width: 100%;
+  top: -40%;
+  left: -125%;
+  z-index: -1;
+  border-radius: 50% 50% 50% 50%;
   animation: hyperspace 10s ease infinite;
 }
 @keyframes hyperspace {
   85%{
-    background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 50%);
+    opacity: 1;
+    background: linear-gradient(-165deg,white 30%, rgb(115, 236, 255) 35%, transparent 40%);
   }
   85.5%{
-    background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 60%);
+    background: linear-gradient(-165deg,white 35%, rgb(115, 236, 255) 50%, transparent 55%);
   }
   86%{
-    background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 70%);
+    background: linear-gradient(-165deg,white 40%, rgb(115, 236, 255) 60%, transparent 70%);
   }
   86.5%{
-    background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 80%);
+    background: linear-gradient(-165deg,white 45%, rgb(115, 236, 255) 70%, transparent 85%);
   }
   87%, 100%{
-    background: linear-gradient(-190deg,white 30%, rgb(115, 236, 255) 40%, transparent 90%);
+    background: linear-gradient(-165deg,white 50%, rgb(115, 236, 255) 80%, transparent 90%);
   }
 }
 
-#space{
-  width: 100%; 
-  height: 100%; 
-  position: relative;
-}
 .blackhole{
-  position: absolute;
   aspect-ratio: 1 / 1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
   border-radius: 50%;
 }
 #singularity{
-  width:14rem;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height:100%;
+  width:100%;
+  margin: auto;
   background: radial-gradient(circle, black 0%, 60%, white 70%);
   box-shadow: 0 0 10px 20px white;
   animation: pulsing-low 0.5s linear infinite;
+  -webkit-animation: pulsing-low 0.5s linear infinite;
 }
 @keyframes pulsing-low{
   0%{
-    transform: translate(-50%,-50%) scale(100%);
+    transform: scale(100%);
+    -webkit-transform: scale(100%);
   }
   20%{
-    transform: translate(-50%,-50%) scale(102%);
+    transform: scale(102%);
+    -webkit-transform: scale(102%);
     box-shadow: 0 0 15px 15px white;
   }
   55%{
-    transform: translate(-50%,-50%) scale(103%);
+    transform: scale(103%);
+    -webkit-transform: scale(103%);
   }
   70%{
-    transform: translate(-50%,-50%) scale(99%);
+    transform: scale(99%);
+    -webkit-transform: scale(99%);
     box-shadow: 0 0 20px 10px white;
   }
   90%{
-    transform: translate(-50%,-50%) scale(101%);
+    transform: scale(101%);
+    -webkit-transform: scale(101%);
     box-shadow: 0 0 20px 15px white;
   }
   100%{
-    transform: translate(-50%,-50%) scale(100%);
+    transform: scale(100%);
+    -webkit-transform: scale(100%);
   }
 }
 #photon-ring{
   width:85%;
+  margin: auto;
   background: transparent;
   border: solid 0.1rem white;
   box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem white;
   animation: rotate 0.2s linear infinite;
 }
 #event-horizon{
-  width: 0;
-  height: 0;
-  border: 7rem solid white;
-  box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 60%;
+  border: 20% solid white;
+  box-shadow: 0 0 1rem 4rem rgb(249, 232, 170);
   animation: pulsing-bright 3s linear infinite alternate;
+  -webkit-animation: pulsing-bright 3s linear infinite alternate;
 }
 @keyframes pulsing-bright {
   0%{
-    transform: translate(-50%,-50%) scale(100%);
+    transform: scale(100%);
+    -webkit-transform: scale(100%);
     box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
   }  
   17%{
     box-shadow: 0 0 1.5rem 2.5rem rgb(255, 242, 195);
   }
   20%{
-    transform: translate(-50%,-50%) scale(98%);
+    transform: scale(98%);
+    -webkit-transform: scale(98%);
   }
   55%{
-    transform: translate(-50%,-50%) scale(101%);
+    transform: scale(101%);
+    -webkit-transform: scale(101%);
   }  
   67%{
     box-shadow: 0 0 2rem 2rem rgb(249, 232, 170);
   }
   70%{
-    transform: translate(-50%,-50%) scale(101%);
+    transform: scale(101%);
+    -webkit-transform: scale(101%);
   } 
   83%{
     box-shadow: 0 0 1.5rem 2rem rgb(255, 246, 185);
   }
   90%{
-    transform: translate(-50%,-50%) scale(99%);
+    transform: scale(99%);
+    -webkit-transform: scale(99%);
   }
   100%{
-    transform: translate(-50%,-50%) scale(100%);
+    transform: scale(100%);
+    -webkit-transform: scale(100%);
     box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
   }
 }
 #aura{
-  filter: blur(2rem);
-  opacity: 1;
-  width: 25rem;
+  position: absolute;
+  filter: blur(2.5rem);
+  -webkit-filter: blur(2.5rem);
+  margin: auto;
+  height: 100%;
   background: repeating-conic-gradient(white, transparent 11% 15%, white 18%);
   background-size: 50% 50%;
   animation: aura-pulsing 20s ease infinite;
+  -webkit-animation: aura-pulsing 20s ease infinite;
 }
 .accretion-disc{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  border: solid 0.5rem white;
-  transform: translate(-50%,-50%);
+
+  aspect-ratio: 18;
+
+  margin: auto;
+  
   border-radius: 50%;
-  width: 35rem;
-  height: auto;
+  
+  height: 7.5%;
+  
   background-color: white;
   box-shadow: 0 0 1rem 1rem rgb(255, 247, 222);
+  
   animation: vibrate 0.1s linear infinite;
+  -webkit-animation: vibrate 0.1s linear infinite;
 }
+
 #front-disc{
-  width: 23rem;
-  height: 1rem;
-  border: none;
-  padding: none;
+  margin: auto;
+
+  height: 5%;
+
+  border: 0;
+  padding: 0;
+
   box-shadow: 0 0 1rem 0.5rem rgb(255, 255, 255);
   background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
   animation: stripe 0.5s ease infinite;
@@ -346,33 +494,10 @@ body {
 }
 @keyframes vibrate{
   25%{
-    transform: translate(-50.25%, -49.75%);
-  }
-  50%{
-    transform: translate(-50%, -50%);
+    rotate: 0.5deg;
   }
   75%{
-    transform: translate(-49.75%, -50.25%);
-  }
-}
-@keyframes pulsing{
-  0%{
-    transform: translate(-50%,-50%) scale(100%);
-  }
-  20%{
-    transform: translate(-50%,-50%) scale(103%);
-  }
-  55%{
-    transform: translate(-50%,-50%) scale(105%);
-  }
-  70%{
-    transform: translate(-50%,-50%) scale(101%);
-  }
-  90%{
-    transform: translate(-50%,-50%) scale(103%);
-  }
-  100%{
-    transform: translate(-50%,-50%) scale(100%);
+    rotate: -0.5deg;
   }
 }
 @keyframes aura-pulsing{
@@ -399,38 +524,18 @@ body {
   0%{
     box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem white;
   }
-  12%{
-    box-shadow: 0.1rem 0.2rem 0.1rem 0.1rem white;
-  }
   24%{
     box-shadow: 0rem 0.2rem 0.1rem 0.1rem white;
-  }
-  37%{
-    box-shadow: 0rem 0.1rem 0.1rem 0.1rem white;
   }
   49%{
     box-shadow: 0rem 0rem 0.1rem 0.1rem white;
   }
-  62%{
-    box-shadow: 0.1rem 0rem 0.1rem 0.1rem white;
-  }
   74%{
     box-shadow: 0.2rem 0rem 0.1rem 0.1rem white;
   }
-  87%{
-    box-shadow: 0.2rem 0.1rem 0.1rem 0.1rem white;
-  }
-  99%{
+  99%, 100%{
     box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem white;
   }
-}
-#sky{
-  background-color: transparent;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  padding-top: 5%;
-  overflow: hidden;
 }
 .star{
   border-radius: 50%;
@@ -453,128 +558,10 @@ height: 1px;
 @keyframes glow{
   10%{
     transform: scale(200%);
+    -webkit-transform: scale(200%);
   }
   20%{
     transform: scale(100%);
-  }
-}
-
-#nav-bar{
-  position: fixed;
-  height: auto;
-  width: 100%;
-  position: sticky;
-}
-ul{
-  top: 0;
-  list-style-type: none;
-  width: 100%;
-  height: auto;
-  text-align: center;
-  margin: auto;
-  padding: 0;
-}
-li{
-  display: inline;
-  padding-inline: 10%;
-}
-.nav-links{
-  color: white;
-  text-decoration: none;
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 100%;
-  position: relative;
-  margin: auto;
-  top: 20%;
-  z-index: 10;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-}
-
-img{
-  vertical-align: middle;
-  width:50vh;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-.prev {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 1em;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  position: relative;
-  cursor: pointer;
-  height: 5px;
-  width: 5px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.2;
-    transform: translate(25px,0px);
-  } 
-  to {
-    opacity: 1;
-    transform: translate(0,0);
+    -webkit-transform: scale(100%);
   }
 }
