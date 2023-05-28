@@ -58,7 +58,7 @@ nav{
 nav ul li img{
   position: relative;
   border-radius: 50%;
-  height: 15vh;
+  height: 20vh;
   display: block;
 }
 
@@ -633,8 +633,8 @@ height: 1px;
 }
 @keyframes crawl{
   to{
-    transform: translateY(-200%);
-    -webkit-transform: translateY(-200%);
+    ansform: translateY(-75%);
+    -webkit-transform: translateY(-75%);
   }
 }
 
@@ -655,10 +655,17 @@ div#theme{
   display: flex;
   align-items: center;
   justify-content: center;
+  /* background-image: url(./images/star-wars-logo-0.png); */
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
+  /* background-position: 0%; */
+  /* flex: 1; */
+  /* align-self: center; */
 }
 
 div#theme label img{
   /* width: 5vw; */
-  height: 10vh;
+  align-self: center;
+  height: 8vh;
   display: block;
 }
