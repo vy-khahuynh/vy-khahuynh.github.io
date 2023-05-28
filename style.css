@@ -12,8 +12,7 @@ html, body{
 }
 body {
   min-height: 100vh;
-  perspective: 200px;
-
+  
   color: white;
   font-size: 1.5em;
   font-family: 'Courier New', monospace;
@@ -42,6 +41,7 @@ body {
 
 #background{
   position: absolute;
+  overflow: hidden;
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -52,7 +52,7 @@ nav{
   position: -webkit-sticky;
   top: 0;
   right: left;
-  margin-top: 2%;
+  padding-top: 2%;
 }
 
 nav ul li img{
@@ -104,11 +104,85 @@ li{
   top: 0;
   left: 0;
   height: 100%;
+  min-height: 892px;
   width: 100%;
+  min-width: 1920px;
   background-image: url(./images/star-wars-the-clone-wars-death-star-wookieepedia-death-star.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 20%;
+  perspective: 200px;
+}
+
+#death-beam-container{
+  position: relative;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  top: 314px;
+  left: 1021.4px;
+  border-style: dotted;
+  transform: rotateX(15deg) rotateY(15deg);
+  -webkit-transform: rotateX(15deg) rotateY(15deg);
+  perspective: 200px;
+  -webkit-perspective: 200px;
+  perspective-origin: center;
+  -webkit-perspective-origin: center;
+}
+
+.death-beam{
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  height: 3px;
+  width: 0;
+  background-color: rgb(17, 255, 0);
+  border-radius: 30%;
+  box-shadow: 0 0 3px 3px green;
+  transform-origin: left;
+  -webkit-transform-origin: left;
+}
+
+#death-beam-container span:nth-child(1){
+  width: 40px;
+  -webkit-transform: rotateZ(-155deg);
+  transform: rotateZ(-155deg);
+}
+
+#death-beam-container span:nth-child(2){
+  width: 30px;
+  -webkit-transform: rotateY(60deg);
+  transform: rotateZ(60deg);
+}
+#death-beam-container span:nth-child(3){
+  width: 65px;
+  -webkit-transform: rotateZ(110deg);
+  transform: rotateZ(110deg);
+}
+#death-beam-container span:nth-child(4){
+  width: 70px;
+  -webkit-transform: rotateZ(160deg);
+  transform: rotateZ(160deg);
+}
+#death-beam-container span:nth-child(5){
+  width: 5px;
+  -webkit-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+#death-beam-container span:nth-child(6){
+  width: 45px;
+  -webkit-transform: rotateZ(80deg);
+  transform: rotateZ(80deg);
+}
+
+#death-beam-container span:nth-child(7){
+  /* -webkit-transform: rotateZ(-45deg);; */
+  /* transform: rotateZ(-45deg); */
+}
+
+#death-beam-container span:nth-child(8){
+  /* -webkit-transform: rotateZ(-135deg);; */
+  /* transform: rotateZ(-135deg); */
 }
 
 .tie-fighter#containerY{
@@ -651,21 +725,21 @@ height: 1px;
 }
 
 div#theme{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   display: -webkit-flex;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-image: url(./images/star-wars-logo-0.png); */
-  /* background-size: contain; */
-  /* background-repeat: no-repeat; */
-  /* background-position: 0%; */
-  /* flex: 1; */
-  /* align-self: center; */
 }
 
 div#theme label img{
-  /* width: 5vw; */
+  width: 4vw;
   align-self: center;
-  height: 8vh;
+  /* height: 8vh; */
   display: block;
 }
