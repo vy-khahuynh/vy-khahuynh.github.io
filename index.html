@@ -7,9 +7,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
-<body onLoad=addStars()> 
+<body onload="addStars()">
 <div id="background">
-  <div id="blackhole-container">
+  <div id="sky"></div>
+  <div id="blackhole-container" class="serious active">
     <div class="accretion-disc"></div>
 
     <div class="blackhole" id="aura"></div>
@@ -23,7 +24,7 @@
     <div class="accretion-disc" id="front-disc"></div>
   </div>
 
-  <div class="star-wars">
+  <div class="star-wars fun inactive">
     <div class="millenium_falcon" id="containerY">
       <div class="millenium_falcon" id="containerX">
         <div class="millenium_falcon" id="blue_trail"></div>
@@ -44,44 +45,61 @@
   </div>
 </div>
 
+<nav>
+  <ul>
+    <li>
+      <div id="theme">
+        <label for="mode" style="width: 100%;"><img src="./images/star-wars-logo-0.png" alt=""></label>
+        <input type="checkbox" name="mode" onclick="switchMode()">
+      </div>
+    </li>
+    <li class="serious active"><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">About</a></li>
+    <li class="serious active"><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">Linkedin</a></li>
+    <li class="serious active"><a class = "nav-links" href="https://github.com/vy-khahuynh">GitHub</a></li>
+    <li class="serious active"><a class = "nav-links"><img src="./images/img_avatar.jpeg" alt="Vy-Kha Huynh"></li></a>
+  </ul>
+</nav>
 
-<div id="cockpit">
-  <img src="./images/tie-fighter-cockpit copy.png" alt="">
-</div>
-
-<!-- <div id="cockpit">
-  <nav style="position: relative; z-index: 1;">
-    <ul>
-      <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">About</a></li>
-      <li><a class = "nav-links" href="https://www.linkedin.com/in/vy-kha-huynh-428963228/">Linkedin</a></li>
-      <li><a class = "nav-links" href="https://github.com/vy-khahuynh">GitHub</a></li>
-      <li><a class = "nav-links"> <img src="./images/img_avatar.jpeg" alt="" style="border-radius: 50%; width: 50%;"> </a></li>
-    </ul>
-  </nav>
-</div>  -->
-
-<!-- <main>
-</main> -->
-
-<script>
-function addStars(){
-  var cur = document.body;
-  var classes = ["small", "medium", "big"];
-  var num = Math.floor(Math.random() * 75) + 100;
-  for(let i = 0 ; i < num ; i++){
-    var star = document.createElement('div');
-    star.classList.add("star");
-    star.classList.add(classes[Math.floor(Math.random() * classes.length)]);
-    star.style.top = Math.floor(Math.random() * 1.15 * screen.availHeight)+"px";
-    star.style.left = Math.floor(Math.random() * 1.15 * screen.availWidth)+"px";
-    cur.appendChild(star);
-  }
-  var bigstars = document.getElementsByClassName("big");
-  for(let i = 0 ; i < 15 ; i++){
-    var delay = Math.floor(Math.random() * 20);
-    bigstars[i].style.animation = `glow 5s ease infinite ${delay}s`;
-  }
-}
-</script>
+<div id="crawl" class="fun inactive">
+  <p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </p>
+</div> 
+<script src="./script-folder/vy-khahuynh_github._o.js"></script>
 </body>
 </html>
