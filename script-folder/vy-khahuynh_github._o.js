@@ -23,7 +23,6 @@ function addStars(){
     var srs = document.querySelectorAll(".serious");
     
     if(mode.checked){
-      document.body.style.overflowY = "hidden";
       for(let i = 0 ; i < fun.length ; i++){
         fun[i].classList.replace('inactive', 'active');
       }
@@ -32,7 +31,6 @@ function addStars(){
       }
     }
     else{
-      document.body.style.overflowY = "auto";
       for(let i = 0 ; i < fun.length ; i++){
         fun[i].classList.replace('active', 'inactive');
       }

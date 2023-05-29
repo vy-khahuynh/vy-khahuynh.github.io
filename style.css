@@ -23,9 +23,6 @@ body {
 	
   animation: gradient 20s ease infinite;
   -webkit-animation: gradient 20s ease infinite;
-
-  perspective: 200px;
-  -webkit-perspective: 200px;
 }
 
 #crawl::-webkit-scrollbar, body::-webkit-scrollbar{
@@ -110,26 +107,47 @@ li{
   position: absolute;
   top: 0;
   left: 0;
+  
   height: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   width: 100%;
-  min-width: 100vw;
-  background-image: url(./images/star-wars-the-clone-wars-death-star-wookieepedia-death-star.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 20%;
+  min-width: 100%;
+
   perspective: 200px;
   -webkit-perspective: 200px;
 }
 
+#death-star{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  width: 20%;
+
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+
+  perspective: 200px;
+  -webkit-perspective: 200px;
+}
+
+#death-star img{
+  width: 100%;
+}
+
 #death-beam-container{
-  position: relative;
+  position: absolute;
   border-radius: 50%;
-  width: 5%;
+  width: 25%;
   aspect-ratio: 1;
-  top: 36.7%;
-  left: 53.2%;
-  border-style: dotted;
+  top: 15%;
+  left: 65%;
+  /* border-style: dotted; */
 
   transform: rotateX(20deg) rotateY(20deg);
   -webkit-transform: rotateX(20deg) rotateY(20deg);
@@ -139,8 +157,14 @@ li{
 }
 
 @keyframes beam-glow {
+  0%{
+    background-color: rgba(17, 255, 0, 0);
+  }
   40%, 60%{
     background-color: rgba(17, 255, 0, 0.2);
+  }
+  100%{
+    background-color: rgba(17, 255, 0, 0);
   }
 }
 
@@ -149,42 +173,49 @@ li{
   top: 0%;
   left: 100%;
   
-  height: 6px;
+  height: 4px;
   border-radius: 30%;
   
   transform-origin: left;
   -webkit-transform-origin: left;
   
   overflow-y: hidden;
-  overflow-x: visible;
+}
+
+.death-beam::-webkit-scrollbar{
+  display: none;
 }
 
 #death-beam-container span:nth-child(1){
   width: 55%;
-  -webkit-transform: rotateZ(-175deg);
-  transform: rotateZ(-175deg);
+  -webkit-transform: rotateZ(-185deg);
+  transform: rotateZ(-185deg);
 }
 
 #death-beam-container span:nth-child(2){
   width: 50%;
-  -webkit-transform: rotateY(95deg);
-  transform: rotateZ(95deg);
+  -webkit-transform: rotateY(105deg);
+  transform: rotateZ(105deg);
 }
+
 #death-beam-container span:nth-child(3){
   width: 100%;
   -webkit-transform: rotateZ(115deg);
   transform: rotateZ(115deg);
 }
+
 #death-beam-container span:nth-child(4){
-  width: 110%;
+  width: 100%;
   -webkit-transform: rotateZ(155deg);
   transform: rotateZ(155deg);
 }
+
 #death-beam-container span:nth-child(5){
-  width: 20%;
+  width: 30%;
   -webkit-transform: rotateZ(-225deg);
   transform: rotateZ(-225deg);
 }
+
 #death-beam-container span:nth-child(6){
   width: 75%;
   -webkit-transform: rotateZ(100deg);
@@ -198,13 +229,14 @@ li{
 }
 
 #death-beam-container span:nth-child(8){
-  width: 85%;
+  width: 80%;
   -webkit-transform: rotateZ(-190deg);
   transform: rotateZ(-190deg);
 }
 
 #death-beam-container span:nth-child(9){
-  width: 100vw;
+  width: 150vw;
+  height: 8px;
   -webkit-transform: rotateZ(-35deg);
   transform: rotateZ(-35deg);
 }
@@ -217,24 +249,168 @@ li{
   left: 0;
   
   width: 100%;
-  height: 10%;
+  height: 50%;
   border-radius: 0 30% 30% 0;
   
   background-color: rgb(133, 255, 124);
 
-  /* transform: translateX(100%) translateY(-50%); */
-  /* -webkit-transform: translateX(100%) translateY(-50%); */
+  transform: translateX(100%) translateY(-50%);
+  -webkit-transform: translateX(100%) translateY(-50%);
+}
 
-  /* animation: beam 5s ease infinite; */
-  /* -webkit-animation: beam 5s ease infinite; */
+#death-beam-container span:nth-child(1)::before{
+  animation: beam 5s linear infinite;
+  -webkit-animation: beam 5s linear infinite;
 }
 
 @keyframes beam{
-  0%{
+  0%, 38%{
     transform: translateX(100%) translateY(-50%);
     -webkit-transform: translateX(100%) translateY(-50%);
   }
-  40%, 60%{
+ 40%, 95%{
+    transform: translateX(0) translateY(-50%);
+    -webkit-transform: translateX(0) translateY(-50%);
+  }
+  100%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+}
+
+#death-beam-container span:nth-child(2)::before{
+  animation: beam2 5s linear infinite;
+  -webkit-animation: beam2 5s linear infinite;
+}
+
+@keyframes beam2{
+  0%, 28%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+ 30%, 95%{
+    transform: translateX(0) translateY(-50%);
+    -webkit-transform: translateX(0) translateY(-50%);
+  }
+  100%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+}
+
+#death-beam-container span:nth-child(3)::before{
+  animation: beam3 5s linear infinite;
+  -webkit-animation: beam3 5s linear infinite;
+}
+
+@keyframes beam3{
+  0%, 58%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+ 60%, 95%{
+    transform: translateX(0) translateY(-50%);
+    -webkit-transform: translateX(0) translateY(-50%);
+  }
+  100%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+}
+
+#death-beam-container span:nth-child(4)::before{
+  animation: beam4 5s linear infinite;
+  -webkit-animation: beam4 5s linear infinite;
+}
+
+@keyframes beam4{
+  0%, 68%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+ 70%, 95%{
+    transform: translateX(0) translateY(-50%);
+    -webkit-transform: translateX(0) translateY(-50%);
+  }
+  100%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+}
+
+#death-beam-container span:nth-child(5)::before{
+  animation: beam5 5s linear infinite;
+  -webkit-animation: beam5 5s linear infinite;
+}
+
+@keyframes beam5{
+  0%, 18%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+ 
+  20%, 95%{
+    transform: translateX(0) translateY(-50%);
+    -webkit-transform: translateX(0) translateY(-50%);
+  }
+  100%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+}
+
+
+#death-beam-container span:nth-child(6)::before{
+  animation: beam6 5s linear infinite;
+  -webkit-animation: beam6 5s linear infinite;
+}
+
+@keyframes beam6{
+  0%, 78%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+ 80%, 95%{
+    transform: translateX(0) translateY(-50%);
+    -webkit-transform: translateX(0) translateY(-50%);
+  }
+  100%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+}
+
+#death-beam-container span:nth-child(7)::before{
+  animation: beam7 5s linear infinite;
+  -webkit-animation: beam7 5s linear infinite;
+}
+
+@keyframes beam7{
+  0%, 48%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+ 50%, 95%{
+    transform: translateX(0) translateY(-50%);
+    -webkit-transform: translateX(0) translateY(-50%);
+  }
+  100%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+}
+
+#death-beam-container span:nth-child(8)::before{
+  animation: beam8 5s linear infinite;
+  -webkit-animation: beam8 5s linear infinite;
+}
+
+@keyframes beam8{
+  0%, 8%{
+    transform: translateX(100%) translateY(-50%);
+    -webkit-transform: translateX(100%) translateY(-50%);
+  }
+ 10%, 95%{
     transform: translateX(0) translateY(-50%);
     -webkit-transform: translateX(0) translateY(-50%);
   }
@@ -245,22 +421,25 @@ li{
 }
 
 #death-beam-container span:last-child::before{
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
+  transform: translateX(-100%) translateY(-50%);
+  -webkit-transform: translateX(-100%) translateY(-50%);
 
-  animation: mainbeam 5s linear infinite;
-  -webkit-animation: mainbeam 5s linear infinite;
+  animation: mainbeam 5s ease-in infinite;
+  -webkit-animation: mainbeam 5s ease-in infinite;
 }
 
 @keyframes mainbeam{
-  0%, 40%{
-    width: 0;
+  0%, 80%{
+    /* opacity: 0; */
+    transform: translateX(-100%) translateY(-50%);
   }
-  50%{
-    width: 100%;
+  87.5%, 95%{
+    /* opacity: 1; */
+    transform: translateX(0) translateY(-50%);
   }
-  60%, 100%{
-    width: 0;
+  97.5%,100%{
+    /* opacity: 0; */
+    transform: translateX(-100%) translateY(-50%);
   }
 }
 
@@ -822,23 +1001,41 @@ height: 1px;
 }
 
 
+#crawl-container{
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  width: 100%;
+  height: 50%;
+  
+  overflow: hidden;
+
+  perspective: 200px;
+  -webkit-perspective: 200px;
+
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #crawl{
   position: relative;
+  
+  height: 100%;
+  width: 40%;
+
   overflow: hidden;
 }
 
 #crawl.active{
-  top: 10%;
-  left: 50%;
+  
+  transform: rotateX(40deg);
+  -webkit-transform: rotateX(40deg);
 
-  height: 100%;
-  width: 40%;
-  min-width: 850px;
-
-  translate: -50% 0%;
-  transform: rotateX(60deg);
-  -webkit-transform: rotateX(60deg);
-
+  margin: auto;
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
@@ -858,11 +1055,9 @@ height: 1px;
   top: 0;
 
   width: 100%;
-  
-  margin-top: 5%;
 
-  animation: crawl 60s linear infinite;
-  -webkit-animation: crawl 60s linear infinite;
+  animation: crawl 30s linear infinite;
+  -webkit-animation: crawl 30s linear infinite;
 }
 @keyframes crawl{
   to{
@@ -900,6 +1095,6 @@ div#theme{
 
 div#theme label img{
   width: 4vw;
-  
+
   display: block;
 }
