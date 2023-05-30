@@ -117,6 +117,27 @@ li{
   -webkit-perspective: 200px;
 }
 
+button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  width: 20%;
+  aspect-ratio: 1;
+
+  border: 0;
+  
+  background: transparent;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+button:hover{
+  cursor: pointer;
+}
+
 #death-star{
   position: absolute;
   top: 50%;
@@ -140,27 +161,26 @@ li{
   width: 100%;
 }
 
-#death-beam-container{
+#death-beam-container.active{
   position: absolute;
   border-radius: 50%;
   width: 25%;
   aspect-ratio: 1;
   top: 15%;
   left: 65%;
-  /* border-style: dotted; */
 
   transform: rotateX(20deg) rotateY(20deg);
   -webkit-transform: rotateX(20deg) rotateY(20deg);
   
-  animation: beam-glow 5s linear infinite;
-  -webkit-animation: beam-glow 5s linear infinite;
+  animation: beam-glow 7s linear 1;
+  -webkit-animation: beam-glow 7s linear 1;
 }
 
 @keyframes beam-glow {
-  0%{
+  0%, 10%{
     background-color: rgba(17, 255, 0, 0);
   }
-  40%, 60%{
+  80%, 97.5%{
     background-color: rgba(17, 255, 0, 0.2);
   }
   100%{
@@ -258,17 +278,17 @@ li{
   -webkit-transform: translateX(100%) translateY(-50%);
 }
 
-#death-beam-container span:nth-child(1)::before{
-  animation: beam 5s linear infinite;
-  -webkit-animation: beam 5s linear infinite;
+#death-beam-container.active span:nth-child(1)::before{
+  animation: beam 7s linear 1;
+  -webkit-animation: beam 7s linear 1;
 }
 
 @keyframes beam{
-  0%, 38%{
+  0%, 39%{
     transform: translateX(100%) translateY(-50%);
     -webkit-transform: translateX(100%) translateY(-50%);
   }
- 40%, 95%{
+ 40%, 97.5%{
     transform: translateX(0) translateY(-50%);
     -webkit-transform: translateX(0) translateY(-50%);
   }
@@ -278,17 +298,17 @@ li{
   }
 }
 
-#death-beam-container span:nth-child(2)::before{
-  animation: beam2 5s linear infinite;
-  -webkit-animation: beam2 5s linear infinite;
+#death-beam-container.active span:nth-child(2)::before{
+  animation: beam2 7s linear 1;
+  -webkit-animation: beam2 7s linear 1;
 }
 
 @keyframes beam2{
-  0%, 28%{
+  0%, 29%{
     transform: translateX(100%) translateY(-50%);
     -webkit-transform: translateX(100%) translateY(-50%);
   }
- 30%, 95%{
+ 30%, 97.5%{
     transform: translateX(0) translateY(-50%);
     -webkit-transform: translateX(0) translateY(-50%);
   }
@@ -298,17 +318,17 @@ li{
   }
 }
 
-#death-beam-container span:nth-child(3)::before{
-  animation: beam3 5s linear infinite;
-  -webkit-animation: beam3 5s linear infinite;
+#death-beam-container.active span:nth-child(3)::before{
+  animation: beam3 7s linear 1;
+  -webkit-animation: beam3 7s linear 1;
 }
 
 @keyframes beam3{
-  0%, 58%{
+  0%, 59%{
     transform: translateX(100%) translateY(-50%);
     -webkit-transform: translateX(100%) translateY(-50%);
   }
- 60%, 95%{
+ 60%, 97.5%{
     transform: translateX(0) translateY(-50%);
     -webkit-transform: translateX(0) translateY(-50%);
   }
@@ -318,17 +338,17 @@ li{
   }
 }
 
-#death-beam-container span:nth-child(4)::before{
-  animation: beam4 5s linear infinite;
-  -webkit-animation: beam4 5s linear infinite;
+#death-beam-container.active span:nth-child(4)::before{
+  animation: beam4 7s linear 1;
+  -webkit-animation: beam4 7s linear 1;
 }
 
 @keyframes beam4{
-  0%, 68%{
+  0%, 69%{
     transform: translateX(100%) translateY(-50%);
     -webkit-transform: translateX(100%) translateY(-50%);
   }
- 70%, 95%{
+ 70%, 97.5%{
     transform: translateX(0) translateY(-50%);
     -webkit-transform: translateX(0) translateY(-50%);
   }
@@ -338,18 +358,18 @@ li{
   }
 }
 
-#death-beam-container span:nth-child(5)::before{
-  animation: beam5 5s linear infinite;
-  -webkit-animation: beam5 5s linear infinite;
+#death-beam-container.active span:nth-child(5)::before{
+  animation: beam5 7s linear 1;
+  -webkit-animation: beam5 7s linear 1;
 }
 
 @keyframes beam5{
-  0%, 18%{
+  0%, 19%{
     transform: translateX(100%) translateY(-50%);
     -webkit-transform: translateX(100%) translateY(-50%);
   }
  
-  20%, 95%{
+  20%, 97.5%{
     transform: translateX(0) translateY(-50%);
     -webkit-transform: translateX(0) translateY(-50%);
   }
@@ -360,9 +380,9 @@ li{
 }
 
 
-#death-beam-container span:nth-child(6)::before{
-  animation: beam6 5s linear infinite;
-  -webkit-animation: beam6 5s linear infinite;
+#death-beam-container.active span:nth-child(6)::before{
+  animation: beam6 7s linear 1;
+  -webkit-animation: beam6 7s linear 1;
 }
 
 @keyframes beam6{
@@ -370,7 +390,7 @@ li{
     transform: translateX(100%) translateY(-50%);
     -webkit-transform: translateX(100%) translateY(-50%);
   }
- 80%, 95%{
+ 80%, 97.5%{
     transform: translateX(0) translateY(-50%);
     -webkit-transform: translateX(0) translateY(-50%);
   }
@@ -380,17 +400,17 @@ li{
   }
 }
 
-#death-beam-container span:nth-child(7)::before{
-  animation: beam7 5s linear infinite;
-  -webkit-animation: beam7 5s linear infinite;
+#death-beam-container.active span:nth-child(7)::before{
+  animation: beam7 7s linear 1;
+  -webkit-animation: beam7 7s linear 1;
 }
 
 @keyframes beam7{
-  0%, 48%{
+  0%, 49%{
     transform: translateX(100%) translateY(-50%);
     -webkit-transform: translateX(100%) translateY(-50%);
   }
- 50%, 95%{
+ 50%, 97.5%{
     transform: translateX(0) translateY(-50%);
     -webkit-transform: translateX(0) translateY(-50%);
   }
@@ -400,17 +420,17 @@ li{
   }
 }
 
-#death-beam-container span:nth-child(8)::before{
-  animation: beam8 5s linear infinite;
-  -webkit-animation: beam8 5s linear infinite;
+#death-beam-container.active span:nth-child(8)::before{
+  animation: beam8 7s linear 1;
+  -webkit-animation: beam8 7s linear 1;
 }
 
 @keyframes beam8{
-  0%, 8%{
+  0%, 9%{
     transform: translateX(100%) translateY(-50%);
     -webkit-transform: translateX(100%) translateY(-50%);
   }
- 10%, 95%{
+ 10%, 97.5%{
     transform: translateX(0) translateY(-50%);
     -webkit-transform: translateX(0) translateY(-50%);
   }
@@ -420,26 +440,23 @@ li{
   }
 }
 
-#death-beam-container span:last-child::before{
-  transform: translateX(-100%) translateY(-50%);
-  -webkit-transform: translateX(-100%) translateY(-50%);
-
-  animation: mainbeam 5s ease-in infinite;
-  -webkit-animation: mainbeam 5s ease-in infinite;
+#death-beam-container.active span:nth-child(9)::before{
+  animation: mainbeam 7s ease-in 1;
+  -webkit-animation: mainbeam 7s ease-in 1;
 }
 
 @keyframes mainbeam{
   0%, 80%{
-    /* opacity: 0; */
     transform: translateX(-100%) translateY(-50%);
+    -webkit-transform: translateX(-100%) translateY(-50%);
   }
-  87.5%, 95%{
-    /* opacity: 1; */
+  87.5%, 96%{
     transform: translateX(0) translateY(-50%);
+    -webkit-transform: translateX(0) translateY(-50%);
   }
   97.5%,100%{
-    /* opacity: 0; */
     transform: translateX(-100%) translateY(-50%);
+    -webkit-transform: translateX(-100%) translateY(-50%);
   }
 }
 

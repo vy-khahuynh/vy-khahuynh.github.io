@@ -39,3 +39,13 @@ function addStars(){
       }
     }
   }
+
+  function activateSuperlaser(){
+    var ds = document.getElementById('death-beam-container');
+    ds.classList.toggle('active');
+
+    setTimeout(function(){
+      ds.classList.toggle('active');
+    }, 
+    7000);
+  }

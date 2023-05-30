@@ -8,6 +8,7 @@
 </head>
 
 <body onload="addStars()">
+<button class="fun inactive" type="button" onclick="activateSuperlaser()"></button>
 <div id="background">
   <div id="sky"></div>
   <div id="blackhole-container" class="serious active">
@@ -97,7 +98,7 @@
   </div>
 </div>
 
-<div id="theme">
+<div id="theme" style="z-index: 5;">
   <label for="mode"><img src="./images/star-wars-logo-0.png" alt=""></label>
   <input type="checkbox" name="mode" onclick="switchMode()">
 </div>
