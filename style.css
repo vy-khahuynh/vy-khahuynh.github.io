@@ -207,7 +207,7 @@ button:hover{
 }
 
 #death-beam-container span:nth-child(1){
-  width: 55%;
+  width: 50%;
   -webkit-transform: rotateZ(-185deg);
   transform: rotateZ(-185deg);
 }
@@ -238,27 +238,35 @@ button:hover{
 
 #death-beam-container span:nth-child(6){
   width: 75%;
-  -webkit-transform: rotateZ(100deg);
-  transform: rotateZ(100deg);
+  -webkit-transform: rotateZ(105deg);
+  transform: rotateZ(105deg);
 }
 
 #death-beam-container span:nth-child(7){
-  width: 110%;
+  width: 115%;
   -webkit-transform: rotateZ(135deg);
   transform: rotateZ(135deg);
 }
 
 #death-beam-container span:nth-child(8){
-  width: 80%;
+  width: 75%;
   -webkit-transform: rotateZ(-190deg);
   transform: rotateZ(-190deg);
 }
 
 #death-beam-container span:nth-child(9){
-  width: 150vw;
-  height: 8px;
-  -webkit-transform: rotateZ(-35deg);
-  transform: rotateZ(-35deg);
+  width: 100vw;
+  -webkit-transform: rotateZ(-35deg) rotateY(15deg);
+  transform: rotateZ(-35deg) rotateY(15deg);
+}
+
+#main-beam{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10px;
+  width: 100vw;
+  background-color: rgb(133, 255, 124);
 }
 
 #death-beam-container span:nth-child(n)::before{
@@ -451,8 +459,8 @@ button:hover{
     -webkit-transform: translateX(-100%) translateY(-50%);
   }
   87.5%, 96%{
-    transform: translateX(0) translateY(-50%);
-    -webkit-transform: translateX(0) translateY(-50%);
+    transform: translateX(0) translateY(-50%) scale(150%);
+    -webkit-transform: translateX(0) translateY(-50%) scale(150%);
   }
   97.5%,100%{
     transform: translateX(-100%) translateY(-50%);
