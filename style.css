@@ -111,7 +111,7 @@ nav{
   top: 0;
   left: 0;
   width: 100%;
-  padding-top: 1%;
+  padding-top: 2%;
   text-align: center;
 }
 
@@ -124,17 +124,48 @@ ul{
 }
 
 li{
-  /* text-align: center; */
-  margin: auto;
   flex: 1 1 0;
   width: 0;
-  /* display: inline-block; */
+  text-align: center;
 }
 
-nav ul li img{
+nav ul li div{
+  position: relative;
+  margin: auto;
   border-radius: 50%;
   height: 15vh;
-  /* display: block; */
+  aspect-ratio: 1;
+}
+
+nav ul li div img{
+  border-radius: 50%;
+  height: 15vh;
+}
+
+nav ul li div::before{
+  position: absolute;
+  content: "";
+  background-color: blue;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  aspect-ratio: 1;
+  translate: -3% 0%;
+}
+
+nav ul li div::after{
+  position: absolute;
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  aspect-ratio: 1;
+  translate: 3% 0%;
 }
 
 .nav-links{
@@ -698,13 +729,13 @@ button:hover{
     transform: translateY(0);
     -webkit-transform: translateY(0);
   }
-  85%{
+  83%, 86%{
     transform: translateY(-5vh);
     -webkit-transform: translateY(-5vh);
   }
-  90%, 100%{
-    transform: translateY(-15vh) rotate(-10deg);
-    -webkit-transform: translateY(-15vh) rotate(-10deg);
+  87%, 100%{
+    transform: translateY(-10vh) rotate(-10deg);
+    -webkit-transform: translateY(-10vh) rotate(-10deg);
   }
 }
 
@@ -728,13 +759,13 @@ button:hover{
     transform: translateX(0%) scale(100%);
     -webkit-transform: translateX(0%) scale(100%);
   }
-  85%{
+  83%, 86%{
     transform: translateX(35vw) scale(60%);
     -webkit-transform: translateX(35vw) scale(60%);
   }
-  90%, 100%{
-    transform: translateX(50vw) scale(0%);
-    -webkit-transform: translateX(50vw) scale(0%);
+  87%, 100%{
+    transform: translateX(45vw) scale(0%);
+    -webkit-transform: translateX(45vw) scale(0%);
   }
 }
 
@@ -749,60 +780,38 @@ button:hover{
 
 #plasma{
   position: absolute;
-  top: 20%;
-  left: -15%;
+  top: 17%;
+  left: -5%;
   
   z-index: -1;
 
   height: 80%;
   width: 90%;
 
+  filter: blur(0.2rem);
+  -webkit-filter: blur(0.2rem);
   border-radius: 50%;
   background: radial-gradient(circle,white 30%, rgb(115, 236, 255));
   
   transform: skew(20deg) rotateZ(-15deg);
   -webkit-transform: skew(20deg) rotateZ(-15deg);
-}
 
-.millenium_falcon#blue_trail{
-  position: absolute;
-  top: -30%;
-  left: -125%;
-  z-index: -1;
-
-  height: 300%;
-  width: 100%;
-
-  transform: skew(-40deg);
-  -webkit-transform: skew(-40deg);
-  rotate: 25deg;
-  opacity: 0;
-
-  background: linear-gradient(-165deg,white 30%, rgb(115, 236, 255) 35%, transparent 40%);
-  border-radius: 50% 50% 50% 50%;
-  
   animation: hyperspace 15s ease infinite;
   -webkit-animation: hyperspace 15s ease infinite;
 }
+
 @keyframes hyperspace {
-  85%{
-    opacity: 0;
-    background: linear-gradient(-165deg,white 30%, rgb(115, 236, 255) 35%, transparent 40%);
+  0%, 85%{
+    filter: blur(0.2rem) brightness(100%);
+    -webkit-filter: blur(0.2rem) brightness(100%);
+    transform: skew(20deg) rotateZ(-15deg);
+    -webkit-transform: skew(20deg) rotateZ(-15deg);
   }
-  85.5%{
-    opacity: 0;
-    background: linear-gradient(-165deg,white 35%, rgb(115, 236, 255) 50%, transparent 55%);
-  }
-  86%{
-    opacity: 0;
-    background: linear-gradient(-165deg,white 40%, rgb(115, 236, 255) 60%, transparent 70%);
-  }
-  86.5%{
-    background: linear-gradient(-165deg,white 45%, rgb(115, 236, 255) 70%, transparent 85%);
-  }
-  87%, 100%{
-    opacity: 1;
-    background: linear-gradient(-165deg,white 50%, rgb(115, 236, 255) 80%, transparent 90%);
+  86%, 100%{
+    filter: blur(0.2rem) brightness(150%);
+    -webkit-filter: blur(0.2rem) brightness(150%);
+    transform: skew(20deg) rotateZ(-15deg) translateX(-2%) translateY(-1%);
+    -webkit-transform: skew(20deg) rotateZ(-15deg) translateX(-2%) translateY(-1%);
   }
 }
 
@@ -1110,6 +1119,8 @@ button:hover{
   width: 40%;
 
   overflow: hidden;
+
+  text-shadow: none;
 }
 
 #crawl.active{
@@ -1152,6 +1163,10 @@ button:hover{
 #crawl p:hover, .inactive * {
   animation-play-state: paused !important;
   -webkit-animation-play-state: paused !important;
+}
+
+button.inactive:hover{
+  cursor: auto;
 }
 
 .active{

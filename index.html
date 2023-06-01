@@ -8,7 +8,6 @@
 </head>
 
 <body onload="addStars()">
-<button class="fun inactive" id="superlaser" type="button" onclick="activateSuperlaser()"></button>
 <div id="background">
   <div id="sky"></div>
   <div id="blackhole-container" class="serious active">
@@ -55,7 +54,7 @@
     </div>
     <div class="millenium_falcon" id="containerY">
       <div class="millenium_falcon" id="containerX">
-        <div class="millenium_falcon" id="blue_trail"></div>
+        <!-- <div class="millenium_falcon" id="blue_trail"></div> -->
         <div id="plasma"></div>
         <img src="./images/nwYC3PkFTpbs3fecPUNssH.png" alt="Millenium Falcon"></img>
       </div>
@@ -77,9 +76,9 @@
   <ul>
     <li class="serious active"><a class="nav-links" href="https://www.linkedin.com/"></a>About</li>
     <li class="serious active"><a class="nav-links" href="https://github.com/"></a> Github</li>
-    <li class="serious active"><img src="./images/img_avatar.jpeg" alt="Vy-Kha Huynh"></li>
+    <li class="serious active"><div><img src="./images/img_avatar.jpeg" alt="Vy-Kha Huynh avatar photo"></div> </li>
     <li class="serious active"><a class="nav-links" href="https://www.linkedin.com/"></a>Linkedin</li>
-    <li class="serious active"><a class="nav-links" href="https://www.linkedin.com/"></a>Email</li>
+    <li class="serious active"><a class="nav-links" href="mailto:vykha.huynh@outlook.com"></a>Contact me</li>
   </ul>
 </nav>
 
@@ -112,6 +111,9 @@
     </p>
   </div>
 </div>
+
+<button class="fun inactive" id="superlaser" type="button" onclick="activateSuperlaser()"></button>
+
 <div id="theme" style="z-index: 5;">
   <label for="mode"><img src="./images/star-wars-logo-0.png" alt=""></label>
   <input type="checkbox" name="mode" onclick="switchMode()">
