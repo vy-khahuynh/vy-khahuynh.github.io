@@ -1,3 +1,52 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -9,6 +58,8 @@
 html, body{
   height: 100%;
   margin: 0;
+  text-size-adjust: none;
+  -webkit-text-size-adjust:none;
 }
 body {
   min-height: 100vh;
@@ -47,6 +98,9 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav{
@@ -60,7 +114,7 @@ nav{
 nav ul li img{
   position: relative;
   border-radius: 50%;
-  height: 20vh;
+  height: 15vh;
   display: block;
 }
 
@@ -92,11 +146,7 @@ li{
   position: relative;
   height: 50%;
   width: 50%;
-  min-height: 284px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  -webkit-transform: translate(-50%,-50%);
+  min-height: 18rem;
   display: flex;
   display: -webkit-flex;
   align-items: center;
@@ -207,7 +257,7 @@ button:hover{
   top: 0%;
   left: 100%;
   
-  height: 4px;
+  height: 0.25rem;
   border-radius: 30%;
   
   transform-origin: left;
@@ -270,7 +320,7 @@ button:hover{
 
 #death-beam-container span:nth-child(9){
   z-index: -1;
-  height: 8px;
+  height: 0.5rem;
   width: 100vw;
   transform: translateY(-50%) rotateZ(-35deg);
   -webkit-transform: translateY(-50%) rotateZ(-35deg);
@@ -456,7 +506,7 @@ button:hover{
 }
 
 #death-beam-container.active span:nth-child(9)::before{
-  box-shadow: 0 0 1px 1px green;
+  box-shadow: 0 0 0.06rem 0.06rem green;
   animation: mainbeam 7s ease-in 1;
   -webkit-animation: mainbeam 7s ease-in 1;
 }
@@ -565,7 +615,7 @@ button:hover{
   height: 1%;
 
   background-color: white;
-  box-shadow: 0 0 2px 1px rgb(17, 255, 0);
+  box-shadow: 0 0 0.13rem 0.06rem rgb(17, 255, 0);
   
   transform: rotateY(50deg) rotate(-15deg);
   -webkit-transform: rotateY(50deg) rotate(-15deg);
@@ -586,53 +636,52 @@ button:hover{
 
 @keyframes laser1 {
   82%{
-    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
-    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
+    transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
   }
   84% {
-    transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
-    -webkit-transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
+    transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
   }
   87%, 100% {
-    transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
-    -webkit-transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
+    transform: translate(9.4rem, -4rem) scale(0%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(9.4rem, -4rem) scale(0%) rotateY(50deg) rotate(-10deg);
   }
 }
 @keyframes laser2 {
   85%{
-    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
-    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
+    transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
   }
   89% {
-    transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
-    -webkit-transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
+    transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
   }
   90%, 100% {
-    transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
-    -webkit-transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
+    transform: translate(9.4rem, -4rem) scale(0%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(9.4rem, -4rem) scale(0%) rotateY(50deg) rotate(-10deg);
   }
 }
 @keyframes laser3 {
   86%{
-    transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
-    -webkit-transform: translate(0px, 0px) scale(100%) rotateY(50deg) rotate(-10deg);
+    transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
   }
   90%{
-    transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
-    -webkit-transform: translate(150px, -50px) scale(30%) rotateY(50deg) rotate(-10deg);
+    transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
   }
   91%, 100% {
-    transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
-    -webkit-transform: translate(150px, -50px) scale(0%) rotateY(50deg) rotate(-10deg);
+    transform: translate(9.4rem, -4rem) scale(0%) rotateY(50deg) rotate(-10deg);
+    -webkit-transform: translate(9.4rem, -4rem) scale(0%) rotateY(50deg) rotate(-10deg);
   }
 }
 .millenium_falcon#containerY{
   position: relative;
   top: 50%;
-
+  
   height: 8%;
   min-height: 5rem;
-  max-height: 5rem;
   aspect-ratio: 1;
 
   display: flex;
@@ -700,8 +749,9 @@ button:hover{
 
 #plasma{
   position: absolute;
-  top: 25%;
-  left: -25%;
+  top: 20%;
+  left: -15%;
+  
   z-index: -1;
 
   height: 80%;
@@ -710,14 +760,13 @@ button:hover{
   border-radius: 50%;
   background: radial-gradient(circle,white 30%, rgb(115, 236, 255));
   
-  transform: skew(20deg);
-  -webkit-transform: skew(20deg);
-  rotate: -15deg;
+  transform: skew(20deg) rotateZ(-15deg);
+  -webkit-transform: skew(20deg) rotateZ(-15deg);
 }
 
 .millenium_falcon#blue_trail{
   position: absolute;
-  top: -40%;
+  top: -30%;
   left: -125%;
   z-index: -1;
 
@@ -772,7 +821,7 @@ button:hover{
   margin: auto;
 
   background: radial-gradient(circle, black 0%, 60%, white 70%);
-  box-shadow: 0 0 10px 20px white;
+  box-shadow: 0 0 0.63rem 1.25rem white;
   
   animation: pulsing-low 0.5s linear infinite;
   -webkit-animation: pulsing-low 0.5s linear infinite;
@@ -785,7 +834,7 @@ button:hover{
   20%{
     transform: scale(102%);
     -webkit-transform: scale(102%);
-    box-shadow: 0 0 15px 15px white;
+    box-shadow: 0 0 0.94rem 0.94rem white;
   }
   55%{
     transform: scale(103%);
@@ -794,12 +843,12 @@ button:hover{
   70%{
     transform: scale(99%);
     -webkit-transform: scale(99%);
-    box-shadow: 0 0 20px 10px white;
+    box-shadow: 0 0 0.25rem 0.63rem white;
   }
   90%{
     transform: scale(101%);
     -webkit-transform: scale(101%);
-    box-shadow: 0 0 20px 15px white;
+    box-shadow: 0 0 0.25rem 0.94rem white;
   }
   100%{
     transform: scale(100%);
@@ -909,7 +958,7 @@ button:hover{
 
 @keyframes aura-pulsing{
   0%{
-    background-position: 0px 0px;
+    background-position: 0% 0%;
   }
   20%{
     background-position: -20.5% 3.6%;
@@ -924,7 +973,7 @@ button:hover{
     background-position: 20.3% -40.5%;
   }
   100%{
-    background-position: 0px 0px;
+    background-position: 0% 0%;
   }
 }
 
@@ -1019,18 +1068,18 @@ button:hover{
 }
 
 .big {
-  width: 5px;
-  height: 5px;
+  width: 0.3%;
+  aspect-ratio: 1;
 }
 
 .medium {
-width: 2.5px;
-height: 2.5px;
+  width: 0.2%;
+  aspect-ratio: 1;
 }
 
 .small {
-width: 1px;
-height: 1px;
+  width: 0.1%;
+  aspect-ratio: 1;
 }
 
 
@@ -1044,8 +1093,8 @@ height: 1px;
   
   overflow: hidden;
 
-  perspective: 200px;
-  -webkit-perspective: 200px;
+  perspective: 12.5rem;
+  -webkit-perspective: 12.5rem;
 
   display: flex;
   display: -webkit-flex;
@@ -1131,4 +1180,58 @@ div#theme label img{
   width: 4vw;
 
   display: block;
+}
+
+#curved{
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  min-width: 22.25rem;
+  text-align: center;
+}
+
+#curved span:nth-child(n) {
+  font-size: 2rem;
+  display: inline-block;
+  white-space: pre;
+  text-shadow: 2px 2px red, -2px 2px blue;
+}
+
+#curved span:nth-child(1) {
+  transform: translateY(5.4rem) translateX(2rem) rotateZ(-60deg);
+}
+#curved span:nth-child(2) {
+  transform: translateY(3.7rem) translateX(1rem)rotateZ(-50deg);
+}
+#curved span:nth-child(3) {
+  transform: translateY(2.2rem) translateX(0.3rem) rotateZ(-40deg);
+}
+#curved span:nth-child(4) {
+  transform: translateY(1rem) rotateZ(-30deg);
+}
+#curved span:nth-child(5) {
+  transform: translateY(0.25rem) rotateZ(-20deg);
+}
+#curved span:nth-child(6) {
+  transform: translateY(-0.1rem);
+}
+#curved span:nth-child(7) {
+  transform: translateY(-0.1rem);
+}
+#curved span:nth-child(8) {
+  transform: translateY(0.25rem) rotateZ(20deg);
+}
+#curved span:nth-child(9) {
+  transform: translateY(1rem) rotateZ(30deg);
+}
+#curved span:nth-child(10) {
+  transform: translateY(2.2rem) translateX(-0.3rem) rotateZ(40deg);
+}
+#curved span:nth-child(11) {
+  transform: translateY(3.7rem) translateX(-1rem)rotateZ(50deg);
+}
+#curved span:nth-child(12) {
+  transform: translateY(5.4rem) translateX(-2rem) rotateZ(60deg);
 }
