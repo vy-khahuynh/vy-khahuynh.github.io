@@ -60,6 +60,8 @@ html, body{
   margin: 0;
   text-size-adjust: none;
   -webkit-text-size-adjust:none;
+  text-shadow: 2px 2px red, -2px 2px blue;
+  font-weight: bold;
 }
 body {
   min-height: 100vh;
@@ -107,35 +109,33 @@ nav{
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  right: left;
-  padding-top: 2%;
-}
-
-nav ul li img{
-  position: relative;
-  border-radius: 50%;
-  height: 15vh;
-  display: block;
+  left: 0;
+  width: 100%;
+  padding-top: 1%;
+  text-align: center;
 }
 
 ul{
+  width: 100%;
   display: flex;
-  display: -webkit-flex;
+  display: -webkit-inline-flex;
   align-items: center;
-  justify-content: center;
-  
-  padding: 0;
-  margin: 0;
-  
-  list-style-type: none;
+  justify-content: center
 }
 
 li{
+  /* text-align: center; */
   margin: auto;
-  width: auto;
+  flex: 1 1 0;
+  width: 0;
+  /* display: inline-block; */
 }
 
-
+nav ul li img{
+  border-radius: 50%;
+  height: 15vh;
+  /* display: block; */
+}
 
 .nav-links{
   color: white;
@@ -1196,7 +1196,6 @@ div#theme label img{
   font-size: 2rem;
   display: inline-block;
   white-space: pre;
-  text-shadow: 2px 2px red, -2px 2px blue;
 }
 
 #curved span:nth-child(1) {
