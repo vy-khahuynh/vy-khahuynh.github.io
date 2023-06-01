@@ -126,7 +126,10 @@ ul{
 li{
   flex: 1 1 0;
   width: 0;
-  text-align: center;
+}
+
+nav ul li *:hover{
+  background-color: darkgray;
 }
 
 nav ul li div{
@@ -139,7 +142,7 @@ nav ul li div{
 
 nav ul li div img{
   border-radius: 50%;
-  height: 15vh;
+  height: 100%;
 }
 
 nav ul li div::before{
@@ -152,7 +155,7 @@ nav ul li div::before{
   z-index: -1;
   height: 100%;
   aspect-ratio: 1;
-  translate: -3% 0%;
+  translate: -5% 0%;
 }
 
 nav ul li div::after{
@@ -165,10 +168,10 @@ nav ul li div::after{
   z-index: -1;
   height: 100%;
   aspect-ratio: 1;
-  translate: 3% 0%;
+  translate: 5% 0%;
 }
 
-.nav-links{
+nav ul li a:nth-child(n){
   color: white;
   text-decoration: none;
 }
