@@ -112,9 +112,6 @@ li{
   min-height: 100%;
   width: 100%;
   min-width: 100%;
-
-  perspective: 200px;
-  -webkit-perspective: 200px;
 }
 
 button{
@@ -152,9 +149,6 @@ button:hover{
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
-
-  perspective: 200px;
-  -webkit-perspective: 200px;
 }
 
 #death-star img{
@@ -164,23 +158,43 @@ button:hover{
 #death-beam-container.active{
   position: absolute;
   border-radius: 50%;
-  width: 25%;
+  width: 20%;
   aspect-ratio: 1;
-  top: 15%;
-  left: 65%;
+  top: 18%;
+  left: 67.8%;
 
-  transform: rotateX(20deg) rotateY(20deg);
-  -webkit-transform: rotateX(20deg) rotateY(20deg);
+  transform: skewX(5deg) skewY(20deg);
   
   animation: beam-glow 7s linear 1;
   -webkit-animation: beam-glow 7s linear 1;
 }
 
 @keyframes beam-glow {
-  0%, 10%{
+  0%, 8%{
     background-color: rgba(17, 255, 0, 0);
   }
-  80%, 97.5%{
+  9%, 18%{
+    background-color: rgba(17, 255, 0, 0.025);
+  }
+  19%, 28%{
+    background-color: rgba(17, 255, 0, 0.05);
+  }
+  29%, 38%{
+    background-color: rgba(17, 255, 0, 0.075);
+  }
+  39%, 48%{
+    background-color: rgba(17, 255, 0, 0.1);
+  }
+  49%, 58%{
+    background-color: rgba(17, 255, 0, 0.125);
+  }
+  59%, 68%{
+    background-color: rgba(17, 255, 0, 0.15);
+  }
+  69%, 78%{
+    background-color: rgba(17, 255, 0, 0.175);
+  }
+  79%, 97.5%{
     background-color: rgba(17, 255, 0, 0.2);
   }
   100%{
@@ -207,66 +221,59 @@ button:hover{
 }
 
 #death-beam-container span:nth-child(1){
-  width: 50%;
-  -webkit-transform: rotateZ(-185deg);
-  transform: rotateZ(-185deg);
+  width: 45%;
+  transform: translateY(-50%) rotateZ(-195deg);
+  -webkit-transform:  translateY(-50%) rotateZ(-195deg);
 }
 
 #death-beam-container span:nth-child(2){
   width: 50%;
-  -webkit-transform: rotateY(105deg);
-  transform: rotateZ(105deg);
+  transform: translateY(-50%) rotateZ(105deg);
+  -webkit-transform:  translateY(-50%) rotateZ(105deg);
 }
 
 #death-beam-container span:nth-child(3){
   width: 100%;
-  -webkit-transform: rotateZ(115deg);
-  transform: rotateZ(115deg);
+  transform: translateY(-50%) rotateZ(115deg);
+  -webkit-transform:  translateY(-50%) rotateZ(115deg);
 }
 
 #death-beam-container span:nth-child(4){
   width: 100%;
-  -webkit-transform: rotateZ(155deg);
-  transform: rotateZ(155deg);
+  transform: translateY(-50%) rotateZ(155deg);
+  -webkit-transform:  translateY(-50%) rotateZ(155deg);
 }
 
 #death-beam-container span:nth-child(5){
-  width: 30%;
-  -webkit-transform: rotateZ(-225deg);
-  transform: rotateZ(-225deg);
+  width: 35%;
+  transform: translateY(-50%) rotateZ(-225deg);
+  -webkit-transform: translateY(-50%) rotateZ(-225deg);
 }
 
 #death-beam-container span:nth-child(6){
   width: 75%;
-  -webkit-transform: rotateZ(105deg);
-  transform: rotateZ(105deg);
+  transform:  translateY(-50%) rotateZ(105deg);
+  -webkit-transform: translateY(-50%) rotateZ(105deg);
 }
 
 #death-beam-container span:nth-child(7){
   width: 115%;
-  -webkit-transform: rotateZ(135deg);
-  transform: rotateZ(135deg);
+  transform: translateY(-50%) translateY(-50%);
+  -webkit-transform: translateY(-50%) rotateZ(135deg);
 }
 
 #death-beam-container span:nth-child(8){
   width: 75%;
-  -webkit-transform: rotateZ(-190deg);
-  transform: rotateZ(-190deg);
+  transform: translateY(-50%) rotateZ(-190deg);
+  -webkit-transform: translateY(-50%) rotateZ(-190deg);
 }
 
 #death-beam-container span:nth-child(9){
+  z-index: -1;
+  height: 8px;
   width: 100vw;
-  -webkit-transform: rotateZ(-35deg) rotateY(15deg);
-  transform: rotateZ(-35deg) rotateY(15deg);
-}
-
-#main-beam{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 10px;
-  width: 100vw;
-  background-color: rgb(133, 255, 124);
+  transform: translateY(-50%) rotateZ(-35deg);
+  -webkit-transform: translateY(-50%) rotateZ(-35deg);
 }
 
 #death-beam-container span:nth-child(n)::before{
@@ -449,6 +456,7 @@ button:hover{
 }
 
 #death-beam-container.active span:nth-child(9)::before{
+  box-shadow: 0 0 1px 1px green;
   animation: mainbeam 7s ease-in 1;
   -webkit-animation: mainbeam 7s ease-in 1;
 }
@@ -458,9 +466,9 @@ button:hover{
     transform: translateX(-100%) translateY(-50%);
     -webkit-transform: translateX(-100%) translateY(-50%);
   }
-  87.5%, 96%{
-    transform: translateX(0) translateY(-50%) scale(150%);
-    -webkit-transform: translateX(0) translateY(-50%) scale(150%);
+  87.5%, 96.5%{
+    transform: translateX(0) translateY(-50%);
+    -webkit-transform: translateX(0) translateY(-50%);
   }
   97.5%,100%{
     transform: translateX(-100%) translateY(-50%);
