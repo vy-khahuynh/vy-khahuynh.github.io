@@ -136,7 +136,7 @@ nav ul li div{
   position: relative;
   margin: auto;
   border-radius: 50%;
-  height: 15vh;
+  height: 17vh;
   aspect-ratio: 1;
 }
 
@@ -155,7 +155,7 @@ nav ul li div::before{
   z-index: -1;
   height: 100%;
   aspect-ratio: 1;
-  translate: -5% 0%;
+  translate: -0.25rem 0rem;
 }
 
 nav ul li div::after{
@@ -168,12 +168,14 @@ nav ul li div::after{
   z-index: -1;
   height: 100%;
   aspect-ratio: 1;
-  translate: 5% 0%;
+  translate: 0.25rem 0rem;
 }
 
 nav ul li a:nth-child(n){
   color: white;
   text-decoration: none;
+  border-radius: 0 30% 0 30%;
+  padding: 0.25rem;
 }
 
 #blackhole-container{
@@ -239,7 +241,7 @@ button:hover{
   width: 100%;
 }
 
-#death-beam-container.active{
+#death-beam-container{
   position: absolute;
   border-radius: 50%;
   width: 20%;
@@ -248,7 +250,9 @@ button:hover{
   left: 67.8%;
 
   transform: skewX(5deg) skewY(20deg);
-  
+}
+
+#death-beam-container.active{
   animation: beam-glow 7s linear 1;
   -webkit-animation: beam-glow 7s linear 1;
 }
@@ -298,6 +302,8 @@ button:hover{
   -webkit-transform-origin: left;
   
   overflow-y: hidden;
+  padding: 0;
+  margin: 0;
 }
 
 .death-beam::-webkit-scrollbar{
@@ -342,7 +348,7 @@ button:hover{
 
 #death-beam-container span:nth-child(7){
   width: 115%;
-  transform: translateY(-50%) translateY(-50%);
+  transform: translateY(-50%) rotateZ(135deg);
   -webkit-transform: translateY(-50%) rotateZ(135deg);
 }
 
@@ -353,9 +359,8 @@ button:hover{
 }
 
 #death-beam-container span:nth-child(9){
-  z-index: -1;
   height: 0.5rem;
-  width: 100vw;
+  width: 70vw;
   transform: translateY(-50%) rotateZ(-35deg);
   -webkit-transform: translateY(-50%) rotateZ(-35deg);
 }
@@ -369,13 +374,13 @@ button:hover{
   
   width: 100%;
   height: 50%;
-  border-radius: 0 30% 30% 0;
+  border-radius: 30% 0 0 30%;
   
   background-color: rgb(133, 255, 124);
 
-  transform: translateX(100%) translateY(-50%);
-  -webkit-transform: translateX(100%) translateY(-50%);
-}
+  transform: translateY(-50%) translateX(-100%);
+  -webkit-transform: translateY(-50%) translateX(-100%);
+  }
 
 #death-beam-container.active span:nth-child(1)::before{
   animation: beam 7s linear 1;
@@ -669,11 +674,11 @@ button:hover{
 }
 
 @keyframes laser1 {
-  82%{
+  84%{
     transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
     -webkit-transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
   }
-  84% {
+  86% {
     transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
     -webkit-transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
   }
@@ -687,11 +692,11 @@ button:hover{
     transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
     -webkit-transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
   }
-  89% {
+  87% {
     transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
     -webkit-transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
   }
-  90%, 100% {
+  88%, 100% {
     transform: translate(9.4rem, -4rem) scale(0%) rotateY(50deg) rotate(-10deg);
     -webkit-transform: translate(9.4rem, -4rem) scale(0%) rotateY(50deg) rotate(-10deg);
   }
@@ -701,11 +706,11 @@ button:hover{
     transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
     -webkit-transform: translate(0rem, 0rem) scale(100%) rotateY(50deg) rotate(-10deg);
   }
-  90%{
+  88%{
     transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
     -webkit-transform: translate(9.4rem, -4rem) scale(30%) rotateY(50deg) rotate(-10deg);
   }
-  91%, 100% {
+  89%, 100% {
     transform: translate(9.4rem, -4rem) scale(0%) rotateY(50deg) rotate(-10deg);
     -webkit-transform: translate(9.4rem, -4rem) scale(0%) rotateY(50deg) rotate(-10deg);
   }
@@ -1117,17 +1122,12 @@ button:hover{
 
 #crawl{
   position: relative;
-  
-  height: 100%;
+
   width: 40%;
 
-  overflow: hidden;
-
   text-shadow: none;
-}
+  font-weight: normal;
 
-#crawl.active{
-  
   transform: rotateX(40deg);
   -webkit-transform: rotateX(40deg);
 
@@ -1145,6 +1145,10 @@ button:hover{
   
   mask-image: linear-gradient(to top, black 90%, transparent 100%);
   -webkit-mask-image: linear-gradient(to top, black 90%, transparent 100%);
+}
+
+#crawl.active{
+  height: 100%;
 }
 
 #crawl p{
