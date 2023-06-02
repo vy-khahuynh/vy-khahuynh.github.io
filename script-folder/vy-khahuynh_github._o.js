@@ -1,5 +1,5 @@
 function addStars(){
-    var cur = document.getElementById('sky');
+    var cur = document.getElementById('stars-container');
     var classes = ["small", "medium", "big"];
     var num = Math.floor(Math.random() * 75) + 100;
     for(let i = 0 ; i < num ; i++){
@@ -19,20 +19,20 @@ function addStars(){
   
   function switchMode(){
     var mode = document.getElementsByName('mode')[0];
-    var fun = document.querySelectorAll(".fun");
-    var srs = document.querySelectorAll(".serious");
+    var sw = document.querySelectorAll(".sw");
+    var srs = document.querySelectorAll(".srs");
     
     if(mode.checked){
-      for(let i = 0 ; i < fun.length ; i++){
-        fun[i].classList.replace('inactive', 'active');
+      for(let i = 0 ; i < sw.length ; i++){
+        sw[i].classList.replace('inactive', 'active');
       }
       for(let i = 0 ; i < srs.length; i++){
         srs[i].classList.replace('active', 'inactive');
       }
     }
     else{
-      for(let i = 0 ; i < fun.length ; i++){
-        fun[i].classList.replace('active', 'inactive');
+      for(let i = 0 ; i < sw.length ; i++){
+        sw[i].classList.replace('active', 'inactive');
       }
       for(let i = 0 ; i < srs.length; i++){
         srs[i].classList.replace('inactive', 'active');

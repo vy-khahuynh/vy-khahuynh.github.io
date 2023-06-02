@@ -9,8 +9,8 @@
 
 <body onload="addStars()">
 <div id="background">
-  <div id="sky"></div>
-  <div id="blackhole-container" class="serious active">
+  <div id="stars-container"></div>
+  <div id="blackhole-container" class="srs active">
     <div id="curved">
       <span><b>V</b></span>
       <span><b>Y</b></span>
@@ -37,8 +37,8 @@
     
     <div class="accretion-disc" id="front-disc"></div>
   </div>
-  <div class="star-wars fun inactive">
-    <div id="death-star">
+  <div id="star-wars-container" class="star-wars sw inactive">
+    <div id="death-star-container">
       <img src="./images/star-wars-the-clone-wars-death-star-wookieepedia-death-star.png" alt="">
       <div id="death-beam-container">
         <span class="death-beam"></span>
@@ -71,18 +71,18 @@
   </div>
 </div>
 
-<nav class="serious active">
+<nav class="srs active">
   <ul>
     <li><a href="https://www.linkedin.com/">About</a></li>
-    <li><a href="https://github.com/">Github</a> </li>
+    <li><a href="https://github.com/vy-khahuynh">Github</a> </li>
     <li><div><img src="./images/img_avatar.jpeg" alt="Vy-Kha Huynh avatar photo"></div> </li>
     <li><a href="https://www.linkedin.com/">Linkedin</a></li>
     <li><a href="mailto:vykha.huynh@outlook.com">Contact Me</a></li>
   </ul>
 </nav>
 
-<div id="crawl-container">
-  <div id="crawl" class="fun inactive">
+<div id="crawl-container"  class="sw inactive">
+  <div id="crawl">
     <p>
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       Hello my name is Vy-Kha Huynh, I am a fourth year student in Software engineering at McGill
@@ -111,9 +111,9 @@
   </div>
 </div>
 
-<button class="fun inactive" id="superlaser" type="button" onclick="activateSuperlaser()"></button>
+<button class="sw inactive" id="superlaser" type="button" onclick="activateSuperlaser()"></button>
 
-<div id="theme" style="z-index: 5;">
+<div id="theme">
   <label for="mode"><img src="./images/star-wars-logo-0.png" alt=""></label>
   <input type="checkbox" name="mode" onclick="switchMode()">
 </div>
