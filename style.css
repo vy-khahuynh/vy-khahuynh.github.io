@@ -217,6 +217,10 @@ button{
   -webkit-transform: translate(-50%, -50%);
 }
 
+button.inactive{
+  width: 0%;
+}
+
 button:hover{
   cursor: pointer;
 }
