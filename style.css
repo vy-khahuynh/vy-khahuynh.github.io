@@ -1223,16 +1223,16 @@ div#theme label img{
 }
 
 #curved span:nth-child(1) {
-  transform: translateY(5.7rem) translateX(0.6rem) rotateZ(-60deg);
+  transform: translateY(5.6rem) translateX(1.7rem) rotateZ(-60deg);
 }
 #curved span:nth-child(2) {
-  transform: translateY(3.85rem) translateX(-0.09rem) rotateZ(-50deg);
+  transform: translateY(3.85rem) translateX(0.9rem) rotateZ(-50deg);
 }
 #curved span:nth-child(3) {
-  transform: translateY(2.1rem) rotateZ(-35deg);
+  transform: translateY(2.3rem) translateX(0.3rem) rotateZ(-40deg);
 }
 #curved span:nth-child(4) {
-  transform: translateY(0.95rem) rotateZ(-25deg);
+  transform: translateY(1.1rem) rotateZ(-30deg);
 }
 #curved span:nth-child(5) {
   transform: translateY(0.25rem) rotateZ(-15deg);
@@ -1247,14 +1247,14 @@ div#theme label img{
   transform: translateY(0.25rem) rotateZ(15deg);
 }
 #curved span:nth-child(9) {
-  transform: translateY(0.95rem) rotateZ(25deg);
+  transform: translateY(1.1rem) rotateZ(30deg);
 }
 #curved span:nth-child(10) {
-  transform: translateY(2.1rem) rotateZ(35deg);
+  transform: translateY(2.3rem) translateX(-0.3rem) rotateZ(40deg);
 }
 #curved span:nth-child(11) {
-  transform: translateY(3.85rem) translateX(-0.09rem) rotateZ(50deg);
+  transform: translateY(3.85rem) translateX(-0.9rem) rotateZ(50deg);
 }
 #curved span:nth-child(12) {
-  transform: translateY(5.7rem) translateX(-0.6rem) rotateZ(60deg);
+  transform: translateY(5.6rem) translateX(-1.7rem) rotateZ(60deg);
 }
