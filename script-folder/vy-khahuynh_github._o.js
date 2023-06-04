@@ -1,13 +1,15 @@
 function addStars(){
+  const body = document.body;
+const html = document.documentElement;
+const height = Math.max(body.scrollHeight, body.offsetHeight,
+  html.clientHeight, html.scrollHeight, html.offsetHeight);
     var cur = document.getElementById('stars-container');
-    var classes = ["small", "medium", "big"];
     var num = Math.floor(Math.random() * 75) + 100;
     for(let i = 0 ; i < num ; i++){
       var star = document.createElement('div');
       star.classList.add("star");
-      star.classList.add(classes[Math.floor(Math.random() * classes.length)]);
-      star.style.top = Math.floor(Math.random() * 0.99 * window.innerHeight)+"px";
-      star.style.left = Math.floor(Math.random() * 0.99 * window.innerWidth)+"px";
+      star.style.top = Math.floor(Math.random() * height)+"px";
+      star.style.left = Math.floor(Math.random() * window.innerWidth)+"px";
       cur.appendChild(star);
     }
     var bigstars = document.getElementsByClassName("big");
@@ -23,6 +25,7 @@ function addStars(){
     var srs = document.querySelectorAll(".srs");
     
     if(mode.checked){
+      const html = document.documentElement.style.overflowY="hidden";
       for(let i = 0 ; i < sw.length ; i++){
         sw[i].classList.replace('inactive', 'active');
       }
@@ -31,6 +34,7 @@ function addStars(){
       }
     }
     else{
+      const html = document.documentElement.style.overflowY="auto";
       for(let i = 0 ; i < sw.length ; i++){
         sw[i].classList.replace('active', 'inactive');
       }
@@ -55,3 +59,5 @@ function addStars(){
     }, 
     7000);
   }
+
+  addEventListener("load", addStars);
