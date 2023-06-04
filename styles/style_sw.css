@@ -60,7 +60,7 @@ html{
 body {
   margin: 0;
   
-  min-height: 100%;
+  height: 100%;
   
   font-size: 1.5em;
   font-family: 'Courier New', monospace;
@@ -74,7 +74,7 @@ body {
   
   scrollbar-width: none;
   
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 html::-webkit-scrollbar{
@@ -173,6 +173,8 @@ html::-webkit-scrollbar{
   
   #death-star-container img{
     width: 100%;
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
   }
   
   #death-beam-container{
@@ -229,7 +231,7 @@ html::-webkit-scrollbar{
     top: 0%;
     left: 100%;
     
-    height: 0.25rem;
+    height: 0.15rem;
     
     transform-origin: left;
     -webkit-transform-origin: left;
@@ -293,7 +295,7 @@ html::-webkit-scrollbar{
   }
   
   #death-beam-container span:nth-child(9){
-    height: 0.5rem;
+    height: 0.4rem;
     width: 70vw;
     transform: translateY(-50%) rotateZ(-35deg);
     -webkit-transform: translateY(-50%) rotateZ(-35deg);
@@ -689,7 +691,7 @@ html::-webkit-scrollbar{
     align-items: center;
     justify-content: center;
     margin: auto;
-    
+
     translate: -8rem 0;
     animation: swooshX 15s ease-in-out infinite;
     -webkit-animation: swooshX 15s ease-in-out infinite;
@@ -697,20 +699,51 @@ html::-webkit-scrollbar{
   
   @keyframes swooshX {
     70%{
-      transform: translateX(0%) scale(100%);
-      -webkit-transform: translateX(0%) scale(100%);
+      transform: translateX(0%);
+      -webkit-transform: translateX(0%);
     }
     83%, 86%{
-      transform: translateX(35vw) scale(60%);
-      -webkit-transform: translateX(35vw) scale(60%);
+      transform: translateX(35vw);
+      -webkit-transform: translateX(35vw);
     }
     87%, 100%{
-      transform: translateX(45vw) scale(0%);
-      -webkit-transform: translateX(45vw) scale(0%);
+      transform: translateX(45vw);
+      -webkit-transform: translateX(45vw);
+    }
+  }
+
+  #millenium_falcon{
+    position: relative;
+
+    height: 100%;
+    width: 100%;
+  
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    animation: swooshscale 15s ease-in-out infinite;
+    -webkit-animation: swooshscale 15s ease-in-out infinite;
+  }
+  @keyframes swooshscale {
+    70%{
+      transform: scale(100%);
+      -webkit-transform: scale(100%);
+    }
+    83%, 86%{
+      transform: scale(60%);
+      -webkit-transform: scale(60%);
+    }
+    87%, 100%{
+      transform: scale(0%);
+      -webkit-transform: scale(0%);
     }
   }
   
-  .millenium_falcon img{
+  #millenium_falcon img{
+    position: absolute;
     height: 100%;
     
     margin: auto;
@@ -721,22 +754,21 @@ html::-webkit-scrollbar{
   
   #plasma{
     position: absolute;
-    top: 17%;
-    left: -5%;
-    
-    z-index: -1;
+    top: 30%;
+    left: -30%;
   
-    height: 80%;
+    height: 70%;
     width: 90%;
   
     filter: blur(0.2rem);
     -webkit-filter: blur(0.2rem);
+
     border-radius: 50%;
     background: radial-gradient(circle,white 30%, rgb(115, 236, 255));
     
-    transform: skew(20deg) rotateZ(-15deg);
-    -webkit-transform: skew(20deg) rotateZ(-15deg);
-  
+    transform: skewX(18deg);
+    -webkit-transform: skewX(18deg);
+
     animation: hyperspace 15s ease infinite;
     -webkit-animation: hyperspace 15s ease infinite;
   }
@@ -745,14 +777,14 @@ html::-webkit-scrollbar{
     0%, 85%{
       filter: blur(0.2rem) brightness(100%);
       -webkit-filter: blur(0.2rem) brightness(100%);
-      transform: skew(20deg) rotateZ(-15deg);
-      -webkit-transform: skew(20deg) rotateZ(-15deg);
+      transform: skew(18deg);
+      -webkit-transform: skew(18deg);
     }
     86%, 100%{
-      filter: blur(0.2rem) brightness(150%);
-      -webkit-filter: blur(0.2rem) brightness(150%);
-      transform: skew(20deg) rotateZ(-15deg) translateX(-2%) translateY(-1%);
-      -webkit-transform: skew(20deg) rotateZ(-15deg) translateX(-2%) translateY(-1%);
+      filter: blur(0.2rem) brightness(200%);
+      -webkit-filter: blur(0.2rem) brightness(200%);
+      transform: skew(18deg) translateX(-3%) translateY(-1%);
+      -webkit-transform: skew(18deg) translateX(-3%) translateY(-1%);
     }
   }
 
@@ -813,9 +845,6 @@ html::-webkit-scrollbar{
   position: relative;
   height: 100%;
   width: 40%;
-
-  text-shadow: none;
-  font-weight: normal;
 
   transform: rotateX(40deg);
   -webkit-transform: rotateX(40deg);

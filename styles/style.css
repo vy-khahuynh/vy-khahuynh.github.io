@@ -63,7 +63,7 @@ body {
   min-height: 100%;
 
   /* text-shadow: 2px 2px red, -2px 2px blue; */
-  font-weight: bold;
+  /* font-weight: bold; */
   
   color: white;
   font-size: 1.5em;
@@ -519,30 +519,6 @@ nav ul li a:nth-child(n){
   align-self: flex-end;
 }
 
-main{
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-}
-
-
-.alignment-grid{
-  visibility: hidden;
-}
-
-#theme{
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  align-items: center;
-    animation: inv 5s linear infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
-}
-
 #socials{
   position: relative;
   background-color: white;
@@ -564,4 +540,15 @@ main{
 
 .ontop{
   z-index: 10;
+}
+
+main{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+.alignment-grid{
+  visibility: hidden;
 }

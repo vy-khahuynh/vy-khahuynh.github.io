@@ -11,8 +11,8 @@ function addStars(){
     star.style.left = Math.floor(Math.random() * 0.99 * window.innerWidth)+"px";
     cur.appendChild(star);
   }
-  var bigstars = document.getElementsByClassName("big");
-  for(let i = 0 ; i < 15 ; i++){
+  var bigstars = document.querySelectorAll(".star:nth-child(n)");
+  for(let i = 0 ; i < bigstars.length ; i++){
     var delay = Math.floor(Math.random() * 20);
     bigstars[i].style.animation = `glow 5s ease infinite ${delay}s`;
   }
