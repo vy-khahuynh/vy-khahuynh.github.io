@@ -56,6 +56,7 @@ table {
 }
 html{
   height: 100%;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
@@ -63,7 +64,7 @@ body {
   min-height: 100%;
 
   /* text-shadow: 2px 2px red, -2px 2px blue; */
-  /* font-weight: bold; */
+  font-weight: bold;
   
   color: white;
   font-size: 1.5em;
@@ -79,6 +80,8 @@ body {
   scrollbar-width: none;
   
   overflow-x: hidden;
+
+  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar{
@@ -132,45 +135,80 @@ li{
   width: 0;
 }
 
-nav ul li *:hover,  #footer div *:hover{
-  background-color: darkgray;
+nav ul li a{
+  background-color: transparent;
+  /* color: black; */
+  position: relative;
+}
+nav ul li a.shine{
+  /* background-color: transparent; */
+  /* color: black; */
+  /* position: relative; */
+  animation: spin 1s linear 1;
 }
 
- #footer div {
+@keyframes spin{
+  50%{
+    transform: rotateZ(180deg);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }
+}
+
+/*
+nav ul li a::after{
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
   border-radius: 5rem;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  translate: 0 -10%;
+  clip-path: polygon(40% 0%, 60% 100%, 0% 100%, 0% 0%);
 }
 
-#footer div a:nth-child(n) {
-  margin: 1vh auto 1vh;
+nav ul li a::before{
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  border-radius: 5rem;
+  z-index: -1;
+  translate: 0 10%;
+  clip-path: polygon(40% 0%, 60% 100%, 100% 100%, 100% 0%);
 }
 
- #footer div a:nth-child(1) {
-  margin-left: 2vw;
+nav ul li a:hover::before,nav ul li a:hover::after  {
+  visibility: collapse;
+} */
+
+nav ul li a:nth-child(n){
+  color: white;
+  /* color: #000000; */
+  text-decoration: none;
+  border-radius: 5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
- #footer div a:nth-child(2) {
-  margin-left: 2vw;
-}
-
- #footer div a:nth-child(3) {
-  margin-right: 2vw;
-  margin-left: 2vw;
-}
-
-#footer div a:nth-child(4) {
-  margin-right: 2vw;
-}
-
- #footer div a img{
-  width: 3vw;
-  display: block;
+nav ul li a:hover{
+  background-color: white;
+  color: #000000;
 }
 
 #avatar{
   position: relative;
   margin: auto;
   border-radius: 50%;
-  height: 17vh;
+  height: 18vh;
   aspect-ratio: 1;
 }
 
@@ -205,13 +243,6 @@ nav ul li *:hover,  #footer div *:hover{
   aspect-ratio: 1;
   translate: 0.2rem 0rem;
 } */
-
-nav ul li a:nth-child(n){
-  color: white;
-  text-decoration: none;
-  border-radius: 0 1rem 0 1rem;
-  padding: 0.25rem;
-}
 
 #blackhole-container{
   position: relative;
@@ -512,13 +543,6 @@ nav ul li a:nth-child(n){
   justify-content: center;
 }
 
- #footer label img{
-  width: 4vw;
-  display: block;
-  justify-self: flex-start;
-  align-self: flex-end;
-}
-
 #socials{
   position: relative;
   background-color: white;
@@ -527,15 +551,45 @@ nav ul li a:nth-child(n){
   display: -webkit-inline-flex;
   justify-content: center;
   align-items: center;
-
-  animation: inv 5s linear infinite;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
 }
+
+#socials.scroll{
+  animation: inv 1s linear 1;
+}
+
 @keyframes inv {
   50%, 100%{
     filter: invert(1);
   }
+}
+
+#socials *:hover{
+  background-color: darkgray;
+}
+
+ #socials {
+  border-radius: 5rem;
+}
+
+#socials a:nth-child(n) {
+  margin: 1vh 1vw 1vh 1vw;
+}
+
+#socials a:first-child {
+  margin-left: 2vw;
+}
+
+#socials a:last-child {
+  margin-right: 2vw;
+}
+
+ #socials a img{
+  width: 3vw;
+  display: block;
+}
+
+#socials a:nth-child(2), #socials a:nth-child(2) > img {
+  border-radius: 50%;
 }
 
 .ontop{
@@ -550,5 +604,51 @@ main{
 
 
 .alignment-grid{
-  visibility: hidden;
+  visibility: collapse;
 }
+
+#switch{
+  transform: translateY(50%);
+  opacity: 0;
+  display: inline-block;
+}
+
+#switch.active{
+  animation: fade 15s ease infinite;
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  15%, 100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#switch span:nth-child(n){
+  font-size: 2rem;
+  display: inline-block;
+}
+
+#switch.active span:nth-child(n){
+  animation: suck 15s ease infinite;
+}
+
+@keyframes suck {
+  0%, 65%{
+    transform: translateY(0) rotateZ(0deg);
+    opacity: 1;
+  }
+  100%{
+    transform: translateY(-500%) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+
+#switch span{
+  white-space: pre;
+}
+
