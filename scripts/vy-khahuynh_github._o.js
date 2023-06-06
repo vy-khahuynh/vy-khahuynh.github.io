@@ -1,3 +1,7 @@
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jquery.com/ for the current version
+document.getElementsByTagName('head')[0].appendChild(script);
+
 function addStars(){
   const body = document.body;
   const html = document.documentElement;
@@ -35,36 +39,50 @@ function activateSuperlaser(){
 }
 
 addEventListener("load", addStars);
-addEventListener("load", introloop);
+addEventListener("load", intro);
 
 function scrolltop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-let names = ["Vy-Kha Huynh", "a Software Engineer", "a Blackhole fanatic", "a LEGO enthusiast"];
+let names = ["Vy-Kha Huynh", "a Full-Stack Developer", "a Software Engineer", "a Blackhole fanatic", "a LEGO enthusiast"];
 
-function introloop(){
-  var i = 1;
-  
-  intro(0);
-  
-  setInterval(function(){
-    intro(i);
-    i = (i + 1) % names.length;
-  }, 15000)
+function intro(){
+  populate();
+  animateNext(1);
 }
 
-function intro(i){
-  var cur = document.querySelectorAll('#switch')[0];
-  cur.classList.remove('active');
-  cur.innerHTML = '';
-  for(var j = 0 ; j < names[i].length ; j++){
-    var letter = document.createElement('span');
-    letter.innerHTML = names[i][j];
-    cur.appendChild(letter);
+function populate(){
+    var sw = document.querySelectorAll('#switch')[0];
+
+    for(var i = 0 ; i < names.length ; i++){
+      var name = document.createElement('span');
+      for(var j = 0 ; j < names[i].length ; j++){
+        var letter = document.createElement('span');
+        letter.innerHTML = names[i][j];
+        name.appendChild(letter);
+      }
+      sw.appendChild(name);
+    }
   }
-  cur.classList.add('active');
-}
+
+// function animateNext(i){
+//   var cur = document.querySelector('#switch');
+//   var child = document.querySelector(`#switch > span:nth-child(${i})`);
+  
+//   child.classList.add('active');
+  
+//   child.addEventListener('animationend', () => {
+//     child.classList.remove('active');
+//     if(i==cur.children.length){
+//       i = 0;
+//       // alert("done");
+//     }
+//     else{
+//       animateNext(i+1);
+//     }
+//   });
+// }
 
 // let options = {
 //   root: null,

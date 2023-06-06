@@ -608,42 +608,69 @@ main{
 }
 
 #switch{
+  position: relative;
   transform: translateY(50%);
+}
+
+/* #switch.active{
+  animation: fade 10s ease-in 1;
+  -webkit-animation: fade 10s ease-in 1;
+} */
+
+#switch > span {
+  margin: auto;
+  font-size: 2rem;
+  position: absolute;
+  translate: -50% 100%;
+  top: 0;
+  left: 0;
   opacity: 0;
-  display: inline-block;
 }
 
-#switch.active{
-  animation: fade 15s ease infinite;
-}
-
-@keyframes fade {
-  0%{
-    opacity: 0;
-    transform: translateY(50%);
-  }
-  15%, 100%{
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-#switch span:nth-child(n){
+#switch span span{
   font-size: 2rem;
   display: inline-block;
 }
 
-#switch.active span:nth-child(n){
-  animation: suck 15s ease infinite;
+#switch span{
+  animation: fade 50s ease-in 1;
+  -webkit-animation: fade 50s ease-in 1;
 }
-
+#switch span span{
+  animation: suck 50s ease-in 1;
+  -webkit-animation: suck 50s ease-in 1;
+}
+#switch span:nth-child(1), #switch span:nth-child(1) span{
+  animation-delay: 0s;
+}
+#switch span:nth-child(2), #switch span:nth-child(2) span{
+  animation-delay: 10s;
+}
+#switch span:nth-child(3), #switch span:nth-child(3) span{
+  animation-delay: 20s;
+}
+#switch span:nth-child(4), #switch span:nth-child(4) span{
+  animation-delay: 30s;
+}
+#switch span:nth-child(5), #switch span:nth-child(5) span{
+  animation-delay: 40s;
+}
+@keyframes fade {
+  2%, 100%{
+    opacity: 1;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+  }
+}
 @keyframes suck {
-  0%, 65%{
+  0%, 15%{
     transform: translateY(0) rotateZ(0deg);
+    -webkit-transform: translateY(0) rotateZ(0deg);
     opacity: 1;
   }
-  100%{
-    transform: translateY(-500%) rotateZ(360deg);
+  20%, 100%{
+    transform: translateY(-400%) rotateZ(360deg);
+    -webkit-transform: translateY(-400%) rotateZ(360deg);
     opacity: 0;
   }
 }
