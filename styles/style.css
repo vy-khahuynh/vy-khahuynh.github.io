@@ -612,11 +612,6 @@ main{
   transform: translateY(50%);
 }
 
-/* #switch.active{
-  animation: fade 10s ease-in 1;
-  -webkit-animation: fade 10s ease-in 1;
-} */
-
 #switch > span {
   margin: auto;
   font-size: 2rem;
@@ -625,21 +620,25 @@ main{
   top: 0;
   left: 0;
   opacity: 0;
+  animation: fade 50s ease-in infinite;
+  -webkit-animation: fade 50s ease-in infinite;
 }
 
-#switch span span{
+#switch > span span{
   font-size: 2rem;
   display: inline-block;
 }
 
-#switch span{
-  animation: fade 50s ease-in 1;
-  -webkit-animation: fade 50s ease-in 1;
+#switch > span span:nth-child(2n){
+  animation: suck1 50s ease-in infinite;
+  -webkit-animation: suck1 50s ease-in infinite;
 }
-#switch span span{
-  animation: suck 50s ease-in 1;
-  -webkit-animation: suck 50s ease-in 1;
+
+#switch > span span:nth-child(2n-1){
+  animation: suck2 50s ease-in infinite;
+  -webkit-animation: suck2 50s ease-in infinite;
 }
+
 #switch span:nth-child(1), #switch span:nth-child(1) span{
   animation-delay: 0s;
 }
@@ -662,8 +661,8 @@ main{
     -webkit-transform: translateY(-50%);
   }
 }
-@keyframes suck {
-  0%, 15%{
+@keyframes suck1 {
+  0%, 14%{
     transform: translateY(0) rotateZ(0deg);
     -webkit-transform: translateY(0) rotateZ(0deg);
     opacity: 1;
@@ -671,6 +670,19 @@ main{
   20%, 100%{
     transform: translateY(-400%) rotateZ(360deg);
     -webkit-transform: translateY(-400%) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes suck2 {
+  0%, 15%{
+    transform: translateY(0) rotateZ(0deg);
+    -webkit-transform: translateY(0) rotateZ(0deg);
+    opacity: 1;
+  }
+  21%, 100%{
+    transform: translateY(-400%) rotateZ(-360deg);
+    -webkit-transform: translateY(-400%) rotateZ(-360deg);
     opacity: 0;
   }
 }
