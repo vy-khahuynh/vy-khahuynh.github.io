@@ -7,7 +7,7 @@ function addStars(){
   const html = document.documentElement;
   const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
   var cur = document.getElementById('stars-container');
-  var num = Math.floor(Math.random() * 75) + 100;
+  var num = Math.floor(Math.random() * 100) + 100;
   for(let i = 0 ; i < num ; i++){
     var star = document.createElement('div');
     star.classList.add("star");
@@ -66,34 +66,50 @@ function populate(){
     }
   }
 
-// function animateNext(i){
-//   var cur = document.querySelector('#switch');
-//   var child = document.querySelector(`#switch > span:nth-child(${i})`);
-  
-//   child.classList.add('active');
-  
-//   child.addEventListener('animationend', () => {
-//     child.classList.remove('active');
-//     if(i==cur.children.length){
-//       i = 0;
-//       // alert("done");
-//     }
-//     else{
-//       animateNext(i+1);
-//     }
-//   });
-// }
+function animate(cb, an, op){
+  const observer = new IntersectionObserver(cb, op);
+  for(var i = 0 ; i < an.length ; i++){
+    observer.observe(an[i]);
+  }
+}
 
-// let options = {
-//   root: null,
-//   rootMargin: "0px",
-//   threshold: 0.3
-// }
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0
+}
 
-// let callback = (entries) => {
-//   entries.forEach((entry) =>{
-//   });
-// };
+let callback = (entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('scroll-animation');
+    }
+    else{
+      entry.target.classList.remove('scroll-animation');
+    }
+  });
+};
 
-// const observer = new IntersectionObserver(callback, options);
+var animated = document.querySelectorAll('.to-show-on-scroll');
+
+animate(callback, animated, options);
+
+let minimize = (entries) =>{
+  entries.forEach((entry) => {
+    if(!entry.isIntersecting){
+      document.querySelector("#nav-bar").classList.add("minimized");
+      document.querySelector("#socials").classList.add("inverted");
+      document.querySelector("#socials").classList.add("minimized");
+    }
+    else{
+      document.querySelector("#nav-bar").classList.remove("minimized");
+      document.querySelector("#socials").classList.remove("inverted");
+      document.querySelector("#socials").classList.remove("minimized");
+    }
+  });
+}
+
+var home = document.querySelectorAll('#home');
+
+animate(minimize, home, {threshold: 0.7});
 
