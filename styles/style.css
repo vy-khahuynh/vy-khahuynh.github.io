@@ -702,7 +702,7 @@ main > div:nth-child(n){
   -webkit-filter: invert(1);
 }
 
-.stamp-w{
+.stamp-l{
   position: absolute;
   height: 2em;
   left: 7.5%;
