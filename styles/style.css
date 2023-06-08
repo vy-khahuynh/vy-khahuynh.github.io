@@ -127,6 +127,7 @@ nav{
   text-align: center;
 
   transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
 }
 
 ul{
@@ -682,7 +683,6 @@ main > div:nth-child(n){
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
-  /* border: 1px red solid; */
   position: relative;
 }
 
@@ -729,10 +729,6 @@ main > div:nth-child(n){
   margin: 2%;
 }
 
-.undertitle{
-  font-size: 1rem;
-}
-
 .tech{
   display: flex;
   display: -webkit-flex;
@@ -756,6 +752,26 @@ div.current::before{
   translate: -50% -50%;
 }
 
+.underplanet{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+.underplanet *{
+  display: block;
+  font-size: 1rem;
+}
+
+.undertitle{
+  font-size: 0.8rem;
+}
+.title{
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
 .stamp{
   position: absolute;
   height: 1em;
@@ -765,13 +781,6 @@ div.current::before{
   -webkit-filter: invert(1);
 }
 
-.stamp-l{
-  position: relative;
-  height: 2em;
-  display: block;
-  /* vertical-align: middle; */
-}
-
 #about > p{
   width: 70%;
 }
@@ -779,8 +788,10 @@ div.current::before{
 .to-show-on-scroll{
   opacity: 0;
   transform: translateY(10%);
-  transition: all 0.5s ease-out;
-  transition-delay: 0.4s;
+  transition: all 0.75s ease-out;
+  -webkit-transition: all 0.75s ease-in-out;
+  transition-delay: 0.5s;
+  -webkit-transition-delay: 0.5s;
 }
 
 .scroll-animation {
