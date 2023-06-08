@@ -64,7 +64,6 @@ body {
   min-height: 100%;
 
   /* text-shadow: 2px 2px red, -2px 2px blue; */
-  font-weight: bold;
   
   color: white;
   font-size: 1.5em;
@@ -128,6 +127,8 @@ nav{
 
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
+
+  font-weight: bold;
 }
 
 ul{
@@ -624,6 +625,7 @@ main > div{
 main h1{
   font-size: 2rem;
   margin-bottom: 1%;
+  font-weight: bold;
 }
 
 main img{
@@ -739,13 +741,13 @@ main > div:nth-child(n){
   height: 1.5em;
 }
 
-div.current::before{
+#current::before{
   content: '';
   background-image: url(../assets/images/astronaut.png);
   background-size: contain;
   background-repeat: no-repeat;
-  height: 50%;
-  width: 50%;
+  height: 40%;
+  width: 40%;
   position: absolute;
   top: 0%;
   left: 50%;
@@ -762,14 +764,21 @@ div.current::before{
 .underplanet *{
   display: block;
   font-size: 1rem;
+  font-weight: normal;
 }
 
 .undertitle{
   font-size: 0.8rem;
 }
+
+main > div#work > div#work-gallery > div > p.underplanet > span.undertitle img{
+  height: 3rem;
+}
+
 .title{
   font-size: 1.2rem;
   text-decoration: underline;
+  font-weight: bold;
 }
 
 .stamp{
@@ -785,13 +794,29 @@ div.current::before{
   width: 70%;
 }
 
+.mcgill{
+  color: red;
+}
+
+img.mcgill{
+  height: 2rem;
+}
+
+.cpk{
+  color: rgb(135, 105, 78);
+}
+
+img.cpk{
+  height: 2rem;
+}
+
 .to-show-on-scroll{
   opacity: 0;
   transform: translateY(10%);
-  transition: all 0.75s ease-out;
-  -webkit-transition: all 0.75s ease-in-out;
-  transition-delay: 0.5s;
-  -webkit-transition-delay: 0.5s;
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition-delay: 0.25s;
+  -webkit-transition-delay: 0.25s;
 }
 
 .scroll-animation {
@@ -807,4 +832,19 @@ div.current::before{
 .inverted{
   filter: invert(1);
   -webkit-filter: invert(1);
+}
+
+.acc-aig, .acc-gr{
+  position: relative;
+}
+
+.acc-aig::before, .acc-gr::before{
+  content: '`';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.acc-aig::before{
+  transform: rotateY(180deg);
 }
