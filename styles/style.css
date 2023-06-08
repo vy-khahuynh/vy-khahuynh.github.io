@@ -725,16 +725,6 @@ main > div:nth-child(n){
   z-index: -1;
 }
 
-.current::before{
-  content: '';
-  position: absolute;
-  height: 5rem;
-  width: 5rem;
-  background-color: aqua;
-  top: 0;
-  left: 0;
-}
-
 #project-gallery > div *, #work-gallery > div *{
   margin: 2%;
 }
@@ -751,6 +741,19 @@ main > div:nth-child(n){
 }
 .tech img{
   height: 1.5em;
+}
+
+div.current::before{
+  content: '';
+  background-image: url(../assets/images/astronaut.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  translate: -50% -50%;
 }
 
 .stamp{
