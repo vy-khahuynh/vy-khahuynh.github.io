@@ -637,11 +637,12 @@ main > div:nth-child(n){
 }
 
 #project-gallery, #work-gallery{
+  position: relative;
   display: flex;
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5rem;
+  width: 100%;
 }
 
 #project-gallery h2, #work-gallery h2{
@@ -649,7 +650,7 @@ main > div:nth-child(n){
   text-decoration: underline;
 }
 
-#project-gallery > div:nth-child(n), #work-gallery > div:nth-child(n){
+#project-gallery > div:nth-child(n){
   display: flex;
   display: webkit-flex;
   align-items: center;
@@ -662,7 +663,7 @@ main > div:nth-child(n){
   position: relative;
 }
 
-#project-gallery > div:nth-child(n)::after, #work-gallery > div:nth-child(n)::after{
+#project-gallery > div:nth-child(n)::after{
   position: absolute;
   content: "";
   height: 100%;
@@ -673,6 +674,65 @@ main > div:nth-child(n){
   z-index: -1;
   border-radius: 5rem;
   background-color: rgb(5, 0, 25);
+}
+
+#work-gallery > div:nth-child(n){
+  margin: 5%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px red solid; */
+  position: relative;
+}
+
+#work-gallery > div img{
+  margin: auto;
+  height: 40vh;
+}
+
+#work-gallery > div > a > span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+}
+
+#work-gallery > div:last-child img{
+  margin: auto;
+  height: 20vh;
+}
+
+#work-gallery::before{
+  content: '';
+  height: 0;
+  width: 100%;
+  border-width: 0.1rem;
+  border-style: dashed;
+  position: absolute;
+  z-index: -1;
+}
+
+#work-gallery::after{
+  content: '';
+  height: 0;
+  width: 0;
+  right: 0rem;
+  border-left: white solid 2rem ;
+  border-top: transparent solid 0.5rem;
+  border-bottom: transparent solid 0.5rem;
+  position: absolute;
+  z-index: -1;
+}
+
+.current::before{
+  content: '';
+  position: absolute;
+  height: 5rem;
+  width: 5rem;
+  background-color: aqua;
+  top: 0;
+  left: 0;
 }
 
 #project-gallery > div *, #work-gallery > div *{
@@ -703,10 +763,10 @@ main > div:nth-child(n){
 }
 
 .stamp-l{
-  position: absolute;
+  position: relative;
   height: 2em;
-  left: 7.5%;
-  top: 7.5%;
+  display: block;
+  /* vertical-align: middle; */
 }
 
 #about > p{
