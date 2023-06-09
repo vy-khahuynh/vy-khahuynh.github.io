@@ -243,7 +243,6 @@ html::-webkit-scrollbar{
     color: white;
     text-decoration: none;
     border-radius: 5rem;
-    /* padding: 0.5rem 1rem 0.5rem 1rem; */
   }
   
   nav ul li a:hover{
@@ -255,7 +254,7 @@ html::-webkit-scrollbar{
     position: relative;
     margin: auto;
     border-radius: 50%;
-    width: 60%;
+    width: 50%;
     aspect-ratio: 1;
   }
   
@@ -264,9 +263,111 @@ html::-webkit-scrollbar{
     width: 100%;
   }
 
-
-  @media (max-height: 1000px) and (max-width: 500px){
-    #socials{ width: 100%;}
-    body{font-size: 1rem;}
-    #socials a img{width: 15vw;}
+  #blackhole-container{
+    position: relative;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
   }
+  
+  .blackhole{
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  
+  #singularity{
+    height:100%;
+    width:100%;
+  
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+  
+    background: radial-gradient(circle, black 0%, 60%, white 70%);
+    box-shadow: 0 0 0.63rem 1.25rem white;
+  } 
+
+  #photon-ring{
+    width:85%;
+  
+    margin: auto;
+    background: transparent;
+    border: solid 0.1rem white;
+    box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem white;
+  }
+  
+  #event-horizon{
+    height: 60%;
+    border: 20% solid white;
+  
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  
+    box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
+  }
+  
+  #aura{
+    position: absolute;
+    
+    height: 100%;
+  
+    margin: auto;
+  
+    filter: blur(2.5rem);
+    -webkit-filter: blur(2.5rem);
+  
+    background: repeating-conic-gradient(white, transparent 11% 15%, white 18%);
+    background-size: 50% 50%;
+  }
+  
+  .accretion-disc{
+    position: absolute;
+  
+    height: 7.5%;
+    aspect-ratio: 18;
+  
+    margin: auto;
+    
+    border-radius: 50%;
+    
+    background-color: white;
+    box-shadow: 0 0 1rem 1rem rgb(255, 247, 222);
+  }
+  
+  @keyframes vibrate{
+    25%{
+      rotate: 0.3deg;
+    }
+    75%{
+      rotate: -0.3deg;
+    }
+  }
+  
+  #front-disc{
+    margin: auto;
+  
+    height: 5%;
+  
+    box-shadow: 0 0 1rem 0.5rem rgb(255, 255, 255);
+    background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
+  }
+  
+  @media (max-height: 1000px) and (max-width: 500px){
+    /* #socials{ width: 100%;} */
+    body{font-size: 1rem;}
+    #socials a img{width: 10vw;}
+    #blackhole-container{
+        height: 30%;
+        width: 30%;
+    }
+  }
+
+  
