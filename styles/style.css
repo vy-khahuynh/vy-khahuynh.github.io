@@ -62,8 +62,6 @@ body {
   margin: 0;
   
   min-height: 100%;
-
-  /* text-shadow: 2px 2px red, -2px 2px blue; */
   
   color: white;
   font-size: 1.5em;
@@ -117,7 +115,7 @@ nav{
   left: 0;
 
   height: 30%;
-  width: 70%;
+  width: 100%;
 
   margin: auto;
   padding-top: 2%;
@@ -133,6 +131,7 @@ nav{
 
 ul{
   width: 100%;
+  /* height: 100%; */
   display: inline-flex;
   display: -webkit-inline-flex;
   align-items: center;
@@ -140,6 +139,7 @@ ul{
 }
 
 li{
+  /* height: 100%; */
   flex: 1 1 0;
   width: 0;
 }
@@ -165,7 +165,7 @@ nav ul li a:hover{
   position: relative;
   margin: auto;
   border-radius: 50%;
-  height: 18vh;
+  height: 18%;
   aspect-ratio: 1;
 }
 
@@ -173,6 +173,33 @@ nav ul li a:hover{
   border-radius: 50%;
   height: 100%;
   border: white 0.25rem solid;
+}
+
+@media (min-width: 1400px) and (min-height: 750px) {
+  #singularity{
+    animation: pulsing-low 0.5s linear infinite;
+    -webkit-animation: pulsing-low 0.5s linear infinite;
+  }
+  #photon-ring{
+    animation: rotate 0.2s linear infinite;
+    -webkit-animation: rotate 0.2s linear infinite;
+  }
+  #event-horizon{
+    animation: pulsing-bright 3s linear infinite alternate;
+    -webkit-animation: pulsing-bright 3s linear infinite alternate;
+  }
+  #aura{
+    animation: aura-pulsing 20s ease infinite;
+    -webkit-animation: aura-pulsing 20s ease infinite;
+  }
+  .accretion-disc{
+    animation: vibrate 0.1s linear infinite;
+    -webkit-animation: vibrate 0.1s linear infinite;
+  }
+  #front-disc{
+    animation: stripe 0.5s ease infinite;
+    -webkit-animation: stripe 0.5s ease infinite;
+  }
 }
 
 #blackhole-container{
@@ -190,6 +217,7 @@ nav ul li a:hover{
   aspect-ratio: 1;
   border-radius: 50%;
 }
+
 #singularity{
   height:100%;
   width:100%;
@@ -202,20 +230,6 @@ nav ul li a:hover{
 
   background: radial-gradient(circle, black 0%, 60%, white 70%);
   box-shadow: 0 0 0.63rem 1.25rem white;
-}
-@media (min-width: 1920px) and (min-height: 1080px) {
-  #singularity{
-    animation: pulsing-low 0.5s linear infinite;
-    -webkit-animation: pulsing-low 0.5s linear infinite;
-  }
-  #photon-ring{
-    animation: rotate 0.2s linear infinite;
-    -webkit-animation: rotate 0.2s linear infinite;
-  }
-  #event-horizon{
-    animation: pulsing-bright 3s linear infinite alternate;
-    -webkit-animation: pulsing-bright 3s linear infinite alternate;
-  }
 }
 
 @keyframes pulsing-low{
@@ -285,7 +299,7 @@ nav ul li a:hover{
   align-items: center;
   margin: auto;
 
-  box-shadow: 0 0 1rem 4rem rgb(249, 232, 170);
+  box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
 }
 
 @keyframes pulsing-bright {
@@ -336,11 +350,10 @@ nav ul li a:hover{
   filter: blur(2.5rem);
   -webkit-filter: blur(2.5rem);
 
+  z-index: -1;
+
   background: repeating-conic-gradient(white, transparent 11% 15%, white 18%);
   background-size: 50% 50%;
-  
-  animation: aura-pulsing 20s ease infinite;
-  -webkit-animation: aura-pulsing 20s ease infinite;
 }
 
 @keyframes aura-pulsing{
@@ -376,9 +389,6 @@ nav ul li a:hover{
   
   background-color: white;
   box-shadow: 0 0 1rem 1rem rgb(255, 247, 222);
-  
-  animation: vibrate 0.1s linear infinite;
-  -webkit-animation: vibrate 0.1s linear infinite;
 }
 
 @keyframes vibrate{
@@ -400,9 +410,6 @@ nav ul li a:hover{
 
   box-shadow: 0 0 1rem 0.5rem rgb(255, 255, 255);
   background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
-  
-  animation: stripe 0.5s ease infinite;
-  -webkit-animation: stripe 0.5s ease infinite;
 }
 
 @keyframes stripe {
