@@ -851,8 +851,8 @@ html::-webkit-scrollbar{
     }
     #project-gallery, #work-gallery{
         margin: auto;
-        margin-top: 20%;
-        width: 140vh;
+        margin-top: 10%;
+        width: 120vh;
     }
     main > div#work > div#work-gallery-container > div#work-gallery > div > p.underplanet > span.undertitle img{
         height: 2rem;
@@ -866,6 +866,15 @@ html::-webkit-scrollbar{
       
       .undertitle{
         font-size: 0.8rem;
+      }
+      #work-gallery > div:nth-child(n){
+        margin: 2%
+      }
+      img.mcgill{
+        height: 1rem;
+      }
+      img.cpk{
+        height: 1rem;
       }
   }
 

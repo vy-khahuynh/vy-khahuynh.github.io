@@ -778,7 +778,7 @@ main > div:nth-child(n){
   font-size: 0.8rem;
 }
 
-main > div#work > div#work-gallery > div > p.underplanet > span.undertitle img{
+main > div#work > div#work-gallery-container > div#work-gallery > div > p.underplanet > span.undertitle img{
   height: 3rem;
 }
 
@@ -854,4 +854,43 @@ img.cpk{
 
 .acc-aig::before{
   transform: rotateY(180deg);
+}
+
+/* mobile */
+@media (max-height: 1000px) and (max-width: 500px){
+  #switch > span > span, main h1{font-size: 1rem;}
+  body{font-size: 0.75rem;}
+  #socials a img{width: 10vw;}
+  #blackhole-container{
+      height: 30%;
+      width: 30%;
+  }
+  #home p{
+      top: 90%;
+  }
+  nav ul li a:nth-child(n){
+      padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  }
+  #work-gallery-container{
+      overflow-x: scroll;
+      overflow-y: hidden;
+  }
+  #project-gallery, #work-gallery{
+      margin: auto;
+      margin-top: 20%;
+      width: 140vh;
+  }
+  main > div#work > div#work-gallery-container > div#work-gallery > div > p.underplanet > span.undertitle img{
+      height: 2rem;
+    }
+  .title{
+      font-size: 0.75rem;
+  }
+  .underplanet *{
+      font-size: 0.75rem;
+    }
+    
+    .undertitle{
+      font-size: 0.8rem;
+    }
 }
