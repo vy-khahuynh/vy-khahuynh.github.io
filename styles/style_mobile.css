@@ -314,6 +314,113 @@ html::-webkit-scrollbar{
   
     box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
   }
+  @keyframes pulsing-low{
+    0%{
+      transform: scale(100%);
+      -webkit-transform: scale(100%);
+    }
+    20%{
+      transform: scale(102%);
+      -webkit-transform: scale(102%);
+      box-shadow: 0 0 0.94rem 0.94rem white;
+    }
+    55%{
+      transform: scale(103%);
+      -webkit-transform: scale(103%);
+    }
+    70%{
+      transform: scale(99%);
+      -webkit-transform: scale(99%);
+      box-shadow: 0 0 0.25rem 0.63rem white;
+    }
+    90%{
+      transform: scale(101%);
+      -webkit-transform: scale(101%);
+      box-shadow: 0 0 0.25rem 0.94rem white;
+    }
+    100%{
+      transform: scale(100%);
+      -webkit-transform: scale(100%);
+    }
+  }
+
+  @keyframes rotate{
+    0%{
+      box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem white;
+    }
+    24%{
+      box-shadow: 0rem 0.2rem 0.1rem 0.1rem white;
+    }
+    49%{
+      box-shadow: 0rem 0rem 0.1rem 0.1rem white;
+    }
+    74%{
+      box-shadow: 0.2rem 0rem 0.1rem 0.1rem white;
+    }
+    99%, 100%{
+      box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem white;
+    }
+  }
+
+
+  @keyframes pulsing-bright {
+    0%{
+      transform: scale(100%);
+      -webkit-transform: scale(100%);
+      box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
+    }  
+    17%{
+      box-shadow: 0 0 1.5rem 2.5rem rgb(255, 242, 195);
+    }
+    20%{
+      transform: scale(98%);
+      -webkit-transform: scale(98%);
+    }
+    55%{
+      transform: scale(101%);
+      -webkit-transform: scale(101%);
+    }  
+    67%{
+      box-shadow: 0 0 2rem 2rem rgb(249, 232, 170);
+    }
+    70%{
+      transform: scale(101%);
+      -webkit-transform: scale(101%);
+    } 
+    83%{
+      box-shadow: 0 0 1.5rem 2rem rgb(255, 246, 185);
+    }
+    90%{
+      transform: scale(99%);
+      -webkit-transform: scale(99%);
+    }
+    100%{
+      transform: scale(100%);
+      -webkit-transform: scale(100%);
+      box-shadow: 0 0 1rem 2rem rgb(249, 232, 170);
+    }
+  }
+  
+@keyframes aura-pulsing{
+    0%{
+      background-position: 0% 0%;
+    }
+    20%{
+      background-position: -20.5% 3.6%;
+    }
+    55%{
+      background-position: -40.7% -50.9%;
+    }
+    70%{
+      background-position: -50.7% -70.5%;
+    }
+    90%{
+      background-position: 20.3% -40.5%;
+    }
+    100%{
+      background-position: 0% 0%;
+    }
+  }
   
   #aura{
     position: absolute;
@@ -360,7 +467,35 @@ html::-webkit-scrollbar{
     box-shadow: 0 0 1rem 0.5rem rgb(255, 255, 255);
     background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
   }
-  
+  @keyframes stripe {
+    0%{
+      background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
+    }
+    12.5%{
+      background: repeating-linear-gradient(white 5%, transparent 40%, white 55%);
+    }
+    25%{
+      background: repeating-linear-gradient(white 10%, transparent 30%, white 60%);
+    }
+    37.5%{
+      background: repeating-linear-gradient(white 5%, transparent 40%, white 50%);
+    }
+    50%{
+      background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
+    }
+    62.5%{
+      background: repeating-linear-gradient(white 10%, transparent 30%, white 45%);
+    }
+    75%{
+      background: repeating-linear-gradient(white 20%, transparent 30%, white 40%);
+    }
+    87.5%{
+      background: repeating-linear-gradient(white 5%, transparent 40%, white 40%);
+    }
+    100%{
+      background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
+    }
+  }
   #home{
     height: 74vh;
     width: 100%; 
@@ -516,6 +651,31 @@ html::-webkit-scrollbar{
   .inverted{
     filter: invert(1);
     -webkit-filter: invert(1);
+  }
+
+  #singularity{
+    animation: pulsing-low 0.5s linear infinite;
+    -webkit-animation: pulsing-low 0.5s linear infinite;
+  }
+  #photon-ring{
+    animation: rotate 0.2s linear infinite;
+    -webkit-animation: rotate 0.2s linear infinite;
+  }
+  #event-horizon{
+    animation: pulsing-bright 3s linear infinite alternate;
+    -webkit-animation: pulsing-bright 3s linear infinite alternate;
+  }
+  #aura{
+    animation: aura-pulsing 20s ease infinite;
+    -webkit-animation: aura-pulsing 20s ease infinite;
+  }
+  .accretion-disc{
+    animation: vibrate 0.1s linear infinite;
+    -webkit-animation: vibrate 0.1s linear infinite;
+  }
+  #front-disc{
+    animation: stripe 0.5s ease infinite;
+    -webkit-animation: stripe 0.5s ease infinite;
   }
 
   /* mobile */
