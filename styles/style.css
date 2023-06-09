@@ -76,8 +76,6 @@ body {
   -webkit-animation: gradient 20s ease infinite;
   
   scrollbar-width: none;
-  
-  overflow-x: hidden;
 
   scroll-behavior: smooth;
 }
@@ -115,22 +113,20 @@ nav{
   top: 0;
   left: 0;
 
-  height: 30%;
+  height: 25vh;
   width: 100%;
 
   margin: auto;
-  padding-top: 2%;
-  padding-bottom: 2%;
-
-  text-align: center;
 
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
 
   font-weight: bold;
+  /* border: 1px red solid; */
 }
 
 ul{
+  height: 100%;
   width: 100%;
   display: inline-flex;
   display: -webkit-inline-flex;
@@ -139,16 +135,12 @@ ul{
 }
 
 li{
+  text-align: center;
   flex: 1 1 0;
   width: 0;
 }
 
-a{
-  text-decoration: none;
-  color: white;
-}
-
-nav ul li a:nth-child(n){
+nav ul li a{
   color: white;
   text-decoration: none;
   border-radius: 5rem;
@@ -164,14 +156,13 @@ nav ul li a:hover{
   position: relative;
   margin: auto;
   border-radius: 50%;
-  width: 50%;
+  width: 40%;
   aspect-ratio: 1;
 }
 
 #avatar img{
   border-radius: 50%;
-  height: 100%;
-  border: white 0.25rem solid;
+  width: 100%;
 }
 
 
@@ -489,8 +480,8 @@ nav ul li a:hover{
   display: -webkit-inline-flex;
   justify-content: center;
   align-items: center;
-  transition: all 1s ease;
-  -webkit-transition: all 1s ease;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
   border-radius: 5rem;
 }
 
@@ -499,7 +490,10 @@ nav ul li a:hover{
 }
 
 #socials a:nth-child(n) {
-  margin: 1vh 1vw 1vh 1vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 2vh;
+  margin-right: 2vh;
 }
 
 #socials a:first-child {
@@ -511,7 +505,7 @@ nav ul li a:hover{
 }
 
  #socials a img{
-  width: 3vw;
+  width: 6vh;
   display: block;
 }
 
@@ -536,7 +530,7 @@ main{
 }
 
 #home{
-  height: 74vh; 
+  height: 75vh; 
   width: 100%; 
   position: relative;
 }
@@ -625,10 +619,6 @@ main{
   }
 }
 
-main > div{
-  padding: 2%;
-}
-
 main h1{
   font-size: 2rem;
   margin-bottom: 1%;
@@ -639,25 +629,36 @@ main img{
   vertical-align: middle;
 }
 
-main > div:nth-child(n){
+main > div{
+  width: 100%;
+  /* border: 1px solid red; */
+  padding: 2%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
+#work-gallery-container, #project-gallery-container{
+  width: 100%;
+  /* border: 1px green solid; */
+  overflow-x: hidden;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #project-gallery, #work-gallery{
+  margin: auto;
   position: relative;
   display: flex;
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-}
-
-#project-gallery h2, #work-gallery h2{
-  font-size: 1.8rem;
-  text-decoration: underline;
+  /* border: 1px yellow solid; */
+  padding: 10%;
 }
 
 #project-gallery > div:nth-child(n){
@@ -686,7 +687,7 @@ main > div:nth-child(n){
   background-color: rgb(5, 0, 25);
 }
 
-#work-gallery > div:nth-child(n){
+/* #work-gallery > div:nth-child(n){
   margin: 5%;
   display: flex;
   display: -webkit-flex;
@@ -695,7 +696,7 @@ main > div:nth-child(n){
   position: relative;
 }
 
-#work-gallery > div img{
+.planet{
   margin: auto;
   height: 40vh;
 }
@@ -707,10 +708,10 @@ main > div:nth-child(n){
   translate: -50% -50%;
 }
 
-#work-gallery > div:last-child img{
+.moon{
   margin: auto;
   height: 20vh;
-}
+} */
 
 #work-gallery::before{
   content: '';
@@ -735,7 +736,7 @@ main > div:nth-child(n){
 }
 
 #project-gallery > div *, #work-gallery > div *{
-  margin: 2%;
+  /* margin: 2%; */
 }
 
 .tech{
@@ -798,22 +799,19 @@ main > div#work > div#work-gallery-container > div#work-gallery > div > p.underp
 }
 
 #about > p{
-  width: 70%;
+  padding-left: 20%;
+  padding-right: 20%; 
 }
 
 .mcgill{
   color: red;
 }
 
-img.mcgill{
-  height: 2rem;
-}
-
 .cpk{
   color: rgb(135, 105, 78);
 }
 
-img.cpk{
+img.mcgill, img.cpk{
   height: 2rem;
 }
 
@@ -857,40 +855,65 @@ img.cpk{
 }
 
 /* mobile */
-@media (max-height: 1000px) and (max-width: 500px){
-  #switch > span > span, main h1{font-size: 1rem;}
-  body{font-size: 0.75rem;}
-  #socials a img{width: 10vw;}
-  #blackhole-container{
-      height: 30%;
-      width: 30%;
-  }
-  #home p{
-      top: 90%;
-  }
-  nav ul li a:nth-child(n){
-      padding: 0.3rem 0.5rem 0.3rem 0.5rem;
-  }
-  #work-gallery-container{
-      overflow-x: scroll;
-      overflow-y: hidden;
-  }
-  #project-gallery, #work-gallery{
-      margin: auto;
-      margin-top: 20%;
-      width: 140vh;
-  }
-  main > div#work > div#work-gallery-container > div#work-gallery > div > p.underplanet > span.undertitle img{
-      height: 2rem;
-    }
-  .title{
-      font-size: 0.75rem;
-  }
-  .underplanet *{
-      font-size: 0.75rem;
+  @media (max-height: 1000px) and (max-width: 500px) and (orientation: portrait){
+    #switch > span > span, main h1{font-size: 1rem;}
+    body{font-size: 0.75rem;}
+    #socials a img{width: 10vw;}
+    #socials a:first-child {
+      margin-left: 3vw;
     }
     
+    #socials a:last-child {
+      margin-right: 3vw;
+    }
+    #blackhole-container{
+        height: 30%;
+        width: 30%;
+    }
+    nav{
+      height: 15vh;
+    }
+    #avatar{
+      width: 80%;
+    }
+    #home{
+      height: 85vh;
+    }
+    #home p{
+        bottom: 20%;
+    }
+    nav ul li a:nth-child(n){
+        padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    }
+    #project-gallery, #work-gallery{
+        /* margin: auto; */
+        /* margin-top: 10%; */
+        /* width: 120vh; */
+    }
+    main > div#work > div#work-gallery-container > div#work-gallery > div > p.underplanet > span.undertitle img{
+        height: 2rem;
+    }
+    #work-gallery::after{
+      border-left: white solid 1rem ;
+      border-top: transparent solid 0.25rem;
+      border-bottom: transparent solid 0.25rem;
+    }
+    .title{
+        font-size: 0.75rem;
+    }
+    .underplanet *{
+        font-size: 0.75rem;
+    }
     .undertitle{
       font-size: 0.8rem;
+    }
+    #work-gallery > div{
+      margin: 2%
+    }
+    img.mcgill, img.cpk{
+      height: 1rem;
+    }
+    img.cpk{
+      height: 1rem;
     }
 }

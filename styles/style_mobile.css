@@ -162,8 +162,8 @@ html::-webkit-scrollbar{
     display: -webkit-inline-flex;
     justify-content: center;
     align-items: center;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
     border-radius: 5rem;
   }
   
