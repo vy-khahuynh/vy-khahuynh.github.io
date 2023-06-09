@@ -67,6 +67,8 @@ body {
 
   font-family: 'Courier New', monospace;
 
+  font-size: 1.5rem;
+
   background: linear-gradient(90deg, #030611, #010510, #120217, #000000);
 	background-size: 500% 500%;
   background-attachment: fixed;
@@ -170,15 +172,18 @@ html::-webkit-scrollbar{
   }
   
   #socials a:nth-child(n) {
-    margin: 1vh 1vw 1vh 1vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
   }
   
   #socials a:first-child {
-    margin-left: 2vw;
+    margin-left: 2vh;
   }
   
   #socials a:last-child {
-    margin-right: 2vw;
+    margin-right: 2vh;
   }
   
    #socials a img{
@@ -257,4 +262,11 @@ html::-webkit-scrollbar{
   #avatar img{
     border-radius: 50%;
     width: 100%;
+  }
+
+
+  @media (max-height: 1000px) and (max-width: 500px){
+    #socials{ width: 100%;}
+    body{font-size: 1rem;}
+    #socials a img{width: 15vw;}
   }
