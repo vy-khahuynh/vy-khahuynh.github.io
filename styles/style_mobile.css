@@ -172,6 +172,7 @@ html::-webkit-scrollbar{
   }
   
   #socials a:nth-child(n) {
+    /* changed */
     margin-top: 1vh;
     margin-bottom: 1vh;
     margin-left: 2vh;
@@ -187,7 +188,8 @@ html::-webkit-scrollbar{
   }
   
    #socials a img{
-    width: 6vh;
+    /* Changed */
+    width: 6vh; 
     display: block;
   }
   
