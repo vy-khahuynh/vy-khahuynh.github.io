@@ -348,8 +348,6 @@ nav ul li a:hover{
   filter: blur(2.5rem);
   -webkit-filter: blur(2.5rem);
 
-  z-index: -1;
-
   background: repeating-conic-gradient(white, transparent 11% 15%, white 18%);
   background-size: 50% 50%;
 }
