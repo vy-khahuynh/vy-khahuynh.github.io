@@ -66,6 +66,7 @@ body {
   color: white;
 
   font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
 
   background: linear-gradient(90deg, #030611, #010510, #120217, #000000);
 	background-size: 500% 500%;
@@ -76,7 +77,7 @@ body {
   
   scrollbar-width: none;
   
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 
   scroll-behavior: smooth;
 }
@@ -173,41 +174,37 @@ nav ul li a:hover{
   border: white 0.25rem solid;
 }
 
-@media (min-width: 1400px) and (min-height: 750px) {
-  body{
-    overflow-x: hidden;
-  }
-  #singularity{
-    animation: pulsing-low 0.5s linear infinite;
-    -webkit-animation: pulsing-low 0.5s linear infinite;
-  }
-  #photon-ring{
-    animation: rotate 0.2s linear infinite;
-    -webkit-animation: rotate 0.2s linear infinite;
-  }
-  #event-horizon{
-    animation: pulsing-bright 3s linear infinite alternate;
-    -webkit-animation: pulsing-bright 3s linear infinite alternate;
-  }
-  #aura{
-    animation: aura-pulsing 20s ease infinite;
-    -webkit-animation: aura-pulsing 20s ease infinite;
-  }
-  .accretion-disc{
-    animation: vibrate 0.1s linear infinite;
-    -webkit-animation: vibrate 0.1s linear infinite;
-  }
-  #front-disc{
-    animation: stripe 0.5s ease infinite;
-    -webkit-animation: stripe 0.5s ease infinite;
-  }
+
+
+#singularity{
+  animation: pulsing-low 0.5s linear infinite;
+  -webkit-animation: pulsing-low 0.5s linear infinite;
+}
+#photon-ring{
+  animation: rotate 0.2s linear infinite;
+  -webkit-animation: rotate 0.2s linear infinite;
+}
+#event-horizon{
+  animation: pulsing-bright 3s linear infinite alternate;
+  -webkit-animation: pulsing-bright 3s linear infinite alternate;
+}
+#aura{
+  animation: aura-pulsing 20s ease infinite;
+  -webkit-animation: aura-pulsing 20s ease infinite;
+}
+.accretion-disc{
+  animation: vibrate 0.1s linear infinite;
+  -webkit-animation: vibrate 0.1s linear infinite;
+}
+#front-disc{
+  animation: stripe 0.5s ease infinite;
+  -webkit-animation: stripe 0.5s ease infinite;
 }
 
 #blackhole-container{
   position: relative;
   height: 50%;
   width: 50%;
-  /* min-height: 18rem; */
   display: flex;
   display: -webkit-flex;
   align-items: center;
@@ -658,7 +655,6 @@ main > div:nth-child(n){
   align-items: center;
   justify-content: center;
   width: 100%;
-  overflow-x: scroll;
 }
 
 #project-gallery h2, #work-gallery h2{
