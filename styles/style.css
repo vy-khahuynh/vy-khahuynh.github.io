@@ -629,7 +629,7 @@ main img{
   vertical-align: middle;
 }
 
-main > div{
+main > section{
   width: 100%;
   /* border: 1px solid red; */
   padding: 2%;
