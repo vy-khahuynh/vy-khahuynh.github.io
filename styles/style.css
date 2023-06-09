@@ -165,7 +165,8 @@ nav ul li a:hover{
   position: relative;
   margin: auto;
   border-radius: 50%;
-  height: 18%;
+  /* height: 18%; */
+  width: 50%;
   aspect-ratio: 1;
 }
 
@@ -206,7 +207,7 @@ nav ul li a:hover{
   position: relative;
   height: 50%;
   width: 50%;
-  min-height: 18rem;
+  /* min-height: 18rem; */
   display: flex;
   display: -webkit-flex;
   align-items: center;
@@ -404,9 +405,6 @@ nav ul li a:hover{
   margin: auto;
 
   height: 5%;
-
-  border: 0;
-  padding: 0;
 
   box-shadow: 0 0 1rem 0.5rem rgb(255, 255, 255);
   background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
