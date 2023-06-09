@@ -243,6 +243,7 @@ html::-webkit-scrollbar{
     color: white;
     text-decoration: none;
     border-radius: 5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
   }
   
   nav ul li a:hover{
@@ -360,13 +361,131 @@ html::-webkit-scrollbar{
     background: repeating-linear-gradient(white 10%, transparent 30%, white 50%);
   }
   
+  #home{
+    height: 74vh; 
+    width: 100%; 
+    position: relative;
+  }
+  
+  #home p {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    translate: -50% -50%;
+    display: flex; 
+    display: -webkit-flex;
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column;
+  }
+  
+  #switch > span{
+    position: absolute;
+    translate: -50% 50%;
+    opacity: 0;
+    white-space: pre;
+    animation: fade 50s ease-in infinite;
+    -webkit-animation: fade 50s ease-in infinite;
+  }
+  
+  #switch > span > span{
+    font-size: 2rem;
+    display: inline-block;
+  }
+  
+  #switch > span > span:nth-child(2n){
+    animation: suck1 50s ease-in infinite;
+    -webkit-animation: suck1 50s ease-in infinite;
+  }
+  
+  #switch > span > span:nth-child(2n-1){
+    animation: suck2 50s ease-in infinite;
+    -webkit-animation: suck2 50s ease-in infinite;
+  }
+  
+  #switch span:nth-child(1), #switch span:nth-child(1) span{
+    animation-delay: 0s;
+  }
+  #switch span:nth-child(2), #switch span:nth-child(2) span{
+    animation-delay: 10s;
+  }
+  #switch span:nth-child(3), #switch span:nth-child(3) span{
+    animation-delay: 20s;
+  }
+  #switch span:nth-child(4), #switch span:nth-child(4) span{
+    animation-delay: 30s;
+  }
+  #switch span:nth-child(5), #switch span:nth-child(5) span{
+    animation-delay: 40s;
+  }
+  @keyframes fade {
+    2%, 100%{
+      opacity: 1;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+    }
+  }
+  @keyframes suck1 {
+    0%, 14%{
+      transform: translateY(0) rotateZ(0deg);
+      -webkit-transform: translateY(0) rotateZ(0deg);
+      opacity: 1;
+    }
+    20%, 100%{
+      transform: translateY(-400%) rotateZ(360deg);
+      -webkit-transform: translateY(-400%) rotateZ(360deg);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes suck2 {
+    0%, 15%{
+      transform: translateY(0) rotateZ(0deg);
+      -webkit-transform: translateY(0) rotateZ(0deg);
+      opacity: 1;
+    }
+    21%, 100%{
+      transform: translateY(-400%) rotateZ(-360deg);
+      -webkit-transform: translateY(-400%) rotateZ(-360deg);
+      opacity: 0;
+    }
+  }
+
+  main > div{
+    padding: 2%;
+  }
+  
+  main h1{
+    font-size: 2rem;
+    margin-bottom: 1%;
+    font-weight: bold;
+  }
+  
+  main img{
+    vertical-align: middle;
+  }
+  
+  main > div:nth-child(n){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  /* mobile */
   @media (max-height: 1000px) and (max-width: 500px){
-    /* #socials{ width: 100%;} */
+    #switch > span > span{font-size: 1rem;}
     body{font-size: 1rem;}
     #socials a img{width: 10vw;}
     #blackhole-container{
         height: 30%;
         width: 30%;
+    }
+    #home p{
+        top: 90%;
+    }
+    nav ul li a:nth-child(n){
+        padding: 0.3rem 0.5rem 0.3rem 0.5rem;
     }
   }
 
