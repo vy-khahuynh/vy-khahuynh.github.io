@@ -202,10 +202,22 @@ nav ul li a:hover{
 
   background: radial-gradient(circle, black 0%, 60%, white 70%);
   box-shadow: 0 0 0.63rem 1.25rem white;
-  
-  animation: pulsing-low 0.5s linear infinite;
-  -webkit-animation: pulsing-low 0.5s linear infinite;
 }
+@media (min-width: 1920px) and (min-height: 1080px) {
+  #singularity{
+    animation: pulsing-low 0.5s linear infinite;
+    -webkit-animation: pulsing-low 0.5s linear infinite;
+  }
+  #photon-ring{
+    animation: rotate 0.2s linear infinite;
+    -webkit-animation: rotate 0.2s linear infinite;
+  }
+  #event-horizon{
+    animation: pulsing-bright 3s linear infinite alternate;
+    -webkit-animation: pulsing-bright 3s linear infinite alternate;
+  }
+}
+
 @keyframes pulsing-low{
   0%{
     transform: scale(100%);
@@ -235,6 +247,7 @@ nav ul li a:hover{
     -webkit-transform: scale(100%);
   }
 }
+
 #photon-ring{
   width:85%;
 
@@ -242,9 +255,6 @@ nav ul li a:hover{
   background: transparent;
   border: solid 0.1rem white;
   box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem white;
-  
-  animation: rotate 0.2s linear infinite;
-  -webkit-animation: rotate 0.2s linear infinite;
 }
 
 @keyframes rotate{
@@ -276,9 +286,6 @@ nav ul li a:hover{
   margin: auto;
 
   box-shadow: 0 0 1rem 4rem rgb(249, 232, 170);
-  
-  animation: pulsing-bright 3s linear infinite alternate;
-  -webkit-animation: pulsing-bright 3s linear infinite alternate;
 }
 
 @keyframes pulsing-bright {
