@@ -715,7 +715,7 @@ main > section{
   z-index: -1;
 }
 
-/* #project-gallery > div:nth-child(n){
+#project-gallery > div:nth-child(n){
   display: flex;
   display: webkit-flex;
   align-items: center;
@@ -739,7 +739,7 @@ main > section{
   z-index: -1;
   border-radius: 5rem;
   background-color: rgb(5, 0, 25);
-} */
+}
 
 .tech{
   display: flex;
@@ -890,12 +890,12 @@ img.mcgill, img.cpk{
     }
     #project-gallery-container, #work-gallery-container{
       overflow-x: scroll;
-      scroll-snap-type: x mandatory;
+      scroll-snap-type: x proximity;
     }
     #project-gallery, #work-gallery{
       padding: 10%;
     }
-    .planet, .moon{
+    .planet, .moon, #project-gallery > div{
       scroll-snap-align: center; 
       height: 40vh;
     }

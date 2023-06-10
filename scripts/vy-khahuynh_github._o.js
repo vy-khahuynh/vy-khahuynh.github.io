@@ -22,22 +22,6 @@ function addStars(){
   }
 }
 
-function activateSuperlaser(){
-  var ds = document.getElementById('death-beam-container');
-
-  var but =  document.getElementById('superlaser');
-
-  ds.classList.toggle('active');
-  
-  but.disabled = true;
-
-  setTimeout(function(){
-    ds.classList.toggle('active');
-    but.disabled = false;
-  }, 
-  7000);
-}
-
 addEventListener("load", addStars);
 addEventListener("load", intro);
 
