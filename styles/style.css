@@ -121,6 +121,7 @@ nav{
   -webkit-transition: all 0.25s ease-in-out;
 
   font-weight: bold;
+  border-radius: 5rem;
   /* border: 1px red solid; */
 }
 
@@ -889,11 +890,13 @@ img.mcgill, img.cpk{
     }
     #project-gallery-container, #work-gallery-container{
       overflow-x: scroll;
+      scroll-snap-type: x mandatory;
     }
     #project-gallery, #work-gallery{
       padding: 10%;
     }
     .planet, .moon{
+      scroll-snap-align: center; 
       height: 40vh;
     }
     #current::before{
