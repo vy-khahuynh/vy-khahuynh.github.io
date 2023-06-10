@@ -642,7 +642,6 @@ main > section{
 
 #work-gallery-container, #project-gallery-container{
   width: 100%;
-  /* border: 1px green solid; */
 }
 
 #project-gallery, #work-gallery{
@@ -651,20 +650,32 @@ main > section{
   display: inline-flex;
   display: -webkit-inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   min-width: 100%;
   /* border: 1px yellow solid; */
   padding: 5%;
 }
 
+/* #project-gallery{
+  display: grid;
+  height: 200vh;
+  width: 100%;
+} */
+
+#project-gallery > div{
+  background-color: aqua;
+  color: #000000;
+}
+
 .planet, .moon{
-  margin: auto;
   position: relative;
   display: flex;
   display: -webkit-flex;
   align-items: center;
-  justify-content: flex;
-  margin-top: 10%;
+  justify-content: center;
+  height: 50vh;
+  aspect-ratio: 1;
+  /* border: 1px white solid; */
 }
 
 
@@ -674,14 +685,6 @@ main > section{
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-}
-
-
-.planet, .moon{
-  margin: auto;
-  height: 50vh;
-  aspect-ratio: 1;
-  /* border: 1px white solid; */
 }
 
 .moon a {
@@ -715,7 +718,7 @@ main > section{
   z-index: -1;
 }
 
-#project-gallery > div:nth-child(n){
+/* #project-gallery > div:nth-child(n){
   display: flex;
   display: webkit-flex;
   align-items: center;
@@ -739,7 +742,7 @@ main > section{
   z-index: -1;
   border-radius: 5rem;
   background-color: rgb(5, 0, 25);
-}
+} */
 
 .tech{
   display: flex;
@@ -788,7 +791,6 @@ div.planet > p.underplanet > span.undertitle img{
 
 .title{
   font-size: 1.2rem;
-  text-decoration: underline;
   font-weight: bold;
 }
 

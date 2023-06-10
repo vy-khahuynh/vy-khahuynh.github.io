@@ -15,7 +15,7 @@ function addStars(){
     star.style.left = Math.floor(Math.random() * 0.99 * window.innerWidth)+"px";
     cur.appendChild(star);
   }
-  var bigstars = document.querySelectorAll(".star:nth-child(n)");
+  var bigstars = document.querySelectorAll(".star:nth-child(3n)");
   for(let i = 0 ; i < bigstars.length ; i++){
     var delay = Math.floor(Math.random() * 20);
     bigstars[i].style.animation = `glow 5s ease infinite ${delay}s`;
@@ -80,7 +80,7 @@ animate(callback, animated, options);
 
 let minimize = (entries) =>{
   entries.forEach((entry) => {
-    if(!entry.isIntersecting){
+    if(entry.isIntersecting){
       document.querySelector("#nav-bar").classList.add("minimized");
       document.querySelector("#socials").classList.add("inverted");
       document.querySelector("#socials").classList.add("minimized");
