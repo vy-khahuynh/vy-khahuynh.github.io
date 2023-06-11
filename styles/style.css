@@ -656,11 +656,12 @@ main > section{
   padding: 5%;
 }
 
-/* #project-gallery{
+#project-gallery{
   display: grid;
-  height: 200vh;
-  width: 100%;
-} */
+  /* height: 200vh;
+  width: 100%; */
+  /* grid-template-rows: 50px 100px */
+}
 
 #project-gallery > div{
   background-color: aqua;
@@ -777,7 +778,7 @@ main > section{
 .underplanet *{
   display: block;
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 .undertitle{
@@ -791,7 +792,7 @@ div.planet > p.underplanet > span.undertitle img{
 
 .title{
   font-size: 1.2rem;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .stamp{
