@@ -119,6 +119,8 @@ nav{
 
   font-weight: bold;
   border-radius: 5rem;
+
+  font-size: 1rem;
 }
 
 ul{
@@ -682,17 +684,12 @@ main > section{
   aspect-ratio: 1;
   margin: 3%;
   /* border: 1px white solid; */
-  /* padding: 2%; */
-}
-
-#work-gallery > div:nth-child(even){
-  animation: travel 5s ease-in-out infinite alternate-reverse;
-  -webkit-animation: travel 5s ease-in-out infinite alternate-reverse;
+  animation: travel 2s ease-in-out infinite alternate-reverse;
+  -webkit-animation: travel 2s ease-in-out infinite alternate-reverse;
 }
 
 #work-gallery > div:nth-child(odd){
-  animation: travel_o 5s ease-in-out infinite alternate-reverse;
-  -webkit-animation: travel_o 5s ease-in-out infinite alternate-reverse;
+  animation-delay: -2s;
 }
 
 @keyframes travel{
@@ -701,15 +698,6 @@ main > section{
   }
   100%{
     transform: translateY(-2%);
-  }
-}
-
-@keyframes travel_o{
-  0%{
-    transform: translateY(-2%);
-  }
-  100%{
-    transform: translateY(2%);
   }
 }
 
