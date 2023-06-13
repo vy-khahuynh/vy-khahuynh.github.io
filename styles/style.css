@@ -845,8 +845,16 @@ img.mcgill, img.cpk{
   transform: translateY(0);
 }
 
-.minimized{
-  scale: 75%;
+.minimized_b{
+  transform-origin: bottom;
+  transform: scale(75%);
+  opacity: 0.7;
+}
+
+
+.minimized_t{
+  transform-origin: top;
+  transform: scale(75%);
   opacity: 0.7;
 }
 

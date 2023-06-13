@@ -84,14 +84,14 @@ animate(callback, animated, options);
 let minimize = (entries) =>{
   entries.forEach((entry) => {
     if(entry.isIntersecting){
-      document.querySelector("#nav-bar > ul").classList.add("minimized");
+      document.querySelector("#nav-bar > ul").classList.add("minimized_t");
       document.querySelector("#socials").classList.add("inverted");
-      document.querySelector("#socials").classList.add("minimized");
+      document.querySelector("#socials").classList.add("minimized_b");
     }
     else{
-      document.querySelector("#nav-bar > ul").classList.remove("minimized");
+      document.querySelector("#nav-bar > ul").classList.remove("minimized_t");
       document.querySelector("#socials").classList.remove("inverted");
-      document.querySelector("#socials").classList.remove("minimized");
+      document.querySelector("#socials").classList.remove("minimized_b");
     }
   });
 }
