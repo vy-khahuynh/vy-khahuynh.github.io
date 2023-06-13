@@ -688,6 +688,7 @@ main > section{
   min-width: 40vh;
   flex: 1 1 0px;
   aspect-ratio: 1;
+  border: 1px white solid;
 }
 
 
@@ -902,7 +903,7 @@ img.mcgill, img.cpk{
       width: 80%;
     }
     #home p{
-        bottom: 20%;
+      bottom: 20%;
     }
     nav ul li a:nth-child(n){
         padding: 0.3rem 0.5rem 0.3rem 0.5rem;
@@ -942,12 +943,4 @@ img.mcgill, img.cpk{
     img.mcgill, img.cpk{
       height: 1rem;
     }
-    img.cpk{
-      height: 1rem;
-    }
-}
-
-/*tablet*/
-@media only screen and (min-device-width: 768px){
-
 }
