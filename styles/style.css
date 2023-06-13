@@ -659,12 +659,24 @@ main > section{
 
 #project-gallery{
   display: grid;
-  /* grid-template-rows: 50px 100px */
+  height: 100vh;
+  justify-content: flex-start;
+  align-items: normal;
+  gap: 1rem;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
 }
 
 #project-gallery > div{
-  background-color: aqua;
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(41, 3, 59);
+  border-radius: 5rem;
   color: #000000;
+  position: relative;
+  padding: 5%;
 }
 
 .planet, .moon{
@@ -674,9 +686,8 @@ main > section{
   align-items: center;
   justify-content: center;
   min-width: 40vh;
-  flex-grow: 1;
+  flex: 1 1 0px;
   aspect-ratio: 1;
-  /* border: 1px white solid; */
 }
 
 
@@ -719,7 +730,7 @@ main > section{
   z-index: -1;
 }
 
-/* #project-gallery > div:nth-child(n){
+#project-gallery > div:nth-child(n){
   display: flex;
   display: webkit-flex;
   align-items: center;
@@ -743,7 +754,7 @@ main > section{
   z-index: -1;
   border-radius: 5rem;
   background-color: rgb(5, 0, 25);
-} */
+}
 
 .tech{
   display: flex;
@@ -811,6 +822,10 @@ div.planet > p.underplanet > span.undertitle img{
 }
 
 .mcgill{
+  color: red;
+}
+
+.mcgill > span{
   color: red;
 }
 
