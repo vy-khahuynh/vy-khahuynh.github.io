@@ -33,7 +33,6 @@ let names = ["Vy-Kha Huynh", "a Full-Stack Developer", "a Software Engineer", "a
 
 function intro(){
   populate();
-  animateNext(1);
 }
 
 function populate(){
