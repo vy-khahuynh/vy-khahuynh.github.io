@@ -699,6 +699,7 @@ main > section{
 #work-gallery::before{
   content: '';
   height: 0;
+  left: 0;
   width: 100%;
   border-width: 0.1rem;
   border-style: dashed;
@@ -861,7 +862,7 @@ img.mcgill, img.cpk{
 }
 
 /* mobile */
-  @media (max-height: 1000px) and (max-width: 500px) and (orientation: portrait){
+  @media only screen and (max-width: 990px){
     #switch > span > span, main h1{font-size: 1rem;}
     body{font-size: 0.75rem;}
     #socials a img{width: 10vw;}
@@ -929,4 +930,9 @@ img.mcgill, img.cpk{
     img.cpk{
       height: 1rem;
     }
+}
+
+/*tablet*/
+@media only screen and (min-device-width: 768px){
+
 }
