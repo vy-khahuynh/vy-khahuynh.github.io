@@ -115,23 +115,19 @@ nav{
   height: 25vh;
   width: 100%;
 
-  margin: auto;
-
-  transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
-
   font-weight: bold;
   border-radius: 5rem;
-  /* border: 1px red solid; */
 }
 
 ul{
   height: 100%;
   width: 100%;
-  display: inline-flex;
-  display: -webkit-inline-flex;
+  display: flex;
+  display: -webkit-flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
 }
 
 li{
@@ -635,10 +631,10 @@ main > section{
   /* border: 1px solid red; */
   padding-top: 2%;
   padding-bottom: 2%;
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 #work-gallery-container, #project-gallery-container{

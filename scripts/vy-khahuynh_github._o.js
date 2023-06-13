@@ -63,6 +63,8 @@ let options = {
   threshold: 0
 }
 
+
+// Add reveal on scroll animation
 let callback = (entries) => {
   entries.forEach((entry) => {
     if(entry.isIntersecting){
@@ -78,15 +80,17 @@ var animated = document.querySelectorAll('.to-show-on-scroll');
 
 animate(callback, animated, options);
 
+
+// Minimize footer and header on top
 let minimize = (entries) =>{
   entries.forEach((entry) => {
     if(entry.isIntersecting){
-      document.querySelector("#nav-bar").classList.add("minimized");
+      document.querySelector("#nav-bar > ul").classList.add("minimized");
       document.querySelector("#socials").classList.add("inverted");
       document.querySelector("#socials").classList.add("minimized");
     }
     else{
-      document.querySelector("#nav-bar").classList.remove("minimized");
+      document.querySelector("#nav-bar > ul").classList.remove("minimized");
       document.querySelector("#socials").classList.remove("inverted");
       document.querySelector("#socials").classList.remove("minimized");
     }
