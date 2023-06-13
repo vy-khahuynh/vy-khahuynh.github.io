@@ -657,7 +657,7 @@ main > section{
   padding: 5%;
 }
 
-#project-gallery{
+/* #project-gallery{
   display: grid;
   height: 100vh;
   justify-content: flex-start;
@@ -677,7 +677,7 @@ main > section{
   color: #000000;
   position: relative;
   padding: 5%;
-}
+} */
 
 .planet, .moon{
   position: relative;
@@ -688,7 +688,8 @@ main > section{
   min-width: 40vh;
   flex: 1 1 0px;
   aspect-ratio: 1;
-  border: 1px white solid;
+  /* border: 1px white solid; */
+  padding: 2%;
 }
 
 
