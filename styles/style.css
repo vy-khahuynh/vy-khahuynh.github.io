@@ -115,21 +115,25 @@ nav{
   left: 0;
 
   height: 20vh;
-  width: 60%;
+  width: 50%;
 
   font-weight: bold;
   border-radius: 5rem;
 
   font-size: 1rem;
+
+  padding: 2%;
 }
 
 ul{
   height: 100%;
   width: 100%;
-  display: flex;
-  display: -webkit-flex;
+
+  display: inline-flex;
+  display: -webkit-inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
 }
@@ -137,25 +141,23 @@ ul{
 li{
   text-align: center;
   flex: 1 1 0;
-}
-
-a{
-  text-decoration: none;
+  width: 0;
 }
 
 nav ul li a{
+  text-decoration: none;
   color: white;
   border-radius: 5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 nav ul li a:hover{
-  background-color: white;
-  color: #000000;
+  background-color: #000000;
+  filter: invert(1);
+  -webkit-filter: invert(1);
 }
 
 #avatar{
-  position: relative;
   margin: auto;
   border-radius: 50%;
   width: 40%;
@@ -167,6 +169,13 @@ nav ul li a:hover{
   width: 100%;
 }
 
+/* #rocket{
+  position: absolute;
+  rotate: 90deg;
+  width: 1%;
+  z-index: -1;
+}
+ */
 #singularity{
   animation: pulsing-low 0.5s linear infinite;
   -webkit-animation: pulsing-low 0.5s linear infinite;
@@ -480,8 +489,10 @@ nav ul li a:hover{
   display: -webkit-inline-flex;
   justify-content: center;
   align-items: center;
+
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
+
   border-radius: 5rem;
 }
 
@@ -489,7 +500,7 @@ nav ul li a:hover{
   background-color: darkgray;
 }
 
-#socials a:nth-child(n) {
+#socials a {
   margin-top: 1vh;
   margin-bottom: 1vh;
   margin-left: 2vh;

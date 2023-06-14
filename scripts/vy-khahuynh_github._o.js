@@ -22,32 +22,32 @@ function addStars(){
   }
 }
 
-addEventListener("load", addStars);
-addEventListener("load", intro);
-
 function scrolltop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 let names = ["Vy-Kha Huynh", "a Full-Stack Developer", "a Software Engineer", "a Blackhole fanatic", "a LEGO enthusiast"];
 
-function intro(){
-  populate();
+function intro(){ 
+  addEventListener("load", addStars);
+  addEventListener("load", populate);
 }
 
 function populate(){
-    var sw = document.querySelectorAll('#switch')[0];
+  var sw = document.querySelectorAll('#switch')[0];
 
-    for(var i = 0 ; i < names.length ; i++){
-      var name = document.createElement('span');
-      for(var j = 0 ; j < names[i].length ; j++){
-        var letter = document.createElement('span');
-        letter.innerHTML = names[i][j];
-        name.appendChild(letter);
-      }
-      sw.appendChild(name);
+  for(var i = 0 ; i < names.length ; i++){
+    var name = document.createElement('span');
+    for(var j = 0 ; j < names[i].length ; j++){
+      var letter = document.createElement('span');
+      letter.innerHTML = names[i][j];
+      name.appendChild(letter);
     }
+    sw.appendChild(name);
   }
+}
+
+intro()
 
 function animate(cb, an, op){
   const observer = new IntersectionObserver(cb, op);
@@ -99,4 +99,27 @@ let minimize = (entries) =>{
 var home = document.querySelectorAll('#home');
 
 animate(minimize, home, {threshold: 0.7});
+
+// When the user scrolls the page, execute myFunction
+// window.onscroll = function() {myFunction()};
+
+// function myFunction() {
+//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//   var scrolled = (winScroll / height) * 100;
+//   document.getElementById("rocket").style.transform = "translateX(scrolled + "%";)"
+  // .translate = scrolled + "%";
+  // .style.width = 
+// }
+
+// function currentScrollPercentage()
+// {
+//     return ((document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
+// }
+
+// var rocket = document.querySelector("#rocket");
+
+// addEventListener("scroll", { 
+//   rocket
+// })
 
