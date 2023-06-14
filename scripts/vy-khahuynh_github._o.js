@@ -100,26 +100,3 @@ var home = document.querySelectorAll('#home');
 
 animate(minimize, home, {threshold: 0.7});
 
-// When the user scrolls the page, execute myFunction
-// window.onscroll = function() {myFunction()};
-
-// function myFunction() {
-//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-//   var scrolled = (winScroll / height) * 100;
-//   document.getElementById("rocket").style.transform = "translateX(scrolled + "%";)"
-  // .translate = scrolled + "%";
-  // .style.width = 
-// }
-
-// function currentScrollPercentage()
-// {
-//     return ((document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
-// }
-
-// var rocket = document.querySelector("#rocket");
-
-// addEventListener("scroll", { 
-//   rocket
-// })
-
