@@ -173,12 +173,15 @@ nav ul li a:hover{
   width: 100%;
 }
 
-/* #rocket{
+#rocket{
   position: absolute;
   rotate: 90deg;
-  width: 1%;
+  width: 2.5%;
+  top: 50%;
+  translate: 0 -50%;
+  left: 0;
   z-index: -1;
-} */
+}
  
 #singularity{
   animation: pulsing-low 0.5s linear infinite;
@@ -551,11 +554,6 @@ main{
   text-align: center;
 }
 
-
-.alignment-grid{
-  visibility: collapse;
-}
-
 #home{
   height: 80vh; 
   width: 100%; 
@@ -679,7 +677,7 @@ main > section{
   width: 100%;
 }
 
-#project-gallery, #work-gallery{
+#work-gallery, #project-gallery{
   margin: auto;
   position: relative;
   display: inline-flex;
@@ -765,6 +763,15 @@ main > section{
   z-index: -1;
   border-radius: 5rem;
   background-color: rgb(5, 0, 25);
+}
+
+.stamp{
+  vertical-align: middle;
+  display: inline-block;
+  height: 2rem;
+  border-radius: 50%;
+  filter: invert(1);
+  -webkit-filter: invert(1);
 }
 
 .tech{

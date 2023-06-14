@@ -85,12 +85,10 @@ let minimize = (entries) =>{
   entries.forEach((entry) => {
     if(entry.isIntersecting){
       document.querySelector("#nav-bar > ul").classList.add("minimized_t");
-      // document.querySelector("#socials").classList.add("inverted");
       document.querySelector("#socials").classList.add("minimized_b");
     }
     else{
       document.querySelector("#nav-bar > ul").classList.remove("minimized_t");
-      // document.querySelector("#socials").classList.remove("inverted");
       document.querySelector("#socials").classList.remove("minimized_b");
     }
   });
@@ -99,4 +97,17 @@ let minimize = (entries) =>{
 var home = document.querySelectorAll('#home');
 
 animate(minimize, home, {threshold: 0.7});
+
+// window.onscroll = function() {myFunction()};
+
+// function myFunction() {
+//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+//   var scrolled = (winScroll / height);
+//   var rocket = document.getElementById('rocket');
+//   var ul = document.querySelector('ul');
+//   var ulwidth = ul.getBoundingClientRect().width - 2 * rocket.getBoundingClientRect().width;
+//   var offset = scrolled * ulwidth;
+//   rocket.style.transform = `translateY(-${offset}px)`;
+// }
 
