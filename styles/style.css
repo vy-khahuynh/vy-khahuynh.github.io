@@ -493,7 +493,9 @@ nav ul li a:hover{
 
 #socials{
   position: relative;
-  background-color: white;
+  /* background-color: white; */
+  border: 2px white solid;
+  background: linear-gradient(to right, rgb(24, 0, 101), purple);
 
   display: inline-flex;
   display: -webkit-inline-flex;
@@ -530,6 +532,7 @@ nav ul li a:hover{
  #socials a img{
   width: 6vh;
   display: block;
+  filter: invert(1);
 }
 
 #socials a:nth-child(2), #socials a:nth-child(2) > img {
