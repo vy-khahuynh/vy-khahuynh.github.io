@@ -152,7 +152,7 @@ nav ul li a{
   border-radius: 5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border: 2px white solid;
-  background: linear-gradient(to right, rgb(24, 0, 101), purple);
+  background: linear-gradient(to right, rgba(24, 0, 101, 0.6), rgba(128, 0, 128,0.6));
 }
 
 nav ul li a:hover{
@@ -493,9 +493,9 @@ nav ul li a:hover{
 
 #socials{
   position: relative;
-  /* background-color: white; */
+  
   border: 2px white solid;
-  background: linear-gradient(to right, rgb(24, 0, 101), purple);
+  background: linear-gradient(to right, rgba(24, 0, 101, 0.6), rgba(128, 0, 128,0.6));
 
   display: inline-flex;
   display: -webkit-inline-flex;
@@ -510,8 +510,8 @@ nav ul li a:hover{
 }
 
 #socials *:hover{
-  background-color: darkgray;
-  border-radius: 0.3rem;
+  background-color: rgb(255, 253, 201);
+  border-radius: 0.4rem;
 }
 
 #socials a {
@@ -533,6 +533,7 @@ nav ul li a:hover{
   width: 6vh;
   display: block;
   filter: invert(1);
+  border-radius: 0.4rem;
 }
 
 #socials a:nth-child(2), #socials a:nth-child(2) > img {
@@ -584,7 +585,7 @@ main{
 }
 
 #switch > span > span{
-  font-size: 2rem;
+  /* font-size: 2rem; */
   display: inline-block;
 }
 
@@ -659,7 +660,7 @@ main{
 }
 
 main h1{
-  font-size: 2rem;
+  /* font-size: 2rem; */
   margin: 1%;
   font-weight: bold;
 }
@@ -690,28 +691,6 @@ main > section{
   /* border: 1px yellow solid; */
 }
 
-/* #project-gallery{
-  display: grid;
-  height: 100vh;
-  justify-content: flex-start;
-  align-items: normal;
-  gap: 1rem;
-  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-}
-
-#project-gallery > div{
-  display: inline-flex;
-  display: -webkit-inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: rgb(41, 3, 59);
-  border-radius: 5rem;
-  color: #000000;
-  position: relative;
-  padding: 5%;
-} */
-
 .planet, .moon{
   position: relative;
   display: flex;
@@ -733,6 +712,10 @@ main > section{
   animation-delay: -2s;
   -webkit-animation-delay: -2s;
   -moz-animation-delay: -2s;
+}
+
+#work-gallery > div:nth-child(even){
+  translate: 0% 10%;
 }
 
 @keyframes travel{
@@ -813,16 +796,15 @@ main > section{
   top: 50%;
   left: 50%;
   translate: -50% -50%;
+  font-size: 1rem;
 }
 
 .underplanet *{
   display: block;
-  font-size: 1rem;
-  font-weight: bold;
 }
 
 .undertitle{
-  font-size: 0.8rem;
+  font-size: 0.75em;
 }
 
 div.planet > p.underplanet > span.undertitle img{
@@ -832,8 +814,8 @@ div.planet > p.underplanet > span.undertitle img{
 }
 
 .title{
-  font-size: 1.2rem;
-  font-weight: bolder;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .stamp{
@@ -850,6 +832,14 @@ div.planet > p.underplanet > span.undertitle img{
   padding-right: 5%; 
   width: 0;
   flex: 1 1 0;
+}
+
+#about > p:first-child{
+  text-align: start;
+}
+
+#about > p:last-child{
+  text-align: end;
 }
 
 #about{
@@ -948,18 +938,13 @@ img.mcgill, img.cpk{
     #home{
       height: 90vh;
     }
+    #home p{
+      bottom: 20%;
+    }
     #about{
       display: block;
-      /* display: -webkit-flex;
-      justify-content: center;
-      align-items: center; */
     }
-  
     #about > p{
-      /* display: flex; */
-      /* display: -webkit-flex; */
-      /* justify-content: center; */
-      /* align-items: center; */
       padding-left: 20%;
       padding-right: 20%; 
       width: auto;
@@ -967,9 +952,6 @@ img.mcgill, img.cpk{
     }
     #avatar{
       width: 80%;
-    }
-    #home p{
-      bottom: 20%;
     }
     nav ul li a:nth-child(n){
       padding: 0.3rem 0.5rem 0.3rem 0.5rem;
@@ -984,6 +966,9 @@ img.mcgill, img.cpk{
     #work-gallery > div:nth-child(odd){
       translate: 0% -10%;
     }
+    #work-gallery > div:nth-child(even){
+      translate: 0% 10%;
+    }
     .planet, .moon, #project-gallery > div{
       scroll-snap-align: center; 
     }
@@ -996,22 +981,13 @@ img.mcgill, img.cpk{
       height: 20%;
       width: 20%;
     }
+    .underplanet{
+      font-size: 1em;
+    }
     div.planet > p.underplanet > span.undertitle img{
       width: 2rem;
-    }
-    .title{
-      font-size: 0.75rem;
-    }
-    .underplanet *{
-      font-size: 0.75rem;
-    }
-    .undertitle{
-      font-size: 0.8rem;
     }
     img.mcgill, img.cpk{
       height: 1rem;
     }
 }
-
-/* @media only screen and (min-width: 1000px){
-} */
