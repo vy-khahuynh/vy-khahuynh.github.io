@@ -741,13 +741,19 @@ main > section{
 }
 
 #project-gallery{
-  min-width: 80vw;
-  aspect-ratio: 1;
+  min-width: 100%;
+  /* aspect-ratio: 1; */
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-template: 1fr 1fr / 1fr 1fr;
+  gap: 5rem;
 }
 
-#project-gallery > div:nth-child(1){
+/* #project-gallery-container{
+  padding-left: 10%;
+  padding-right: 10%;
+} */
+
+/* #project-gallery > div:nth-child(1){
   grid-area: 1 / 1 / span 1 / span 1;
 }
 
@@ -765,7 +771,7 @@ main > section{
 
 #project-gallery > div:nth-child(5){
   grid-area: 3 / 3 / span 1 / span 1;
-}
+} */
 
 
 #project-gallery > div:nth-child(n){
@@ -788,11 +794,39 @@ main > section{
   width: 100%;
   top: 0;
   left: 0;
-  /* translate: 0% 1rem; */
   z-index: -1;
   border-radius: 5rem;
-  /* background-color: rgb(5, 0, 25); */
   background-image: url(../assets/images/pourdecisions.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#project-gallery > div:nth-child(2)::after{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5rem;
+  background-image: url(../assets/images/carshop-backend.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#project-gallery > div:nth-child(3)::after{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 5rem;
+  background-image: url(../assets/images/mtl-library.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -805,11 +839,9 @@ main > section{
   width: 100%;
   top: 0;
   left: 0;
-  /* translate: 0% 1rem; */
   z-index: -1;
   border-radius: 5rem;
-  /* background-color: rgb(5, 0, 25); */
-  background-image: url(../assets/images/mtl-library.png);
+  background-image: url(../assets/images/soccer-database.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1036,12 +1068,6 @@ img.mcgill, img.cpk{
     }
     #project-gallery, #work-gallery{
       padding: 10% 50% 10% 50%;
-    }
-    #work-gallery > div:nth-child(odd){
-      translate: 0% -10%;
-    }
-    #work-gallery > div:nth-child(even){
-      translate: 0% 10%;
     }
     .planet, .moon, #project-gallery > div{
       scroll-snap-align: center; 
