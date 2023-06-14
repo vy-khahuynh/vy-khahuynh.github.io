@@ -149,11 +149,12 @@ nav ul li a{
   color: white;
   border-radius: 5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  border: 1px white solid;
+  border: 2px white solid;
+  background: linear-gradient(to right, rgb(24, 0, 101), purple);
 }
 
 nav ul li a:hover{
-  background-color: #000000;
+  background: #000000;
   filter: invert(1);
   -webkit-filter: invert(1);
 }
@@ -924,6 +925,7 @@ img.mcgill, img.cpk{
     nav{
       height: 15vh;
       width: 100%;
+      font-size: 0.7rem;
     }
     #home{
       height: 85vh;
