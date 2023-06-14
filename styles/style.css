@@ -702,6 +702,7 @@ main > section{
 }
 
 #work-gallery > div:nth-child(odd){
+  translate: 0% -10%;
   animation-delay: -2s;
 }
 
@@ -923,12 +924,12 @@ img.mcgill, img.cpk{
         width: 30%;
     }
     nav{
-      height: 15vh;
+      height: 10vh;
       width: 100%;
       font-size: 0.7rem;
     }
     #home{
-      height: 85vh;
+      height: 90vh;
     }
     #avatar{
       width: 80%;
@@ -945,6 +946,9 @@ img.mcgill, img.cpk{
     }
     #project-gallery, #work-gallery{
       padding: 10% 50% 10% 50%;
+    }
+    #work-gallery > div:nth-child(odd){
+      translate: 0% -10%;
     }
     .planet, .moon, #project-gallery > div{
       scroll-snap-align: center; 
