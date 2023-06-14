@@ -513,8 +513,9 @@ nav ul li a:hover{
 }
 
 #socials *:hover{
-  background-color: rgb(255, 253, 201);
-  border-radius: 0.4rem;
+  background-color: white;
+  filter: invert(1);
+  -webkit-filter: invert(1);
 }
 
 #socials a {
@@ -522,6 +523,7 @@ nav ul li a:hover{
   margin-bottom: 1vh;
   margin-left: 2vh;
   margin-right: 2vh;
+  border-radius: 0.5rem;
 }
 
 #socials a:first-child {
@@ -677,7 +679,7 @@ main > section{
   width: 100%;
 }
 
-#work-gallery, #project-gallery{
+#work-gallery{
   margin: auto;
   position: relative;
   display: inline-flex;
@@ -685,23 +687,6 @@ main > section{
   align-items: center;
   justify-content: space-evenly;
   min-width: 100%;
-  /* border: 1px yellow solid; */
-}
-
-.planet, .moon{
-  position: relative;
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 40vh;
-  flex: 1 1 0px;
-  aspect-ratio: 1;
-  margin: 3%;
-  /* border: 1px white solid; */
-  animation: travel 2s ease-in-out infinite alternate-reverse;
-  -webkit-animation: travel 2s ease-in-out infinite alternate-reverse;
-  -moz-animation: travel 2s ease-in-out infinite alternate-reverse;
 }
 
 #work-gallery > div:nth-child(odd){
@@ -724,6 +709,22 @@ main > section{
   }
 }
 
+.planet, .moon{
+  position: relative;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40vh;
+  flex: 1 1 0px;
+  aspect-ratio: 1;
+  margin: 3%;
+  /* border: 1px white solid; */
+  animation: travel 2s ease-in-out infinite alternate-reverse;
+  -webkit-animation: travel 2s ease-in-out infinite alternate-reverse;
+  -moz-animation: travel 2s ease-in-out infinite alternate-reverse;
+}
+
 .moon > a > span{
   position: absolute;
   top: 50%;
@@ -738,6 +739,33 @@ main > section{
 .planet img, .moon img{
   width: 100%;
 }
+
+#project-gallery{
+  height: 100vh;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(5, 1fr);
+}
+
+#project-gallery > div:nth-child(1){
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+#project-gallery > div:nth-child(2){
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+#project-gallery > div:nth-child(3){
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+
+#project-gallery > div:nth-child(4){
+  grid-area: 2 / 4 / span 1 / span 1;
+}
+
+#project-gallery > div:nth-child(5){
+  grid-area: 1 / 5 / span 1 / span 1;
+}
+
 
 #project-gallery > div:nth-child(n){
   display: flex;
@@ -991,4 +1019,15 @@ img.mcgill, img.cpk{
     img.mcgill, img.cpk{
       height: 1rem;
     }
+}
+
+.progressBar {
+  position: fixed;
+top: 0;
+left: 0;
+height: 8px;
+background: linear-gradient(to right, #ff5f6d, #ffc371);
+width: 0%;
+z-index: 100;
+transition: width 0.2s ease-out;
 }

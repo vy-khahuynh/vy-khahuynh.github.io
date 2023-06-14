@@ -98,16 +98,32 @@ var home = document.querySelectorAll('#home');
 
 animate(minimize, home, {threshold: 0.7});
 
-// window.onscroll = function() {myFunction()};
+window.onscroll = function() {myFunction()};
 
-// function myFunction() {
-//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-//   var scrolled = (winScroll / height);
-//   var rocket = document.getElementById('rocket');
-//   var ul = document.querySelector('ul');
-//   var ulwidth = ul.getBoundingClientRect().width - 2 * rocket.getBoundingClientRect().width;
-//   var offset = scrolled * ulwidth;
-//   rocket.style.transform = `translateY(-${offset}px)`;
-// }
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  var rocket = document.getElementById('rocket');
+  rocket.style.left = `${scrolled}%`
+}
 
+const progressBar = document.querySelector('.progressBar');
+const section = document.querySelector('main');
+
+const scrollProgressBar = () => {
+    let scrollDistance = -(section.getBoundingClientRect().top);
+    let progressPercentage =
+        (scrollDistance /
+            (section.getBoundingClientRect().height - 
+                document.documentElement.clientHeight)) * 100;
+
+    let val = Math.floor(progressPercentage);
+    progressBar.style.width = val + '%';
+
+    if (val < 0) {
+        progressBar.style.width = '0%';
+    }
+};
+
+window.addEventListener('scroll', scrollProgressBar);
