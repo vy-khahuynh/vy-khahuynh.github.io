@@ -121,8 +121,6 @@ nav{
   border-radius: 5rem;
 
   font-size: 1rem;
-
-  padding: 2%;
 }
 
 ul{
@@ -151,6 +149,7 @@ nav ul li a{
   color: white;
   border-radius: 5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
+  border: 1px white solid;
 }
 
 nav ul li a:hover{
@@ -949,8 +948,8 @@ img.mcgill, img.cpk{
       scroll-snap-align: center; 
     }
     #work-gallery > div:nth-child(n){
-      /* animation: none; */
-      /* -webkit-animation: none; */
+      animation: none;
+      -webkit-animation: none;
     }
     #current::before{
       height: 20%;
