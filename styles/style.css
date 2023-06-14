@@ -949,8 +949,8 @@ img.mcgill, img.cpk{
       scroll-snap-align: center; 
     }
     #work-gallery > div:nth-child(n){
-      animation: none;
-      -webkit-animation: none;
+      /* animation: none; */
+      /* -webkit-animation: none; */
     }
     #current::before{
       height: 20%;
