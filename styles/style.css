@@ -730,29 +730,6 @@ main > section{
   width: 100%;
 }
 
-/* #work-gallery::before{
-  content: '';
-  height: 0;
-  left: 0;
-  width: 100%;
-  border-width: 0.1rem;
-  border-style: dashed;
-  position: absolute;
-  z-index: -1;
-}
-
-#work-gallery::after{
-  content: '';
-  height: 0;
-  width: 0;
-  right: 0rem;
-  border-left: white solid 2rem ;
-  border-top: transparent solid 0.5rem;
-  border-bottom: transparent solid 0.5rem;
-  position: absolute;
-  z-index: -1;
-} */
-
 #project-gallery > div:nth-child(n){
   display: flex;
   display: webkit-flex;
@@ -976,4 +953,24 @@ img.mcgill, img.cpk{
     img.mcgill, img.cpk{
       height: 1rem;
     }
+}
+
+@media only screen and (min-width: 1000px){
+  #about{
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about > p{
+    /* display: flex; */
+    /* display: -webkit-flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding-left: 5%;
+  padding-right: 5%; 
+    width: 0;
+    flex: 1 1 0;
+  }
 }
