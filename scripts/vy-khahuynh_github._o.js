@@ -98,16 +98,6 @@ var home = document.querySelectorAll('#home');
 
 animate(minimize, home, {threshold: 0.7});
 
-// window.onscroll = function() {myFunction()};
-
-// function myFunction() {
-//   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-//   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-//   var scrolled = (winScroll / height) * 100;
-//   var rocket = document.getElementById('rocket');
-//   rocket.style.left = `${scrolled}%`
-// }
-
 const progressBar = document.querySelector('.progressBar');
 const section = document.querySelector('main');
 

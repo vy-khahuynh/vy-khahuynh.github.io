@@ -66,7 +66,7 @@ body {
 
   font-size: 1.5rem;
 
-  background: linear-gradient(90deg, #030611, #010510, #120217, #000000);
+  background: linear-gradient(90deg, #030611, #010510, #08020a, #000000);
 	background-size: 500% 500%;
   background-attachment: fixed;
 	
@@ -736,7 +736,6 @@ main > section{
 }
 
 #project-gallery{
-  min-width: 100%;
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   gap: 5rem;
@@ -823,6 +822,7 @@ main > section{
 
 .tech img{
   height: 4vh;
+  margin: 2%;
 }
 
 #current::before{
