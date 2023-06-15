@@ -84,19 +84,19 @@ animate(callback, animated, options);
 let minimize = (entries) =>{
   entries.forEach((entry) => {
     if(entry.isIntersecting){
-      document.querySelector("#nav-bar > ul").classList.add("minimized_t");
-      document.querySelector("#socials").classList.add("minimized_b");
+      document.querySelector("#nav-bar").classList.add("minimized");
+      document.querySelector("#socials").classList.add("minimized");
     }
     else{
-      document.querySelector("#nav-bar > ul").classList.remove("minimized_t");
-      document.querySelector("#socials").classList.remove("minimized_b");
+      document.querySelector("#nav-bar").classList.remove("minimized");
+      document.querySelector("#socials").classList.remove("minimized");
     }
   });
 }
 
 var home = document.querySelectorAll('#home');
 
-animate(minimize, home, {threshold: 0.7});
+animate(minimize, home, {threshold: 0.5});
 
 const progressBar = document.querySelector('.progressBar');
 const section = document.querySelector('body');

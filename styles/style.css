@@ -116,37 +116,31 @@ nav{
   font-size: 0.8rem;
 
   text-align: center;
-  
-  background: linear-gradient(90deg, #030611, #010510, #08020a, #000000);
-	background-size: 500% 500%;
-  background-attachment: fixed;
 
-  mask-image: linear-gradient(to top, transparent, black 20%);
+  /* mask-image: linear-gradient(to top, transparent, black 20%); */
 	
   animation: gradient 20s ease infinite;
   -webkit-animation: gradient 20s ease infinite;
   -moz-animation: gradient 20s ease infinite;
-
-  transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
 }
 
 ul{
   height: 100%;
-  width: 50%;
+  width: 100%;
 
-  border-radius: 5rem;
+  padding-left: 25%;
+  padding-right: 25%;
 
   display: inline-flex;
   display: -webkit-inline-flex;
-  
   align-items: center;
   justify-content: center;
   
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
+
+  background-color: rgba(0, 0, 0, 0.9)
 }
 
 li{
@@ -187,11 +181,11 @@ nav ul li a:hover{
   top: 50%;
   right: 0;
 
-  height: 20px;
+  height: 15px;
 
-  rotate: 90deg;
+  transform: translateY(-50%);
+
   display: block;
-  translate: 0% -50%;
 }
  
 #singularity{
@@ -938,17 +932,23 @@ img.mcgill, img.cpk{
   transform: translateY(0);
 }
 
-.minimized_b{
-  transform-origin: bottom;
-  transform: scale(75%);
+.minimized{
   opacity: 0.7;
 }
 
-
-.minimized_t{
-  transform-origin: top;
+#socials.minimized{
+  transform-origin: bottom;
   transform: scale(75%);
-  opacity: 0.7;
+}
+
+#nav-bar.minimized > ul{
+  height: 70%;
+  padding-left: 30%;
+  padding-right: 30%;
+}
+
+#nav-bar.minimized{
+  font-size: 0.6rem;
 }
 
 .inverted{
@@ -982,6 +982,8 @@ img.mcgill, img.cpk{
   transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
+
+  border-radius: 0 50% 50% 0;
 }
 
 /* mobile */
@@ -998,8 +1000,15 @@ img.mcgill, img.cpk{
     }
     nav{
       height: 10vh;
-      width: 100%;
       font-size: 0.7rem;
+    }
+    ul{
+      padding: 5%;
+    }
+    #nav-bar.minimized > ul{
+      padding-top: 8%;
+      padding-left: 10%;
+      padding-right: 10%;
     }
     nav ul li a:nth-child(n){
       padding: 0.3rem 0.5rem 0.3rem 0.5rem;
@@ -1040,4 +1049,10 @@ img.mcgill, img.cpk{
     .underplanet{font-size: 1em;}
     div.planet > p.underplanet > span.undertitle img{width: 2rem;}
     img.mcgill, img.cpk{height: 1rem;}
+    .progressBar{
+      height: 4px;
+    }
+    #rocket{
+      height: 7px;
+    }
 }
