@@ -116,8 +116,6 @@ nav{
   font-size: 0.8rem;
 
   text-align: center;
-
-  /* mask-image: linear-gradient(to top, transparent, black 20%); */
 	
   animation: gradient 20s ease infinite;
   -webkit-animation: gradient 20s ease infinite;
@@ -144,7 +142,6 @@ ul{
 }
 
 li{
-  text-align: center;
   flex: 1 1 0;
   width: 0;
 }
@@ -167,7 +164,7 @@ nav ul li a:hover{
 #avatar{
   margin: auto;
   border-radius: 50%;
-  width: 70%;
+  width: 60%;
   aspect-ratio: 1;
 }
 
@@ -517,10 +514,9 @@ nav ul li a:hover{
   border-radius: 5rem;
 }
 
-#socials *:hover{
-  background-color: white;
-  filter: invert(1);
-  -webkit-filter: invert(1);
+#socials a img:hover{
+  filter: invert(0);
+  -webkit-filter: invert(0);
 }
 
 #socials a {
@@ -528,7 +524,6 @@ nav ul li a:hover{
   margin-bottom: 1vh;
   margin-left: 2vh;
   margin-right: 2vh;
-  border-radius: 0.5rem;
 }
 
 #socials a:first-child {
@@ -543,7 +538,7 @@ nav ul li a:hover{
   width: 6vh;
   display: block;
   filter: invert(1);
-  border-radius: 0.4rem;
+  -webkit-filter: invert(1);
 }
 
 #socials a:nth-child(2), #socials a:nth-child(2) > img {
@@ -752,7 +747,6 @@ main > section{
 
 #project-gallery{
   display: grid;
-  min-width: 100%;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   gap: 5rem;
 }
@@ -760,7 +754,7 @@ main > section{
 
 #project-gallery > div:nth-child(n){
   display: flex;
-  display: webkit-flex;
+  display: -webkit-flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -894,12 +888,12 @@ div.planet > p.underplanet > span.undertitle img{
   flex: 1 1 0;
 }
 
-#about > p:first-child{
+#about > p:first-of-type{
   padding-left: 10%;
   text-align: start;
 }
 
-#about > p:last-child{
+#about > p:last-of-type{
   padding-right: 10%;
   text-align: end;
 }
