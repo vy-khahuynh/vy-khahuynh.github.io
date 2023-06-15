@@ -742,36 +742,10 @@ main > section{
 
 #project-gallery{
   min-width: 100%;
-  /* aspect-ratio: 1; */
   display: grid;
   grid-template: 1fr 1fr / 1fr 1fr;
   gap: 5rem;
 }
-
-/* #project-gallery-container{
-  padding-left: 10%;
-  padding-right: 10%;
-} */
-
-/* #project-gallery > div:nth-child(1){
-  grid-area: 1 / 1 / span 1 / span 1;
-}
-
-#project-gallery > div:nth-child(2){
-  grid-area: 3 / 1 / span 1 / span 1;
-}
-
-#project-gallery > div:nth-child(3){
-  grid-area: 2 / 2 / span 1 / span 1;
-}
-
-#project-gallery > div:nth-child(4){
-  grid-area: 1 / 3 / span 1 / span 1;
-}
-
-#project-gallery > div:nth-child(5){
-  grid-area: 3 / 3 / span 1 / span 1;
-} */
 
 
 #project-gallery > div:nth-child(n){
@@ -780,11 +754,12 @@ main > section{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 2%;
   border-radius: 5rem;
+  margin: 2%;
   padding: 2%;
   background-color: rgba(12, 1, 59, 0.75);
   position: relative;
+  font-size: 1rem;
 }
 
 #project-gallery > div:nth-child(1)::after{
@@ -875,7 +850,7 @@ main > section{
   justify-content: center;
 }
 .tech img{
-  height: 5vh;
+  height: 4vh;
 }
 
 #current::before{
@@ -1066,7 +1041,7 @@ img.mcgill, img.cpk{
       overflow-x: scroll;
       scroll-snap-type: x proximity;
     }
-    #project-gallery, #work-gallery{
+    #work-gallery{
       padding: 10% 50% 10% 50%;
     }
     .planet, .moon, #project-gallery > div{
@@ -1076,6 +1051,17 @@ img.mcgill, img.cpk{
       animation: none;
       -webkit-animation: none;
       -moz-animation: none;
+    }
+    #project-gallery{
+      padding-top: 5%;
+      padding-bottom: 5%;
+      gap: 1rem;
+    }
+    #project-gallery div:nth-child(n){
+      font-size: 1em;
+    }
+    .tech img{
+      height: 4vh;
     }
     #current::before{
       height: 20%;
