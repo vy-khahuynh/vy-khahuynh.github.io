@@ -105,31 +105,38 @@ html::-webkit-scrollbar{
 }
 
 nav{
-  margin: auto;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   left: 0;
 
   height: 20vh;
-  width: 50%;
+  width: 100%;
 
   font-weight: bold;
-  border-radius: 5rem;
 
   font-size: 1rem;
+
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  mask-image: linear-gradient(to top, transparent, black 10%);
 }
 
 ul{
   height: 100%;
-  width: 100%;
+  width: 50%;
 
   border-radius: 5rem;
 
   display: inline-flex;
   display: -webkit-inline-flex;
+  
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
@@ -172,10 +179,10 @@ nav ul li a:hover{
 #rocket{
   position: absolute;
   rotate: 90deg;
-  width: 2.5%;
+  width: 0.5rem;
   top: 50%;
   translate: 0 -50%;
-  left: 0;
+  right: 0;
   z-index: -1;
 }
  
@@ -668,6 +675,12 @@ main > section{
   width: 100%;
   padding-top: 2%;
   padding-bottom: 2%;
+  position: relative;
+}
+
+.anchor{
+  position: absolute;
+  top: -20vh;
 }
 
 #work-gallery-container, #project-gallery-container{
@@ -737,6 +750,7 @@ main > section{
 
 #project-gallery{
   display: grid;
+  min-width: 100%;
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   gap: 5rem;
 }
@@ -754,7 +768,7 @@ main > section{
   margin: 2%;
   
   padding: 2%;
-  background-color: rgba(12, 1, 59, 0.75);
+  background-color: rgba(12, 1, 59, 0.6);
   
   position: relative;
   
@@ -957,7 +971,7 @@ img.mcgill, img.cpk{
   background: linear-gradient(to right, rgba(154, 0, 0, 1), rgb(170, 0, 170), rgb(44, 0, 189));
   width: 0%;
   z-index: 100;
-  transition: width 0.2s ease-out;
+  transition: all 0.2s ease-in-out;
 }
 
 /* mobile */
