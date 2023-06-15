@@ -99,7 +99,7 @@ var home = document.querySelectorAll('#home');
 animate(minimize, home, {threshold: 0.7});
 
 const progressBar = document.querySelector('.progressBar');
-const section = document.querySelector('main');
+const section = document.querySelector('body');
 
 const scrollProgressBar = () => {
     let scrollDistance = -(section.getBoundingClientRect().top);
