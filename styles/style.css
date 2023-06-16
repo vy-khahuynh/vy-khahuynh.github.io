@@ -110,7 +110,7 @@ nav{
   top: 0;
   left: 0;
 
-  height: 20vh;
+  height: 17.5vh;
   width: 100%;
 
   font-size: 0.8rem;
@@ -160,12 +160,23 @@ nav ul li a:hover{
 #avatar{
   margin: auto;
   border-radius: 50%;
-  width: 60%;
+  width: 20%;
   aspect-ratio: 1;
+  background: url(../assets/images/avatar.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
 }
 
-#avatar img{
-  width: 100%;
+#avatar:hover{
+  background: url(../assets/images/avatar2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 #rocket{
@@ -679,7 +690,7 @@ main > section{
   width: 100%;
 }
 
-#work-gallery{
+#work-gallery, #project-gallery{
   margin: auto;
   position: relative;
   display: inline-flex;
@@ -689,14 +700,14 @@ main > section{
   min-width: 100%;
 }
 
-#work-gallery > div:nth-child(odd){
+#work-gallery > div:nth-child(odd), #project-gallery > div:nth-child(even){
   translate: 0% -10%;
   animation-delay: -2s;
   -webkit-animation-delay: -2s;
   -moz-animation-delay: -2s;
 }
 
-#work-gallery > div:nth-child(even){
+#work-gallery > div:nth-child(even), #project-gallery > div:nth-child(odd){
   translate: 0% 10%;
 }
 
@@ -748,7 +759,7 @@ main > section{
   width: 100%;
 }
 
-#project-gallery{
+/* #project-gallery{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
@@ -827,7 +838,7 @@ main > section{
   z-index: -1;
   border-radius: 5rem;
   background-color: rgba(0, 0, 0, 0.6);
-}
+} */
 
 .stamp{
   vertical-align: middle;
@@ -882,7 +893,7 @@ main > section{
 }
 
 .undertitle{
-  font-size: 0.75em;
+  font-size: 0.9em;
 }
 
 div.planet > p.underplanet > span.undertitle img{
