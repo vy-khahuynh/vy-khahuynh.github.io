@@ -992,19 +992,28 @@ img.mcgill, img.cpk{
   height: 70%;
 }
 
-.acc-aig, .acc-gr{
+.acc-aig, .acc-gr, .acc-circ{
   position: relative;
 }
 
-.acc-aig::before, .acc-gr::before{
-  content: '`';
+.acc-aig::before, .acc-gr::before, .acc-circ::before{
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  translate: -50% 0%;
+}
+
+.acc-gr::before{
+  content: '`';
 }
 
 .acc-aig::before{
-  transform: rotateY(180deg);
+  content: '´';
+}
+
+.acc-circ::before{
+  content: '^';
+  font-size: 0.5em;
 }
 
 .progressBar {
