@@ -116,10 +116,6 @@ nav{
   font-size: 0.8rem;
 
   text-align: center;
-	
-  animation: gradient 20s ease infinite;
-  -webkit-animation: gradient 20s ease infinite;
-  -moz-animation: gradient 20s ease infinite;
 }
 
 ul{
@@ -671,7 +667,7 @@ main img{
 main > section{
   width: 100%;
   padding-top: 2%;
-  padding-bottom: 2%;
+  padding-bottom: 5%;
   position: relative;
 }
 
@@ -728,6 +724,14 @@ main > section{
   animation: travel 2s ease-in-out infinite alternate-reverse;
   -webkit-animation: travel 2s ease-in-out infinite alternate-reverse;
   -moz-animation: travel 2s ease-in-out infinite alternate-reverse;
+
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+}
+
+.planet:hover, .moon:hover{
+  scale: 110%;
 }
 
 .moon > a > span{
@@ -747,14 +751,15 @@ main > section{
 
 #project-gallery{
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-  gap: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
 
 
-#project-gallery > div:nth-child(n){
-  display: flex;
-  display: -webkit-flex;
+#project-gallery > div{
+  display: inline-flex;
+  display: -webkit-inline-flex;
+  
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -764,12 +769,23 @@ main > section{
   margin: 2%;
   
   padding: 2%;
-  background-color: rgba(12, 1, 59, 0.6);
+  background-color: rgba(12, 1, 59, 0.5);
   
   position: relative;
   
   font-size: 1rem;
+
+  text-shadow: 2px 2px #000000;
+
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
 }
+
+#project-gallery > div:hover{
+  background-color: rgba(12, 1, 59, 0.8);
+}
+
 
 #project-gallery > div::after{
   position: absolute;
@@ -811,7 +827,7 @@ main > section{
   translate: 0% 1rem;
   z-index: -1;
   border-radius: 5rem;
-  background-color: rgb(5, 0, 25);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .stamp{
@@ -942,12 +958,7 @@ img.mcgill, img.cpk{
 }
 
 #nav-bar.minimized{
-  font-size: 0.6rem;
-}
-
-.inverted{
-  filter: invert(1);
-  -webkit-filter: invert(1);
+  font-size: 0.5rem;
 }
 
 .acc-aig, .acc-gr{
