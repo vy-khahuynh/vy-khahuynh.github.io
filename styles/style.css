@@ -131,7 +131,7 @@ ul{
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
 
-  background-color: rgba(0, 0, 0, 0.9)
+  background-color: rgba(0, 0, 0, 0.95)
 }
 
 li{
@@ -141,6 +141,8 @@ li{
 
 li:first-child{
   margin-right: auto;
+  background: transparent;
+  color: white;
   background: linear-gradient(to right, rgba(108, 63, 255, 0.6),rgba(215, 88, 215, 0.6)), rgba(154, 0, 0, 1);
   background-clip: text;
   -webkit-background-clip: text;
@@ -1017,7 +1019,7 @@ img.mcgill, img.cpk{
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
 
-  border-radius: 0 50% 50% 0;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 /* mobile */
@@ -1043,6 +1045,9 @@ img.mcgill, img.cpk{
     li{
       flex: 1 1 0;
       width: 100px;
+    }
+    li.title{
+      font-size: 1em;
     }
     #nav-bar.minimized > ul{
       padding-top: 8%;
@@ -1088,10 +1093,7 @@ img.mcgill, img.cpk{
     .underplanet{font-size: 1em;}
     div.planet > p.underplanet > span.undertitle img{width: 2rem;}
     img.mcgill, img.cpk{height: 1rem;}
-    .progressBar{
+    .progressBar, #rocket{
       height: 4px;
-    }
-    #rocket{
-      height: 7px;
     }
 }
