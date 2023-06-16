@@ -165,7 +165,6 @@ nav ul li a:hover{
 }
 
 #avatar img{
-  border-radius: 50%;
   width: 100%;
 }
 
@@ -955,10 +954,6 @@ img.mcgill, img.cpk{
   height: 70%;
   padding-left: 30%;
   padding-right: 30%;
-}
-
-#nav-bar.minimized{
-  font-size: 0.5rem;
 }
 
 .acc-aig, .acc-gr{
