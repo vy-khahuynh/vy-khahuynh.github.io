@@ -832,7 +832,7 @@ main > section{
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  font-size: 1rem;
+  font-size: 0.66em;
   text-shadow: 2px 2px #000000;
 }
 
@@ -897,7 +897,7 @@ span.undertitle img{
 }
 
 img.mcgill, img.cpk{
-  height: 2rem;
+  height: 1.33em;
 }
 
 .to-show-on-scroll{
@@ -990,7 +990,7 @@ img.mcgill, img.cpk{
       padding: 5%;
       justify-content: center;
     }
-    li.title{
+    li.title, .underplanet{
       font-size: 1em;
     }
     #nav-bar.minimized > ul{
@@ -1026,16 +1026,13 @@ img.mcgill, img.cpk{
       height: 20%;
       width: 20%;
     }
-    #work-gallery > div, #project-gallery > div{
+    div#work-gallery-container > div#work-gallery > div, div#project-gallery-container > div#project-gallery > div{
+      translate: 0 0;
       animation: none;
       -webkit-animation: none;
       -moz-animation: none;
     }
-    div#work-gallery-container > div#work-gallery > div, div#project-gallery-container > div#project-gallery > div{
-      translate: 0 0;
-    }
     .tech img{height: 4vh;}
-    .underplanet{font-size: 1em;}
     div.planet > p.underplanet > span.undertitle img{width: 2rem;}
     img.mcgill, img.cpk{height: 1rem;}
     .progressBar{
