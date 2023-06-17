@@ -130,7 +130,7 @@ ul{
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
 
-  background-color: rgba(0, 0, 0, 0.95);
+  background-color: rgba(0, 0, 0, 0.95)
 }
 
 li{
@@ -513,7 +513,6 @@ nav > ul > li > a:hover{
   position: relative;
 
   width: 25%;
-  height: 10vh;
   
   border: 2px white solid;
   background: linear-gradient(to right, rgba(128, 0, 128, 0.6), rgba(24, 0, 101, 0.6), rgba(154, 0, 0, 0.6));
@@ -531,20 +530,20 @@ nav > ul > li > a:hover{
   padding: 0.5%;
 }
 
-#socials > a{
-  width: 3rem;
-}
-
 #socials > a > img:hover{
   filter: invert(0);
   -webkit-filter: invert(0);
 }
 
  #socials a img{
-  width: 100%;
+  width: 3rem;
   filter: invert(1);
   -webkit-filter: invert(1);
   display: block;
+}
+
+#socials > a {
+  width: 3rem;
 }
 
 .ontop{
@@ -564,6 +563,7 @@ main h1{
 
 main > section{
   width: 100%;
+  min-height: 100vh;
   padding-top: 2%;
   padding-bottom: 5%;
   position: relative;
@@ -703,7 +703,6 @@ main > section{
 }
 
 #work-gallery-container, #project-gallery-container{
-  margin: auto;
   width: 100%;
 }
 
@@ -734,6 +733,7 @@ main > section{
 #project-gallery > div:last-child{
   grid-area: 2 / 2 / span 1 / span 1;
 }
+
 
 #project-gallery > div, #work-gallery > div{
   border-radius: 50%;
@@ -903,7 +903,7 @@ img.mcgill, img.cpk{
 
 .to-show-on-scroll{
   opacity: 0;
-  transform: translateY(10%) translateX(10%) rotateZ(15deg);
+  transform: translateY(10%);
   transition: all 0.5s ease-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -914,7 +914,7 @@ img.mcgill, img.cpk{
 
 .scroll-animation {
   opacity: 1;
-  transform: translateY(0) translateX(0) rotateZ(0deg);
+  transform: translateY(0);
 }
 
 .minimized{
@@ -974,11 +974,8 @@ img.mcgill, img.cpk{
     body{font-size: 0.75rem;}
     #switch > span > span, main h1{font-size: 1rem;}
     #socials{
-      width: 90%;
+      width: 95%;
       border: 1px white solid;
-    }
-    #socials > a{
-      width: 2.5rem;
     }
     #blackhole-container{
         height: 30%;
@@ -986,6 +983,14 @@ img.mcgill, img.cpk{
     }
     nav{
       font-size: 0.9rem;
+    }
+    ul{
+      padding: 5%;
+      justify-content: center;
+    }
+    li{
+      flex: 1 1 0;
+      width: 100px;
     }
     li.title{
       font-size: 1em;
@@ -1012,12 +1017,14 @@ img.mcgill, img.cpk{
       overflow-x: scroll;
       scroll-snap-type: x proximity;
     }
-    #project-gallery, #work-gallery{
+    #project-gallery{
       display: inline-flex;
       display: -webkit-inline-flex;
       align-items: center;
-      justify-content: start;
+      justify-content: space-evenly;
     }
+    #work-gallery{padding: 10% 50% 10% 50%;}
+    #project-gallery{padding: 10% 100% 10% 100%;}
     .planet, .moon{scroll-snap-align: center;}
     #current::before{
       height: 20%;
