@@ -68,6 +68,8 @@ body {
 
   background: linear-gradient(90deg, #030611, #010510, #08020a, #000000);
 	background-size: 500% 500%;
+
+  overflow-x: hidden;
   background-attachment: fixed;
 	
   animation: gradient 20s ease infinite;
@@ -555,6 +557,7 @@ main{
   position: relative;
   width: 100%;
   text-align: center;
+  overflow-x: hidden;
 }
 
 main h1{
@@ -703,6 +706,7 @@ main > section{
 
 #work-gallery-container, #project-gallery-container{
   width: 100%;
+  margin: auto;
 }
 
 #work-gallery, #project-gallery{
@@ -902,7 +906,9 @@ img.mcgill, img.cpk{
 
 .to-show-on-scroll{
   opacity: 0;
-  transform: translateY(10%);
+  transform: translateY(10%) translateX(10%) rotateZ(15deg);
+  -webkit-transform: translateY(10%) translateX(10%) rotateZ(15deg);
+  -moz-transform: translateY(10%) translateX(10%) rotateZ(15deg);
   transition: all 0.5s ease-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -913,7 +919,9 @@ img.mcgill, img.cpk{
 
 .scroll-animation {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
 }
 
 .minimized{
