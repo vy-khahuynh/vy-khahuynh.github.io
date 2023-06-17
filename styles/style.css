@@ -513,6 +513,7 @@ nav > ul > li > a:hover{
   position: relative;
 
   width: 25%;
+  height: 10vh;
   
   border: 2px white solid;
   background: linear-gradient(to right, rgba(128, 0, 128, 0.6), rgba(24, 0, 101, 0.6), rgba(154, 0, 0, 0.6));
@@ -536,7 +537,7 @@ nav > ul > li > a:hover{
 }
 
  #socials a img{
-  width: 3rem;
+  width: 100%;
   filter: invert(1);
   -webkit-filter: invert(1);
   display: block;
@@ -563,10 +564,8 @@ main h1{
 
 main > section{
   width: 100%;
-  min-height: 100vh;
-  padding-top: 2%;
-  padding-bottom: 5%;
   position: relative;
+  margin: 5% 0 5%;
 }
 
 .anchor{
@@ -974,8 +973,11 @@ img.mcgill, img.cpk{
     body{font-size: 0.75rem;}
     #switch > span > span, main h1{font-size: 1rem;}
     #socials{
-      width: 95%;
+      width: 90%;
       border: 1px white solid;
+    }
+    #socials a{
+      width: 2.5rem;
     }
     #blackhole-container{
         height: 30%;
@@ -987,10 +989,6 @@ img.mcgill, img.cpk{
     ul{
       padding: 5%;
       justify-content: center;
-    }
-    li{
-      flex: 1 1 0;
-      width: 100px;
     }
     li.title{
       font-size: 1em;
@@ -1017,14 +1015,12 @@ img.mcgill, img.cpk{
       overflow-x: scroll;
       scroll-snap-type: x proximity;
     }
-    #project-gallery{
+    #project-gallery, #work-gallery{
       display: inline-flex;
       display: -webkit-inline-flex;
       align-items: center;
-      justify-content: space-evenly;
+      justify-content: flex-start;
     }
-    #work-gallery{padding: 10% 50% 10% 50%;}
-    #project-gallery{padding: 10% 100% 10% 100%;}
     .planet, .moon{scroll-snap-align: center;}
     #current::before{
       height: 20%;
@@ -1034,6 +1030,9 @@ img.mcgill, img.cpk{
       animation: none;
       -webkit-animation: none;
       -moz-animation: none;
+    }
+    div#work-gallery-container > div#work-gallery > div, div#project-gallery-container > div#project-gallery > div{
+      translate: 0 0;
     }
     .tech img{height: 4vh;}
     .underplanet{font-size: 1em;}
