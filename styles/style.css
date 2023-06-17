@@ -738,6 +738,20 @@ main > section{
   translate: 0% 10%;
 }
 
+#project-gallery > div:last-child{
+  translate: 0% 10%;
+  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+}
+
+#project-gallery > div:nth-last-child(2){
+  translate: 0% -10%;
+  animation-delay: -2s;
+  -webkit-animation-delay: -2s;
+  -moz-animation-delay: -2s;
+}
+
 @keyframes travel{
   0%{
     transform: translateY(2%);
@@ -1014,7 +1028,7 @@ img.mcgill, img.cpk{
       padding-left: 10%;
       padding-right: 10%;
     }
-    nav ul li a:nth-child(n){
+    nav ul li a{
       padding: 0.3rem 0.5rem 0.3rem 0.5rem;
       border: 1px white solid;
     }
@@ -1033,14 +1047,13 @@ img.mcgill, img.cpk{
       scroll-snap-type: x proximity;
     }
     #project-gallery{
-      margin: auto;
-      position: relative;
       display: inline-flex;
       display: -webkit-inline-flex;
       align-items: center;
       justify-content: space-evenly;
     }
-    #work-gallery, #project-gallery{padding: 10% 50% 10% 50%;}
+    #work-gallery{padding: 10% 50% 10% 50%;}
+    #project-gallery{padding: 10% 100% 10% 100%;}
     .planet, .moon{scroll-snap-align: center;}
     #current::before{
       height: 20%;
