@@ -902,10 +902,14 @@ img.mcgill, img.cpk{
 
 .to-show-on-scroll{
   opacity: 0;
-  transform: translateY(10%);
+  transform: translateY(10%) translateX(10%) rotateZ(15deg);
+  -webkit-transform: translateY(10%) translateX(10%) rotateZ(15deg);
+  -moz-transform: translateY(10%) translateX(10%) rotateZ(15deg);
+
   transition: all 0.5s ease-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
+  
   transition-delay: 0.25s;
   -webkit-transition-delay: 0.25s;
   -moz-transition-delay: 0.25s;
@@ -913,7 +917,10 @@ img.mcgill, img.cpk{
 
 .scroll-animation {
   opacity: 1;
-  transform: translateY(0);
+  
+  transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
 }
 
 .minimized{
