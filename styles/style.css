@@ -852,6 +852,7 @@ main > section{
 
 .moon > a {
   width: 50%;
+  z-index: 100;
 }
 
 .planet img, .moon img{
