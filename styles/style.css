@@ -69,7 +69,6 @@ body {
   background: linear-gradient(90deg, #030611, #010510, #08020a, #000000);
 	background-size: 500% 500%;
 
-  overflow-x: hidden;
   background-attachment: fixed;
 	
   animation: gradient 20s ease infinite;
@@ -557,7 +556,7 @@ main{
   position: relative;
   width: 100%;
   text-align: center;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 main h1{
@@ -810,11 +809,12 @@ main > section{
   translate: -50% -50%;
 }
 
-.moon a {
+.moon > a {
   width: 50%;
 }
 
 .planet img, .moon img{
+  display: block;
   width: 100%;
 }
 
@@ -1029,7 +1029,7 @@ img.mcgill, img.cpk{
       align-items: center;
       justify-content: flex-start;
     }
-    .planet, .moon{scroll-snap-align: center;}
+    .planet, .moon{scroll-snap-align: center; margin: auto;}
     #current::before{
       height: 20%;
       width: 20%;
@@ -1040,7 +1040,6 @@ img.mcgill, img.cpk{
       -webkit-animation: none;
       -moz-animation: none;
     }
-    .tech img{height: 4vh;}
     div.planet > p.underplanet > span.undertitle img{width: 2rem;}
     img.mcgill, img.cpk{height: 1rem;}
     .progressBar{
