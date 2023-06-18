@@ -69,6 +69,7 @@ body {
   background: linear-gradient(90deg, #030611, #010510, #08020a, #000000);
 	background-size: 500% 500%;
 
+  overflow-x: hidden;
   background-attachment: fixed;
 	
   animation: gradient 20s ease infinite;
@@ -164,7 +165,7 @@ nav > ul > li > a:hover{
 }
 
 #avatar{
-  margin: 3%;
+  margin: auto;
   border-radius: 50%;
   width: 20%;
   aspect-ratio: 1;
@@ -556,6 +557,7 @@ main{
   position: relative;
   width: 100%;
   text-align: center;
+  overflow-x: hidden;
 }
 
 main h1{
@@ -765,47 +767,6 @@ main > section{
   -moz-animation-delay: -2s;
 }
 
-#project-gallery > div::after{
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  top: 0;
-  left: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0;
-}
-
-#project-gallery > div:nth-child(1)::after{
-  background-image: url(../assets/images/soccer-database.png);
-}
-
-#project-gallery > div:nth-child(2)::after{
-  background-image: url(../assets/images/mtl-library.png);
-}
-
-#project-gallery > div:nth-child(3)::after{
-  background-image: url(../assets/images/carshop-backend.png);
-}
-
-#project-gallery > div:nth-child(4)::after{
-  background-image: url(../assets/images/pourdecisions.png);
-}
-
-#project-gallery > div:nth-child(5)::after{
-  background-image: url(../assets/images/pourdecisions.png);
-}
-
-#project-gallery > div:hover::after{
-  opacity: 1;
-  transition: all 0.5s ease-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-}
-
 @keyframes travel{
   0%{
     transform: translateY(2%);
@@ -976,10 +937,6 @@ img.mcgill, img.cpk{
   height: 70%;
 }
 
-.acc-container{
-  display: inline-block;
-}
-
 .acc-aig, .acc-gr, .acc-circ{
   position: relative;
 }
@@ -1023,7 +980,6 @@ img.mcgill, img.cpk{
   @media only screen and (max-width: 990px){
     body{font-size: 0.75rem;}
     #switch > span > span, main h1{font-size: 1rem;}
-    main{overflow-x: hidden;}
     #socials{
       width: 90%;
       border: 1px white solid;
