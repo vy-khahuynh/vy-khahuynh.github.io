@@ -570,6 +570,10 @@ main > section{
   margin: 5% 0 5%;
 }
 
+main > section > div{
+  margin: 2%;
+}
+
 .anchor{
   position: absolute;
   top: -20vh;
@@ -886,18 +890,11 @@ main > section{
   display: block;
 }
 
-.tech{
-  display: inline-flex;
-  display: -webkit-inline-flex;
-  align-items: center;
-  justify-content: center;
-  /* padding: 2%; */
+#skills{
+  /* position: relative; */
+  width: 100%;
+  height: auto;
 }
-
-/* .tech img{
-  height: 4vh;
-  margin: 2%;
-} */
 
 .stamp{
   margin: auto;
