@@ -978,6 +978,7 @@ img.mcgill, img.cpk{
 
 #nav-bar.minimized > ul{
   height: 70%;
+  font-size: smaller;
 }
 
 .acc-aig, .acc-gr, .acc-circ{
@@ -1036,6 +1037,9 @@ img.mcgill, img.cpk{
     #blackhole-container{
         height: 30%;
         width: 30%;
+    }
+    #nav-bar .title{
+      font-size: 1.5em;
     }
     nav{
       font-size: 0.9rem;
