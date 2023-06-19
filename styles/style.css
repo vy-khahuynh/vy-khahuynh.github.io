@@ -915,6 +915,10 @@ main > section > div{
   font-weight: bold;
 }
 
+#nav-bar .title{
+  font-size: 3em;
+}
+
 #about .largetitle{
   font-family: Futura, "Trebuchet MS";
   display: inline-block;
