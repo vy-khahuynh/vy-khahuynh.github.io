@@ -852,7 +852,7 @@ main > section{
 
 .moon > a {
   width: 50%;
-  z-index: 100;
+  z-index: 1;
 }
 
 .planet img, .moon img{
@@ -1014,7 +1014,6 @@ img.mcgill, img.cpk{
   height: 8px;
   background: linear-gradient(to right, rgba(154, 0, 0, 1), rgb(170, 0, 170), rgb(44, 0, 189));
   width: 0%;
-  z-index: 100;
   transition: all 0.2s linear;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -1074,6 +1073,9 @@ img.mcgill, img.cpk{
       display: -webkit-inline-flex;
       align-items: center;
       justify-content: flex-start;
+    }
+    #project-gallery-container{
+      margin-bottom: 10vh;
     }
     .planet, .moon{scroll-snap-align: center; margin: auto;}
     #current::before{
