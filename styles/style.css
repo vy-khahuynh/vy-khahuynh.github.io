@@ -569,6 +569,7 @@ main > section{
   position: relative;
   margin: 5% 0 5%;
   overflow: hidden;
+  /* border: 1px red solid; */
 }
 
 main > section > div{
@@ -970,7 +971,7 @@ img.mcgill, img.cpk{
 }
 
 .minimized{
-  opacity: 0.7;
+  opacity: 0.1;
 }
 
 #socials.minimized{
