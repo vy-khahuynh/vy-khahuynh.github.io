@@ -47,7 +47,7 @@ intro()
 
 function animate(cb, an, op){
   const observer = new IntersectionObserver(cb, op);
-  for(var i = 0 ; i < an.length ; i++){
+  for(let i = 0 ; i < an.length ; i++){
     observer.observe(an[i]);
   }
 }
@@ -57,23 +57,6 @@ let options = {
   rootMargin: "0px",
   threshold: 0
 }
-
-
-// Add reveal on scroll animation
-let callback = (entries) => {
-  entries.forEach((entry) => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('scroll-animation');
-    }
-    else{
-      entry.target.classList.remove('scroll-animation');
-    }
-  });
-};
-
-var animated = document.querySelectorAll('.to-show-on-scroll');
-
-animate(callback, animated, options);
 
 
 // Minimize footer and header on top
@@ -93,6 +76,29 @@ let minimize = (entries) =>{
 var home = document.querySelectorAll('#home');
 
 animate(minimize, home, {threshold: 0.5});
+
+let highlight = (entries) =>{
+  entries.forEach((entry) => {
+    let inner = entry.target.id.charAt(0).toUpperCase() + entry.target.id.slice(1)
+    let navbar = document.querySelectorAll("#nav-bar > ul > li > a")
+  
+    for(let i = 0 ; i < navbar.length ; i++){
+      if(navbar[i].innerHTML == `${inner}`){
+        var activenav = navbar[i]
+        break
+      }
+    }
+    if(entry.isIntersecting){
+      activenav.classList.add("active")
+    }
+    else{
+      activenav.classList.remove("active")
+    }
+  });
+}
+
+var sections = document.querySelectorAll("section")
+animate(highlight, sections, options);
 
 const progressBar = document.querySelector('.progressBar');
 const section = document.querySelector('body');

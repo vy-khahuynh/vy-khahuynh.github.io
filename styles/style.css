@@ -112,6 +112,8 @@ nav{
   top: 0;
   left: 0;
 
+  opacity: 1;
+
   height: 10vh;
   width: 100%;
 
@@ -160,14 +162,14 @@ nav > ul > li > a{
   background: linear-gradient(to right, rgba(24, 0, 101, 0.6), rgba(128, 0, 128, 0.6), rgba(154, 0, 0, 0.6));
 }
 
-nav > ul > li > a:hover{
+nav > ul > li > a:hover, nav > ul > li > a.active{
   background: #000000;
   filter: invert(1);
   -webkit-filter: invert(1);
 }
 
 #avatar{
-  margin: auto;
+  margin: 3%;
   border-radius: 50%;
   width: 20%;
   aspect-ratio: 1;
@@ -571,8 +573,6 @@ main > section{
   width: 100%;
   position: relative;
   margin: 5% 0 5%;
-  overflow: hidden;
-  /* border: 1px red solid; */
 }
 
 main > section > div{
@@ -580,6 +580,7 @@ main > section > div{
 }
 
 #home{
+  margin-top: 0;
   position: relative;
   height: 90vh; 
   width: 100%; 
@@ -729,18 +730,9 @@ main > section > div{
 }
 
 #project-gallery{
-  position: relative;
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-  padding: 5%;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   row-gap: 7rem;
-}
-
-#project-gallery > div:nth-last-child(2){
-  grid-area: 2 / 3 / span 1 / span 1;
-}
-#project-gallery > div:last-child{
-  grid-area: 2 / 2 / span 1 / span 1;
 }
 
 
@@ -748,26 +740,24 @@ main > section > div{
   border-radius: 50%;
 }
 
-#work-gallery > div:nth-child(odd), #project-gallery > div:nth-child(even){
+#work-gallery > div:nth-child(odd), #project-gallery > div:nth-child(odd){
   translate: 0% -10%;
   animation-delay: -2s;
   -webkit-animation-delay: -2s;
   -moz-animation-delay: -2s;
 }
 
-#work-gallery > div:nth-child(even), #project-gallery > div:nth-child(odd){
+#work-gallery > div:nth-child(even), #project-gallery > div:nth-child(even){
   translate: 0% 10%;
 }
 
-#project-gallery > div:last-child{
-  translate: 0% 10%;
+#project-gallery > div:nth-last-child(2){
   animation-delay: 0s;
   -webkit-animation-delay: 0s;
   -moz-animation-delay: 0s;
 }
 
-#project-gallery > div:nth-last-child(2){
-  translate: 0% -10%;
+#project-gallery > div:nth-last-child(1){
   animation-delay: -2s;
   -webkit-animation-delay: -2s;
   -moz-animation-delay: -2s;
@@ -804,14 +794,10 @@ main > section > div{
 }
 
 #project-gallery > div:nth-child(3)::after{
-  background-image: url(../assets/images/carshop-backend.png);
-}
-#project-gallery > div:nth-child(4)::after{
   background-image: url(../assets/images/pourdecisions.png);
 }
-
-#project-gallery > div:nth-child(5)::after{
-  background-image: url(../assets/images/cifar10-mlp.png);  
+#project-gallery > div:nth-child(4)::after{
+  background-image: url(../assets/images/cifar10-mlp.png);
 }
 
 @keyframes travel{
@@ -970,7 +956,9 @@ img.mcgill, img.cpk{
 
 .anchor{
   position: absolute;
-  top: -15vh;
+  top: -14vh;
+  left: 0;
+  width: 100%;
 }
 
 .minimized{
@@ -980,6 +968,10 @@ img.mcgill, img.cpk{
 #socials.minimized{
   transform-origin: bottom;
   transform: scale(75%);
+  -webkit-transform-origin: bottom;
+  -webkit-transform: scale(75%);
+  -moz-transform-origin: bottom;
+  -moz-transform: scale(75%);
 }
 
 #nav-bar.minimized > ul{
@@ -1080,13 +1072,13 @@ img.mcgill, img.cpk{
     #avatar{width: 70%;}
     #project-gallery-container, #work-gallery-container{
       overflow-x: scroll;
-      scroll-snap-type: x proximity;
+      scroll-snap-type: x mandatory;
     }
     #project-gallery, #work-gallery{
       display: inline-flex;
       display: -webkit-inline-flex;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
     }
     #project-gallery-container{
       margin-bottom: 10vh;
