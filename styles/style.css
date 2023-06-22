@@ -120,7 +120,7 @@ nav{
   font-size: 0.7em;
 }
 
-#nav-bar, #nav-bar > ul{
+#nav-bar, #nav-bar > ul,  #nav-bar > ul > li > a{
   transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
@@ -772,6 +772,10 @@ main > section > div{
   translate: 0% -10%;
 }
 
+#project-gallery > div{
+  margin: 2%;
+}
+
 #project-gallery > div:nth-child(even){
   flex-direction: row-reverse;
 }
@@ -889,9 +893,18 @@ div.project.desc > p > span > a > img{
   vertical-align: middle;
 }
 
-div.project.desc > p > span.title{
+div.project.desc > p > span{
   display: block;
 }
+
+#project-gallery > div:nth-child(even) > div.project.desc > p > span:not(.title):not(.undertitle){
+  text-align: start;
+}
+
+#project-gallery > div:nth-child(odd) > div.project.desc > p > span:not(.title):not(.undertitle){
+  text-align: end;
+}
+
 
 #current::before{
   content: '';
@@ -1129,6 +1142,16 @@ img.mcgill, img.cpk{
     #project-gallery{
       min-width: 0;
       width: 100%;
+    }
+    #project-gallery > div:nth-child(n){
+      flex-direction: column;
+    }
+    #project-gallery > div > div{
+      width: 100%;
+      flex: 0;
+    }
+    div#project-gallery-container > div#project-gallery > div:nth-child(n) > div.project.desc > p > span{
+      text-align: center;
     }
     .planet, .moon{scroll-snap-align: center; margin: auto;}
     #current::before{
