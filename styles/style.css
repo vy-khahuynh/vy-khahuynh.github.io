@@ -705,6 +705,7 @@ main > section > div{
 
 #work-gallery-container, #project-gallery-container{
   width: 100%;
+  height: auto;
   margin: auto;
 }
 
@@ -712,6 +713,8 @@ main > section > div{
   margin: auto;
   position: relative;
   min-width: 100%;
+  height: auto;
+  padding: 5%;
 }
 
 #work-gallery{
@@ -823,8 +826,6 @@ main > section > div{
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
-  
-  min-width: 40vh;
   
   flex: 1 1 0;
   
@@ -1060,6 +1061,9 @@ img.mcgill, img.cpk{
     nav ul li a{
       padding: 0.3rem 0.5rem 0.3rem 0.5rem;
       border: 1px white solid;
+    }
+    .planet{
+      width: 95vw;
     }
     #home p{bottom: 20%;}
     #summary{display: block;}
