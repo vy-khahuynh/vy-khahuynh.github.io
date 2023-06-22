@@ -568,15 +568,11 @@ main > section{
   width: 100%;
   position: relative;
   margin: 5% 0 5%;
+  overflow: hidden;
 }
 
 main > section > div{
   margin: 2%;
-}
-
-.anchor{
-  position: absolute;
-  top: -20vh;
 }
 
 #home{
@@ -962,9 +958,14 @@ img.mcgill, img.cpk{
 
 .scroll-animation {
   opacity: 1;
-  transform: none;
-  -webkit-transform: none;
-  -moz-transform: none;
+  transform:  translateY(0) translateX(0) rotateZ(0deg);
+  -webkit-transform:  translateY(0) translateX(0) rotateZ(0deg);
+  -moz-transform:  translateY(0) translateX(0) rotateZ(0deg);
+}
+
+.anchor{
+  position: absolute;
+  top: -15vh;
 }
 
 .minimized{
