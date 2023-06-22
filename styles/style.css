@@ -731,8 +731,20 @@ main > section > div{
 
 #project-gallery{
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-  row-gap: 7rem;
+  grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+}
+
+#project-gallery > div{
+  width: 100%;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#project-gallery > div > div{
+  width: 0;
+  flex: 1 1 0;
 }
 
 
@@ -740,30 +752,31 @@ main > section > div{
   border-radius: 50%;
 }
 
-#work-gallery > div:nth-child(odd), #project-gallery > div:nth-child(odd){
-  translate: 0% -10%;
+#work-gallery > div:nth-child(odd){
   animation-delay: -2s;
   -webkit-animation-delay: -2s;
   -moz-animation-delay: -2s;
 }
 
-#work-gallery > div:nth-child(even), #project-gallery > div:nth-child(even){
+#project-gallery > div:nth-child(4n+1) > div.planet{
+  animation-delay: -2s;
+  -webkit-animation-delay: -2s;
+  -moz-animation-delay: -2s;
+}
+
+#work-gallery > div:nth-child(even){
   translate: 0% 10%;
 }
 
-#project-gallery > div:nth-last-child(2){
-  animation-delay: 0s;
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
+#work-gallery > div:nth-child(odd){
+  translate: 0% -10%;
 }
 
-#project-gallery > div:nth-last-child(1){
-  animation-delay: -2s;
-  -webkit-animation-delay: -2s;
-  -moz-animation-delay: -2s;
+#project-gallery > div:nth-child(even){
+  flex-direction: row-reverse;
 }
 
-#project-gallery > div::after{
+#project-gallery > div > div.planet::after{
   content: '';
   background-position: center;
   background-repeat: no-repeat;
@@ -781,22 +794,41 @@ main > section > div{
   -moz-transition: all 0.5s ease-in-out;
 }
 
-#project-gallery > div:hover::after{
+#project-gallery > div > div.planet:hover::after{
   opacity: 1;
 }
 
-#project-gallery > div:nth-child(1)::after{
+/* :nth-child(0n + 1 of #project-gallery > div.planet)::after{
+  background-image: url(../assets/images/soccer-database.png);
+} */
+
+#project-gallery > div:nth-child(1) > div.planet::after{
+  background-position: left;
   background-image: url(../assets/images/soccer-database.png);
 }
 
-#project-gallery > div:nth-child(2)::after{
+/* :nth-child(0n + 2 of #project-gallery > div.planet)::after{
+  background-image: url(../assets/images/mtl-library.png);
+} */
+
+#project-gallery > div:nth-child(2) > div.planet::after{
   background-image: url(../assets/images/mtl-library.png);
 }
 
-#project-gallery > div:nth-child(3)::after{
+/* :nth-child(0n + 3 of #project-gallery > div.planet)::after{
+  background-image: url(../assets/images/pourdecisions.png);
+} */
+
+#project-gallery > div:nth-child(3) > div.planet::after{
   background-image: url(../assets/images/pourdecisions.png);
 }
-#project-gallery > div:nth-child(4)::after{
+
+/* :nth-child(0n + 4 of #project-gallery > div.planet)::after{
+  background-image: url(../assets/images/cifar10-mlp.png);
+} */
+
+#project-gallery > div:nth-child(4) > div.planet::after{
+  background-position: left;
   background-image: url(../assets/images/cifar10-mlp.png);
 }
 
@@ -851,6 +883,16 @@ main > section > div{
   width: 100%;
 }
 
+div.project.desc > p > span > a > img{
+  height: 1em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+div.project.desc > p > span.title{
+  display: block;
+}
+
 #current::before{
   content: '';
   background-image: url(../assets/images/astronaut.png);
@@ -875,6 +917,7 @@ main > section > div{
 
 .underplanet *{
   display: block;
+  margin: 2%;
 }
 
 #skills{
@@ -1074,7 +1117,7 @@ img.mcgill, img.cpk{
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
     }
-    #project-gallery, #work-gallery{
+    #work-gallery{
       display: inline-flex;
       display: -webkit-inline-flex;
       align-items: center;
@@ -1083,12 +1126,16 @@ img.mcgill, img.cpk{
     #project-gallery-container{
       margin-bottom: 10vh;
     }
+    #project-gallery{
+      min-width: 0;
+      width: 100%;
+    }
     .planet, .moon{scroll-snap-align: center; margin: auto;}
     #current::before{
       height: 20%;
       width: 20%;
     }
-    div#work-gallery-container > div#work-gallery > div, div#project-gallery-container > div#project-gallery > div{
+    div#work-gallery-container > div#work-gallery > div, div#project-gallery-container > div#project-gallery > div > div{
       translate: 0 0;
       animation: none;
       -webkit-animation: none;
