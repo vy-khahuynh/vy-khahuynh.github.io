@@ -758,7 +758,7 @@ main > section > div{
   -moz-animation-delay: -2s;
 }
 
-#project-gallery > div:nth-child(4n+1) > div.planet{
+#project-gallery > div:nth-child(2n+1) > div.planet{
   animation-delay: -2s;
   -webkit-animation-delay: -2s;
   -moz-animation-delay: -2s;
@@ -924,7 +924,7 @@ div.project.desc > p > span{
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  font-size: 0.66em;
+  font-size: 0.9em;
   text-shadow: 2px 2px #000000;
 }
 
