@@ -118,6 +118,13 @@ nav{
   font-size: 0.7em;
 }
 
+#nav-bar, #nav-bar > ul{
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+}
+
+
 ul{
   height: 100%;
   width: 100%;
@@ -126,10 +133,6 @@ ul{
   display: -webkit-inline-flex;
   align-items: center;
   justify-content: space-around;
-  
-  transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
 
   background-color: rgba(0, 0, 0, 0.95)
 }
