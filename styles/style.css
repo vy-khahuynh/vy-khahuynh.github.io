@@ -911,7 +911,8 @@ div.project.desc > p > span{
 
 div.project.desc{
   position: relative;
-  background: linear-gradient(to bottom, rgb(172, 102, 172), rgb(130, 119, 167), rgb(217, 110, 110), rgb(68, 82, 187));
+  /* background: linear-gradient(to bottom, rgb(172, 102, 172), rgb(130, 119, 167), rgb(217, 110, 110), rgb(68, 82, 187)); */
+  background: linear-gradient(to bottom, rgb(124, 51, 124), rgb(52, 39, 100), rgb(131, 49, 49));
   border-radius: 5rem;
   padding: 2%;
   border: 2px white solid;
