@@ -864,6 +864,8 @@ main > section > div{
   
   margin: 3vw;
 
+  border-radius: 50%;
+
   animation: travel 2s ease-in-out infinite alternate-reverse;
   -webkit-animation: travel 2s ease-in-out infinite alternate-reverse;
   -moz-animation: travel 2s ease-in-out infinite alternate-reverse;
@@ -888,6 +890,7 @@ main > section > div{
   width: 20%;
   min-width: 170px;
   z-index: 1;
+  border-radius: 50%;
 }
 
 .planet img, .moon img{
@@ -1168,7 +1171,7 @@ img.mcgill, img.cpk{
     #project-gallery > div > div{
       width: 100%;
       flex: 0;
-      margin-top: 5%;
+      margin-top: 10%;
     }
     div#project-gallery-container > div#project-gallery > div:nth-child(n) > div.project.desc > p > span{
       text-align: center;
