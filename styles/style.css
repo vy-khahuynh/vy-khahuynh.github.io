@@ -885,7 +885,8 @@ main > section > div{
 }
 
 .moon > a {
-  width: 50%;
+  width: 20%;
+  min-width: 170px;
   z-index: 1;
 }
 
@@ -903,6 +904,18 @@ div.project.desc > p > span > a > img{
 div.project.desc > p > span{
   display: block;
   margin: 2vw;
+}
+
+div.project.desc{
+  position: relative;
+  background: linear-gradient(to bottom, rgb(172, 102, 172), rgb(130, 119, 167), rgb(217, 110, 110), rgb(68, 82, 187));
+  border-radius: 5rem;
+  padding: 2%;
+  border: 2px white solid;
+}
+
+div.project.desc > p > span{
+  color: black;
 }
 
 #project-gallery > div:nth-child(even) > div.project.desc > p > span:not(.title):not(.undertitle){
@@ -952,8 +965,6 @@ div.project.desc > p > span{
   width: 2rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  filter: invert(1);
-  -webkit-filter: invert(1);
 }
 
 .title{
@@ -1157,6 +1168,7 @@ img.mcgill, img.cpk{
     #project-gallery > div > div{
       width: 100%;
       flex: 0;
+      margin-top: 5%;
     }
     div#project-gallery-container > div#project-gallery > div:nth-child(n) > div.project.desc > p > span{
       text-align: center;
