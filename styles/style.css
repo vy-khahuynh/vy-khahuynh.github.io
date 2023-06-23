@@ -732,6 +732,8 @@ main > section > div{
 #project-gallery{
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+  justify-items: center;
+  align-items: center;
 }
 
 #project-gallery > div{
@@ -741,6 +743,11 @@ main > section > div{
   align-items: center;
   justify-content: center;
 }
+
+#project-gallery > div:first-child{
+  margin-top: 0;
+}
+
 
 #project-gallery > div > div{
   width: 0;
@@ -773,7 +780,7 @@ main > section > div{
 }
 
 #project-gallery > div{
-  margin: 2%;
+  margin: 5%;
 }
 
 #project-gallery > div:nth-child(even){
@@ -855,7 +862,7 @@ main > section > div{
   
   flex: 1 1 0;
   
-  margin: 3%;
+  margin: 3vw;
 
   animation: travel 2s ease-in-out infinite alternate-reverse;
   -webkit-animation: travel 2s ease-in-out infinite alternate-reverse;
@@ -895,6 +902,7 @@ div.project.desc > p > span > a > img{
 
 div.project.desc > p > span{
   display: block;
+  margin: 2vw;
 }
 
 #project-gallery > div:nth-child(even) > div.project.desc > p > span:not(.title):not(.undertitle){
