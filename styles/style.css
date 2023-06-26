@@ -922,11 +922,11 @@ div.project.desc > p > span{
   color: black;
 }
 
-#project-gallery > div:nth-child(even) > div.project.desc > p > span:not(.title):not(.undertitle){
+#project-gallery > div:nth-child(even) > div.project.desc > p > span:not(.title):not(.undertitle):not(.tech){
   text-align: start;
 }
 
-#project-gallery > div:nth-child(odd) > div.project.desc > p > span:not(.title):not(.undertitle){
+#project-gallery > div:nth-child(odd) > div.project.desc > p > span:not(.title):not(.undertitle):not(.tech){
   text-align: end;
 }
 
@@ -969,6 +969,21 @@ div.project.desc > p > span{
   width: 2rem;
   aspect-ratio: 1;
   border-radius: 50%;
+}
+
+div.project.desc > p > span.tech{
+  height: 3vw;
+  display: flex;
+  -webkit-display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* text-align: center; */
+}
+
+div.project.desc > p > span.tech > img{
+  height: 100%;
+  /* width: 0;
+  flex: 1 1 0; */
 }
 
 .title{
@@ -1107,6 +1122,9 @@ img.mcgill, img.cpk{
     #socials{
       width: 90%;
       border: 1px white solid;
+    }
+    div.project.desc > p > span.tech{
+      height: 7.5vw;
     }
     #socials a{
       width: 2.5rem;
