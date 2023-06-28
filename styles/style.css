@@ -207,7 +207,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 
   height: 15px;
 
-  transform: translateY(-50%);
+  transform: translateX(50%) translateY(-50%);
 
   display: block;
 }
@@ -284,7 +284,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   background: radial-gradient(rgb(224, 59, 4) 40%, 43%, transparent 44%, rgb(224, 59, 4) 45% 47%, transparent 48%, rgb(224, 59, 4) 49% 52%, rgb(235, 105, 36), rgb(224, 59, 4) 55% 56%, transparent 57%, rgb(208, 28, 0) 58%, 61%, transparent 62%, rgb(208, 28, 0) 64%, transparent 65%, rgb(208, 28, 0) 66%, 69%, transparent 70%, rgb(208, 28, 0) 71%, 76%, transparent 77%, rgb(208, 28, 0) 78%, 82%, transparent 83%, rgb(208, 28, 0) 84%, transparent);
   
   clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 75% 50%, 25% 50%, 0% 45%, 0% 65%, 50% 67.5%, 100% 65%, 100% 100%, 0% 100%);
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 75% 50%, 25% 50%, 0% 45%, 0% 65%, 50% 67.5%, 100% 65%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 75% 50%, 25% 50%, 0% 45%, 0% 65%, 25% 67%, 50% 67.5%, 75% 67%,100% 65%, 100% 100%, 0% 100%);
 
   mask-image: radial-gradient(black 50%, transparent);
   -webkit-mask-image: radial-gradient(black 50%, transparent);
@@ -847,7 +847,6 @@ div.project.desc > p > span{
 }
 
 #skills{
-  /* position: relative; */
   width: 100%;
   height: auto;
 }
@@ -865,13 +864,10 @@ div.project.desc > p > span.tech{
   -webkit-display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* text-align: center; */
 }
 
 div.project.desc > p > span.tech > img{
   height: 100%;
-  /* width: 0;
-  flex: 1 1 0; */
 }
 
 .title{
