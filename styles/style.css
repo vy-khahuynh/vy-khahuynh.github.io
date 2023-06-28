@@ -825,7 +825,7 @@ div.project.desc > p > span{
 div.project.desc{
   position: relative;
   /* background: linear-gradient(to bottom, rgb(172, 102, 172), rgb(130, 119, 167), rgb(217, 110, 110), rgb(68, 82, 187)); */
-  background: linear-gradient(to bottom, rgb(124, 51, 124), rgb(52, 39, 100), rgb(131, 49, 49));
+  background: linear-gradient(to right, rgb(124, 51, 124), rgb(52, 39, 100), rgb(131, 49, 49));
   border-radius: 5rem;
   padding: 2%;
   border: 2px white solid;
@@ -933,11 +933,11 @@ span.undertitle img{
   color: red;
 }
 
-.cpk{
+.cpk, .cpk *{
   color: rgb(135, 105, 78);
 }
 
-img.mcgill, img.cpk{
+.mcgill img, .cpk img{
   height: 1.33em;
 }
 
@@ -990,7 +990,7 @@ img.mcgill, img.cpk{
   font-size: 0.5em;
 }
 
-.acc-container{
+.acc-container, .mcgill, .cpk{
   display: inline-block;
 }
 
@@ -1023,7 +1023,7 @@ img.mcgill, img.cpk{
       width: 2.5rem;
     }
     #blackhole-container{
-        height: 20%;
+        height: 30%;
         width: 100%;
     }
     #nav-bar .title{
@@ -1083,6 +1083,10 @@ img.mcgill, img.cpk{
       width: 100%;
       flex: 0;
       margin-top: 10%;
+    }
+    div.project.desc{
+      padding: 5%;
+      border: 1px white solid;
     }
     div#project-gallery-container > div#project-gallery > div:nth-child(n) > div.project.desc > p > span{
       text-align: center;
