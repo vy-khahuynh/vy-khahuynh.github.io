@@ -305,9 +305,9 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 }
 
 .stripe{
-  animation: pulsate 20s infinite linear alternate;
-  -webkit-animation: pulsate 20s infinite linear alternate;
-  -moz-animation: pulsate 20s linear infinite alternate;
+  animation: pulsate 20s linear infinite;
+  -webkit-animation: pulsate 20s linear infinite;
+  -moz-animation: pulsate 20s linear infinite;
 }
 
 #photon-ring{
