@@ -98,7 +98,7 @@ let highlight = (entries) =>{
 }
 
 var sections = document.querySelectorAll("section")
-animate(highlight, sections, options);
+// animate(highlight, sections, options);
 
 const progressBar = document.querySelector('.progressBar');
 const section = document.querySelector('body');
