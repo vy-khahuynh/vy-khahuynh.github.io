@@ -2,35 +2,24 @@ function addStars(){
   const body = document.body;
   const html = document.documentElement;
   const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-  var cur = document.getElementById('stars-container');
-  var num = Math.floor(Math.random() * 100) + 100;
+  const cur = document.getElementById('stars-container');
+  const num = Math.floor(Math.random() * 100) + 100;
   for(let i = 0 ; i < num ; i++){
     var star = document.createElement('div');
     star.classList.add("star");
-    star.style.top = Math.floor(Math.random() * 0.99 * height)+"px";
-    star.style.left = Math.floor(Math.random() * 0.99 * window.innerWidth)+"px";
+    star.style.top = Math.floor(Math.random() * 0.97 * height)+"px";
+    star.style.left = Math.floor(Math.random() * 0.97 * window.innerWidth)+"px";
     cur.appendChild(star);
   }
   var bigstars = document.querySelectorAll(".star:nth-child(3n)");
   for(let i = 0 ; i < bigstars.length ; i++){
-    var delay = Math.floor(Math.random() * 20);
+    var delay = Math.floor(Math.random() * 30);
     bigstars[i].style.animation = `glow 5s ease infinite ${delay}s`;
   }
 }
 
-function scrolltop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-let names = ["Vy-Kha Huynh", "a Full-Stack Developer", "a Software Engineer", "a Blackhole fanatic", "a LEGO enthusiast"];
-
-function intro(){ 
-  addEventListener("load", addStars);
-  addEventListener("load", populate);
-  animateBH();
-}
-
 function populate(){
+  const names = ["Vy-Kha Huynh", "a Full-Stack Developer", "a Software Engineer", "a Blackhole fanatic", "a LEGO enthusiast"];
   var sw = document.querySelectorAll('#switch')[0];
 
   for(var i = 0 ; i < names.length ; i++){
@@ -44,7 +33,20 @@ function populate(){
   }
 }
 
-intro()
+function animateBH(){
+  let front = document.querySelectorAll("#front-disc > .stripe");
+  let event = document.querySelectorAll("#singularity > .stripe");
+  for(let i = 0 ; i < front.length ; i++){
+    front[i].style.animationDelay = `${i * 2}s`;
+    event[i].style.animationDelay = `${i * 2}s`;
+  }
+}
+
+function intro(){ 
+  addStars();
+  populate();
+  animateBH();
+}
 
 function animate(cb, an, op){
   const observer = new IntersectionObserver(cb, op);
@@ -56,9 +58,8 @@ function animate(cb, an, op){
 let options = {
   root: null,
   rootMargin: "0px",
-  threshold: 0
+  threshold: 0.5
 }
-
 
 // Minimize footer and header on top
 let minimize = (entries) =>{
@@ -74,60 +75,24 @@ let minimize = (entries) =>{
   });
 }
 
-var home = document.querySelectorAll('#home');
-
-animate(minimize, home, {threshold: 0.5});
-
-let highlight = (entries) =>{
-  entries.forEach((entry) => {
-    let inner = entry.target.id.charAt(0).toUpperCase() + entry.target.id.slice(1)
-    let navbar = document.querySelectorAll("#nav-bar > ul > li > a")
-  
-    for(let i = 0 ; i < navbar.length ; i++){
-      if(navbar[i].innerHTML == `${inner}`){
-        var activenav = navbar[i]
-        break
-      }
-    }
-    if(entry.isIntersecting){
-      activenav.classList.add("active")
-    }
-    else{
-      activenav.classList.remove("active")
-    }
-  });
-}
-
-var sections = document.querySelectorAll("section")
-// animate(highlight, sections, options);
-
-const progressBar = document.querySelector('.progressBar');
-const section = document.querySelector('body');
+animate(minimize, document.querySelectorAll('#home'), options);
 
 const scrollProgressBar = () => {
-    let scrollDistance = -(section.getBoundingClientRect().top);
-    let progressPercentage =
-        (scrollDistance /
-            (section.getBoundingClientRect().height - 
-                document.documentElement.clientHeight)) * 100;
+  const progressBar = document.querySelector('.progressBar');
+  const section = document.querySelector('body');
+  let scrollDistance = -(section.getBoundingClientRect().top);
+  let progressPercentage =
+      (scrollDistance /
+          (section.getBoundingClientRect().height - 
+              document.documentElement.clientHeight)) * 100;
 
-    let val = Math.floor(progressPercentage);
-    progressBar.style.width = val + '%';
+  let val = Math.floor(progressPercentage);
+  progressBar.style.width = val + '%';
 
-    if (val < 0) {
-        progressBar.style.width = '0%';
-    }
+  if (val < 0) {
+      progressBar.style.width = '0%';
+  }
 };
 
 window.addEventListener('scroll', scrollProgressBar);
-
-function animateBH(){
-  let front = document.querySelectorAll("#front-disc > .stripe");
-  let back = document.querySelectorAll("#back-disc > .stripe");
-  let event = document.querySelectorAll("#singularity > .stripe");
-  for(let i = 0 ; i < front.length ; i++){
-    front[i].style.animationDelay = `${i * 2}s`;
-    back[i].style.animationDelay = `${i * 2}s`;
-    event[i].style.animationDelay = `${i * 2}s`;
-  }
-}
+window.addEventListener("load", intro);

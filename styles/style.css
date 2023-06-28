@@ -949,7 +949,7 @@ img.mcgill, img.cpk{
 }
 
 .minimized{
-  opacity: 0.1;
+  opacity: 0;
 }
 
 #socials.minimized{
