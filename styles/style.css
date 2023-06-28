@@ -221,8 +221,8 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   display: -webkit-flex;
   align-items: center;
   justify-content: center;
-  perspective: 50rem;
-  -webkit-perspective: 50rem;
+  perspective: 100rem;
+  -webkit-perspective: 100rem;
   filter: brightness(120%);
   -webkit-filter: brightness(120%);
   overflow: hidden;
