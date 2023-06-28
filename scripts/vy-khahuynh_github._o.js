@@ -27,6 +27,7 @@ let names = ["Vy-Kha Huynh", "a Full-Stack Developer", "a Software Engineer", "a
 function intro(){ 
   addEventListener("load", addStars);
   addEventListener("load", populate);
+  animateBH();
 }
 
 function populate(){
@@ -119,3 +120,14 @@ const scrollProgressBar = () => {
 };
 
 window.addEventListener('scroll', scrollProgressBar);
+
+function animateBH(){
+  let front = document.querySelectorAll("#front-disc > .stripe");
+  let back = document.querySelectorAll("#back-disc > .stripe");
+  let event = document.querySelectorAll("#singularity > .stripe");
+  for(let i = 0 ; i < front.length ; i++){
+    front[i].style.animationDelay = `${i * 2}s`;
+    back[i].style.animationDelay = `${i * 2}s`;
+    event[i].style.animationDelay = `${i * 2}s`;
+  }
+}

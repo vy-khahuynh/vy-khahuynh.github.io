@@ -316,41 +316,6 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   -moz-animation: rotate 1s linear infinite;
 }
 
-.stripe:nth-child(2){
-  animation-delay: 2s;
-}
-
-.stripe:nth-child(3){
-  animation-delay: 4s;
-}
-
-.stripe:nth-child(4){
-  animation-delay: 6s;
-}
-
-.stripe:nth-child(5){
-  animation-delay: 8s;
-}
-
-.stripe:nth-child(6){
-  animation-delay: 10s;
-}
-
-.stripe:nth-child(7){
-  animation-delay: 12s;
-}
-
-.stripe:nth-child(8){
-  animation-delay: 14s;
-}
-
-.stripe:nth-child(9){
-  animation-delay: 16s;
-}
-.stripe:nth-child(10){
-  animation-delay: 18s;
-}
-
 @keyframes pulsate {
   0% {
     transform: scale(0.4);
@@ -557,7 +522,7 @@ main > section > div{
 
 #home p {
   position: absolute;
-  top: 70%;
+  bottom: 20%;
   left: 50%;
   translate: -50% -50%;
   display: flex; 
@@ -1091,7 +1056,6 @@ img.mcgill, img.cpk{
     .planet{
       width: 95vw;
     }
-    #home p{bottom: 20%;}
     #summary{display: block;}
     #summary > p{
       padding-left: 20%;
