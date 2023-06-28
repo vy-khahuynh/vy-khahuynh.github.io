@@ -553,31 +553,6 @@ main > section > div{
   -moz-animation: suck2 50s ease-in infinite;
 }
 
-#switch span:nth-child(1), #switch span:nth-child(1) span{
-  animation-delay: 0s;
-  -webkit-animation-delay: 0s;
-  -moz-animation-delay: 0s;
-}
-#switch span:nth-child(2), #switch span:nth-child(2) span{
-  animation-delay: 10s;
-  -webkit-animation-delay: 10s;
-  -moz-animation-delay: 10s;
-}
-#switch span:nth-child(3), #switch span:nth-child(3) span{
-  animation-delay: 20s;
-  -webkit-animation-delay: 20s;
-  -moz-animation-delay: 20s;
-}
-#switch span:nth-child(4), #switch span:nth-child(4) span{
-  animation-delay: 30s;
-  -webkit-animation-delay: 30s;
-  -moz-animation-delay: 30s;
-}
-#switch span:nth-child(5), #switch span:nth-child(5) span{
-  animation-delay: 40s;
-  -webkit-animation-delay: 40s;
-  -moz-animation-delay: 40s;
-}
 @keyframes fade {
   2%, 100%{
     opacity: 1;
