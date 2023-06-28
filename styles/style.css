@@ -270,7 +270,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 }
 
 #event-horizon{
-  height: 85%;
+  height: 80%;
 
   position: relative;
 
@@ -284,7 +284,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   background: radial-gradient(rgb(224, 59, 4) 40%, 43%, transparent 44%, rgb(224, 59, 4) 45% 47%, transparent 48%, rgb(224, 59, 4) 49% 52%, rgb(235, 105, 36), rgb(224, 59, 4) 55% 56%, transparent 57%, rgb(208, 28, 0) 58%, 61%, transparent 62%, rgb(208, 28, 0) 64%, transparent 65%, rgb(208, 28, 0) 66%, 69%, transparent 70%, rgb(208, 28, 0) 71%, 76%, transparent 77%, rgb(208, 28, 0) 78%, 82%, transparent 83%, rgb(208, 28, 0) 84%, transparent);
   
   clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 50% 50%, 0% 45%, 0% 67.5%, 50% 70%, 100% 67.5%, 100% 100%, 0% 100%);
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 50% 55%, 0% 45%, 0% 67.5%, 50% 70%, 100% 67.5%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 50% 55%, 0% 45%, 0% 65%, 50% 67.5%, 100% 65%, 100% 100%, 0% 100%);
 
   mask-image: radial-gradient(black 50%, transparent);
   -webkit-mask-image: radial-gradient(black 50%, transparent);
@@ -305,9 +305,9 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 }
 
 .stripe{
-  animation: pulsate 20s infinite linear;
-  -webkit-animation: pulsate 20s infinite linear;
-  -moz-animation: pulsate 1s linear infinite;
+  animation: pulsate 20s infinite linear alternate;
+  -webkit-animation: pulsate 20s infinite linear alternate;
+  -moz-animation: pulsate 20s linear infinite alternate;
 }
 
 #photon-ring{
@@ -318,13 +318,13 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 
 @keyframes pulsate {
   0% {
-    transform: scale(0.4);
-    -webkit-transform: scale(0.4);
+    transform: scale(0.45);
+    -webkit-transform: scale(0.45);
     opacity: 0;
   }
   2.5% {
-    transform: scale(0.4);
-    -webkit-transform: scale(0.4);
+    transform: scale(0.45);
+    -webkit-transform: scale(0.45);
     opacity: 1;
   } 
   92.5% {
@@ -369,14 +369,14 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 .accretion-disc{
   position: absolute;
 
-  height: 180%;
+  height: 150%;
   aspect-ratio: 1;
 
   margin: auto;
   
   border-radius: 50%;
   
-  background: radial-gradient(transparent 26%, rgb(224, 59, 4) 27% 27.5%, transparent 28%, 29%, rgb(235, 105, 36) 30%, rgb(224, 59, 4) 37% 40%, transparent 41%, rgb(224, 59, 4) 42%, 43%, transparent 44%, rgb(224, 59, 4) 46%, transparent 48%, rgb(208, 28, 0) 51% 56%, transparent 57%, rgb(208, 28, 0) 58%, 61%, transparent 62%, rgb(208, 28, 0) 63%, transparent 65%, rgb(208, 28, 0) 66%, 69%, transparent 70%, rgb(208, 28, 0) 71%, 75%, transparent 77%, rgb(208, 28, 0) 78%, 82%, transparent 83%, rgb(208, 28, 0) 85%, transparent);
+  background: radial-gradient(black 30%, rgb(224, 59, 4) 31% 36%, rgb(235, 105, 36) 36%, rgb(224, 59, 4) 39% 40%, transparent 41%, rgb(224, 59, 4) 42%, 43%, transparent 44%, rgb(224, 59, 4) 46%, transparent 48%, rgb(208, 28, 0) 51% 56%, transparent 57%, rgb(208, 28, 0) 58%, 61%, transparent 62%, rgb(208, 28, 0) 63%, transparent 65%, rgb(208, 28, 0) 66%, 69%, transparent 70%, rgb(208, 28, 0) 71%, 75%, transparent 77%, rgb(208, 28, 0) 78%, 82%, transparent 83%, rgb(208, 28, 0) 85%, transparent);
 
   mask-image: radial-gradient(black 40%, transparent);
   -webkit-mask-image: radial-gradient(black 40%, transparent);
@@ -400,8 +400,8 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 
 #back-disc{
   z-index: -1;
-  clip-path: polygon(37.5% 50%, 62.5% 50%, 80% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 20% 0%);
-  -webkit-clip-path: polygon(37.5% 50%, 62.5% 50%, 80% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 20% 0%);
+  clip-path: polygon(40% 50%, 60% 50%, 90% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 10% 0%);
+  -webkit-clip-path: polygon(40% 50%, 60% 50%, 90% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 10% 0%);
 }
 
 .star{
