@@ -420,17 +420,17 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   }
 }
 
-.star:nth-child(n) {
+.star:nth-child(3n) {
   width: 0.1%;
   aspect-ratio: 1;
 }
 
-.star:nth-child(2n) {
+.star:nth-child(3n+1) {
   width: 0.2%;
   aspect-ratio: 1;
 }
 
-.star:nth-child(3n) {
+.star:nth-child(3n+2) {
   width: 0.3%;
   aspect-ratio: 1;
 }

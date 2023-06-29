@@ -101,16 +101,16 @@ window.addEventListener("load", intro);
 
 window.addEventListener('scroll', () => {
   let { scrollY } = window;
-  const small = document.querySelectorAll(".star:nth-child(n)");
-  const medium = document.querySelectorAll(".star:nth-child(2n)");
-  const big = document.querySelectorAll(".star:nth-child(3n)");
+  const small = document.querySelectorAll(".star:nth-child(3n)");
+  const medium = document.querySelectorAll(".star:nth-child(3n+1)");
+  const big = document.querySelectorAll(".star:nth-child(3n+2)");
   for(let i = 0 ; i < small.length ; i++){
     small[i].style.translate = `0px ${-0.1 * scrollY}px`;
   }
   for(let i = 0 ; i < medium.length ; i++){
-    medium[i].style.translate = `0px ${-0.5 * scrollY}px`;
+    medium[i].style.translate = `0px ${-0.2 * scrollY}px`;
   }
   for(let i = 0 ; i < big.length ; i++){
-    big[i].style.translate = `0px ${-1 * scrollY}px`;
+    big[i].style.translate = `0px ${-0.5 * scrollY}px`;
   }
 });
