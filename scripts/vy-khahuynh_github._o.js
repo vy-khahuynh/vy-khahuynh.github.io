@@ -114,3 +114,52 @@ window.addEventListener('scroll', () => {
     big[i].style.translate = `0px ${-0.5 * scrollY}px`;
   }
 });
+
+window.addEventListener('scroll', () => {
+  let homeY = window.scrollY + document.querySelector('#home-anchor').getBoundingClientRect().top // Y
+  let aboutY = window.scrollY + document.querySelector('#about-anchor').getBoundingClientRect().top // Y
+  let workY = window.scrollY + document.querySelector('#work-anchor').getBoundingClientRect().top // Y
+  let projectY = window.scrollY + document.querySelector('#projects-anchor').getBoundingClientRect().top // Y
+  let curY = window.scrollY;
+  let sections = document.querySelectorAll("#nav-bar > ul > li > a");
+  if(curY >= (projectY-10)){
+    for(let i = 0 ; i < sections.length ; i++){
+      if(sections[i].innerHTML === "Projects"){
+        sections[i].classList.add("active");
+      }
+      else{
+        sections[i].classList.remove("active");
+      }
+    }
+  }
+  else if(curY >= (workY-10)){
+    for(let i = 0 ; i < sections.length ; i++){
+      if(sections[i].innerHTML === "Work"){
+        sections[i].classList.add("active");
+      }
+      else{
+        sections[i].classList.remove("active");
+      }
+    }
+  }
+  else if (curY >= (aboutY-10)){
+    for(let i = 0 ; i < sections.length ; i++){
+      if(sections[i].innerHTML === "About"){
+        sections[i].classList.add("active");
+      }
+      else{
+        sections[i].classList.remove("active");
+      }
+    }
+  }
+  else{
+    for(let i = 0 ; i < sections.length ; i++){
+      if(sections[i].innerHTML === "Home"){
+        sections[i].classList.add("active");
+      }
+      else{
+        sections[i].classList.remove("active");
+      }
+    }
+  }
+});
