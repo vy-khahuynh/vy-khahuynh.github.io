@@ -7,7 +7,7 @@ function addStars(){
     const html = document.documentElement;
     const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
     var cur = document.getElementById('stars-container');
-    var num = Math.floor(Math.random() * 100) + 100;
+    var num = Math.floor(Math.random() * 50) + 50;
     for(let i = 0 ; i < num ; i++){
       var star = document.createElement('div');
       star.classList.add("star");

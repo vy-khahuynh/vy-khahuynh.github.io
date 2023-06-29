@@ -7,8 +7,8 @@ function addStars(){
   for(let i = 0 ; i < num ; i++){
     var star = document.createElement('div');
     star.classList.add("star"); 
-    star.style.top = Math.floor(Math.random() * 0.97 * height)+"px";
-    star.style.left = Math.floor(Math.random() * 0.97 * window.innerWidth)+"px";
+    star.style.top = Math.floor(Math.random() * 0.95 * height)+"px";
+    star.style.left = Math.floor(Math.random() * 0.95 * window.innerWidth)+"px";
     cur.appendChild(star);
   }
   var bigstars = document.querySelectorAll(".star:nth-child(3n)");

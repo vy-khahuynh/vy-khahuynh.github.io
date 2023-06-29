@@ -53,7 +53,7 @@ table {
   -moz-box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
+  color: #D3D3D3;
   scroll-behavior: smooth;
 }
 html{
@@ -66,7 +66,7 @@ body {
 
   font-size: 1.5rem;
 
-  background: linear-gradient(90deg, #040815, #000510, #110415, #111111);
+  background: linear-gradient(90deg, #040815, #000510, #110415, #111111, #130101);
 	background-size: 500% 500%;
 
   background-attachment: fixed;
@@ -137,35 +137,35 @@ ul{
   align-items: center;
   justify-content: space-around;
 
-  background-color: rgba(17, 17, 17, 0.9)
+  background-color: rgba(17, 17, 17, 1);
 }
 
 li{
   margin: 0 2% 0;
 }
 
-li:first-child{
-  margin-right: auto;
-  background: transparent;
-  color: white;
-  background: linear-gradient(to right, rgba(108, 63, 255, 0.6),rgba(215, 88, 215, 0.6)), rgba(154, 0, 0, 1);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 nav > ul > li > a{
   text-decoration: none;
-  color: white;
+  color: #D3D3D3;
   border-radius: 5rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   border: 2px white solid;
-  background: linear-gradient(to right, rgba(24, 0, 101, 0.6), rgba(128, 0, 128, 0.6), rgba(154, 0, 0, 0.6));
+  background: linear-gradient(to right, rgba(21, 14, 44, 1), rgba(48, 0, 48, 1), rgba(67, 0, 0, 1));
 }
 
 nav > ul > li > a:hover, nav > ul > li > a.active{
   background: #FFFFFF;
   color: #444444;
+}
+
+li:first-child{
+  margin-right: auto;
+  background: transparent;
+  color: #D3D3D3;
+  background: linear-gradient(to right, rgba(51, 26, 136, 1),rgb(167, 64, 167), rgba(154, 0, 0, 1));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 #avatar{
@@ -225,7 +225,6 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   -webkit-perspective: 100rem;
   filter: brightness(120%);
   -webkit-filter: brightness(120%);
-  overflow: hidden;
 }
 
 .blackhole{
@@ -464,7 +463,8 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   height: 10vh;
   
   border: 2px white solid;
-  background: linear-gradient(to right, rgba(128, 0, 128, 0.6), rgba(24, 0, 101, 0.6), rgba(154, 0, 0, 0.6));
+
+  background: linear-gradient(to right, rgb(12, 8, 26), rgb(28, 0, 28), rgb(37, 0, 0));
 
   display: flex;
   display: -webkit-flex;
@@ -812,9 +812,7 @@ div.project.desc > p > span{
 
 div.project.desc{
   position: relative;
-  /* background: linear-gradient(to bottom, rgb(172, 102, 172), rgb(130, 119, 167), rgb(217, 110, 110), rgb(68, 82, 187)); */
   background: linear-gradient(to right, rgb(124, 51, 124), rgb(52, 39, 100), rgb(131, 49, 49));
-  /* filter: brightness(1.5); */
   border-radius: 5rem;
   padding: 2%;
   border: 2px white solid;
@@ -914,18 +912,6 @@ span.undertitle img{
   aspect-ratio: 1;
 }
 
-.mcgill, .mcgill *{
-  color: red;
-}
-
-.cpk, .cpk *{
-  color: rgb(135, 105, 78);
-}
-
-.mcgill img, .cpk img{
-  height: 1.33em;
-}
-
 .anchor{
   position: absolute;
   top: -14vh;
@@ -975,7 +961,7 @@ span.undertitle img{
   font-size: 0.5em;
 }
 
-.acc-container, .mcgill, .cpk{
+.acc-container{
   display: inline-block;
 }
 
@@ -1053,6 +1039,9 @@ span.undertitle img{
       display: -webkit-inline-flex;
       align-items: center;
       justify-content: center;
+    }
+    .planet:hover, .moon:hover{
+      scale: 100%;
     }
     #project-gallery-container{
       margin-bottom: 10vh;
