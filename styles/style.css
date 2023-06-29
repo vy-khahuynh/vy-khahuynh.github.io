@@ -96,7 +96,8 @@ html::-webkit-scrollbar{
 }
 
 #background{
-  position: absolute;
+  position: fixed;
+  /* position: absolute; */
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -295,11 +296,9 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   height: 100%;
   aspect-ratio: 1;
   position: absolute;
-
-  background-color: red;
-
-  mask-image: radial-gradient(transparent 49%, black 50% 51%, transparent 51%);
-  -webkit-mask-image: radial-gradient(transparent 49%, black 50% 51%, transparent 51%);
+  opacity: 0;
+  background: radial-gradient(circle at center, transparent 68%, red 68%);
+  
   border-radius: 50%;
   z-index: -1;
 }
@@ -318,24 +317,22 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 
 @keyframes pulsate {
   0% {
-    transform: scale(0.45);
-    -webkit-transform: scale(0.45);
-    opacity: 0;
+    transform: scale(0.32);
+    -webkit-transform: scale(0.32);
   }
   2.5% {
-    transform: scale(0.45);
-    -webkit-transform: scale(0.45);
+    transform: scale(0.32);
+    -webkit-transform: scale(0.32);
     opacity: 1;
   } 
   92.5% {
-    transform: scale(2);
-    -webkit-transform: scale(2);
+    transform: scale(1);
+    -webkit-transform: scale(1);
     opacity: 1;
   }
   100% {
-    transform: scale(2);
-    -webkit-transform: scale(2);
-    opacity: 0;
+    transform: scale(1);
+    -webkit-transform: scale(1);
   }
 }
 
@@ -368,6 +365,11 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 
 .accretion-disc{
   position: absolute;
+
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
 
   height: 150%;
   aspect-ratio: 1;
@@ -419,7 +421,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 }
 
 .star:nth-child(n) {
-  width: 0.3%;
+  width: 0.1%;
   aspect-ratio: 1;
 }
 
@@ -429,7 +431,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 }
 
 .star:nth-child(3n) {
-  width: 0.1%;
+  width: 0.3%;
   aspect-ratio: 1;
 }
 

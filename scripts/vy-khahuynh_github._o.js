@@ -6,7 +6,7 @@ function addStars(){
   const num = Math.floor(Math.random() * 100) + 100;
   for(let i = 0 ; i < num ; i++){
     var star = document.createElement('div');
-    star.classList.add("star");
+    star.classList.add("star"); 
     star.style.top = Math.floor(Math.random() * 0.97 * height)+"px";
     star.style.left = Math.floor(Math.random() * 0.97 * window.innerWidth)+"px";
     cur.appendChild(star);
@@ -98,3 +98,19 @@ const scrollProgressBar = () => {
 
 window.addEventListener('scroll', scrollProgressBar);
 window.addEventListener("load", intro);
+
+window.addEventListener('scroll', () => {
+  let { scrollY } = window;
+  const small = document.querySelectorAll(".star:nth-child(n)");
+  const medium = document.querySelectorAll(".star:nth-child(2n)");
+  const big = document.querySelectorAll(".star:nth-child(3n)");
+  for(let i = 0 ; i < small.length ; i++){
+    small[i].style.translate = `0px ${-0.1 * scrollY}px`;
+  }
+  for(let i = 0 ; i < medium.length ; i++){
+    medium[i].style.translate = `0px ${-0.5 * scrollY}px`;
+  }
+  for(let i = 0 ; i < big.length ; i++){
+    big[i].style.translate = `0px ${-1 * scrollY}px`;
+  }
+});
