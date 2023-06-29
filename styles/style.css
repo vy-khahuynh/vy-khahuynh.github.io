@@ -521,6 +521,10 @@ main > section > div{
   margin: 2%;
 }
 
+main > section:last-child{
+  margin-bottom: 10vh;
+}
+
 #home{
   margin-top: 0;
   position: relative;
