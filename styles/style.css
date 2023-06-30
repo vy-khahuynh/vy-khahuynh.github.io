@@ -82,6 +82,7 @@ body {
      -moz-animation: gradient 20s ease infinite;
   
   scrollbar-width: none;
+  overflow: auto;
 }
 
 html::-webkit-scrollbar{
