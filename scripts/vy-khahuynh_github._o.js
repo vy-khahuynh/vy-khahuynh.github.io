@@ -19,7 +19,7 @@ function addStars(){
 }
 
 function populate(){
-  const names = ["Vy-Kha Huynh", "a Full-Stack Developer", "a Software Engineer", "a Blackhole fanatic", "a LEGO enthusiast"];
+  const names = ["Vy-Kha Huynh", "a Full-Stack Developer", "a Software Engineer", "a Blackhole Fanatic", "a LEGO Enthusiast"];
   var sw = document.querySelectorAll('#switch')[0];
 
   for(let i = 0 ; i < names.length ; i++){
