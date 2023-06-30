@@ -119,7 +119,7 @@ window.addEventListener('scroll', () => {
 });
 
 window.addEventListener('scroll', () => {
-  let homeY = window.scrollY + document.querySelector('#home-anchor').getBoundingClientRect().top // Y
+  // let homeY = window.scrollY + document.querySelector('#home-anchor').getBoundingClientRect().top // Y
   let aboutY = window.scrollY + document.querySelector('#about-anchor').getBoundingClientRect().top // Y
   let workY = window.scrollY + document.querySelector('#work-anchor').getBoundingClientRect().top // Y
   let projectY = window.scrollY + document.querySelector('#projects-anchor').getBoundingClientRect().top // Y
