@@ -1,3 +1,5 @@
+const isMobile = window.matchMedia('(max-width: 990px)').matches;
+
 function addStars(){
   const body = document.body;
   const html = document.documentElement;
@@ -5,7 +7,7 @@ function addStars(){
   const cur = document.getElementById('stars-container');
   let initial = 50;
   let add = 25;
-  if(!window.matchMedia("max-width: 990px").matches){
+  if(!isMobile){
     initial = 100; 
     add = 100; 
   }
@@ -85,7 +87,7 @@ let minimize = (entries) =>{
 
 animate(minimize, document.querySelectorAll('#home'), options);
 
-if(!window.matchMedia("max-width: 990px").matches){
+if(!isMobile){
   const scrollProgressBar = () => {
     const progressBar = document.querySelector('.progressBar');
     const section = document.querySelector('body');
@@ -172,3 +174,5 @@ window.addEventListener('scroll', () => {
     }
   }
 });
+
+alert(isMobile);
