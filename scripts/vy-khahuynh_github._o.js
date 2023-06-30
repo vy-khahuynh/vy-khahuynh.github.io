@@ -104,11 +104,8 @@ if(!window.matchMedia("max-width: 990px").matches){
   };
   
   window.addEventListener('scroll', scrollProgressBar);
-}
 
-window.addEventListener("load", intro);
-
-window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', () => {
   let { scrollY } = window;
   const small = document.querySelectorAll(".star:nth-child(3n)");
   const medium = document.querySelectorAll(".star:nth-child(3n+1)");
@@ -123,6 +120,9 @@ window.addEventListener('scroll', () => {
     big[i].style.translate = `0px ${-0.5 * scrollY}px`;
   }
 });
+}
+
+window.addEventListener("load", intro);
 
 window.addEventListener('scroll', () => {
   // let homeY = window.scrollY + document.querySelector('#home-anchor').getBoundingClientRect().top // Y
