@@ -241,8 +241,8 @@ li:first-child{
   justify-content: center;
   perspective: 100rem;
   -webkit-perspective: 100rem;
-  filter: brightness(120%);
-  -webkit-filter: brightness(120%);
+  filter: brightness(110%);
+  -webkit-filter: brightness(110%);
 }
 
 .blackhole{
@@ -303,8 +303,8 @@ li:first-child{
           clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 75% 50%, 25% 50%, 0% 45%, 0% 65%, 25% 67%, 50% 67.5%, 75% 67%,100% 65%, 100% 100%, 0% 100%);
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 45%, 75% 50%, 25% 50%, 0% 45%, 0% 65%, 25% 67%, 50% 67.5%, 75% 67%,100% 65%, 100% 100%, 0% 100%);
 
-          mask-image: radial-gradient(black 50%, transparent);
-  -webkit-mask-image: radial-gradient(black 50%, transparent);
+          mask-image: radial-gradient(black 50%, transparent 70%);
+  -webkit-mask-image: radial-gradient(black 50%, transparent 70%);
 }
 
 #event-horizon-shadow{
@@ -316,8 +316,8 @@ li:first-child{
           clip-path: polygon(100% 45%, 75% 50%, 25% 50%, 0% 45%, 0% 65%, 25% 67%, 50% 67.5%, 75% 67%, 100% 65%);
   -webkit-clip-path: polygon(100% 45%, 75% 50%, 25% 50%, 0% 45%, 0% 65%, 25% 67%, 50% 67.5%, 75% 67%, 100% 65%);
 
-  mask-image: radial-gradient(black 50%, transparent);
-  -webkit-mask-image: radial-gradient(black 50%, transparent);
+          mask-image: radial-gradient(black 50%, transparent 70%);
+  -webkit-mask-image: radial-gradient(black 50%, transparent 70%);
 }
 
 .stripe{
@@ -408,8 +408,9 @@ li:first-child{
   border-radius: 50%;
   
   background: radial-gradient(black 30%, rgb(224, 59, 4) 31%, transparent 32%, rgb(224, 59, 4) 33%, rgb(235, 105, 36) 36%, rgb(224, 59, 4) 39% 40%, transparent 41%, rgb(224, 59, 4) 42%, 43%, transparent 44%, rgb(224, 59, 4) 46%, transparent 48%, rgb(208, 28, 0) 51% 56%, transparent 57%, rgb(208, 28, 0) 58%, 61%, transparent 62%, rgb(208, 28, 0) 63%, transparent 65%, rgb(208, 28, 0) 66%, 69%, transparent 70%, rgb(208, 28, 0) 71%, 75%, transparent 77%, rgb(208, 28, 0) 78%, 82%, transparent 83%, rgb(208, 28, 0) 85%, transparent);
-  mask-image: radial-gradient(black 40%, transparent);
-  -webkit-mask-image: radial-gradient(black 40%, transparent);
+          
+          mask-image: radial-gradient(black 50%, transparent 70%);
+  -webkit-mask-image: radial-gradient(black 50%, transparent 70%);
 
   transform: rotateX(85deg);
 }
@@ -532,11 +533,7 @@ main h1{
 main > section{
   width: 100%;
   position: relative;
-  margin: 5% 0 5%;
-}
-
-main > section > div{
-  margin: 2%;
+  margin: 5% 0;
 }
 
 main > section:last-child{
@@ -658,7 +655,7 @@ main > section:last-child{
   position: relative;
   min-width: 100%;
   height: auto;
-  padding: 5%;
+  padding: 0 5%;
 }
 
 #work-gallery{
@@ -834,7 +831,7 @@ div.project.desc > p > span{
 
 div.project.desc{
   position: relative;
-  background: linear-gradient(to right, rgb(124, 51, 124), rgb(52, 39, 100), rgb(131, 49, 49));
+  background: linear-gradient(to right, rgb(64, 38, 155), rgb(124, 51, 124), rgb(131, 49, 49));
   border-radius: 5rem;
   padding: 2%;
   border: 2px white solid;
@@ -967,7 +964,7 @@ span.undertitle img{
   position: absolute;
   top: 0;
   left: 50%;
-  translate: -50% 0%;
+  translate: -30% -20%;
 }
 
 .acc-gr::before{
@@ -1061,6 +1058,7 @@ span.undertitle img{
       display: -webkit-inline-flex;
       align-items: center;
       justify-content: center;
+      padding-top: 5%;
     }
     .planet:hover, .moon:hover{
       scale: 100%;
@@ -1068,10 +1066,7 @@ span.undertitle img{
     #project-gallery-container{
       margin-bottom: 10vh;
     }
-    #project-gallery{
-      min-width: 0;
-      width: 100%;
-    }
+
     #project-gallery > div:nth-child(n){
       flex-direction: column;
     }
