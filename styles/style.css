@@ -950,7 +950,6 @@ div.project.desc > p > span.tech > img{
 }
 
 #nav-bar.minimized > ul{
-  /* height: 70%; */
   font-size: smaller;
 }
 
@@ -962,7 +961,7 @@ div.project.desc > p > span.tech > img{
   position: absolute;
   top: 0;
   left: 50%;
-  translate: -50% -0%;
+  translate: -50% 0%;
 }
 
 .acc-gr::before{
@@ -1093,12 +1092,11 @@ div.project.desc > p > span.tech > img{
     }
     div.planet > p.underplanet > span.undertitle img{width: 2rem;}
     img.mcgill, img.cpk{height: 1rem;}
-    /* .progressBar{
-      height: 4px;
+    #socials.minimized{
+              transform: none;
+      -webkit-transform: none;
+         -moz-transform: none;
     }
-    #rocket{
-      height: 8px;
-    } */
     .progressBar{
       display: none;
     }
