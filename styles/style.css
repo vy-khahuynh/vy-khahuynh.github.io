@@ -1000,7 +1000,7 @@ span.undertitle img{
 
 /* mobile */
   @media only screen and (max-width: 990px){
-    body{font-size: 0.75rem;}
+    body{font-size: 1rem;}
     #switch > span > span, main h1{font-size: 1rem;}
     #socials{
       width: 90%;
@@ -1017,10 +1017,10 @@ span.undertitle img{
         width: 100%;
     }
     #nav-bar .title{
-      font-size: 1.5em;
+      font-size: 1.4em;
     }
     nav{
-      font-size: 0.8rem;
+      font-size: 0.8em;
     }
     ul{
       padding: 5%;
