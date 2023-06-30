@@ -3,12 +3,13 @@ function addStars(){
   const html = document.documentElement;
   const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
   const cur = document.getElementById('stars-container');
+  let initial = 50;
+  let add = 25;
   if(!window.matchMedia("max-width: 990px").matches){
-    const num = Math.floor(Math.random() * 100) + 100;
+    initial = 100; 
+    add = 100; 
   }
-  else{
-    const num = Math.floor(Math.random() * 25) + 50;
-  }
+  const num = Math.floor(Math.random() * add) + initial;
   for(let i = 0 ; i < num ; i++){
     var star = document.createElement('div');
     star.classList.add("star"); 
