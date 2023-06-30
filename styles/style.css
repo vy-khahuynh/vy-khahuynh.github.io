@@ -59,10 +59,28 @@ table {
 html{
   height: 100%;
 }
+/* @font-face {
+  font-family: "age";
+  src: url(../assets/font/agelast-font/Agelast-mLlAm.otf);
+}
+@font-face {
+  font-family: "mando";
+  src: url(../assets/font/mandalore-font/Mandalore-K77lD.otf);
+}
+
+@font-face {
+  font-family: "drexs";
+  src: url(../assets/font/drexs-font/Drexs-51Pp8.otf);
+} */
+@font-face {
+  font-family: "andro";
+  src: url(../assets/font/andromeda-font/Andromeda-eR2n.ttf);
+}
 body {
   min-height: 100%;
 
-  font-family: 'Andale Mono', monospace;
+  /* font-family: 'Andale Mono', monospace; */
+  font-family: "andro";
 
   font-size: 1.5rem;
 
@@ -901,7 +919,7 @@ div.project.desc > p > span.tech > img{
 }
 
 #about .largetitle{
-  font-family: Futura, "Trebuchet MS";
+  /* font-family: Futura, "Trebuchet MS"; */
   display: inline-block;
   margin-bottom: 3%;
 }
@@ -1005,7 +1023,7 @@ span.undertitle img{
       font-size: 1.5em;
     }
     nav{
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
     ul{
       padding: 5%;
