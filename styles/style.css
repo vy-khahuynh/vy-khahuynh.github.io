@@ -182,7 +182,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   border-radius: 50%;
   width: 20%;
   aspect-ratio: 1;
-  background: url(../assets/images/avatar.png);
+  background: url(../assets/images/avatar.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -203,7 +203,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 }
 
 #avatar:hover{
-  background: url(../assets/images/avatar2.png);
+  background: url(../assets/images/avatar2.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -738,23 +738,23 @@ main > section:last-child{
   opacity: 1;
 }
 
-#project-gallery > div:nth-child(1) > div.planet::after{
+/* #project-gallery > div:nth-child(1) > div.planet::after{
   background-position: left;
-  background-image: url(../assets/images/soccer-database.png);
+  background-image: url(../assets/images/soccer-database.webp);
 }
 
 #project-gallery > div:nth-child(2) > div.planet::after{
-  background-image: url(../assets/images/pourdecisions.png);
+  background-image: url(../assets/images/pourdecisions.webp);
 }
 
 #project-gallery > div:nth-child(3) > div.planet::after{
-  background-image: url(../assets/images/mtl-library.png);
+  background-image: url(../assets/images/mtl-library.webp);
 }
 
 #project-gallery > div:nth-child(4) > div.planet::after{
   background-position: left;
-  background-image: url(../assets/images/cifar10-mlp.png);
-}
+  background-image: url(../assets/images/cifar10-mlp.webp);
+} */
 
 @keyframes travel{
   0%{
@@ -856,7 +856,7 @@ div.project.desc > p > span{
 
 #current::before{
   content: '';
-  background-image: url(../assets/images/astronaut.png);
+  background-image: url(../assets/images/astronaut.webp);
   background-size: contain;
   background-repeat: no-repeat;
   height: 20%;
