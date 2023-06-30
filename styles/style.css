@@ -1092,10 +1092,13 @@ div.project.desc > p > span.tech > img{
     }
     div.planet > p.underplanet > span.undertitle img{width: 2rem;}
     img.mcgill, img.cpk{height: 1rem;}
-    .progressBar{
+    /* .progressBar{
       height: 4px;
     }
     #rocket{
       height: 8px;
+    } */
+    .progressBar{
+      display: none;
     }
 }
