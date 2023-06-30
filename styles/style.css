@@ -1100,4 +1100,10 @@ div.project.desc > p > span.tech > img{
     .progressBar{
       display: none;
     }
+
+    *{
+              animation: none;
+      -webkit-animation: none;
+         -moz-animation: none;
+    }
 }

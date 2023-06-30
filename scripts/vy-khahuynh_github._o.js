@@ -174,5 +174,3 @@ window.addEventListener('scroll', () => {
     }
   }
 });
-
-alert(isMobile);
