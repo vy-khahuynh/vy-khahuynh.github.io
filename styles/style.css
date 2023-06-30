@@ -59,28 +59,16 @@ table {
 html{
   height: 100%;
 }
-/* @font-face {
-  font-family: "age";
-  src: url(../assets/font/agelast-font/Agelast-mLlAm.otf);
-}
-@font-face {
-  font-family: "mando";
-  src: url(../assets/font/mandalore-font/Mandalore-K77lD.otf);
-}
-
-@font-face {
-  font-family: "drexs";
-  src: url(../assets/font/drexs-font/Drexs-51Pp8.otf);
-} */
 @font-face {
   font-family: "andro";
   src: url(../assets/font/andromeda-font/Andromeda-eR2n.ttf);
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 body {
   min-height: 100%;
 
   /* font-family: 'Andale Mono', monospace; */
-  font-family: "andro";
+  font-family: 'Roboto', sans-serif;
 
   font-size: 1.5rem;
 
@@ -115,7 +103,6 @@ html::-webkit-scrollbar{
 
 #background{
   position: fixed;
-  /* position: absolute; */
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -176,7 +163,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   color: #444444;
 }
 
-li:first-child{
+#nav-bar > ul > li:first-child{
   margin-right: auto;
   background: transparent;
   color: #D3D3D3;
@@ -184,6 +171,7 @@ li:first-child{
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: "andro";
 }
 
 #avatar{
@@ -528,6 +516,7 @@ main{
 main h1{
   font-size: 1.5em;
   font-weight: bold;
+  font-family: "andro";
 }
 
 main > section{
@@ -557,6 +546,7 @@ main > section:last-child{
   align-items: center; 
   justify-content: center; 
   flex-direction: column;
+  font-family: "andro";
 }
 
 #switch > span{
@@ -799,6 +789,17 @@ main > section:last-child{
   scale: 110%;
 }
 
+/* .planet > .underplanet > .undertitle > a{
+  width: 20%;
+  display: block;
+}
+
+.planet > .underplanet > .undertitle > a > img{
+  width: 100%;
+  margin: auto;
+  display: inline-block;
+} */
+
 .moon > a > span{
   position: absolute;
   top: 50%;
@@ -869,7 +870,6 @@ div.project.desc > p > span{
   left: 50%;
   translate: -50% -50%;
   font-size: 0.9em;
-  text-shadow: 2px 2px #000000;
 }
 
 .underplanet *{
@@ -917,18 +917,12 @@ div.project.desc > p > span.tech > img{
 
 #about .largetitle{
   /* font-family: Futura, "Trebuchet MS"; */
+  font-family: "andro";
   display: inline-block;
-  margin-bottom: 3%;
 }
 
 .undertitle{
-  font-size: 0.9em;
-}
-
-span.undertitle img{
-  margin: auto;
-  width: 3rem;
-  aspect-ratio: 1;
+  font-size: 0.8em;
 }
 
 .anchor{
@@ -964,7 +958,7 @@ span.undertitle img{
   position: absolute;
   top: 0;
   left: 50%;
-  translate: -30% -20%;
+  translate: -50% -0%;
 }
 
 .acc-gr::before{
@@ -977,7 +971,7 @@ span.undertitle img{
 
 .acc-circ::before{
   content: '^';
-  font-size: 0.5em;
+  font-size: 0.4em;
 }
 
 .acc-container{
