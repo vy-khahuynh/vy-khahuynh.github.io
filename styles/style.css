@@ -62,6 +62,7 @@ html{
 @font-face {
   font-family: "andro";
   src: url(../assets/font/andromeda-font/Andromeda-eR2n.ttf);
+  font-display: swap;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 body {
