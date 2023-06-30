@@ -79,7 +79,7 @@ let minimize = (entries) =>{
 
 animate(minimize, document.querySelectorAll('#home'), options);
 
-if(window.matchMedia("max-width: 990px").matches){
+if(!window.matchMedia("max-width: 990px").matches){
   const scrollProgressBar = () => {
     const progressBar = document.querySelector('.progressBar');
     const section = document.querySelector('body');
@@ -98,24 +98,25 @@ if(window.matchMedia("max-width: 990px").matches){
   };
   
   window.addEventListener('scroll', scrollProgressBar);
-  window.addEventListener("load", intro);
-  
-  window.addEventListener('scroll', () => {
-    let { scrollY } = window;
-    const small = document.querySelectorAll(".star:nth-child(3n)");
-    const medium = document.querySelectorAll(".star:nth-child(3n+1)");
-    const big = document.querySelectorAll(".star:nth-child(3n+2)");
-    for(let i = 0 ; i < small.length ; i++){
-      small[i].style.translate = `0px ${-0.1 * scrollY}px`;
-    }
-    for(let i = 0 ; i < medium.length ; i++){
-      medium[i].style.translate = `0px ${-0.2 * scrollY}px`;
-    }
-    for(let i = 0 ; i < big.length ; i++){
-      big[i].style.translate = `0px ${-0.5 * scrollY}px`;
-    }
-  });
 }
+
+window.addEventListener("load", intro);
+
+window.addEventListener('scroll', () => {
+  let { scrollY } = window;
+  const small = document.querySelectorAll(".star:nth-child(3n)");
+  const medium = document.querySelectorAll(".star:nth-child(3n+1)");
+  const big = document.querySelectorAll(".star:nth-child(3n+2)");
+  for(let i = 0 ; i < small.length ; i++){
+    small[i].style.translate = `0px ${-0.1 * scrollY}px`;
+  }
+  for(let i = 0 ; i < medium.length ; i++){
+    medium[i].style.translate = `0px ${-0.2 * scrollY}px`;
+  }
+  for(let i = 0 ; i < big.length ; i++){
+    big[i].style.translate = `0px ${-0.5 * scrollY}px`;
+  }
+});
 
 window.addEventListener('scroll', () => {
   let homeY = window.scrollY + document.querySelector('#home-anchor').getBoundingClientRect().top // Y
