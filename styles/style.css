@@ -1101,7 +1101,8 @@ div.project.desc > p > span.tech > img{
       display: none;
     }
 
-    *{
+    body{
+      background: #040815;
               animation: none;
       -webkit-animation: none;
          -moz-animation: none;
