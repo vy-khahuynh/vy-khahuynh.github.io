@@ -997,13 +997,16 @@ div.project.desc > p > span.tech > img{
 /* mobile */
   @media only screen and (max-width: 990px){
     body{font-size: 1rem;}
-    #switch > span > span, main h1{font-size: 1rem;}
+    #switch > span > span, main h1{font-size: 1.5rem;}
     #socials{
       width: 90%;
       border: 1px white solid;
     }
     div.project.desc > p > span.tech{
       height: 7.5vw;
+    }
+    main > section{
+      margin: 10% 0%;
     }
     #socials a{
       width: 2.5rem;
