@@ -474,7 +474,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   
   border: 2px white solid;
 
-  background: linear-gradient(to right, rgb(12, 8, 26), rgb(28, 0, 28), rgb(37, 0, 0));
+  background: linear-gradient(to right, rgba(21, 14, 44, 1), rgba(48, 0, 48, 1), rgba(67, 0, 0, 1));
 
   display: flex;
   display: -webkit-flex;
