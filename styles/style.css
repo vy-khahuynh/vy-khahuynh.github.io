@@ -494,7 +494,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   -webkit-filter: invert(0);
 }
 
- #socials a img{
+ #socials > a > img{
   width: 100%;
   filter: invert(1);
   -webkit-filter: invert(1);
@@ -995,118 +995,124 @@ div.project.desc > p > span.tech > img{
 }
 
 /* mobile */
-  @media only screen and (max-width: 990px){
-    body{font-size: 1rem;}
-    #switch > span > span, main h1{font-size: 1.5rem;}
-    #socials{
-      width: 90%;
-      border: 1px white solid;
-    }
-    div.project.desc > p > span.tech{
-      height: 7.5vw;
-    }
-    main > section{
-      margin: 10% 0%;
-    }
-    #socials a{
-      width: 2.5rem;
-    }
-    #blackhole-container{
-        height: 30%;
-        width: 100%;
-    }
-    #nav-bar .title{
-      font-size: 1.4em;
-    }
-    nav{
-      font-size: 0.8em;
-    }
-    ul{
-      padding: 5%;
-      justify-content: center;
-    }
-    li.title, .underplanet{
-      font-size: 1em;
-    }
-    #nav-bar.minimized > ul{
-      padding-top: 8%;
-      padding-left: 10%;
-      padding-right: 10%;
-    }
-    nav ul li a{
-      padding: 0.3rem 0.5rem 0.3rem 0.5rem;
-      border: 1px white solid;
-    }
-    .planet{
-      width: 95vw;
-    }
-    #summary{display: block;}
-    #summary > p{
-      padding-left: 20%;
-      padding-right: 20%; 
-      width: auto;
-      flex: 0 0 0;
-    }
-    #avatar{width: 70%;}
-    #project-gallery-container, #work-gallery-container{
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-    }
-    #work-gallery{
-      display: inline-flex;
-      display: -webkit-inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding-top: 5%;
-    }
-    .planet:hover, .moon:hover{
-      scale: 100%;
-    }
-    #project-gallery-container{
-      margin-bottom: 10vh;
-    }
-
-    #project-gallery > div:nth-child(n){
-      flex-direction: column;
-    }
-    #project-gallery > div > div{
+@media only screen and (max-width: 990px){
+  body{font-size: 1rem;}
+  #switch > span > span, main h1{font-size: 1.5rem;}
+  #socials{
+    width: 90%;
+    border: 1px white solid;
+  }
+  div.project.desc > p > span.tech{
+    height: 7.5vw;
+  }
+  main > section{
+    margin: 10% 0%;
+  }
+  #socials a{
+    width: 2.5rem;
+  }
+  #blackhole-container{
+      height: 30%;
       width: 100%;
-      flex: 0;
-      margin-top: 10%;
-    }
-    div.project.desc{
-      padding: 5%;
-      border: 1px white solid;
-    }
-    div#project-gallery-container > div#project-gallery > div:nth-child(n) > div.project.desc > p > span{
-      text-align: center;
-    }
-    .planet, .moon{scroll-snap-align: center; margin: auto;}
-    #current::before{
-      height: 20%;
-      width: 20%;
-    }
-    div#work-gallery-container > div#work-gallery > div, div#project-gallery-container > div#project-gallery > div > div{
-      translate: 0 0;
-      animation: none;
-      -webkit-animation: none;
-      -moz-animation: none;
-    }
-    div.planet > p.underplanet > span.undertitle img{width: 2rem;}
-    img.mcgill, img.cpk{height: 1rem;}
-    #socials.minimized{
-              transform: none;
-      -webkit-transform: none;
-         -moz-transform: none;
-    }
-    .progressBar{
-      display: none;
-    }
+  }
+  #nav-bar .title{
+    font-size: 1.4em;
+  }
+  nav{
+    font-size: 0.8em;
+  }
+  ul{
+    padding: 5%;
+    justify-content: center;
+  }
+  li.title, .underplanet{
+    font-size: 1em;
+  }
+  #nav-bar.minimized > ul{
+    padding-top: 8%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  nav ul li a{
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    border: 1px white solid;
+  }
+  .planet{
+    width: 95vw;
+  }
+  #summary{display: block;}
+  #summary > p{
+    padding-left: 20%;
+    padding-right: 20%; 
+    width: auto;
+    flex: 0 0 0;
+  }
+  #avatar{width: 70%;}
+  #project-gallery-container, #work-gallery-container{
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  #work-gallery{
+    display: inline-flex;
+    display: -webkit-inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+  }
+  .planet:hover, .moon:hover{
+    scale: 100%;
+  }
+  #project-gallery-container{
+    margin-bottom: 10vh;
+  }
 
-    body{
-      background: #040815;
-              animation: none;
-      -webkit-animation: none;
-         -moz-animation: none;
-    }
+  #project-gallery > div:nth-child(n){
+    flex-direction: column;
+  }
+  #project-gallery > div > div{
+    width: 100%;
+    flex: 0;
+    margin-top: 10%;
+  }
+  div.project.desc{
+    padding: 5%;
+    border: 1px white solid;
+  }
+  div#project-gallery-container > div#project-gallery > div:nth-child(n) > div.project.desc > p > span{
+    text-align: center;
+  }
+  .planet, .moon{scroll-snap-align: center; margin: auto;}
+  #current::before{
+    height: 20%;
+    width: 20%;
+  }
+  div#work-gallery-container > div#work-gallery > div, div#project-gallery-container > div#project-gallery > div > div{
+    translate: 0 0;
+    animation: none;
+    -webkit-animation: none;
+    -moz-animation: none;
+  }
+  div.planet > p.underplanet > span.undertitle img{width: 2rem;}
+  img.mcgill, img.cpk{height: 1rem;}
+  #socials.minimized{
+            transform: none;
+    -webkit-transform: none;
+        -moz-transform: none;
+  }
+  .progressBar{
+    display: none;
+  }
+
+  body{
+    background: #040815;
+            animation: none;
+    -webkit-animation: none;
+        -moz-animation: none;
+  }
 }
+
+/* @media only screen and (orientation: landscape){
+  #socials, nav{
+    height: 20vh;
+  }
+} */
