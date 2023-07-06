@@ -111,8 +111,6 @@ html::-webkit-scrollbar, body::-webkit-scrollbar{
   display: flex;
   align-items: center;
   justify-content: center;
-
-  overflow: auto;
 }
 
 nav{
@@ -513,11 +511,11 @@ main{
   position: relative;
   width: 100%;
   text-align: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 main h1{
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
   font-family: "andro";
 }
@@ -859,7 +857,7 @@ div.project.desc > p > span{
 
 .underplanet *{
   display: block;
-  margin: 2%;
+  margin: 5%;
 }
 
 #skills{
@@ -979,7 +977,10 @@ div.project.desc > p > span.tech > img{
 /* mobile */
 @media only screen and (max-width: 990px){
   body{font-size: 1rem;}
-  #switch > span > span, main h1{font-size: 1.5rem;}
+  #switch > span > span{font-size: 1.5rem;}
+  main > h1 {
+    font-size: 1.75rem;
+  }
   #socials{
     width: 90%;
     border: 1px white solid;
