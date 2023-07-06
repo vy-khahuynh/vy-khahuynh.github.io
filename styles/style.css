@@ -738,24 +738,6 @@ main > section:last-child{
   opacity: 1;
 }
 
-/* #project-gallery > div:nth-child(1) > div.planet::after{
-  background-position: left;
-  background-image: url(../assets/images/soccer-database.webp);
-}
-
-#project-gallery > div:nth-child(2) > div.planet::after{
-  background-image: url(../assets/images/pourdecisions.webp);
-}
-
-#project-gallery > div:nth-child(3) > div.planet::after{
-  background-image: url(../assets/images/mtl-library.webp);
-}
-
-#project-gallery > div:nth-child(4) > div.planet::after{
-  background-position: left;
-  background-image: url(../assets/images/cifar10-mlp.webp);
-} */
-
 @keyframes travel{
   0%{
     transform: translateY(2%);
@@ -1066,7 +1048,7 @@ div.project.desc > p > span.tech > img{
     margin-bottom: 10vh;
   }
 
-  #project-gallery > div{
+  #project-gallery > div:nth-child(n){
     flex-direction: column;
   }
   #project-gallery > div > div{
