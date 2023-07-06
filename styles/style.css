@@ -307,8 +307,8 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
           clip-path: polygon(100% 45%, 75% 50%, 25% 50%, 0% 45%, 0% 65%, 25% 67%, 50% 67.5%, 75% 67%, 100% 65%);
   -webkit-clip-path: polygon(100% 45%, 75% 50%, 25% 50%, 0% 45%, 0% 65%, 25% 67%, 50% 67.5%, 75% 67%, 100% 65%);
 
-          mask-image: radial-gradient(black 50%, transparent 70%);
-  -webkit-mask-image: radial-gradient(black 50%, transparent 70%);
+          mask-image: radial-gradient(black 65%, transparent 70%);
+  -webkit-mask-image: radial-gradient(black 65%, transparent 70%);
 }
 
 .stripe{
@@ -1066,7 +1066,7 @@ div.project.desc > p > span.tech > img{
     margin-bottom: 10vh;
   }
 
-  #project-gallery > div:nth-child(n){
+  #project-gallery > div{
     flex-direction: column;
   }
   #project-gallery > div > div{
