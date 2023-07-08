@@ -459,6 +459,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   bottom: 0;
   left: 0;
   width: 100%;
+  height: 10vh;
 }
 
 #socials{
@@ -468,7 +469,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   position: relative;
 
   width: 25%;
-  height: 10vh;
+  height: 100%;
   
   border: 2px white solid;
 
@@ -493,14 +494,14 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 }
 
  #socials > a > img{
-  width: 100%;
+  height: 100%;
   filter: invert(1);
   -webkit-filter: invert(1);
   display: block;
 }
 
 #socials > a {
-  width: 3rem;
+  height: 80%;
 }
 
 .ontop{
@@ -511,7 +512,6 @@ main{
   position: relative;
   width: 100%;
   text-align: center;
-  /* overflow: hidden; */
 }
 
 main h1{
@@ -1005,7 +1005,8 @@ div.project.desc > p > span.tech > img{
     font-size: 0.8em;
   }
   ul{
-    padding: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
     justify-content: center;
   }
   li.title, .underplanet{
