@@ -468,7 +468,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 
   position: relative;
 
-  width: 25%;
+  width: 30%;
   height: 100%;
   
   border: 2px white solid;
@@ -485,7 +485,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   -moz-transition: all 0.5s ease;
   
   border-radius: 5rem;
-  padding: 0.5%;
+  padding: 0.5% 2%;
 }
 
 #socials > a > img:hover{
@@ -494,6 +494,7 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 }
 
  #socials > a > img{
+  margin: auto;
   height: 100%;
   filter: invert(1);
   -webkit-filter: invert(1);
@@ -501,7 +502,9 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
 }
 
 #socials > a {
-  height: 80%;
+  aspect-ratio: 1;
+  max-height: 90%;
+  flex: 1 1 0;
 }
 
 .ontop{
@@ -984,15 +987,13 @@ div.project.desc > p > span.tech > img{
   #socials{
     width: 90%;
     border: 1px white solid;
+    padding: 2%;
   }
   div.project.desc > p > span.tech{
     height: 7.5vw;
   }
   main > section{
     margin: 10% 0%;
-  }
-  #socials a{
-    width: 2.5rem;
   }
   #blackhole-container{
       height: 30%;
