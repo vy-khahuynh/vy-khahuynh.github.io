@@ -979,6 +979,7 @@ div.project.desc > p > span.tech > img{
   }
   
   .planet{
+    max-width: none;
     width: 90vw;
     margin: 5vw;
   }
@@ -1046,9 +1047,3 @@ div.project.desc > p > span.tech > img{
         -moz-animation: none;
   }
 }
-
-/* @media only screen and (orientation: landscape){
-  #socials, nav{
-    height: 20vh;
-  }
-} */
