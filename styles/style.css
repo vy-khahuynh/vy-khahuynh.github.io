@@ -418,6 +418,15 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   -webkit-clip-path: polygon(40% 50%, 60% 50%, 88% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 12% 0%);
 }
 
+#copyrights{
+  color: grey;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 0.5em;
+  margin: 1rem;
+}
+
 .star{
   position: absolute;
   z-index: -1;
