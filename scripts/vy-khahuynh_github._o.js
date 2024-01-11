@@ -5,24 +5,23 @@ function addStars(){
   const html = document.documentElement;
   const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
   const cur = document.getElementById('stars-container');
-  let initial = 50;
+  
+  let initial = 75;
   let add = 25;
-  if(!isMobile){
-    initial = 100; 
-    add = 100; 
-  }
-  const num = Math.floor(Math.random() * add) + initial;
-  for(let i = 0 ; i < num ; i++){
+  const numstars = Math.floor(Math.random() * add) + initial;
+  
+  for(let i = 0 ; i < numstars ; i++){
     var star = document.createElement('div');
     star.classList.add("star"); 
     star.style.top = Math.floor(Math.random() * 0.95 * height)+"px";
     star.style.left = Math.floor(Math.random() * 0.95 * window.innerWidth)+"px";
+    star.style.opacity = (Math.random() * 0.9) + 0.1
     cur.appendChild(star);
   }
   var bigstars = document.querySelectorAll(".star:nth-child(3n)");
   for(let i = 0 ; i < bigstars.length ; i++){
     var delay = Math.floor(Math.random() * 30);
-    bigstars[i].style.animation = `glow 5s ease infinite ${delay}s`;
+    bigstars[i].style.animation = `glow 10s ease infinite ${delay}s`;
   }
 }
 
@@ -44,18 +43,27 @@ function populate(){
 }
 
 function animateBH(){
-  let front = document.querySelectorAll("#front-disc > .stripe");
-  let event = document.querySelectorAll("#singularity > .stripe");
-  for(let i = 0 ; i < front.length ; i++){
-    front[i].style.animationDelay = `${i * 2}s`;
-    event[i].style.animationDelay = `${i * 2}s`;
+  let eventhorizon = document.querySelector("#event-horizon");
+  let accretiondisc = document.querySelector("#accretion-disc");
+  for(let i = 0 ; i < 10 ; i++){
+    var stripe = document.createElement('span');
+    stripe.classList.add("stripe", "blackhole");
+    stripe.style.animationDelay = `${(i)}s`;
+    eventhorizon.appendChild(stripe);
+  }
+
+  for(let i = 0 ; i < 10 ; i++){
+    var stripe = document.createElement('span');
+    stripe.classList.add("stripe", "blackhole");
+    stripe.style.animationDelay = `${(i)}s`;
+    accretiondisc.appendChild(stripe);
   }
 }
 
 function intro(){ 
   addStars();
-  populate();
   animateBH();
+  // populate();
 }
 
 function animate(cb, an, op){
