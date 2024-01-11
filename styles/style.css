@@ -234,10 +234,14 @@ header{
   width: 100%;
   margin: 0;
   padding: 0;
-  position: sticky;
-  position: -webkit-sticky;
+  position: fixed;
+  top: 0;
+  left: 0;
   background-color: rgba(17, 17, 17, 1);
-  /* border: 1px red solid; */
+
+  transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
 }
 
 nav{
@@ -247,12 +251,6 @@ nav{
 
   height: calc(100% - 8px);
   width: 100%;
-}
-
-#nav-bar, #nav-bar > ul{
-  transition: all 0.25s ease-in-out;
-  -webkit-transition: all 0.25s ease-in-out;
-  -moz-transition: all 0.25s ease-in-out;
 }
 
 
@@ -433,23 +431,12 @@ main{
   position: relative;
   width: 100%;
   text-align: center;
-}
-
-main h1{
-  font-size: 2em;
-  font-weight: bold;
-  font-family: "andro";
+  margin: 10vh 0;
 }
 
 main > section{
   width: 100%;
   position: relative;
-  /* margin: 5% 0; */
-  margin-top: 10vh;
-}
-
-main > section:last-child{
-  margin-bottom: 10vh;
 }
 
 #home{
@@ -775,6 +762,7 @@ div.project.desc > p > span.tech > img{
 .largetitle{
   font-size: 2em;
   font-weight: bold;
+  font-family: "andro";
 }
 
 #about .largetitle{
@@ -793,9 +781,9 @@ div.project.desc > p > span.tech > img{
   width: 100%;
 }
 
-/* .minimized{
+.minimized{
   opacity: 0;
-} */
+}
 
 #socials.minimized{
   transform-origin: bottom;
