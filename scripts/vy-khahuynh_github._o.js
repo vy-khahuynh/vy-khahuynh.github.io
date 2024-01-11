@@ -95,42 +95,24 @@ let minimize = (entries) =>{
 
 animate(minimize, document.querySelectorAll('#home'), options);
 
-if(!isMobile){
-  const scrollProgressBar = () => {
-    const progressBar = document.querySelector('.progressBar');
-    const section = document.querySelector('body');
-    let scrollDistance = -(section.getBoundingClientRect().top);
-    let progressPercentage =
-        (scrollDistance /
-            (section.getBoundingClientRect().height - 
-                document.documentElement.clientHeight)) * 100;
-  
-    let val = Math.floor(progressPercentage);
-    progressBar.style.width = val + '%';
-  
-    if (val < 0) {
-        progressBar.style.width = '0%';
-    }
-  };
-  
-  window.addEventListener('scroll', scrollProgressBar);
+const scrollProgressBar = () => {
+  const progressBar = document.querySelector('.progressBar');
+  const section = document.querySelector('body');
+  let scrollDistance = -(section.getBoundingClientRect().top);
+  let progressPercentage =
+      (scrollDistance /
+          (section.getBoundingClientRect().height - 
+              document.documentElement.clientHeight)) * 100;
 
-  window.addEventListener('scroll', () => {
-  let { scrollY } = window;
-  const small = document.querySelectorAll(".star:nth-child(3n)");
-  const medium = document.querySelectorAll(".star:nth-child(3n+1)");
-  const big = document.querySelectorAll(".star:nth-child(3n+2)");
-  for(let i = 0 ; i < small.length ; i++){
-    small[i].style.translate = `0px ${-0.1 * scrollY}px`;
+  let val = Math.floor(progressPercentage);
+  progressBar.style.width = val + '%';
+
+  if (val < 0) {
+      progressBar.style.width = '0%';
   }
-  for(let i = 0 ; i < medium.length ; i++){
-    medium[i].style.translate = `0px ${-0.2 * scrollY}px`;
-  }
-  for(let i = 0 ; i < big.length ; i++){
-    big[i].style.translate = `0px ${-0.5 * scrollY}px`;
-  }
-});
-}
+};
+
+window.addEventListener('scroll', scrollProgressBar);
 
 window.addEventListener("load", intro);
 

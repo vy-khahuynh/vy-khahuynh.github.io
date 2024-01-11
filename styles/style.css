@@ -62,6 +62,7 @@ table {
   src: url(../assets/font/andromeda-font/Andromeda-eR2n.ttf);
   font-display: swap;
 }
+
 body {
   min-height: 100vh;
   max-width: 100vw;
@@ -229,6 +230,39 @@ html::-webkit-scrollbar, body::-webkit-scrollbar{
   -webkit-mask: conic-gradient(transparent 40deg, black 40deg 320deg, transparent 320deg);
 }
 
+.star{
+  position: absolute;
+  z-index: -1;
+  aspect-ratio: 1;
+
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px white;
+}
+
+@keyframes glow{
+  10%{
+            transform: scale(500%);
+    -webkit-transform: scale(500%);
+  }
+  20%{
+            transform: scale(100%);
+    -webkit-transform: scale(100%);
+  }
+}
+
+.star:nth-child(3n) {
+  width: 0.5px;
+}
+
+.star:nth-child(3n+1) {
+  width: 1px;
+}
+
+.star:nth-child(3n+2) {
+  width: 3px;
+}
+
 header{
   height: 10vh;
   width: 100%;
@@ -273,7 +307,7 @@ nav > ul > li > a{
   color: #D3D3D3;
   border-radius: 5rem;
   padding: 0.3rem 0.7rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   border: 1px white solid;
   background: linear-gradient(to right, rgba(21, 14, 44, 1), rgba(48, 0, 48, 1), rgba(67, 0, 0, 1));
 }
@@ -336,39 +370,6 @@ nav > ul > li:first-child{
   left: 0;
   font-size: 0.5em;
   margin: 1rem;
-}
-
-.star{
-  position: absolute;
-  z-index: -1;
-  aspect-ratio: 1;
-
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0px 0px 5px white;
-}
-
-@keyframes glow{
-  10%{
-            transform: scale(500%);
-    -webkit-transform: scale(500%);
-  }
-  20%{
-            transform: scale(100%);
-    -webkit-transform: scale(100%);
-  }
-}
-
-.star:nth-child(3n) {
-  width: 0.5px;
-}
-
-.star:nth-child(3n+1) {
-  width: 1px;
-}
-
-.star:nth-child(3n+2) {
-  width: 3px;
 }
 
 footer{
@@ -438,6 +439,20 @@ main{
 main > section{
   width: 100%;
   position: relative;
+}
+
+main > section{
+  width: 100%;
+  position: relative;
+  margin: 10% 0%;
+}
+
+main > section:last-child{
+  margin-bottom: 0;
+}
+
+main > section:first-child{
+  margin-top: 0;
 }
 
 #home{
@@ -540,29 +555,37 @@ main > section{
   text-align: end;
 }
 
-#work-gallery-container, #project-gallery-container{
-  width: 100%;
-  height: auto;
-  margin: auto;
-}
-
-#work-gallery, #project-gallery{
-  margin: auto;
+/* #work-gallery, #project-gallery{
   position: relative;
-  min-width: 100%;
-  height: auto;
-  padding: 5%;
-}
+  width: 100%;
+  padding: 10%;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+} */
 
-#work-gallery{
+/* #work-gallery{
   display: inline-flex;
   display: -webkit-inline-flex;
   align-items: center;
   justify-content: space-evenly;
-  
+} */
+
+#work-gallery{
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  padding: 10vh;
 }
 
-#project-gallery{
+.planet{
+  position: relative;
+  scroll-snap-align: center;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+}
+
+/* #project-gallery{
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   justify-items: center;
@@ -618,10 +641,12 @@ main > section{
   100%{
     transform: translateY(-2%);
   }
-}
+} */
 
-.planet{
+/* .planet{
   position: relative;
+
+  scroll-snap-align: center;
 
   display: flex;
   display: -webkit-flex;
@@ -630,8 +655,9 @@ main > section{
   
   flex: 1 1 0;
   width: 0;
+  width: 90vw;
 
-  max-width: 40vw;
+  width: 100vw;
 
   margin: 0 5%;
 
@@ -644,16 +670,16 @@ main > section{
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
-}
+} */
 
-.planet:hover{
+/* .planet:hover{
   scale: 110%;
 }
 
 .planet img{
   display: block;
   width: 100%;
-}
+} */
 
 div.project.desc > p > span > a > img{
   height: 1em;
@@ -692,12 +718,12 @@ div.project.desc > p > span{
   background-image: url(../assets/images/astronaut.webp);
   background-size: contain;
   background-repeat: no-repeat;
-  height: 20%;
-  width: 20%;
+  height: 10vh;
+  aspect-ratio: 1;
   position: absolute;
-  top: 0%;
+  top: -10vh;
   left: 50%;
-  translate: -50% -80%;
+  translate: -50% 30%;
 }
 
 .underplanet{
