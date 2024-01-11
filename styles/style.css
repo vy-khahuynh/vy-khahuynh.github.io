@@ -68,7 +68,7 @@ body {
 
   font-family: 'Roboto', sans-serif;
 
-  font-size: 0.7rem;
+  font-size: 1rem;
 
   background: linear-gradient(#040815, #000510, #110415, #111111, #130101);
 	background-size: 500% 500%;
@@ -273,6 +273,7 @@ nav > ul > li > a{
   color: #D3D3D3;
   border-radius: 5rem;
   padding: 0.3rem 0.7rem;
+  font-size: 0.7rem;
   border: 1px white solid;
   background: linear-gradient(to right, rgba(21, 14, 44, 1), rgba(48, 0, 48, 1), rgba(67, 0, 0, 1));
 }
@@ -290,6 +291,7 @@ nav > ul > li:first-child{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: "andro";
+  font-size: 1.2em;
   text-align: center;
 }
 
@@ -524,11 +526,6 @@ main > section{
   align-items: center;
 }
 
-#summary > p{ 
-  width: 0;
-  flex: 1 1 0;
-}
-
 #summary > p img{
   vertical-align: middle;
 }
@@ -759,7 +756,7 @@ div.project.desc > p > span.tech > img{
 }
 
 .largetitle{
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
   font-family: "andro";
 }
