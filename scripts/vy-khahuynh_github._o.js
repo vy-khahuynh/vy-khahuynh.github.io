@@ -84,11 +84,11 @@ let minimize = (entries) =>{
   entries.forEach((entry) => {
     if(entry.isIntersecting){
       document.querySelector("header").classList.add("minimized");
-      // document.querySelector("#socials").classList.add("minimized");
+      document.querySelector("#socials").classList.add("minimized");
     }
     else{
       document.querySelector("header").classList.remove("minimized");
-      // document.querySelector("#socials").classList.remove("minimized");
+      document.querySelector("#socials").classList.remove("minimized");
     }
   });
 }
