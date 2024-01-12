@@ -384,10 +384,10 @@ nav > ul > li:first-child > h1{
 #copyrights{
   color: grey;
   position: absolute;
-  bottom: 0;
+  bottom: -4em;
   left: 0;
   font-size: 0.5em;
-  margin: 1rem;
+  margin: 1em;
 }
 
 footer{
@@ -452,7 +452,8 @@ main{
   width: 100vw;
   min-height: 100vh;
   text-align: center;
-  margin: 10vh 0;
+  margin-top: 10vh;
+  margin-bottom: calc(10vh + 2.5em);
 }
 
 main > section{
