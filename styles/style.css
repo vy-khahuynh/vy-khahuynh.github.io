@@ -386,7 +386,7 @@ nav > ul > li:first-child > h1{
   position: absolute;
   bottom: -4em;
   left: 0;
-  font-size: 0.5em;
+  font-size: 0.75em;
   margin: 1em;
 }
 
@@ -453,7 +453,7 @@ main{
   min-height: 100vh;
   text-align: center;
   margin-top: 10vh;
-  margin-bottom: calc(10vh + 2.5em);
+  margin-bottom: calc(10vh + 3em);
 }
 
 main > section{
@@ -565,8 +565,15 @@ main > section:first-child{
 }
 
 #summary{
-  white-space: pre-line;
   margin: 0 10vw;
+}
+
+#summary > * > p{
+  white-space: pre-line;
+}
+
+#summary > article{
+  margin-top: 2vh;
 }
 
 #eng{
