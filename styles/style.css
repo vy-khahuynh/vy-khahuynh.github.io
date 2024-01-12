@@ -4,7 +4,7 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
+/* html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -23,9 +23,9 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-}
+} */
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+/* article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -46,7 +46,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
+} */
 
 * {
   box-sizing: border-box;
@@ -68,8 +68,6 @@ body {
   max-width: 100vw;
 
   font-family: 'Roboto', sans-serif;
-
-  font-size: 1rem;
 
   background: linear-gradient(#040815, #000510, #110415, #111111, #130101);
 	background-size: 500% 500%;
@@ -105,6 +103,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar{
   height: 100vh;
   width: 100vw;
   z-index: -1;
+  top: 0;
+  left: 0;
 
   display: flex;
   place-items: center;
@@ -296,6 +296,8 @@ ul{
   display: -webkit-inline-flex;
   align-items: center;
   justify-content: space-around;
+
+  list-style: none;
 }
 
 li{
@@ -317,16 +319,43 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   color: #444444;
 }
 
-nav > ul > li:first-child{
-  background: transparent;
-  color: #D3D3D3;
+nav > ul > li:first-child > h1{
   background: linear-gradient(to right, rgba(51, 26, 136, 1),rgb(167, 64, 167), rgba(154, 0, 0, 1));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: "andro";
-  font-size: 1.2em;
   text-align: center;
+  font-size: 1.2em;
+}
+
+#nav-bar.minimized > ul{
+  font-size: smaller;
+}
+
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 8px;
+  background: linear-gradient(to right, rgba(154, 0, 0, 1), rgb(170, 0, 170), rgb(44, 0, 189));
+  width: 0%;
+  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+#rocket{
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  height: 15px;
+
+  transform: translateX(50%) translateY(-50%);
+
+  display: block;
 }
 
 #avatar{
@@ -334,6 +363,7 @@ nav > ul > li:first-child{
   border-radius: 50%;
   width: 40%;
   aspect-ratio: 1;
+
   background: url(../assets/images/avatar.webp);
   background-position: center;
   background-repeat: no-repeat;
@@ -349,18 +379,6 @@ nav > ul > li:first-child{
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-}
-
-#rocket{
-  position: absolute;
-  top: 50%;
-  right: 0;
-
-  height: 15px;
-
-  transform: translateX(50%) translateY(-50%);
-
-  display: block;
 }
 
 #copyrights{
@@ -456,59 +474,69 @@ main > section:first-child{
 }
 
 #home{
-  margin-top: 0;
   position: relative;
   height: 90vh; 
   width: 100%; 
+  display: flex;
+  display: -webkit-flex;
+  place-items: end; 
+  justify-content: center;
 }
 
-#home h1 {
-  position: absolute;
-  bottom: 20%;
-  left: 50%;
-  translate: -50% -50%;
+#intro {
+  position: relative;
   display: flex; 
   display: -webkit-flex;
   align-items: center; 
   justify-content: center; 
   flex-direction: column;
-  font-family: "andro";
+  margin-bottom: 5em;
+}
+
+#switch{
+  display: flex; 
+  display: -webkit-flex;
+  align-items: center; 
+  justify-content: center; 
+  flex-direction: column;
+  height: 1.5em;
 }
 
 #switch > span{
-  position: absolute;
-  translate: -50% 50%;
-  opacity: 0;
+  display: block;
   white-space: pre;
+  position: absolute;
+  opacity: 0;
+  transform: translateY(50%);
   animation: fade 50s ease-in infinite;
   -webkit-animation: fade 50s ease-in infinite;
   -moz-animation: fade 50s ease-in infinite;
 }
 
-#switch > span > span{
+#switch .letter{
   display: inline-block;
 }
 
-#switch > span > span:nth-child(2n){
-  animation: suck1 50s ease-in infinite;
-  -webkit-animation: suck1 50s ease-in infinite;
-  -moz-animation: suck1 50s ease-in infinite;
+#switch .letter:nth-child(2n){
+  animation: suckfast 50s ease-in infinite;
+  -webkit-animation: suckfast 50s ease-in infinite;
+  -moz-animation: suckfast 50s ease-in infinite;
 }
 
-#switch > span > span:nth-child(2n-1){
-  animation: suck2 50s ease-in infinite;
-  -webkit-animation: suck2 50s ease-in infinite;
-  -moz-animation: suck2 50s ease-in infinite;
+#switch .letter:nth-child(2n-1){
+  animation: suckslow 50s ease-in infinite;
+  -webkit-animation: suckslow 50s ease-in infinite;
+  -moz-animation: suckslow 50s ease-in infinite;
 }
 
 @keyframes fade {
   2%, 100%{
     opacity: 1;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
+    transform: translateY(0%);
   }
 }
-@keyframes suck1 {
+
+@keyframes suckfast {
   0%, 14%{
     transform: translateY(0) rotateZ(0deg);
     -webkit-transform: translateY(0) rotateZ(0deg);
@@ -521,7 +549,7 @@ main > section:first-child{
   }
 }
 
-@keyframes suck2 {
+@keyframes suckslow {
   0%, 15%{
     transform: translateY(0) rotateZ(0deg);
     -webkit-transform: translateY(0) rotateZ(0deg);
@@ -541,48 +569,87 @@ main > section:first-child{
   align-items: center;
 }
 
-#summary > p img{
-  vertical-align: middle;
+#summary p{
+  white-space: pre-line;
+  line-height: 1.2em;
+  margin: 5%;
 }
 
-#summary > p:first-of-type{
-  padding-left: 10%;
+#eng{
+  padding-left: 5%;
   text-align: start;
 }
 
-#summary > p:last-of-type{
-  padding-right: 10%;
+#fr{
+  padding-right: 5%;
   text-align: end;
 }
 
-/* #work-gallery, #project-gallery{
-  position: relative;
-  width: 100%;
-  padding: 10%;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-} */
-
-/* #work-gallery{
-  display: inline-flex;
-  display: -webkit-inline-flex;
-  align-items: center;
-  justify-content: space-evenly;
-} */
-
 #work-gallery{
   display: flex;
+  flex-direction: row;
   overflow-x: scroll;
   scroll-snap-type: x mandatory;
-  padding: 10vh;
+  padding-top: 10vh;
+  min-width: 100vw;
 }
 
 .planet{
   position: relative;
-  scroll-snap-align: center;
+  
+  flex: 0 0 90vw;
+  margin: 0 5vw;
+  
   display: flex;
   place-items: center;
   justify-content: center;
+  
+  scroll-snap-align: center;
+  
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+
+}
+
+
+.planet > img{
+  width: 100%;
+}
+
+.planet:hover{
+  scale: 110%;
+}
+
+#current::before{
+  content: '';
+  background-image: url(../assets/images/astronaut.webp);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 10vh;
+  aspect-ratio: 1;
+  position: absolute;
+  top: -10vh;
+  left: 50%;
+  translate: -50% 30%;
+}
+
+.underplanet{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  border-radius: 50%;
+
+  padding: 10%;
+
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 0.2rem;
 }
 
 /* #project-gallery{
@@ -681,7 +748,7 @@ main > section:first-child{
   width: 100%;
 } */
 
-div.project.desc > p > span > a > img{
+/* div.project.desc > p > span > a > img{
   height: 1em;
   display: inline-block;
   vertical-align: middle;
@@ -710,46 +777,15 @@ div.project.desc > p > span{
 
 #project-gallery > div:nth-child(odd) > div.project.desc > p > span:not(.title):not(.undertitle):not(.tech){
   text-align: end;
-}
-
-
-#current::before{
-  content: '';
-  background-image: url(../assets/images/astronaut.webp);
-  background-size: contain;
-  background-repeat: no-repeat;
-  height: 10vh;
-  aspect-ratio: 1;
-  position: absolute;
-  top: -10vh;
-  left: 50%;
-  translate: -50% 30%;
-}
-
-.underplanet{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  
-  border-radius: 50%;
-
-  padding: 15%;
-
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.underplanet > span{
-  display: block;
-  margin: 2%;
-}
+} */
 
 #skills{
   width: 100%;
   height: auto;
+}
+
+.italic{
+  font-style: italic;
 }
 
 .stamp{
@@ -771,29 +807,9 @@ div.project.desc > p > span.tech > img{
   height: 100%;
 }
 
-.title{
+h1{
   font-size: 1.5em;
-  font-weight: bold;
-}
-
-.title2{
-  font-size: 1.5em;
-  font-style: italic;
-}
-
-.largetitle{
-  font-size: 1.5em;
-  font-weight: bold;
   font-family: "andro";
-}
-
-#about .largetitle{
-  font-family: "andro";
-  display: inline-block;
-}
-
-.undertitle{
-  font-size: 0.8em;
 }
 
 .anchor{
@@ -814,52 +830,6 @@ div.project.desc > p > span.tech > img{
   -webkit-transform: scale(75%);
   -moz-transform-origin: bottom;
   -moz-transform: scale(75%);
-}
-
-#nav-bar.minimized > ul{
-  font-size: smaller;
-}
-
-.acc-aig, .acc-gr, .acc-circ{
-  position: relative;
-}
-
-.acc-aig::before, .acc-gr::before, .acc-circ::before{
-  position: absolute;
-  top: 0;
-  left: 50%;
-  translate: -50% 0%;
-}
-
-.acc-gr::before{
-  content: '`';
-}
-
-.acc-aig::before{
-  content: '´';
-}
-
-.acc-circ::before{
-  content: '^';
-  font-size: 0.4em;
-}
-
-.acc-container{
-  display: inline-block;
-}
-
-.progressBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 8px;
-  background: linear-gradient(to right, rgba(154, 0, 0, 1), rgb(170, 0, 170), rgb(44, 0, 189));
-  width: 0%;
-  transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-
-  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 @media only screen and (min-width: 990px){

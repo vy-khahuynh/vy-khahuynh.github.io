@@ -3,7 +3,8 @@ const isMobile = window.matchMedia('(max-width: 990px)').matches;
 function addStars(){
   const body = document.body;
   const html = document.documentElement;
-  const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  // const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  const height = screen.height;
   const cur = document.getElementById('stars-container');
   
   let initial = 75;
@@ -27,13 +28,14 @@ function addStars(){
 
 function populate(){
   const names = ["Vy-Kha Huynh", "a Full-Stack Developer", "a Software Engineer", "a Blackhole Fanatic", "a LEGO Enthusiast"];
-  var sw = document.querySelectorAll('#switch')[0];
+  var sw = document.querySelector('#switch');
 
   for(let i = 0 ; i < names.length ; i++){
     var name = document.createElement('span');
     name.style.animationDelay = `${i * 10}s`;
     for(let j = 0 ; j < names[i].length ; j++){
       var letter = document.createElement('span');
+      letter.classList.add('letter');
       letter.innerHTML = names[i][j];
       letter.style.animationDelay = `${i * 10}s`;
       name.appendChild(letter);

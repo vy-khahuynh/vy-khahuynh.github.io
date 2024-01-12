@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+  <!-- Background containing stars + blackhole -->
 <div id="background">
   <div id="stars-container"></div>
   <div id="blackhole-container">
@@ -32,10 +32,12 @@
   </div>
 </div>
 
+<!-- Header -->
 <header class="ontop">
   <div class="progressBar">
     <img src="./assets/images/rocket.webp" alt="" id="rocket">
   </div>
+  
   <nav id="nav-bar">
     <ul>
       <li><h1>VY-KHA HUYNH</h1></li>
@@ -50,7 +52,7 @@
 <main>
   <section id="home">
     <div id="home-anchor" class="anchor"></div>
-    <h1 class="largetitle">
+    <h1 class="largetitle" id="intro">
       Hello, I'm<span id="switch"></span>
     </h1>
   </section>
@@ -58,67 +60,63 @@
   <section id="about">
     <div id="about-anchor" class="anchor"></div>
     <div id="avatar"></div>
+    
     <div id="summary">
-      <p id="eng">
-        <span class="largetitle">I am
-          <br>
-          <span>Vy-Kha Huynh</span>
-        </span>
-        <br>
-        <span>I am a U4 Software Engineering student at McGill University in Montreal.</span>
-        <br>
-        <span>I am a Build and Release intern at <a href="https://www.audiokinetic.com/en/">Audiokinetic</a></span>
-        <br>
-        <span>I have experience in web dev, mobile dev, database dev and build & release.</span>
-      </p>
-      <p id="fr">
-        <span class="largetitle">Je suis
-          <br>
-          <span>Vy-Kha Huynh</span>
-        </span>
-        <br>
-        <span>Je suis un étudiant U4 en génie logiciel à l'Université de McGill de Montréal.</span>
-        <br>
-        <span>Je suis un stagiaire en configuration et déploiement à <a href="https://www.audiokinetic.com/en/">Audiokinetic</a></span>
-        <br>
-        <span>J'ai de l'expérience en développement Web, mobile, bases de données et configuration & déploiement.</span>
-      </p>
+      <article id="eng">
+        <h1>
+          I am<br>Vy-Kha<br>Huynh
+        </h1>
+        <p>
+          U4 Software Engineering student at McGill University in Montreal.
+          Build and Release intern at <a href="https://www.audiokinetic.com/en/">Audiokinetic</a>.
+          Experience in web dev, mobile dev, database dev and build & release.
+        </p>
+      </article>
+      <article id="fr">
+        <h1>
+          Je suis<br>Vy-Kha<br>Huynh
+        </h1>
+        <p>
+          Étudiant U4 en génie logiciel à l'Université de McGill de Montréal.
+          Stagiaire en configuration et déploiement à <a href="https://www.audiokinetic.com/en/">Audiokinetic</a>.
+          Expérience en développement Web, mobile, bases de données et configuration & déploiement.
+        </p>
+      </article>
     </div>
   </section>
 
   <section id="work">
     <div id="work-anchor" class="anchor"></div>
-    <h1>WORK EXPERIENCE</h1>
-      <div id="work-gallery">
-        <div id="current" class="planet">
-          <img srcset="./assets/images/planet2.webp 1500w, ./assets/images/planet2_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet2.webp" alt="Blue, purple and grey planet">
-          <p class="underplanet">
-            <span class="title">IOS Full-Stack Developer</span>
-            <span class="title2">
-              Audiokinetic
-              <a href=""><img src="./assets/images/CPK-thumbnail.webp" alt=""></a>
-            </span>
-            <span class="undertitle">January 2024 - Present</span>
-            <span>Maintain the build system (Jenkins, Python, Java/Groovy),
-              improve build system visibility by developing new reports and dashboards,
-              automate publishing for all deliverables and
-              monitor and maintain automated systems.</span>
+    <h1  class="largetitle">WORK EXPERIENCE</h1>
+    <div id="work-gallery">
+      
+      <div id="current" class="planet">
+        <img srcset="./assets/images/planet1.webp 1500w, ./assets/images/planet1_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet1.webp" alt="Blue, purple and grey planet">
+        <article class="underplanet">
+          <h2>Build/Release Intern</h2>
+          <h3>Audiokinetic</h3>
+          <h4 class="italic">January 2024 - Present</h4>
+          <p>
+            Maintain the build system (Jenkins, Python, Java/Groovy),
+            improve build system visibility by developing new reports and dashboards,
+            automate publishing for all deliverables and
+            monitor and maintain automated systems.
           </p>
-        </div>
-
-        <div class="planet">
-          <img srcset="./assets/images/planet1.webp 1500w, ./assets/images/planet1_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet1.webp" alt="Blue, purple and grey planet">
-          <p class="underplanet">
-            <span class="title">IOS Full-Stack Developer</span>
-            <span class="title2">
-              CPK Solutions
-              <a href=""><img src="./assets/images/CPK-thumbnail.webp" alt=""></a>
-            </span>
-            <span class="undertitle">May 2023 - September 2023</span>
-            <span>Built a POS integrated with a management app to allow restaurants to manage products, orders, staff and customers</span>
-          </p>
-        </div>
+        </article>
       </div>
+      
+      <div class="planet">
+        <img srcset="./assets/images/planet2.webp 1500w, ./assets/images/planet2_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet2.webp" alt="Blue, purple and grey planet">
+        <article class="underplanet">
+          <h2>IOS Full-Stack Intern</h2>
+          <h3>CPK Solutions</h3>
+          <h4  class="italic">May 2023 - September 2023</h4>
+          <p>
+            Built a POS integrated with a management app to allow restaurants to manage products, orders, staff and customers
+          </p>
+        </article>
+      </div>
+
     </div>
   </section>
 
