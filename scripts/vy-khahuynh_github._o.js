@@ -1,20 +1,21 @@
 const isMobile = window.matchMedia('(max-width: 990px)').matches;
 
 function addStars(){
-  const body = document.body;
-  const html = document.documentElement;
+  // const body = document.body;
+  // const html = document.documentElement;
   // const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-  const height = screen.height;
+  // const height = screen.height;
+  // alert(height)
   const cur = document.getElementById('stars-container');
   
-  let initial = 75;
-  let add = 25;
+  let initial = 50;
+  let add = 10;
   const numstars = Math.floor(Math.random() * add) + initial;
   
   for(let i = 0 ; i < numstars ; i++){
     var star = document.createElement('div');
     star.classList.add("star"); 
-    star.style.top = Math.floor(Math.random() * 0.95 * height)+"px";
+    star.style.top = Math.floor(Math.random() * 0.95 * window.innerHeight)+"px";
     star.style.left = Math.floor(Math.random() * 0.95 * window.innerWidth)+"px";
     star.style.opacity = (Math.random() * 0.9) + 0.1
     cur.appendChild(star);
@@ -27,7 +28,7 @@ function addStars(){
 }
 
 function populate(){
-  const names = ["Vy-Kha Huynh", "a Full-Stack Developer", "a Software Engineer", "a Blackhole Fanatic", "a LEGO Enthusiast"];
+  const names = ["Vy-Kha Huynh", "an Aspiring SWE", "a Blackhole Enthusiast", "a LEGO Hobbyist", "a Star Wars Fan"];
   var sw = document.querySelector('#switch');
 
   for(let i = 0 ; i < names.length ; i++){
