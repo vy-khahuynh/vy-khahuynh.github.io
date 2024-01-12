@@ -594,8 +594,7 @@ main > section:first-child{
   
   scroll-snap-type: x mandatory;
   
-  padding-top: 10vh;
-  padding-bottom: 5vh;
+  padding: 5vh 0;
   
   min-width: 100vw;
 }
@@ -628,6 +627,10 @@ main > section:first-child{
 
 .planet:hover{
   scale: 110%;
+}
+
+#current{
+  margin-top: 5vh;
 }
 
 #current::before{
@@ -793,9 +796,6 @@ div.project.desc > p > span{
   height: auto;
 } */
 
-.italic{
-  font-style: italic;
-}
 
 /* .stamp{
   margin: auto;
@@ -815,6 +815,10 @@ div.project.desc > p > span.tech{
 div.project.desc > p > span.tech > img{
   height: 100%;
 } */
+
+.italic{
+  font-style: italic;
+}
 
 h1{
   font-size: 1.5em;
