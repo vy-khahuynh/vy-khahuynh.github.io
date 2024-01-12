@@ -3,24 +3,31 @@ script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jqu
 document.getElementsByTagName('head')[0].appendChild(script);
 
 function addStars(){
-    const body = document.body;
-    const html = document.documentElement;
-    const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-    var cur = document.getElementById('stars-container');
-    var num = Math.floor(Math.random() * 50) + 50;
-    for(let i = 0 ; i < num ; i++){
-      var star = document.createElement('div');
-      star.classList.add("star");
-      star.style.top = Math.floor(Math.random() * 0.99 * height)+"px";
-      star.style.left = Math.floor(Math.random() * 0.99 * window.innerWidth)+"px";
-      cur.appendChild(star);
-    }
-    var bigstars = document.querySelectorAll(".star:nth-child(n)");
-    for(let i = 0 ; i < bigstars.length ; i++){
-      var delay = Math.floor(Math.random() * 20);
-      bigstars[i].style.animation = `glow 5s ease infinite ${delay}s`;
-    }
+  // const body = document.body;
+  // const html = document.documentElement;
+  // const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  // const height = screen.height;
+  // alert(height)
+  const cur = document.getElementById('stars-container');
+  
+  let initial = 50;
+  let add = 10;
+  const numstars = Math.floor(Math.random() * add) + initial;
+  
+  for(let i = 0 ; i < numstars ; i++){
+    var star = document.createElement('div');
+    star.classList.add("star"); 
+    star.style.top = Math.floor(Math.random() * 0.95 * window.innerHeight)+"px";
+    star.style.left = Math.floor(Math.random() * 0.95 * window.innerWidth)+"px";
+    star.style.opacity = (Math.random() * 0.9) + 0.1
+    cur.appendChild(star);
   }
+  var bigstars = document.querySelectorAll(".star:nth-child(3n)");
+  for(let i = 0 ; i < bigstars.length ; i++){
+    var delay = Math.floor(Math.random() * 30);
+    bigstars[i].style.animation = `glow 10s ease infinite ${delay}s`;
+  }
+}
   
   function activateSuperlaser(){
     var ds = document.getElementById('death-beam-container');

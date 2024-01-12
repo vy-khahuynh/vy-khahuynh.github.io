@@ -315,8 +315,8 @@ html::-webkit-scrollbar{
   #death-beam-container span:nth-child(9){
     height: 0.4rem;
     width: 70vw;
-    transform: translateY(-50%) rotateZ(-35deg);
-    -webkit-transform: translateY(-50%) rotateZ(-35deg);
+    transform: translateY(-50%) rotateZ(-42deg);
+    -webkit-transform: translateY(-50%) rotateZ(-42deg);
   }
   
   #death-beam-container span:nth-child(n)::before{
@@ -334,6 +334,8 @@ html::-webkit-scrollbar{
   
     transform: translateX(100%) translateY(-50%);
     -webkit-transform: translateX(100%) translateY(-50%);
+
+    opacity: 0;
     }
   
   #death-beam-container.active span:nth-child(1)::before{
@@ -349,6 +351,7 @@ html::-webkit-scrollbar{
    40%, 98%{
       transform: translateX(0) translateY(-50%);
       -webkit-transform: translateX(0) translateY(-50%);
+      opacity: 1;
     }
     100%{
       transform: translateX(100%) translateY(-50%);
@@ -369,6 +372,7 @@ html::-webkit-scrollbar{
    30%, 98%{
       transform: translateX(0) translateY(-50%);
       -webkit-transform: translateX(0) translateY(-50%);
+      opacity: 1;
     }
     100%{
       transform: translateX(100%) translateY(-50%);
@@ -389,6 +393,7 @@ html::-webkit-scrollbar{
    60%, 98%{
       transform: translateX(0) translateY(-50%);
       -webkit-transform: translateX(0) translateY(-50%);
+      opacity: 1;
     }
     100%{
       transform: translateX(100%) translateY(-50%);
@@ -409,6 +414,7 @@ html::-webkit-scrollbar{
    70%, 98%{
       transform: translateX(0) translateY(-50%);
       -webkit-transform: translateX(0) translateY(-50%);
+      opacity: 1;
     }
     100%{
       transform: translateX(100%) translateY(-50%);
@@ -430,6 +436,7 @@ html::-webkit-scrollbar{
     20%, 98%{
       transform: translateX(0) translateY(-50%);
       -webkit-transform: translateX(0) translateY(-50%);
+      opacity: 1;
     }
     100%{
       transform: translateX(100%) translateY(-50%);
@@ -451,6 +458,7 @@ html::-webkit-scrollbar{
    80%, 98%{
       transform: translateX(0) translateY(-50%);
       -webkit-transform: translateX(0) translateY(-50%);
+      opacity: 1;
     }
     100%{
       transform: translateX(100%) translateY(-50%);
@@ -471,6 +479,7 @@ html::-webkit-scrollbar{
    50%, 98%{
       transform: translateX(0) translateY(-50%);
       -webkit-transform: translateX(0) translateY(-50%);
+      opacity: 1;
     }
     100%{
       transform: translateX(100%) translateY(-50%);
@@ -491,6 +500,7 @@ html::-webkit-scrollbar{
    10%, 98%{
       transform: translateX(0) translateY(-50%);
       -webkit-transform: translateX(0) translateY(-50%);
+      opacity: 1;
     }
     100%{
       transform: translateX(100%) translateY(-50%);
@@ -511,6 +521,7 @@ html::-webkit-scrollbar{
     87.5%, 96.5%{
       transform: translateX(0) translateY(-50%);
       -webkit-transform: translateX(0) translateY(-50%);
+      opacity: 1;
     }
     98%,100%{
       transform: translateX(-100%) translateY(-50%);
@@ -806,38 +817,37 @@ html::-webkit-scrollbar{
     }
   }
 
-  .star{
+.star{
   position: absolute;
   z-index: -1;
+  aspect-ratio: 1;
 
-  border-radius: 50%;
   background: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px white;
 }
 
 @keyframes glow{
   10%{
-    transform: scale(200%);
-    -webkit-transform: scale(200%);
+            transform: scale(500%);
+    -webkit-transform: scale(500%);
   }
   20%{
-    transform: scale(100%);
+            transform: scale(100%);
     -webkit-transform: scale(100%);
   }
 }
 
-.star:nth-child(n) {
-  width: 0.3%;
-  aspect-ratio: 1;
-}
-
-.star:nth-child(2n) {
-  width: 0.2%;
-  aspect-ratio: 1;
-}
-
 .star:nth-child(3n) {
-  width: 0.1%;
-  aspect-ratio: 1;
+  width: 0.5px;
+}
+
+.star:nth-child(3n+1) {
+  width: 1px;
+}
+
+.star:nth-child(3n+2) {
+  width: 3px;
 }
 
 
