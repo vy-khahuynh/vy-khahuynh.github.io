@@ -65,6 +65,8 @@ function intro(){
   populate();
 }
 
+window.addEventListener("load", intro);
+
 function animate(cb, an, op){
   const observer = new IntersectionObserver(cb, op);
   for(let i = 0 ; i < an.length ; i++){
@@ -114,8 +116,6 @@ const scrollProgressBar = () => {
 
 window.addEventListener('scroll', scrollProgressBar);
 
-window.addEventListener("load", intro);
-
 window.addEventListener('scroll', () => {
   // let homeY = window.scrollY + document.querySelector('#home-anchor').getBoundingClientRect().top // Y
   let aboutY = window.scrollY + document.querySelector('#about-anchor').getBoundingClientRect().top // Y
@@ -123,7 +123,7 @@ window.addEventListener('scroll', () => {
   let projectY = window.scrollY + document.querySelector('#projects-anchor').getBoundingClientRect().top // Y
   let curY = window.scrollY;
   let sections = document.querySelectorAll("#nav-bar > ul > li > a");
-  if(curY >= (projectY-10)){
+  if(curY >= (projectY-0.1*window.innerHeight)){
     for(let i = 0 ; i < sections.length ; i++){
       if(sections[i].innerHTML === "Projects"){
         sections[i].classList.add("active");
@@ -133,7 +133,7 @@ window.addEventListener('scroll', () => {
       }
     }
   }
-  else if(curY >= (workY-10)){
+  else if(curY >= (workY-0.1*window.innerHeight)){
     for(let i = 0 ; i < sections.length ; i++){
       if(sections[i].innerHTML === "Work"){
         sections[i].classList.add("active");
@@ -143,7 +143,7 @@ window.addEventListener('scroll', () => {
       }
     }
   }
-  else if (curY >= (aboutY-10)){
+  else if (curY >= (aboutY-0.1*window.innerHeight)){
     for(let i = 0 ; i < sections.length ; i++){
       if(sections[i].innerHTML === "About"){
         sections[i].classList.add("active");
