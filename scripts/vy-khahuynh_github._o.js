@@ -107,6 +107,7 @@ const scrollProgressBar = () => {
 
   let val = Math.floor(progressPercentage);
   progressBar.style.width = val + '%';
+  progressBar.style.width = `calc(${val}% - 16px)`;
 
   if (val < 0) {
       progressBar.style.width = '0%';
