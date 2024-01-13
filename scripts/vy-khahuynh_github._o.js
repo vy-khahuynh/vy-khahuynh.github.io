@@ -2,13 +2,11 @@ const isMobile = window.matchMedia('(max-width: 990px)').matches;
 
 function addStars(){
   const cur = document.getElementById('stars-container');
-  let initial = 30;
-  let add = 20;  
+  let numstars = 100;
+  
   if (!isMobile){
-    initial+=20;
-    add+=30;
+    numstars*=2;
   }
-  const numstars = Math.floor(Math.random() * add) + initial;
   
   for(let i = 0 ; i < numstars ; i++){
     var star = document.createElement('div');
