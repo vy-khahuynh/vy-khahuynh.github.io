@@ -123,7 +123,7 @@ window.addEventListener('scroll', () => {
   let projectY = window.scrollY + document.querySelector('#projects-anchor').getBoundingClientRect().top // Y
   let curY = window.scrollY;
   let sections = document.querySelectorAll("#nav-bar > ul > li > a");
-  if(curY >= (projectY-0.1*window.innerHeight)){
+  if(curY >= (projectY-0.2*window.innerHeight)){
     for(let i = 0 ; i < sections.length ; i++){
       if(sections[i].innerHTML === "Projects"){
         sections[i].classList.add("active");
@@ -133,7 +133,7 @@ window.addEventListener('scroll', () => {
       }
     }
   }
-  else if(curY >= (workY-0.1*window.innerHeight)){
+  else if(curY >= (workY-0.2*window.innerHeight)){
     for(let i = 0 ; i < sections.length ; i++){
       if(sections[i].innerHTML === "Work"){
         sections[i].classList.add("active");
