@@ -364,6 +364,7 @@ nav > ul > li:first-child > h1{
   border-radius: 50%;
   width: 40%;
   aspect-ratio: 1;
+  max-width: 500px;
 
   background: url(../assets/images/avatar.webp);
   background-position: center;
@@ -864,15 +865,38 @@ h1{
 
 #socials.minimized{
   transform-origin: bottom;
-  transform: scale(75%);
+  transform: scale(75%);  
   -webkit-transform-origin: bottom;
   -webkit-transform: scale(75%);
   -moz-transform-origin: bottom;
   -moz-transform: scale(75%);
 }
 
-@media only screen and (min-width: 990px){
-  #blackhole-container{
-    margin: 35vw;
+/* @media only screen and (min-width: 550px){
+  body{
+    font-size: 1.2rem;
   }
 }
+
+@media only screen and (min-width: 990px){
+  #work-gallery, #project-gallery{
+    justify-content: center;
+    place-items: center;
+    overflow: visible;
+  }
+  .planet{
+    flex: 1 1 0;
+  }
+  #socials{
+    width: 30vw;
+  }
+  .planet:hover{
+  scale: 110%;
+  }
+}
+
+@media only screen and (min-width: 1500px){
+  body{
+    font-size: 1.5rem;
+  }
+} */

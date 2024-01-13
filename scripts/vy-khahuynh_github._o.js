@@ -1,15 +1,13 @@
 const isMobile = window.matchMedia('(max-width: 990px)').matches;
 
 function addStars(){
-  // const body = document.body;
-  // const html = document.documentElement;
-  // const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-  // const height = screen.height;
-  // alert(height)
   const cur = document.getElementById('stars-container');
-  
-  let initial = 50;
-  let add = 10;
+  let initial = 30;
+  let add = 20;  
+  if (!isMobile){
+    initial+=20;
+    add+=30;
+  }
   const numstars = Math.floor(Math.random() * add) + initial;
   
   for(let i = 0 ; i < numstars ; i++){
@@ -17,7 +15,7 @@ function addStars(){
     star.classList.add("star"); 
     star.style.top = Math.floor(Math.random() * 0.95 * window.innerHeight)+"px";
     star.style.left = Math.floor(Math.random() * 0.95 * window.innerWidth)+"px";
-    star.style.opacity = (Math.random() * 0.9) + 0.1
+    star.style.opacity = (Math.random() * 0.8) + 0.2;
     cur.appendChild(star);
   }
   var bigstars = document.querySelectorAll(".star:nth-child(3n)");
