@@ -560,7 +560,6 @@ main > section:first-of-type{
 .planet{
   position: relative;
 
-  min-width: 500px;
   max-width: 800px;
   
   flex: 0 0 90vw;
@@ -767,6 +766,7 @@ details[open] > .tech-stack > img{
 
   .planet{    
     flex: 1 1 0;
+    min-width: 500px;
     animation: travel 2s ease-in-out infinite alternate-reverse;
     -webkit-animation: travel 2s ease-in-out infinite alternate-reverse;
     -moz-animation: travel 2s ease-in-out infinite alternate-reverse;
