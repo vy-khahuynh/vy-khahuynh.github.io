@@ -264,7 +264,7 @@ nav > ul > li > a{
   color: #D3D3D3;
   border-radius: 5rem;
   padding: 0.3rem 0.7rem;
-  font-size: 0.8rem;
+  font-size: 0.8em;
   border: 1px white solid;
   background: linear-gradient(to right, rgba(21, 14, 44, 1), rgba(48, 0, 48, 1), rgba(67, 0, 0, 1));
 }
@@ -274,17 +274,13 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   color: #444444;
 }
 
-nav > ul > li:first-child > *{
+nav > ul > li:first-child > h1{
   background: linear-gradient(to right, rgba(51, 26, 136, 1),rgb(167, 64, 167), rgba(154, 0, 0, 1));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  font-size: 1.2rem;
-}
-
-#nav-bar.minimized > ul{
-  font-size: smaller;
+  font-size: 1.2em;
 }
 
 .progressBar {
@@ -308,7 +304,7 @@ nav > ul > li:first-child > *{
 
   height: 8px;
 
-  transform: translateX(100%) translateY(-50%);
+  transform: translateX(10px) translateY(-50%);
 
   display: block;
 }
@@ -318,7 +314,7 @@ nav > ul > li:first-child > *{
   border-radius: 50%;
   width: 40%;
   aspect-ratio: 1;
-  max-width: 500px;
+  max-width: 400px;
 
   background: url(../assets/images/avatar.webp);
   background-position: center;
@@ -377,7 +373,7 @@ footer{
   -moz-transition: all 0.5s ease;
   
   border-radius: 5rem;
-  padding: 1%;
+  padding: 0.1em;
 }
 
 #socials > a {
@@ -652,55 +648,11 @@ details[open] > .tech-stack > img{
 
 .tech-stack > img{
   opacity: 0;
-  max-height: 2.5rem;
+  max-height: 2.5em;
+  max-width: 2.5em;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
-}
-
-/* #project-gallery{
-  display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  justify-items: center;
-}
-
-#row-1{
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-
-#row-2{
-  grid-row-start: 2;
-  grid-row-end: 3;
-}
-
-#row-3{
-  grid-row-start: 3;
-  grid-row-end: 4;
-}
-
-#row-4{
-  grid-row-start: 4;
-  grid-row-end: 5;
-}
-
-.row{
-  width: 100%;
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.row > div{
-  width: 0;
-  flex: 1 1 0;
-}
-
-#work-gallery > div:nth-child(odd), #project-gallery > div:nth-child(2n+1) > div.planet{
-  animation-delay: -2s;
-  -webkit-animation-delay: -2s;
-  -moz-animation-delay: -2s;
 }
 
 .row:nth-child(even){
@@ -714,98 +666,13 @@ details[open] > .tech-stack > img{
   100%{
     transform: translateY(-2%);
   }
-} */
-
-/* .planet{
-  position: relative;
-
-  scroll-snap-align: center;
-
-  display: flex;
-  display: -webkit-flex;
-  align-items: center;
-  justify-content: center;
-  
-  flex: 1 1 0;
-  width: 0;
-  width: 90vw;
-
-  width: 100vw;
-
-  margin: 0 5%;
-
-  border-radius: 50%;
-
-  animation: travel 2s ease-in-out infinite alternate-reverse;
-  -webkit-animation: travel 2s ease-in-out infinite alternate-reverse;
-  -moz-animation: travel 2s ease-in-out infinite alternate-reverse;
-
-  transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-} */
-
-/* .planet:hover{
-  scale: 110%;
 }
-
-.planet img{
-  display: block;
-  width: 100%;
-} */
-
-/* div.project.desc > p > span > a > img{
-  height: 1em;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-div.project.desc > p > span{
-  display: block;
-  margin: 5%;
-}
-
-div.project.desc{
-  position: relative;
-  background: linear-gradient(to right, rgb(64, 38, 155), rgb(124, 51, 124), rgb(131, 49, 49));
-  border-radius: 5rem;
-  padding: 2%;
-  border: 2px white solid;
-}
-
-div.project.desc > p > span{
-  color: #111111;
-}
-
-#project-gallery > div:nth-child(even) > div.project.desc > p > span:not(.title):not(.undertitle):not(.tech){
-  text-align: start;
-}
-
-#project-gallery > div:nth-child(odd) > div.project.desc > p > span:not(.title):not(.undertitle):not(.tech){
-  text-align: end;
-}
-
-#skills{
-  width: 100%;
-  height: auto;
-}
-div.project.desc > p > span.tech{
-  height: 3vw;
-  display: flex;
-  -webkit-display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-div.project.desc > p > span.tech > img{
-  height: 100%;
-}
-*/
 
 .gh-link{
   margin: auto;
   display: block;
-  width: 2rem;
+  max-width: 2em;
+  max-height: 2em;
   aspect-ratio: 1;
   border-radius: 50%;
   position: relative;
@@ -838,7 +705,6 @@ div.project.desc > p > span.tech > img{
 
 .minimized{
   opacity: 0;
-  /* visibility: hidden; */
   pointer-events: none;
 }
 
@@ -851,31 +717,62 @@ div.project.desc > p > span.tech > img{
   -moz-transform: scale(75%);
 }
 
-/* @media only screen and (min-width: 550px){
+@media only screen and (max-width: 360px){
+  body{
+    font-size: 0.7rem;
+  }
+}
+
+@media only screen and (min-width: 540px){
   body{
     font-size: 1.2rem;
   }
-}
-
-@media only screen and (min-width: 990px){
-  #work-gallery, #project-gallery{
-    justify-content: center;
-    place-items: center;
-    overflow: visible;
-  }
-  .planet{
-    flex: 1 1 0;
-  }
-  #socials{
-    width: 30vw;
-  }
-  .planet:hover{
-  scale: 110%;
+  #blackhole-container{
+    width: 50vw;
   }
 }
 
-@media only screen and (min-width: 1500px){
+@media only screen and (min-width: 770px){
   body{
     font-size: 1.5rem;
   }
-} */
+  #socials{
+    width: 50%;
+  }
+  
+  ul{  
+    justify-content: center;
+  }
+
+  nav > ul > li:first-child{
+    margin-right: auto;
+  }
+
+  .planet:hover{
+    scale: 110%;
+  }
+
+  #work-gallery > div:nth-child(odd), #project-gallery > div:nth-child(even){
+    animation-delay: -2s;
+    -webkit-animation-delay: -2s;
+    -moz-animation-delay: -2s;
+  }
+}
+
+@media only screen and (min-width: 1280px){
+  #work-gallery, #project-gallery{
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+
+  .planet{    
+    flex: 1 1 0;
+    min-width: 500px;
+    max-width: 800px;
+  }
+  
+  #socials{
+    width: 40%;
+  }
+}
