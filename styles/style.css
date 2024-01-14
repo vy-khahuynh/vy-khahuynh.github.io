@@ -416,7 +416,7 @@ main > :not(section:first-child){
 }
 
 main > section:last-of-type{
-  padding-bottom: calc(10vh + 1.75rem);
+  padding-bottom: calc(10vh + 1.75em);
 }
 
 main > section:first-of-type{
@@ -559,6 +559,9 @@ main > section:first-of-type{
 
 .planet{
   position: relative;
+
+  min-width: 500px;
+  max-width: 800px;
   
   flex: 0 0 90vw;
   margin: 0 5vw;
@@ -572,10 +575,6 @@ main > section:first-of-type{
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
-
-  animation: travel 2s ease-in-out infinite alternate-reverse;
-  -webkit-animation: travel 2s ease-in-out infinite alternate-reverse;
-  -moz-animation: travel 2s ease-in-out infinite alternate-reverse;
 }
 
 .planet > img{
@@ -623,9 +622,9 @@ details{
 details summary {
   cursor: pointer;
   margin-bottom: -5px; /* for more prominent move */
-  transition: margin 0.5s ease-out;
-  -webkit-transition: margin 0.5s ease-out;
-  -moz-transition: margin 0.5s ease-out;
+  transition: margin 0.25s ease-out;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
 }
 
 details[open] summary {
@@ -747,7 +746,6 @@ details[open] > .tech-stack > img{
   nav > ul > li:first-child{
     margin-right: auto;
   }
-
 }
 
 @media only screen and (min-width: 1280px){
@@ -766,10 +764,12 @@ details[open] > .tech-stack > img{
     -webkit-animation-delay: -2s;
     -moz-animation-delay: -2s;
   }
+
   .planet{    
     flex: 1 1 0;
-    min-width: 500px;
-    max-width: 800px;
+    animation: travel 2s ease-in-out infinite alternate-reverse;
+    -webkit-animation: travel 2s ease-in-out infinite alternate-reverse;
+    -moz-animation: travel 2s ease-in-out infinite alternate-reverse;
   }
   
   #socials{
