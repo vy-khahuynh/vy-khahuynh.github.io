@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
 
+@font-face {
+  font-family: "andro";
+  src: url(../assets/font/andromeda-font/Andromeda-eR2n.ttf);
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -8,11 +14,6 @@
   padding: 0;
   color: #D3D3D3;
   scroll-behavior: smooth;
-}
-@font-face {
-  font-family: "andro";
-  src: url(../assets/font/andromeda-font/Andromeda-eR2n.ttf);
-  font-display: swap;
 }
 
 body {
@@ -33,11 +34,6 @@ body {
   scrollbar-width: none;
 }
 
-html::-webkit-scrollbar, body::-webkit-scrollbar{
-  scrollbar-width: none;
-  display: none;
-}
-
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -50,10 +46,51 @@ html::-webkit-scrollbar, body::-webkit-scrollbar{
     }
 }
 
+html::-webkit-scrollbar, body::-webkit-scrollbar{
+  scrollbar-width: none;
+  display: none;
+}
+
 img{
   display: block;
 }
 
+/* Background */
+/* Stars */
+.star{
+  position: absolute;
+  z-index: -1;
+  aspect-ratio: 1;
+
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px white;
+}
+
+@keyframes glow{
+  10%{
+            transform: scale(300%);
+    -webkit-transform: scale(300%);
+  }
+  20%{
+            transform: scale(100%);
+    -webkit-transform: scale(100%);
+  }
+}
+
+.star:nth-child(3n) {
+  width: 0.5px;
+}
+
+.star:nth-child(3n+1) {
+  width: 1px;
+}
+
+.star:nth-child(3n+2) {
+  width: 3px;
+}
+
+/* Blackhole */
 #background{
   position: fixed;
   height: 100vh;
@@ -67,6 +104,11 @@ img{
   justify-content: center;
 }
 
+.blackhole{
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
 #blackhole-container{
   width: 100vw;
   margin: 20px;
@@ -76,29 +118,6 @@ img{
   display: -webkit-flex;
   place-items: center;
   justify-content: center;
-}
-
-.blackhole{
-  aspect-ratio: 1;
-  border-radius: 50%;
-}
-
-@keyframes rotate{
-  0%{
-    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(186, 28, 0, 0.5);
-  }
-  24%{
-    box-shadow: 0rem 0.1rem 0.1rem 0.1rem rgba(186, 28, 0, 0.5);
-  }
-  49%{
-    box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(186, 28, 0, 0.5);
-  }
-  74%{
-    box-shadow: 0.1rem 0rem 0.1rem 0.1rem rgba(186, 28, 0, 0.5);
-  }
-  99%, 100%{
-    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(186, 28, 0, 0.5);
-  }
 }
 
 #event-horizon{
@@ -132,6 +151,24 @@ img{
           animation: rotate 1s linear infinite;
   -webkit-animation: rotate 1s linear infinite;
      -moz-animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate{
+  0%{
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(186, 28, 0, 0.5);
+  }
+  24%{
+    box-shadow: 0rem 0.1rem 0.1rem 0.1rem rgba(186, 28, 0, 0.5);
+  }
+  49%{
+    box-shadow: 0rem 0rem 0.1rem 0.1rem rgba(186, 28, 0, 0.5);
+  }
+  74%{
+    box-shadow: 0.1rem 0rem 0.1rem 0.1rem rgba(186, 28, 0, 0.5);
+  }
+  99%, 100%{
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(186, 28, 0, 0.5);
+  }
 }
 
 .stripe{
@@ -185,39 +222,7 @@ img{
   -webkit-mask: conic-gradient(transparent 40deg, black 40deg 320deg, transparent 320deg);
 }
 
-.star{
-  position: absolute;
-  z-index: -1;
-  aspect-ratio: 1;
-
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0px 0px 5px white;
-}
-
-@keyframes glow{
-  10%{
-            transform: scale(300%);
-    -webkit-transform: scale(300%);
-  }
-  20%{
-            transform: scale(100%);
-    -webkit-transform: scale(100%);
-  }
-}
-
-.star:nth-child(3n) {
-  width: 0.5px;
-}
-
-.star:nth-child(3n+1) {
-  width: 1px;
-}
-
-.star:nth-child(3n+2) {
-  width: 3px;
-}
-
+/* Header */
 header{
   height: 10vh;
   width: 100vw;
@@ -309,95 +314,7 @@ nav > ul > li:first-child > h1{
   display: block;
 }
 
-#avatar{
-  margin: auto;
-  border-radius: 50%;
-  width: 40%;
-  aspect-ratio: 1;
-  max-width: 400px;
-
-  background: url(../assets/images/avatar.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-
-  transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-}
-
-#avatar:hover{
-  background: url(../assets/images/avatar2.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-#copyrights{
-  color: grey;
-  position: absolute;
-  bottom: 10vh;
-  left: 0;
-  font-size: 0.75em;
-  margin: 0.5em;
-}
-
-footer{
-  position: fixed;
-  
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 10vh;
-}
-
-#socials{
-  margin: auto;
-
-  position: relative;
-
-  width: 100%;
-  height: 100%;
-  
-  border: 1px white solid;
-
-  background: linear-gradient(to right, rgba(21, 14, 44, 1), rgba(48, 0, 48, 1), rgba(67, 0, 0, 1));
-
-  display: flex;
-  display: -webkit-flex;
-  justify-content: space-around;
-  place-items: center;
-
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  
-  border-radius: 5rem;
-  padding: 0.75em;
-}
-
-#socials > a {
-  height: 100%;
-  display: block;
-  aspect-ratio: 1;
-}
-
-#socials > a > img:hover{
-  filter: invert(0);
-  -webkit-filter: invert(0);
-}
-
- #socials > a > img{
-  height: 100%;
-  filter: invert(1);
-  -webkit-filter: invert(1);
-}
-
-
-.ontop{
-  z-index: 100;
-}
-
+/* Main */
 main{
   position: relative;
   width: 100vw;
@@ -423,11 +340,14 @@ main > section:first-of-type{
   padding-top: 10vh;
 }
 
-#about{
-  mask: linear-gradient(to bottom, transparent, black 2.5vh);
-  -webkit-mask: linear-gradient(to bottom, transparent, black 2.5vh);
+.anchor{
+  position: absolute;
+  top: -14vh;
+  left: 0;
+  width: 100%;
 }
 
+/* Home */
 #home{
   position: relative;
   height: 100vh; 
@@ -518,6 +438,36 @@ main > section:first-of-type{
   }
 }
 
+/* About */
+#about{
+  mask: linear-gradient(to bottom, transparent, black 2.5vh);
+  -webkit-mask: linear-gradient(to bottom, transparent, black 2.5vh);
+}
+
+#avatar{
+  margin: auto;
+  border-radius: 50%;
+  width: 40%;
+  aspect-ratio: 1;
+  max-width: 400px;
+
+  background: url(../assets/images/avatar.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  transition: all 0.1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+}
+
+#avatar:hover{
+  background: url(../assets/images/avatar2.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 #summary{
   margin: 0 10vw;
 }
@@ -538,6 +488,7 @@ main > section:first-of-type{
   text-align: start;
 }
 
+/* Work + Project Gallery */
 #work-gallery, #project-gallery{
   display: flex;
   flex-direction: row;
@@ -613,6 +564,10 @@ main > section:first-of-type{
   gap: 0.5rem;
 }
 
+.italic{
+  font-style: italic;
+}
+
 details{
   max-width: 100%;
   padding: 5px;
@@ -630,18 +585,12 @@ details[open] summary {
   margin-bottom: 5px;
 }
 
-
-
 .tech-stack{
   display: flex;
   place-items: center;
   justify-content: center;
   max-width: 100%;
   flex-wrap: wrap;
-}
-
-details[open] > .tech-stack > img{
-  opacity: 1;
 }
 
 .tech-stack > img{
@@ -653,8 +602,8 @@ details[open] > .tech-stack > img{
   -moz-transition: all 0.5s ease-in-out;
 }
 
-.row:nth-child(even){
-  flex-direction: row-reverse;
+details[open] > .tech-stack > img{
+  opacity: 1;
 }
 
 @keyframes travel{
@@ -690,15 +639,65 @@ details[open] > .tech-stack > img{
   -webkit-filter: invert(1);
 }
 
-.italic{
-  font-style: italic;
+#copyrights{
+  color: grey;
+  position: absolute;
+  bottom: 10vh;
+  left: 0;
+  font-size: 0.75em;
+  margin: 0.5em;
 }
 
-.anchor{
-  position: absolute;
-  top: -14vh;
+/* Footer */
+footer{
+  position: fixed;
+  
+  bottom: 0;
   left: 0;
+  width: 100vw;
+  height: 10vh;
+}
+
+#socials{
+  margin: auto;
+
+  position: relative;
+
   width: 100%;
+  height: 100%;
+  
+  border: 1px white solid;
+
+  background: linear-gradient(to right, rgba(21, 14, 44, 1), rgba(48, 0, 48, 1), rgba(67, 0, 0, 1));
+
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  place-items: center;
+
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  
+  border-radius: 5rem;
+  padding: 0.75em;
+}
+
+#socials > a {
+  height: 100%;
+  display: block;
+  aspect-ratio: 1;
+}
+
+#socials > a > img:hover{
+  filter: invert(0);
+  -webkit-filter: invert(0);
+}
+
+ #socials > a > img{
+  height: 100%;
+  filter: invert(1);
+  -webkit-filter: invert(1);
 }
 
 .minimized{
@@ -715,6 +714,11 @@ details[open] > .tech-stack > img{
   -moz-transform: scale(75%);
 }
 
+.ontop{
+  z-index: 100;
+}
+
+/* Media queries */
 @media only screen and (max-width: 360px){
   body{
     font-size: 0.7rem;
@@ -774,5 +778,6 @@ details[open] > .tech-stack > img{
   
   #socials{
     width: 40%;
+    padding: 0.5em;
   }
 }
