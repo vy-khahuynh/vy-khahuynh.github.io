@@ -20,20 +20,23 @@
 <body>
   <!-- Background containing stars + blackhole -->
 <div id="background">
+
   <div id="stars-container"></div>
+
   <div id="blackhole-container">
     <div class="blackhole" id="event-horizon">
       <div class="blackhole photon-ring"></div>
     </div>
-    
     <div class="blackhole" id="accretion-disc">
       <div class="blackhole photon-ring"></div>
     </div>
   </div>
+
 </div>
 
 <!-- Header -->
 <header class="ontop">
+
   <div class="progressBar">
     <img src="./assets/images/rocket.webp" alt="" id="rocket">
   </div>
@@ -47,14 +50,15 @@
       <li><a href="#projects-anchor">Projects</a></li>
     </ul>
   </nav>
+
 </header>
 
 <main>
   <section id="home">
     <div id="home-anchor" class="anchor"></div>
-    <h1 class="largetitle" id="intro">
+    <h2 id="intro">
       Hello, I'm<span id="switch"></span>
-    </h1>
+    </h2>
   </section>
 
   <section id="about">
@@ -62,19 +66,10 @@
     <div id="avatar"></div>
     
     <div id="summary">
-      <article id="eng">
-        <!-- <h1>I am<br>Vy-Kha<br>Huynh</h1> -->
-        <h1>I am Vy-Kha Huynh</h1>
-        <p>U4 Software Engineering student at McGill University in Montreal.
-          
-          Build and Release intern at <a href="https://www.audiokinetic.com/en/">Audiokinetic</a>.
-          
-          Experience in web dev, mobile dev, database dev and build & release.
-        </p>
-      </article>
+
       <article id="fr">
         <!-- <h1>Je suis<br>Vy-Kha<br>Huynh</h1> -->
-        <h1>Je suis Vy-Kha Huynh</h1>
+        <h3>Je suis Vy-Kha Huynh</h3>
         <p>Étudiant U4 en génie logiciel à l'Université de McGill à Montréal.
           
           Stagiaire en configuration et déploiement à <a href="https://www.audiokinetic.com/en/">Audiokinetic</a>.
@@ -82,20 +77,31 @@
           Expérience en développement Web, mobile, bases de données et configuration & déploiement.
         </p>
       </article>
+      <article id="eng">
+        <!-- <h1>I am<br>Vy-Kha<br>Huynh</h1> -->
+        <h3>I am Vy-Kha Huynh</h3>
+        <p>U4 Software Engineering student at McGill University in Montreal.
+          
+          Build and Release intern at <a href="https://www.audiokinetic.com/en/">Audiokinetic</a>.
+          
+          Experience in web dev, mobile dev, database dev and build & release.
+        </p>
+      </article>
+      
     </div>
   </section>
 
   <section id="work">
     <div id="work-anchor" class="anchor"></div>
-    <h1  class="largetitle">WORK EXPERIENCE</h1>
+    <h2>WORK EXPERIENCE</h2>
     <div id="work-gallery">
       
       <div id="current" class="planet">
         <img srcset="./assets/images/planet1.webp 1500w, ./assets/images/planet1_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet1.webp" alt="Blue, grey and black planet">
         <article class="underplanet">
-          <h2>Build/Release Intern</h2>
-          <h3>Audiokinetic</h3>
-          <h4 class="italic">January 2024 - Present</h4>
+          <h3>Build/Release Intern</h3>
+          <h4>Audiokinetic</h4>
+          <h5 class="italic">January 2024 - Present</h5>
           <p>
             Maintain the build system (Jenkins, Python, Java/Groovy),
             improve build system visibility by developing new reports and dashboards,
@@ -108,11 +114,11 @@
       <div class="planet">
         <img srcset="./assets/images/planet2.webp 1500w, ./assets/images/planet2_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet2.webp" alt="Blue, purple and grey planet">
         <article class="underplanet">
-          <h2>IOS Full-Stack Intern</h2>
-          <h3>CPK Solutions</h3>
-          <h4  class="italic">May 2023 - September 2023</h4>
+          <h3>IOS Full-Stack Intern</h3>
+          <h4>CPK Solutions</h4>
+          <h5  class="italic">May 2023 - September 2023</h5>
           <p>
-            Built a POS integrated with a management app to allow restaurants to manage products, orders, staff and customers
+            Built a POS integrated with a management IOS mobile app to allow restaurants to manage products, orders, staff and customers
           </p>
         </article>
       </div>
@@ -120,135 +126,72 @@
     </div>
   </section>
   
-
-  <!-- <section id="projects">
-    <div id="projects-anchor" class="anchor"></div>
-    <h1>PROJECTS</h1>
-    <div id="project-gallery-container">
-      <div id="project-gallery">
-        
-        <div id="row-1" class="row">
-          <div class="planet">
-            <img srcset="./assets/images/planet3.webp 1500w, ./assets/images/planet3_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet3.webp" alt="Blue, purple and grey planet">
-          </div>
-          <div class="project desc">
-            <p>
-              <span class="title">Soccer World Cup Database</span>
-              <span class="undertitle">Soccer World Cup database to keep track of statistics of each World Cup</span>
-              <span class="tech">
-                <img src="./assets/images/db2-thumbnail.webp" alt="">
-                <img src="./assets/images/java-thumbnail.webp" alt="">
-              </span>
-              <span>Designed and implemented the architecture and schema for the soccer database, ensuring data integrity and scalability.</span>
-              <span>Automated table creation and population using Bash scripts, reducing manual errors, and saving time for future database updates.</span>
-              <span>Optimized the database performance by fine-tuning queries, resulting in faster response time and improved query performance.</span>
-            </p>
-          </div>
-        </div>
-
-        <div id="row-2" class="row">
-          <div class="planet">
-            <img srcset="./assets/images/planet4.webp 1500w, ./assets/images/planet4_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet4.webp" alt="Blue, purple and grey planet">
-          </div>
-          <div class="project desc">
-            <p>
-              <span class="title"> PourDecisions
-                <a href="https://github.com/nielsmai/PourDecisions" target="_blank" class="stamp">
-                  <img src="./assets/images/github-logo.webp" alt="">
-                </a>
-              </span>
-              <span class="undertitle">Online drink-sharing platform</span>
-              <span class="tech">
-                <img src="./assets/images/js-thumbnail.webp" alt="">
-                <img src="./assets/images/html-thumbnail.webp" alt="">
-                <img src="./assets/images/css-thumbnail.webp" alt="">
-                <img src="./assets/images/react-thumbnail.webp" alt="">
-                <img src="./assets/images/mongodb-thumbnail.webp" alt="">
-              </span>
-              <span>Created an online drink sharing platform allowing users to share, save, and randomize drink recipes in a 10-person team enforcing Agile practices.</span>
-              <span>Designed and implemented frontend pages for creating accounts and user profile, ensuring an effortless and seamless usage for improved user experience.</span>
-              <span>Developed efficient REST APIs for managing user accounts, providing secure, structured, and reliable backend functionality.</span>
-            </p>
-          </div>
-        </div>
-
-        <div id="row-3" class="row">
-          <div class="planet">
-            <img srcset="./assets/images/planet5.webp 1500w, ./assets/images/planet5_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet5.webp" alt="Blue, purple and grey planet">
-          </div>
-          <div class="project desc">
-            <p>
-              <span class="title">Montreal Library Website
-                <a href="https://github.com/McGill-ECSE321-Fall2021/project-group-02" target="_blank"  class="stamp">
-                  <img src="./assets/images/github-logo.webp" alt="">
-                </a>
-              </span>
-              <span class="undertitle">Library website for item rental and employment management</span>
-              <span class="tech">
-                <img src="./assets/images/js-thumbnail.webp" alt="">
-                <img src="./assets/images/html-thumbnail.webp" alt="">
-                <img src="./assets/images/css-thumbnail.webp" alt="">
-                <img src="./assets/images/java-thumbnail.webp" alt="">
-                <img src="./assets/images/android-studio-thumbnail.webp" alt="">
-                <img src="./assets/images/vue-thumbnail.webp" alt="">
-                <img src="./assets/images/postgresql-thumbnail.webp" alt="">
-              </span>
-              <span>Built a library website allowing users to browse catalogs, rented items and allow head librarians to manage staff in a 6-member team enforcing Agile practices.</span>
-              <span>Led testing efforts, designed, and executed persistence layer testing, unit tests, and integration tests to ensure system stability and reliability achieving 88% code coverage.</span>
-              <span>Oversaw and managed a team of 3 testers to ensure the design, writing and execution of dependable and quality test cases.</span>
-              <span>Developed REST APIs for creating, deleting, and modifying employee profiles and library info, streamlining employment and information management for head librarians.</span>
-            </p>
-          </div>
-        </div>
-
-        <div id="row-4" class="row">
-          <div class="planet">
-            <img srcset="./assets/images/planet6.webp 1500w, ./assets/images/planet6_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet6.webp" alt="Blue, purple and grey planet">
-          </div>
-          <div class="project desc">
-            <p>
-              <span class="title"> CIFAR10 MLP Multi-Classifier</span>
-              <span class="undertitle">MLP classifier to categorize CIFAR10 images</span>
-              <span class="tech">
-                <img src="./assets/images/python-thumbnail.webp" alt="">
-                <img src="./assets/images/numpy-thumbnail.webp" alt="">
-                <img src="./assets/images/pandas-thumbnail.webp" alt="">
-                <img src="./assets/images/scikit-thumbnail.webp" alt="">
-                <img src="./assets/images/google-colab-thumbnail.webp" alt="">
-              </span>
-              <span>Implemented Gradient Descent and Stochastic Gradient Descent (SGD) from scratch with backpropagation achieving a model accuracy of 86%.</span>
-              <span>Developed fit/predict class functions to train and test the MLP with tunable hyperparameters such as number of hidden layers and number of hidden units for each layer to allow a better modularization of the code.</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <span id = "copyrights">©️ 2023 Vy-Kha Huynh</span>
-  </section> -->
   <section id="projects">
     <div id="projects-anchor" class="anchor"></div>
-    <h1>PROJECTS</h1>
-    <!-- <div id="project-gallery-container"></div> -->
+    <h2>PROJECTS</h2>
     <div id="project-gallery">
       
       <div class="planet">
-        <img srcset="./assets/images/planet3.webp 1500w, ./assets/images/planet3_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet3.webp" alt="Blue, purple and grey planet">
-      </div>
-
-      <div class="planet">
         <img srcset="./assets/images/planet4.webp 1500w, ./assets/images/planet4_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet4.webp" alt="Blue, purple and grey planet">
+        <article class="underplanet">
+          <h3>PourDecisions
+            <a href="https://github.com/nielsmai/PourDecisions" target="_blank" class="gh-link"></a>
+          </h3>
+          <details>
+            <summary>Tech Stack</summary>
+            <div class="tech-stack">
+              <img src="./assets/images/db2-thumbnail.webp" alt="">
+              <img src="./assets/images/java-thumbnail.webp" alt="">
+            </div>
+          </details>
+          <p>Created an online drink sharing website allowing users to share, save, and randomize drink recipes.</p>
+        </article>
       </div>
-
+        
       <div class="planet">
         <img srcset="./assets/images/planet5.webp 1500w, ./assets/images/planet5_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet5.webp" alt="Blue, purple and grey planet">
-      </div>
-      
-      <div class="planet">
-        <img srcset="./assets/images/planet6.webp 1500w, ./assets/images/planet6_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet6.webp" alt="Blue, purple and grey planet">
+        <article class="underplanet">
+          <h3>Soccer World Cup Database
+            <a href="https://github.com/nielsmai/PourDecisions" target="_blank" class="gh-link"></a>
+          </h3>
+          <details>
+            <summary>Tech Stack</summary>
+            <div class="tech-stack">
+              <img src="./assets/images/js-thumbnail.webp" alt="">
+              <img src="./assets/images/html-thumbnail.webp" alt="">
+              <img src="./assets/images/css-thumbnail.webp" alt="">
+              <img src="./assets/images/react-thumbnail.webp" alt="">
+              <img src="./assets/images/mongodb-thumbnail.webp" alt="">
+            </div>
+          </details>
+          <p>Designed and built a Soccer World Cup database keeping track of statistics during each World Cup in a 10-member team.</p>
+        </article>
       </div>
 
+      <div class="planet">
+        <img srcset="./assets/images/planet6.webp 1500w, ./assets/images/planet6_500w.webp 500w" sizes="(max-width: 990px) 100vw, 40vw" src="./assets/images/planet6.webp" alt="Blue, purple and grey planet">
+        <article class="underplanet">
+          <h3>Montreal Library Mock Website
+            <a href="https://github.com/McGill-ECSE321-Fall2021/project-group-02" target="_blank" class="gh-link"></a>
+          </h3>
+          <details>
+            <summary>Tech Stack</summary>
+             <div class="tech-stack">
+              <img src="./assets/images/js-thumbnail.webp" alt="javascript logo">
+              <img src="./assets/images/html-thumbnail.webp" alt="html logo">
+              <img src="./assets/images/css-thumbnail.webp" alt="css logo">
+              <img src="./assets/images/java-thumbnail.webp" alt="java logo">
+              <img src="./assets/images/android-studio-thumbnail.webp" alt="android studio logo">
+              <img src="./assets/images/vue-thumbnail.webp" alt="">
+              <img src="./assets/images/postgresql-thumbnail.webp" alt="">
+             </div>
+          </details>
+          <p>Implemented a mock library website for item rental and employment management in a 6-member team.</p>
+        </article>
+      </div>
     </div>
   </section>
+
   <span id = "copyrights">©️ 2023 Vy-Kha Huynh</span>
 </main>
 

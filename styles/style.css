@@ -1,52 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-/* html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-} */
-/* HTML5 display-role reset for older browsers */
-/* article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -68,7 +20,6 @@ body {
   max-width: 100vw;
 
   font-family: 'Roboto', sans-serif;
-  /* font-weight: bolder; */
 
   background: linear-gradient(#040815, #000510, #110415, #111111, #130101);
 	background-size: 500% 500%;
@@ -97,6 +48,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar{
     100% {
         background-position: 0% 50%;
     }
+}
+
+img{
+  display: block;
 }
 
 #background{
@@ -158,7 +113,6 @@ html::-webkit-scrollbar, body::-webkit-scrollbar{
   
   background: radial-gradient(circle closest-side, black 60%, rgb(255, 34, 0) 60%, 63%, transparent 64%, rgb(208, 28, 0) 65% 72%, transparent 73%, rgb(170, 23, 0) 74%, transparent 76%, rgb(108, 14, 0) 79% 82%, transparent 83%, rgb(135, 18, 0) 85%, rgb(87, 12, 0) 90% 94%, transparent 94.5%, rgb(56, 7, 0) 95%, transparent 96%, rgb(35, 5, 0) 98%);
 }
-
 
 #event-horizon::before{
   content: '';
@@ -243,8 +197,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar{
 
 @keyframes glow{
   10%{
-            transform: scale(500%);
-    -webkit-transform: scale(500%);
+            transform: scale(300%);
+    -webkit-transform: scale(300%);
   }
   20%{
             transform: scale(100%);
@@ -320,13 +274,13 @@ nav > ul > li > a:hover, nav > ul > li > a.active{
   color: #444444;
 }
 
-nav > ul > li:first-child > h1{
+nav > ul > li:first-child > *{
   background: linear-gradient(to right, rgba(51, 26, 136, 1),rgb(167, 64, 167), rgba(154, 0, 0, 1));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 #nav-bar.minimized > ul{
@@ -386,7 +340,7 @@ nav > ul > li:first-child > h1{
 #copyrights{
   color: grey;
   position: absolute;
-  bottom: 10vh;
+  bottom: 7.5vh;
   left: 0;
   font-size: 0.75em;
   margin: 0.5em;
@@ -398,7 +352,7 @@ footer{
   bottom: 0;
   left: 0;
   width: 100vw;
-  height: 10vh;
+  height: 7.5vh;
 }
 
 #socials{
@@ -416,7 +370,7 @@ footer{
   display: flex;
   display: -webkit-flex;
   justify-content: space-around;
-  align-items: center;
+  place-items: center;
 
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -426,24 +380,23 @@ footer{
   padding: 1%;
 }
 
+#socials > a {
+  max-height: 100%;
+  display: block;
+  aspect-ratio: 1;
+}
+
 #socials > a > img:hover{
   filter: invert(0);
   -webkit-filter: invert(0);
 }
 
  #socials > a > img{
-  margin: auto;
   height: 100%;
   filter: invert(1);
   -webkit-filter: invert(1);
-  display: block;
 }
 
-#socials > a {
-  aspect-ratio: 1;
-  max-height: 90%;
-  flex: 1 1 0;
-}
 
 .ontop{
   z-index: 100;
@@ -454,8 +407,6 @@ main{
   width: 100vw;
   min-height: 100vh;
   text-align: center;
-  padding-top: 10vh;
-  /* padding-bottom: 10vh; */
 }
 
 main > section{
@@ -469,22 +420,21 @@ main > :not(section:first-child){
 }
 
 main > section:last-of-type{
-  padding-bottom: calc(10vh + 2rem);
+  padding-bottom: calc(7.5vh + 1.75rem);
 }
 
 main > section:first-of-type{
-  padding-top: 0;
+  padding-top: 10vh;
 }
 
 #about{
-  padding-top: 10vh;
-  mask: linear-gradient(to bottom, transparent, black);
-  -webkit-mask: linear-gradient(to bottom, transparent, black 10%);
+  mask: linear-gradient(to bottom, transparent, black 2.5vh);
+  -webkit-mask: linear-gradient(to bottom, transparent, black 2.5vh);
 }
 
 #home{
   position: relative;
-  height: 90vh; 
+  height: 100vh; 
   width: 100%; 
   display: flex;
   display: -webkit-flex;
@@ -500,6 +450,7 @@ main > section:first-of-type{
   justify-content: center; 
   flex-direction: column;
   margin-bottom: 5em;
+  font-weight: normal;
 }
 
 #switch{
@@ -584,34 +535,12 @@ main > section:first-of-type{
 }
 
 #eng{
-  text-align: start;
-}
-
-#fr{
   text-align: end;
 }
 
-/* #summary{
-  display: flex;
-  display: -webkit-flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#summary p{
-  display: inline-block;
-  white-space: pre-line;
-}
-
-#eng{
-  margin-left: 10vw;
+#fr{
   text-align: start;
 }
-
-#fr{
-  margin-right: 10vw;
-  text-align: end;
-} */
 
 #work-gallery, #project-gallery{
   display: flex;
@@ -653,9 +582,9 @@ main > section:first-of-type{
   -moz-animation: travel 2s ease-in-out infinite alternate-reverse;
 }
 
-
 .planet > img{
   width: 100%;
+  filter: brightness(0.5);
 }
 
 #current::before{
@@ -669,6 +598,7 @@ main > section:first-of-type{
   top: -10vh;
   left: 50%;
   translate: -50% 30%;
+  z-index: 1;
 }
 
 .underplanet{
@@ -678,7 +608,7 @@ main > section:first-of-type{
   
   border-radius: 50%;
 
-  padding: 10%;
+  padding: 15%;
 
   display: flex;
   display: -webkit-flex;
@@ -687,6 +617,45 @@ main > section:first-of-type{
   flex-direction: column;
 
   gap: 0.5rem;
+}
+
+details{
+  max-width: 100%;
+  padding: 5px;
+}
+
+details summary {
+  cursor: pointer;
+  margin-bottom: -5px; /* for more prominent move */
+  transition: margin 0.5s ease-out;
+  -webkit-transition: margin 0.5s ease-out;
+  -moz-transition: margin 0.5s ease-out;
+}
+
+details[open] summary {
+  margin-bottom: 5px;
+}
+
+
+
+.tech-stack{
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+details[open] > .tech-stack > img{
+  opacity: 1;
+}
+
+.tech-stack > img{
+  opacity: 0;
+  max-height: 2.5rem;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
 }
 
 /* #project-gallery{
@@ -814,21 +783,12 @@ div.project.desc > p > span{
 
 #project-gallery > div:nth-child(odd) > div.project.desc > p > span:not(.title):not(.undertitle):not(.tech){
   text-align: end;
-} */
-
-/* #skills{
-  width: 100%;
-  height: auto;
-} */
-
-
-/* .stamp{
-  margin: auto;
-  width: 2rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
 }
 
+#skills{
+  width: 100%;
+  height: auto;
+}
 div.project.desc > p > span.tech{
   height: 3vw;
   display: flex;
@@ -839,15 +799,34 @@ div.project.desc > p > span.tech{
 
 div.project.desc > p > span.tech > img{
   height: 100%;
-} */
+}
+*/
+
+.gh-link{
+  margin: auto;
+  display: block;
+  width: 2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: relative;
+}
+
+.gh-link::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/images/github-logo.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+          filter: invert(1);
+  -webkit-filter: invert(1);
+}
 
 .italic{
   font-style: italic;
-}
-
-h1{
-  font-size: 1.5em;
-  font-family: "andro";
 }
 
 .anchor{
