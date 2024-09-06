@@ -3,11 +3,6 @@ script.src = 'https://code.jquery.com/jquery-3.6.3.min.js'; // Check https://jqu
 document.getElementsByTagName('head')[0].appendChild(script);
 
 function addStars(){
-  // const body = document.body;
-  // const html = document.documentElement;
-  // const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
-  // const height = screen.height;
-  // alert(height)
   const cur = document.getElementById('stars-container');
   
   let initial = 50;
