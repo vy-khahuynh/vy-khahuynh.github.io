@@ -26,11 +26,11 @@ body {
 	background-size: 500% 500%;
 
   background-attachment: fixed;
-	
+
           animation: gradient 20s ease infinite;
   -webkit-animation: gradient 20s ease infinite;
      -moz-animation: gradient 20s ease infinite;
-  
+
   scrollbar-width: none;
 }
 
@@ -129,7 +129,7 @@ img{
   display: -webkit-flex;
   justify-content: center;
   place-items: center;
-  
+
   background: radial-gradient(circle closest-side, black 60%, rgb(255, 34, 0) 60%, 63%, transparent 64%, rgb(208, 28, 0) 65% 72%, transparent 73%, rgb(170, 23, 0) 74%, transparent 76%, rgb(108, 14, 0) 79% 82%, transparent 83%, rgb(135, 18, 0) 85%, rgb(87, 12, 0) 90% 94%, transparent 94.5%, rgb(56, 7, 0) 95%, transparent 96%, rgb(35, 5, 0) 98%);
 }
 
@@ -147,7 +147,7 @@ img{
   height: 50%;
   border: solid 0.1rem rgba(186, 28, 0, 0.5);
   box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem rgba(186, 28, 0, 0.5);
-  
+
           animation: rotate 1s linear infinite;
   -webkit-animation: rotate 1s linear infinite;
      -moz-animation: rotate 1s linear infinite;
@@ -194,7 +194,7 @@ img{
     transform: scale(0.62);
     -webkit-transform: scale(0.62);
     opacity: 0.75;
-  } 
+  }
   92.5% {
     transform: scale(0.9);
     -webkit-transform: scale(0.9);
@@ -213,7 +213,7 @@ img{
   display: -webkit-flex;
   justify-content: center;
   place-items: center;
-  
+
   background: radial-gradient(circle closest-side, black 60%, rgb(255, 34, 0) 60%, 63%, transparent 64%, rgb(208, 28, 0) 65% 72%, transparent 73%, rgb(170, 23, 0) 74%, transparent 76%, rgb(108, 14, 0) 79% 82%, transparent 83%, rgb(135, 18, 0) 85%, rgb(87, 12, 0) 90% 94%, transparent 94.5%, rgb(56, 7, 0) 95%, transparent 96%, rgb(35, 5, 0) 98%);
 
   transform: rotateX(82deg);
@@ -226,7 +226,7 @@ img{
 header{
   height: 10vh;
   width: 100vw;
-  
+
   position: fixed;
   top: 0;
   left: 0;
@@ -320,7 +320,7 @@ main{
   width: 100vw;
   min-height: 100vh;
   text-align: center;
-  
+
   transition: background-color 0.25s ease-in-out;
   -webkit-transition: background-color 0.25s ease-in-out;
   -moz-transition: background-color 0.25s ease-in-out;
@@ -350,30 +350,30 @@ main > section:first-of-type{
 /* Home */
 #home{
   position: relative;
-  height: 100vh; 
-  width: 100%; 
+  height: 100vh;
+  width: 100%;
   display: flex;
   display: -webkit-flex;
-  place-items: end; 
+  place-items: end;
   justify-content: center;
 }
 
 #intro {
   position: relative;
-  display: flex; 
+  display: flex;
   display: -webkit-flex;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   margin-bottom: 5em;
   font-weight: normal;
 }
 
 #switch{
-  display: flex; 
+  display: flex;
   display: -webkit-flex;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   height: 1.5em;
 }
@@ -449,7 +449,7 @@ main > section:first-of-type{
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  
+
   transition: all 0.1s ease-in-out;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
@@ -488,12 +488,12 @@ main > section:first-of-type{
   flex-direction: row;
 
   overflow-x: scroll;
-  
+
   scroll-snap-type: x mandatory;
-  
+
   padding-top: 7.5vh;
   padding-bottom: 2.5vh;
-  
+
   min-width: 100vw;
 }
 
@@ -506,16 +506,16 @@ main > section:first-of-type{
   position: relative;
 
   max-width: 800px;
-  
+
   flex: 0 0 90vw;
   margin: 0 5vw;
-  
+
   display: flex;
   place-items: center;
   justify-content: center;
-  
+
   scroll-snap-align: center;
-  
+
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -546,7 +546,7 @@ main > section:first-of-type{
   position: absolute;
   width: 100%;
   height: 100%;
-  
+
   border-radius: 50%;
 
   padding: 15%;
@@ -647,7 +647,7 @@ details[open] > .tech-stack > img{
 /* Footer */
 footer{
   position: fixed;
-  
+
   bottom: 0;
   left: 0;
   width: 100vw;
@@ -661,7 +661,7 @@ footer{
 
   width: 100%;
   height: 100%;
-  
+
   border: 1px white solid;
 
   background: linear-gradient(to right, rgba(21, 14, 44, 1), rgba(48, 0, 48, 1), rgba(67, 0, 0, 1));
@@ -674,7 +674,7 @@ footer{
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
-  
+
   border-radius: 5rem;
   padding: 0.75em;
 }
@@ -703,7 +703,7 @@ footer{
 
 #socials.minimized{
   transform-origin: bottom;
-  transform: scale(75%);  
+  transform: scale(75%);
   -webkit-transform-origin: bottom;
   -webkit-transform: scale(75%);
   -moz-transform-origin: bottom;
@@ -737,8 +737,8 @@ footer{
   #socials{
     width: 50%;
   }
-  
-  ul{  
+
+  ul{
     justify-content: center;
   }
 
@@ -753,17 +753,17 @@ footer{
     flex-wrap: wrap;
     overflow: visible;
   }
-  
+
   .planet:hover{
     scale: 105%;
   }
 
-  .planet{    
+  .planet{
     flex: 1 1 0;
     min-width: 500px;
     max-width: calc((100vw - 20vw) / 2);
   }
-  
+
   #socials{
     width: 40%;
     padding: 0.5em;
