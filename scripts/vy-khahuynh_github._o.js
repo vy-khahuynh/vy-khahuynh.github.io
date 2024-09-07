@@ -96,6 +96,17 @@ let minimize = (entries) =>{
 
 animate(minimize, document.querySelectorAll('#home'), options);
 
+animate((entries) => {
+  entries.forEach((entry) => {
+    if(entry.isIntersecting){
+      document.querySelector("main").style.background = 'rgba(0, 0, 0, 0)';
+    }
+    else{
+      document.querySelector("main").style.background = 'rgba(0, 0, 0, 0.5)';
+    }
+  })
+}, document.querySelectorAll('#home'), options)
+
 const scrollProgressBar = () => {
   const progressBar = document.querySelector('.progressBar');
   const section = document.querySelector('body');
@@ -117,7 +128,6 @@ const scrollProgressBar = () => {
 window.addEventListener('scroll', scrollProgressBar);
 
 window.addEventListener('scroll', () => {
-  // let homeY = window.scrollY + document.querySelector('#home-anchor').getBoundingClientRect().top // Y
   let aboutY = window.scrollY + document.querySelector('#about-anchor').getBoundingClientRect().top // Y
   let workY = window.scrollY + document.querySelector('#work-anchor').getBoundingClientRect().top // Y
   let projectY = window.scrollY + document.querySelector('#projects-anchor').getBoundingClientRect().top // Y
@@ -143,7 +153,7 @@ window.addEventListener('scroll', () => {
       }
     }
   }
-  else if (curY >= (aboutY-0.1*window.innerHeight)){
+  else if (curY >= (aboutY-0.2*window.innerHeight)){
     for(let i = 0 ; i < sections.length ; i++){
       if(sections[i].innerHTML === "About"){
         sections[i].classList.add("active");

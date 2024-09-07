@@ -320,16 +320,16 @@ main{
   width: 100vw;
   min-height: 100vh;
   text-align: center;
+  
+  transition: background-color 0.25s ease-in-out;
+  -webkit-transition: background-color 0.25s ease-in-out;
+  -moz-transition: background-color 0.25s ease-in-out;
 }
 
 main > section{
   width: 100%;
   position: relative;
   padding: 2.5vh 0;
-}
-
-main > :not(section:first-child){
-  background-color: rgba(0, 0, 0, 0.5);  
 }
 
 main > section:last-of-type{
@@ -438,12 +438,6 @@ main > section:first-of-type{
   }
 }
 
-/* About */
-#about{
-  mask: linear-gradient(to bottom, transparent, black 2.5vh);
-  -webkit-mask: linear-gradient(to bottom, transparent, black 2.5vh);
-}
-
 #avatar{
   margin: auto;
   border-radius: 50%;
@@ -451,18 +445,18 @@ main > section:first-of-type{
   aspect-ratio: 1;
   max-width: 400px;
 
-  background: url(../assets/images/avatar.webp);
+  background: url(../images/avatar.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-
+  
   transition: all 0.1s ease-in-out;
   -webkit-transition: all 0.1s ease-in-out;
   -moz-transition: all 0.1s ease-in-out;
 }
 
 #avatar:hover{
-  background: url(../assets/images/avatar2.webp);
+  background: url(../images/avatar2.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -480,12 +474,12 @@ main > section:first-of-type{
   margin-top: 2vh;
 }
 
-#eng{
-  text-align: end;
+#summary > article:first-child{
+  text-align: start;
 }
 
-#fr{
-  text-align: start;
+#summary > article:last-child{
+  text-align: end;
 }
 
 /* Work + Project Gallery */
@@ -525,6 +519,8 @@ main > section:first-of-type{
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
+
+  border-radius: 50%;
 }
 
 .planet > img{
@@ -534,7 +530,7 @@ main > section:first-of-type{
 
 #current::before{
   content: '';
-  background-image: url(../assets/images/astronaut.webp);
+  background-image: url(../images/astronaut.webp);
   background-size: contain;
   background-repeat: no-repeat;
   height: 10vh;
@@ -759,25 +755,22 @@ footer{
   }
   
   .planet:hover{
-    scale: 110%;
-  }
-  
-  #work-gallery > div:nth-child(odd), #project-gallery > div:nth-child(even){
-    animation-delay: -2s;
-    -webkit-animation-delay: -2s;
-    -moz-animation-delay: -2s;
+    scale: 105%;
   }
 
   .planet{    
     flex: 1 1 0;
     min-width: 500px;
-    animation: travel 2s ease-in-out infinite alternate-reverse;
-    -webkit-animation: travel 2s ease-in-out infinite alternate-reverse;
-    -moz-animation: travel 2s ease-in-out infinite alternate-reverse;
+    max-width: calc((100vw - 20vw) / 2);
   }
   
   #socials{
     width: 40%;
     padding: 0.5em;
+  }
+
+  #current::before{
+    height: 15vh;
+    top: -15vh;
   }
 }
