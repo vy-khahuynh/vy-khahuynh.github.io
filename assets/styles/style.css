@@ -288,20 +288,6 @@ nav > ul > li:first-child > h1{
   font-size: 1.2em;
 }
 
-.progressBar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 8px;
-  background: linear-gradient(to right, rgba(154, 0, 0, 1), rgb(170, 0, 170), rgb(44, 0, 189));
-  width: 0%;
-  transition: all 0.2s linear;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-
-  border-radius: 0 0.5rem 0.5rem 0;
-}
-
 #rocket{
   position: absolute;
   top: 50%;

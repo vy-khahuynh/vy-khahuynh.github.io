@@ -3,14 +3,14 @@ const isMobile = window.matchMedia('(max-width: 990px)').matches;
 function addStars(){
   const cur = document.getElementById('stars-container');
   let numstars = 100;
-  
+
   if (!isMobile){
     numstars*=2;
   }
-  
+
   for(let i = 0 ; i < numstars ; i++){
     var star = document.createElement('div');
-    star.classList.add("star"); 
+    star.classList.add("star");
     star.style.top = Math.floor(Math.random() * 0.95 * window.innerHeight)+"px";
     star.style.left = Math.floor(Math.random() * 0.95 * window.innerWidth)+"px";
     star.style.opacity = (Math.random() * 0.8) + 0.2;
@@ -59,7 +59,7 @@ function animateBH(){
   }
 }
 
-function intro(){ 
+function intro(){
   addStars();
   animateBH();
   populate();
@@ -106,26 +106,6 @@ animate((entries) => {
     }
   })
 }, document.querySelectorAll('#home'), options)
-
-const scrollProgressBar = () => {
-  const progressBar = document.querySelector('.progressBar');
-  const section = document.querySelector('body');
-  let scrollDistance = -(section.getBoundingClientRect().top);
-  let progressPercentage =
-      (scrollDistance /
-          (section.getBoundingClientRect().height - 
-              document.documentElement.clientHeight)) * 100;
-
-  let val = Math.floor(progressPercentage);
-  progressBar.style.width = val + '%';
-  progressBar.style.width = `calc(${val}% - 10px)`;
-
-  if (val < 0) {
-      progressBar.style.width = '0%';
-  }
-};
-
-window.addEventListener('scroll', scrollProgressBar);
 
 window.addEventListener('scroll', () => {
   let aboutY = window.scrollY + document.querySelector('#about-anchor').getBoundingClientRect().top // Y
